@@ -65,11 +65,9 @@ export function JsonLd({ locale }: { locale: Locale }) {
       name: s.title,
       description: s.desc,
     })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "127",
-    },
+    // NOTĂ: aggregateRating a fost eliminat — Google penalizează rating-urile
+    // false/neverificabile. Reintrodu-l DOAR cu recenzii reale (ex. importate
+    // din Google Business Profile).
   };
 
   const faq = {

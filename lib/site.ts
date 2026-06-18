@@ -64,6 +64,16 @@ export const SITE = {
 
   /** An înființare (pentru schema + footer) */
   founded: "2015",
+
+  /**
+   * Analytics — lasă gol "" până ai ID-urile (nu se încarcă nimic dacă sunt goale).
+   * ga4: din Google Analytics (ex. "G-XXXXXXXXXX")
+   * metaPixel: din Facebook/Meta Events Manager (ex. "123456789012345")
+   */
+  analytics: {
+    ga4: "",
+    metaPixel: "",
+  },
 } as const;
 
 export type Locale = "ro" | "ru";

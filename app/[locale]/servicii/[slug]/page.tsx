@@ -110,7 +110,7 @@ export default async function ServiceDetail({
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
                 href={`/${locale}/contact#programare`}
-                className="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-brand-600/30 transition-all hover:bg-brand-700"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-6 py-3 text-base font-bold text-forest-950 shadow-lg shadow-gold-600/30 transition-all hover:from-gold-300 hover:to-gold-500"
               >
                 {dict.ui.bookThisService}
               </Link>

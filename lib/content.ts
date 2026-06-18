@@ -673,6 +673,218 @@ export const SERVICES: ServiceDetail[] = [
       },
     },
   },
+  {
+    slug: "tratament-post-alcool",
+    icon: "drop",
+    content: {
+      ro: {
+        metaTitle:
+          "Tratament Post-Alcool la Domiciliu în Chișinău | Ieșire din Binge — Medline.md",
+        metaDescription:
+          "Tratament post-alcool și ieșire din binge la domiciliu în Chișinău: perfuzii de detoxifiere, rehidratare și refacere, sub supravegherea unei asistente medicale. Discret, 24/7.",
+        keywords:
+          "tratament post-alcool, iesire din binge la domiciliu, detoxifiere alcool Chisinau, perfuzie dupa alcool, capatul betiei, vivod iz zapoya Chisinau",
+        h1: "Tratament post-alcool la domiciliu",
+        short:
+          "Detoxifiere și refacere a organismului după consum de alcool, prin perfuzii, la domiciliu.",
+        lead: "Tratamentul post-alcool Medline ajută organismul să se refacă după consumul excesiv de alcool, prin perfuzii de detoxifiere și rehidratare administrate la domiciliu, sub supravegherea unei asistente medicale calificate — discret și în siguranță.",
+        sections: [
+          {
+            heading: "În ce constă tratamentul",
+            body: [
+              "Tratamentul include perfuzii cu soluții de rehidratare, vitamine și substanțe care ajută la eliminarea toxinelor, ameliorând simptomele neplăcute de după consum: greață, tremurături, deshidratare, dureri de cap și slăbiciune.",
+              "Asistenta evaluează starea generală, măsoară funcțiile vitale și administrează tratamentul potrivit, rămânând lângă pacient pe tot parcursul.",
+            ],
+          },
+          {
+            heading: "Discret și la tine acasă",
+            body: [
+              "Înțelegem că este o situație delicată — de aceea oferim servicii confidențiale, fără judecăți, în confortul și intimitatea propriei case.",
+              "Pentru cazurile severe sau cu afecțiuni asociate, recomandăm și un consult medical de specialitate. Te putem îndruma.",
+            ],
+          },
+        ],
+        indications: [
+          "Stare de rău după consum excesiv de alcool",
+          "Deshidratare, greață, tremurături, dureri de cap",
+          "Nevoia de refacere rapidă a organismului",
+          "Persoane care preferă discreția propriei case",
+        ],
+        benefits: [
+          "Ameliorarea rapidă a simptomelor neplăcute",
+          "Perfuzii de detoxifiere și rehidratare",
+          "Confidențialitate totală, la domiciliu",
+          "Asistente calificate, disponibile 24/7",
+        ],
+        faq: [
+          {
+            q: "Tratamentul este confidențial?",
+            a: "Da, absolut. Oferim servicii discrete, la domiciliu, cu respect deplin pentru intimitatea pacientului.",
+          },
+          {
+            q: "Înlocuiește tratamentul un consult medical?",
+            a: "Tratamentul ameliorează simptomele, dar pentru dependență sau afecțiuni grave recomandăm și un consult de specialitate. Te îndrumăm corespunzător.",
+          },
+        ],
+      },
+      ru: {
+        metaTitle:
+          "Вывод из Запоя на Дому в Кишинёве | Лечение после Алкоголя — Medline.md",
+        metaDescription:
+          "Вывод из запоя и лечение после алкоголя на дому в Кишинёве: детокс-капельницы, регидратация и восстановление под наблюдением медсестры. Анонимно, 24/7.",
+        keywords:
+          "вывод из запоя Кишинёв, вывод из запоя на дому, капельница после алкоголя, детоксикация алкоголь, лечение после алкоголя Молдова",
+        h1: "Вывод из запоя на дому",
+        short:
+          "Детоксикация и восстановление организма после алкоголя через капельницы, на дому.",
+        lead: "Лечение после алкоголя от Medline помогает организму восстановиться после чрезмерного употребления алкоголя — с помощью детокс-капельниц и регидратации на дому, под наблюдением квалифицированной медсестры, анонимно и безопасно.",
+        sections: [
+          {
+            heading: "В чём состоит лечение",
+            body: [
+              "Лечение включает капельницы с растворами для регидратации, витаминами и веществами, помогающими выводить токсины, облегчая неприятные симптомы: тошноту, тремор, обезвоживание, головную боль и слабость.",
+              "Медсестра оценивает общее состояние, измеряет жизненные показатели и подбирает подходящее лечение, оставаясь рядом с пациентом всё время.",
+            ],
+          },
+          {
+            heading: "Анонимно и у вас дома",
+            body: [
+              "Мы понимаем, что это деликатная ситуация — поэтому предлагаем конфиденциальные услуги, без осуждения, в комфорте и приватности собственного дома.",
+              "Для тяжёлых случаев или при сопутствующих заболеваниях рекомендуем также консультацию специалиста. Мы подскажем.",
+            ],
+          },
+        ],
+        indications: [
+          "Плохое самочувствие после злоупотребления алкоголем",
+          "Обезвоживание, тошнота, тремор, головная боль",
+          "Необходимость быстрого восстановления организма",
+          "Те, кто предпочитает анонимность дома",
+        ],
+        benefits: [
+          "Быстрое облегчение неприятных симптомов",
+          "Детокс-капельницы и регидратация",
+          "Полная конфиденциальность, на дому",
+          "Квалифицированные медсёстры, 24/7",
+        ],
+        faq: [
+          {
+            q: "Лечение конфиденциально?",
+            a: "Да, абсолютно. Мы оказываем анонимные услуги на дому с полным уважением к приватности пациента.",
+          },
+          {
+            q: "Заменяет ли лечение визит к врачу?",
+            a: "Лечение облегчает симптомы, но при зависимости или тяжёлых состояниях рекомендуем консультацию специалиста. Мы направим вас.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "codare-anti-alcool",
+    icon: "shield",
+    content: {
+      ro: {
+        metaTitle:
+          "Codare Anti-Alcool la Domiciliu în Chișinău | Medline.md",
+        metaDescription:
+          "Codare anti-alcool la domiciliu în Chișinău, în condiții sigure și confidențiale, sub supraveghere medicală. Programare discretă, asistente calificate.",
+        keywords:
+          "codare anti-alcool, codare alcool Chisinau, codare la domiciliu, kodirovka ot alkogolya Chisinau, codare impotriva alcoolului Moldova",
+        h1: "Codare anti-alcool la domiciliu",
+        short:
+          "Procedură de codare împotriva dependenței de alcool, în condiții sigure și confidențiale.",
+        lead: "Medline oferă servicii de codare anti-alcool la domiciliu, efectuate în condiții sigure și confidențiale. Procedura se realizează numai după o evaluare prealabilă și cu acordul informat al pacientului, ca pas în drumul către o viață fără alcool.",
+        sections: [
+          {
+            heading: "Ce presupune codarea",
+            body: [
+              "Codarea este o metodă de sprijin în lupta împotriva dependenței de alcool. Înainte de procedură, este obligatorie o evaluare a stării de sănătate și o perioadă de abstinență, conform recomandărilor medicale.",
+              "Procedura se efectuează în siguranță, cu materiale sterile, iar pacientul primește toate informațiile necesare pentru a lua o decizie conștientă.",
+            ],
+          },
+          {
+            heading: "Confidențialitate și sprijin",
+            body: [
+              "Tratăm fiecare caz cu maximă discreție și fără judecăți. Codarea este eficientă mai ales ca parte a unei decizii personale ferme și, ideal, însoțită de sprijin psihologic.",
+              "Pentru evaluare și programare, contactează-ne — îți explicăm pașii și condițiile necesare.",
+            ],
+          },
+        ],
+        indications: [
+          "Dorința fermă de a renunța la alcool",
+          "Respectarea perioadei de abstinență recomandate",
+          "Lipsa contraindicațiilor medicale (se evaluează în prealabil)",
+          "Persoane care preferă discreția propriei case",
+        ],
+        benefits: [
+          "Procedură în condiții sterile și sigure",
+          "Confidențialitate deplină, la domiciliu",
+          "Evaluare prealabilă a stării de sănătate",
+          "Sprijin și îndrumare pe parcurs",
+        ],
+        faq: [
+          {
+            q: "Ce trebuie să fac înainte de codare?",
+            a: "Este necesară o perioadă de abstinență și o evaluare a stării de sănătate. Te informăm exact ce condiții trebuie îndeplinite la programare.",
+          },
+          {
+            q: "Procedura este confidențială?",
+            a: "Da, oferim servicii complet discrete, la domiciliu, cu respect pentru intimitatea ta.",
+          },
+        ],
+      },
+      ru: {
+        metaTitle:
+          "Кодирование от Алкоголя на Дому в Кишинёве | Medline.md",
+        metaDescription:
+          "Кодирование от алкоголя на дому в Кишинёве — в безопасных и анонимных условиях, под медицинским наблюдением. Дискретная запись, квалифицированные медсёстры.",
+        keywords:
+          "кодирование от алкоголя, кодировка от алкоголя Кишинёв, кодирование на дому, кодировка от алкоголизма Молдова",
+        h1: "Кодирование от алкоголя на дому",
+        short:
+          "Процедура кодирования от алкогольной зависимости в безопасных и анонимных условиях.",
+        lead: "Medline предлагает услуги кодирования от алкоголя на дому, выполняемые в безопасных и конфиденциальных условиях. Процедура проводится только после предварительной оценки и с информированного согласия пациента — как шаг на пути к жизни без алкоголя.",
+        sections: [
+          {
+            heading: "Что включает кодирование",
+            body: [
+              "Кодирование — это метод поддержки в борьбе с алкогольной зависимостью. Перед процедурой обязательны оценка состояния здоровья и период трезвости согласно медицинским рекомендациям.",
+              "Процедура выполняется безопасно, стерильными материалами, и пациент получает всю необходимую информацию для осознанного решения.",
+            ],
+          },
+          {
+            heading: "Конфиденциальность и поддержка",
+            body: [
+              "Мы относимся к каждому случаю с максимальной деликатностью и без осуждения. Кодирование эффективнее всего как часть твёрдого личного решения и, в идеале, в сопровождении психологической поддержки.",
+              "Для оценки и записи свяжитесь с нами — объясним шаги и необходимые условия.",
+            ],
+          },
+        ],
+        indications: [
+          "Твёрдое желание отказаться от алкоголя",
+          "Соблюдение рекомендованного периода трезвости",
+          "Отсутствие медицинских противопоказаний (оценивается заранее)",
+          "Те, кто предпочитает анонимность дома",
+        ],
+        benefits: [
+          "Процедура в стерильных и безопасных условиях",
+          "Полная конфиденциальность, на дому",
+          "Предварительная оценка состояния здоровья",
+          "Поддержка и сопровождение",
+        ],
+        faq: [
+          {
+            q: "Что нужно сделать перед кодированием?",
+            a: "Необходим период трезвости и оценка состояния здоровья. Мы точно расскажем, какие условия нужно выполнить, при записи.",
+          },
+          {
+            q: "Процедура анонимна?",
+            a: "Да, мы оказываем полностью анонимные услуги на дому с уважением к вашей приватности.",
+          },
+        ],
+      },
+    },
+  },
 ];
 
 export function getService(slug: string): ServiceDetail | undefined {

@@ -5,6 +5,7 @@ import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { CookieConsent } from "@/components/CookieConsent";
 import { BackToTop } from "@/components/BackToTop";
+import { Analytics } from "@/components/Analytics";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -95,6 +96,7 @@ export default async function LocaleLayout({
         {children}
         <BackToTop label={dict.ui.backToTop} />
         <CookieConsent dict={dict} />
+        <Analytics />
       </body>
     </html>
   );

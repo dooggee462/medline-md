@@ -200,4 +200,5 @@ export const SERVICE_ICONS: Record<
   stethoscope: IconStethoscope,
   flask: IconFlask,
   bandage: IconBandage,
+  shield: IconShield,
 };

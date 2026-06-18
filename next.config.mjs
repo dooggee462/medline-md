@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Generează un build autonom (.next/standalone) — ideal pentru Docker/VPS
+  output: "standalone",
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,

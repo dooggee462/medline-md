@@ -1,0 +1,29 @@
+# Medline.md — app Next.js + Caddy (reverse proxy cu HTTPS automat)
+services:
+  web:
+    build: .
+    container_name: medline-web
+    restart: unless-stopped
+    expose:
+      - "3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_TELEMETRY_DISABLED=1
+
+  caddy:
+    image: caddy:2-alpine
+    container_name: medline-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - web
+
+volumes:
+  caddy_data:
+  caddy_config:

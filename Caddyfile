@@ -1,0 +1,28 @@
+# ───────────────────────────────────────────────
+# Caddy — reverse proxy cu HTTPS automat (Let's Encrypt)
+#
+# ⚠️ ÎNLOCUIEȘTE:
+#   1. medline.md / www.medline.md  → domeniul tău real
+#   2. email-ul de mai jos           → emailul tău (pentru certificat SSL)
+#
+# Înainte să pornești: setează în DNS un record A pentru domeniu
+# care să indice către IP-ul serverului Hetzner.
+# ───────────────────────────────────────────────
+
+{
+	email contact@medline.md
+}
+
+medline.md, www.medline.md {
+	encode zstd gzip
+	reverse_proxy web:3000
+}
+
+# ── TESTARE FĂRĂ DOMENIU ──
+# Dacă vrei să testezi doar cu IP-ul serverului (înainte de DNS),
+# comentează blocul de mai sus și decomentează-l pe acesta:
+#
+# :80 {
+# 	encode zstd gzip
+# 	reverse_proxy web:3000
+# }
