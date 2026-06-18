@@ -1,0 +1,26 @@
+{
+  "name": "medline-md",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site de prezentare și programare pentru Medline.md — asistență medicală la domiciliu",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.3.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.4",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "sharp": "^0.35.1",
+    "tailwindcss": "^4.1.4",
+    "typescript": "^5.8.3"
+  }
+}
