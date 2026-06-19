@@ -193,10 +193,10 @@ const ro: Dictionary = {
   },
   hero: {
     badge: "Intervenție 24/7 în Chișinău și împrejurimi",
-    title: "Asistență medicală profesională",
-    titleAccent: "direct la tine acasă",
+    title: "Asistență medicală la domiciliu",
+    titleAccent: "în Chișinău și toată Moldova",
     subtitle:
-      "Echipa Medline aduce îngrijirea medicală în confortul casei tale: perfuzii, injecții, îngrijirea bolnavilor și consult medical, cu asistente calificate și empatie.",
+      "Echipa Medline aduce îngrijirea medicală profesională direct la tine acasă: perfuzii, injecții, îngrijirea bolnavilor și consult medical, cu asistente calificate și empatie.",
     ctaPrimary: "Programează o vizită",
     ctaSecondary: "Sună: rezolvăm rapid",
     stats: [
@@ -442,10 +442,10 @@ const ru: Dictionary = {
   },
   hero: {
     badge: "Выезд 24/7 по Кишинёву и окрестностям",
-    title: "Профессиональная медицинская помощь",
-    titleAccent: "прямо у вас дома",
+    title: "Медицинская помощь на дому",
+    titleAccent: "в Кишинёве и по всей Молдове",
     subtitle:
-      "Команда Medline привозит медицинскую заботу в комфорт вашего дома: капельницы, инъекции, уход за больными и медосмотр — с квалифицированными медсёстрами и вниманием.",
+      "Команда Medline привозит профессиональную медицинскую помощь прямо к вам домой: капельницы, инъекции, уход за больными и медосмотр — с квалифицированными медсёстрами и вниманием.",
     ctaPrimary: "Записаться на визит",
     ctaSecondary: "Позвоните — решим быстро",
     stats: [
