@@ -807,6 +807,306 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "ce-sa-faci-daca-cineva-a-baut-prea-mult",
+    date: "2026-06-20",
+    readMinutes: 5,
+    content: {
+      ro: {
+        metaTitle: "Ce să Faci Dacă Cineva a Băut Prea Mult Alcool | Ghid — Medline.md",
+        metaDescription:
+          "Ce să faci dacă cineva a băut prea mult: semne de alarmă, primul ajutor acasă și când să chemi urgența. Plus cum ajută o perfuzie de detoxifiere la domiciliu în Chișinău.",
+        keywords: "ce sa fac daca cineva a baut prea mult, intoxicatie cu alcool ce fac, primul ajutor betie, perfuzie dupa alcool Chisinau",
+        title: "Ce să faci dacă cineva a băut prea mult alcool",
+        excerpt: "Semne de alarmă, primul ajutor la domiciliu și când e nevoie de ajutor medical urgent.",
+        sections: [
+          {
+            body: [
+              "Când cineva drag a băut prea mult, e greu să știi cum să reacționezi. Acest ghid te ajută să recunoști semnele periculoase și să acționezi corect — calm și rapid.",
+            ],
+          },
+          {
+            heading: "Semne de alarmă — sună imediat la 112",
+            body: [
+              "Cheamă urgent ajutorul medical (112) dacă persoana: este inconștientă și nu poate fi trezită, respiră neregulat sau rar, are pielea rece/vânătă, vomită în timp ce e adormită, are convulsii sau confuzie severă.",
+              "Aceste semne pot indica o intoxicație alcoolică gravă, care pune viața în pericol. Nu aștepta să „treacă de la sine”.",
+            ],
+          },
+          {
+            heading: "Primul ajutor acasă",
+            body: [
+              "Dacă persoana este conștientă: așaz-o pe o parte (poziția de siguranță) ca să nu se înece dacă vomită, ține-o la căldură, oferă-i apă în înghițituri mici și rămâi lângă ea.",
+              "Nu-i da cafea, nu o pune sub duș rece și nu o forța să mai bea alcool — acestea sunt mituri periculoase.",
+            ],
+          },
+          {
+            heading: "Cum ajută o perfuzie de detoxifiere la domiciliu",
+            body: [
+              "După ce pericolul imediat a trecut, o perfuzie de detoxifiere ajută organismul să se refacă mai repede: rehidratare, vitamine și substanțe care reduc greața, tremurăturile și durerile de cap.",
+              "Echipa Medline vine la domiciliu, în Chișinău, discret și 24/7. Sună-ne și te ajutăm să-ți revii în siguranță.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Что Делать, Если Человек Перепил Алкоголя | Гид — Medline.md",
+        metaDescription:
+          "Что делать, если человек перепил: тревожные признаки, первая помощь дома и когда вызывать скорую. Плюс как помогает капельница на дому в Кишинёве.",
+        keywords: "что делать если человек перепил, алкогольное отравление что делать, первая помощь при опьянении, капельница после алкоголя Кишинёв",
+        title: "Что делать, если человек перепил алкоголя",
+        excerpt: "Тревожные признаки, первая помощь дома и когда нужна срочная медицинская помощь.",
+        sections: [
+          {
+            body: [
+              "Когда близкий человек перепил, трудно понять, как реагировать. Этот гид поможет распознать опасные признаки и действовать правильно — спокойно и быстро.",
+            ],
+          },
+          {
+            heading: "Тревожные признаки — сразу звоните 112",
+            body: [
+              "Срочно вызывайте скорую (112), если человек: без сознания и не просыпается, дышит редко или неровно, кожа холодная/синюшная, рвота во сне, судороги или сильная спутанность.",
+              "Эти признаки могут означать тяжёлое алкогольное отравление, опасное для жизни. Не ждите, что «само пройдёт».",
+            ],
+          },
+          {
+            heading: "Первая помощь дома",
+            body: [
+              "Если человек в сознании: положите его на бок (безопасное положение), чтобы он не захлебнулся при рвоте, согрейте, давайте воду небольшими глотками и будьте рядом.",
+              "Не давайте кофе, не ставьте под холодный душ и не заставляйте пить ещё — это опасные мифы.",
+            ],
+          },
+          {
+            heading: "Как помогает капельница на дому",
+            body: [
+              "Когда непосредственная опасность миновала, детокс-капельница помогает организму быстрее восстановиться: регидратация, витамины и вещества, снижающие тошноту, тремор и головную боль.",
+              "Команда Medline приезжает на дом в Кишинёве, анонимно и 24/7. Позвоните — поможем восстановиться безопасно.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "cum-ajuti-pe-cineva-sa-iasa-din-binge",
+    date: "2026-06-13",
+    readMinutes: 5,
+    content: {
+      ro: {
+        metaTitle: "Cum Ajuți pe Cineva să Iasă dintr-o Beție Prelungită (Binge) | Medline.md",
+        metaDescription:
+          "Cum ajuți pe cineva să iasă dintr-un binge / beție prelungită, în siguranță. De ce e riscant să oprești brusc și cum ajută detoxifierea la domiciliu în Chișinău.",
+        keywords: "cum ajut pe cineva sa iasa din betie, iesire din binge, vivod iz zapoya Chisinau, detoxifiere alcool la domiciliu",
+        title: "Cum ajuți pe cineva să iasă dintr-o beție prelungită",
+        excerpt: "Pași siguri pentru a ajuta o persoană dragă să iasă dintr-un binge, cu sprijin medical.",
+        sections: [
+          {
+            body: [
+              "O beție prelungită (binge, „запой”) nu se rezolvă cu mustrări sau forțare. Persoana are nevoie de sprijin și, de multe ori, de ajutor medical. Iată cum poți ajuta corect.",
+            ],
+          },
+          {
+            heading: "De ce e riscant să oprești brusc, singur",
+            body: [
+              "Oprirea bruscă a alcoolului după o perioadă lungă de consum poate provoca simptome severe (sevraj): tremurături, anxietate, transpirații, în cazuri grave chiar convulsii. De aceea e mai sigur cu supraveghere medicală.",
+            ],
+          },
+          {
+            heading: "Cum ajutăm noi — detoxifiere la domiciliu",
+            body: [
+              "Asistenta Medline vine la domiciliu, evaluează starea și administrează o perfuzie de detoxifiere care ameliorează simptomele și ajută organismul să se refacă, discret și în siguranță.",
+              "Totul este confidențial, fără judecăți — un prim pas blând spre recuperare.",
+            ],
+          },
+          {
+            heading: "Pasul următor: codarea",
+            body: [
+              "Pentru cei care vor să rămână fără alcool pe termen lung, oferim și serviciul de codare, după o evaluare prealabilă. Contactează-ne ca să-ți explicăm pașii.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Как Помочь Человеку Выйти из Запоя | Гид — Medline.md",
+        metaDescription:
+          "Как безопасно помочь человеку выйти из запоя. Почему опасно резко бросать самому и как помогает детоксикация на дому в Кишинёве.",
+        keywords: "как помочь выйти из запоя, вывод из запоя на дому, вывод из запоя Кишинёв, детоксикация на дому",
+        title: "Как помочь человеку выйти из запоя",
+        excerpt: "Безопасные шаги, чтобы помочь близкому выйти из запоя при медицинской поддержке.",
+        sections: [
+          {
+            body: [
+              "Запой не решается упрёками или принуждением. Человеку нужна поддержка и часто — медицинская помощь. Вот как помочь правильно.",
+            ],
+          },
+          {
+            heading: "Почему опасно резко бросать самому",
+            body: [
+              "Резкая отмена алкоголя последлительного употребления может вызвать тяжёлые симптомы (абстиненция): тремор, тревогу, потливость, в тяжёлых случаях даже судороги. Поэтому безопаснее под медицинским наблюдением.",
+            ],
+          },
+          {
+            heading: "Как помогаем мы — детокс на дому",
+            body: [
+              "Медсестра Medline приезжает на дом, оценивает состояние и ставит детокс-капельницу, которая облегчает симптомы и помогает организму восстановиться — анонимно и безопасно.",
+              "Всё конфиденциально, без осуждения — мягкий первый шаг к восстановлению.",
+            ],
+          },
+          {
+            heading: "Следующий шаг: кодирование",
+            body: [
+              "Для тех, кто хочет надолго остаться без алкоголя, мы также предлагаем кодирование — после предварительной оценки. Свяжитесь с нами, и мы объясним шаги.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "mahmureala-severa-ce-sa-faci",
+    date: "2026-06-12",
+    readMinutes: 4,
+    content: {
+      ro: {
+        metaTitle: "Mahmureală Severă: Ce să Faci ca să-ți Revii Rapid | Medline.md",
+        metaDescription:
+          "Mahmureală severă: ce ajută cu adevărat (hidratare, vitamine, perfuzii) și ce sunt doar mituri. Cum îți revii rapid cu o perfuzie la domiciliu în Chișinău.",
+        keywords: "mahmureala severa ce sa fac, cum trece mahmureala repede, perfuzie mahmureala, perfuzie dupa alcool Chisinau",
+        title: "Mahmureală severă: ce să faci ca să-ți revii rapid",
+        excerpt: "Ce ajută cu adevărat după o noapte grea — și ce e doar mit.",
+        sections: [
+          {
+            body: [
+              "Mahmureala apare din deshidratare, pierderea de vitamine și efectul toxinelor. Vestea bună: îți poți reveni mai repede dacă faci lucrurile potrivite.",
+            ],
+          },
+          {
+            heading: "Ce ajută cu adevărat",
+            body: [
+              "Hidratarea (apă, soluții cu electroliți), odihna, o masă ușoară și timpul. Pentru o refacere rapidă, o perfuzie cu rehidratare și vitamine ameliorează simptomele în scurt timp.",
+            ],
+          },
+          {
+            heading: "Mituri de evitat",
+            body: [
+              "„Încă un pahar” (nu ajută, amână problema), cafeaua în exces (deshidratează), dușul rece. Acestea nu vindecă mahmureala.",
+            ],
+          },
+          {
+            heading: "Când e mai mult decât o mahmureală",
+            body: [
+              "Dacă apar vărsături persistente, confuzie, tremurături puternice sau simptomele țin foarte mult, e nevoie de ajutor medical. Medline vine la domiciliu în Chișinău cu o perfuzie de refacere — sună-ne.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Тяжёлое Похмелье: Что Делать, Чтобы Быстро Прийти в Себя | Medline.md",
+        metaDescription:
+          "Тяжёлое похмелье: что действительно помогает (вода, витамины, капельницы) и что лишь миф. Как быстро прийти в себя с капельницей на дому в Кишинёве.",
+        keywords: "тяжёлое похмелье что делать, как быстро снять похмелье, капельница от похмелья, капельница после алкоголя Кишинёв",
+        title: "Тяжёлое похмелье: что делать, чтобы быстро прийти в себя",
+        excerpt: "Что действительно помогает после тяжёлой ночи — и что лишь миф.",
+        sections: [
+          {
+            body: [
+              "Похмелье возникает из-за обезвоживания, потери витаминов и действия токсинов. Хорошая новость: можно прийти в себя быстрее, если делать правильные вещи.",
+            ],
+          },
+          {
+            heading: "Что действительно помогает",
+            body: [
+              "Гидратация (вода, растворы с электролитами), отдых, лёгкая еда и время. Для быстрого восстановления капельница с регидратацией и витаминами облегчает симптомы за короткое время.",
+            ],
+          },
+          {
+            heading: "Мифы, которых стоит избегать",
+            body: [
+              "«Ещё рюмка» (не помогает, откладывает проблему), избыток кофе (обезвоживает), холодный душ. Это не лечит похмелье.",
+            ],
+          },
+          {
+            heading: "Когда это больше, чем похмелье",
+            body: [
+              "Если есть постоянная рвота, спутанность, сильный тремор или симптомыдержатся очень долго — нужна медицинская помощь. Medline приезжает на дом в Кишинёве с восстановительной капельницей — звоните.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "semne-ca-ai-nevoie-de-perfuzie-detoxifiere",
+    date: "2026-06-11",
+    readMinutes: 4,
+    content: {
+      ro: {
+        metaTitle: "Semne că Ai Nevoie de o Perfuzie de Detoxifiere după Alcool | Medline.md",
+        metaDescription:
+          "Cum îți dai seama că ai nevoie de o perfuzie de detoxifiere după alcool: simptome, beneficii și cum programezi o vizită la domiciliu în Chișinău.",
+        keywords: "semne ca ai nevoie de perfuzie, cand e nevoie de detoxifiere alcool, perfuzie detoxifiere domiciliu, detoxifiere post-alcool Chisinau",
+        title: "Semne că ai nevoie de o perfuzie de detoxifiere după alcool",
+        excerpt: "Simptomele care îți spun că o perfuzie de detoxifiere te-ar ajuta să-ți revii.",
+        sections: [
+          {
+            body: [
+              "Nu orice mahmureală necesită o perfuzie, dar există situații în care detoxifierea îți accelerează semnificativ refacerea. Iată semnele.",
+            ],
+          },
+          {
+            heading: "Simptome care indică nevoia de detoxifiere",
+            body: [
+              "Greață și vărsături care nu trec, deshidratare puternică, tremurături, dureri de cap intense, slăbiciune marcată sau o perioadă mai lungă de consum în spate.",
+            ],
+          },
+          {
+            heading: "Cum ajută perfuzia",
+            body: [
+              "Perfuzia rehidratează rapid, completează vitaminele pierdute și ajută eliminarea toxinelor, reducând simptomele neplăcute mult mai repede decât doar prin odihnă.",
+            ],
+          },
+          {
+            heading: "Cum programezi",
+            body: [
+              "Ne suni sau ne scrii, iar asistenta Medline ajunge la domiciliu, în Chișinău, discret și 24/7. Evaluează starea și administrează perfuzia potrivită pentru tine.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Признаки, что Нужна Капельница после Алкоголя | Medline.md",
+        metaDescription:
+          "Как понять, что нужна детокс-капельница после алкоголя: симптомы, польза и как записаться на визит на дом в Кишинёве.",
+        keywords: "признаки что нужна капельница, когда нужна детоксикация алкоголь, капельница на дому, детоксикация после алкоголя Кишинёв",
+        title: "Признаки, что нужна капельница после алкоголя",
+        excerpt: "Симптомы, которые говорят, что детокс-капельница поможет вам восстановиться.",
+        sections: [
+          {
+            body: [
+              "Не каждое похмелье требует капельницы, но есть ситуации, когда детоксикация значительно ускоряет восстановление. Вот признаки.",
+            ],
+          },
+          {
+            heading: "Симптомы, указывающие на необходимость детокса",
+            body: [
+              "Тошнота и рвота, которые не проходят, сильное обезвоживание, тремор, интенсивная головная боль, выраженная слабость илидлительный период употребления.",
+            ],
+          },
+          {
+            heading: "Как помогает капельница",
+            body: [
+              "Капельница быстро восполняет жидкость, возвращает потерянные витамины и помогает выводить токсины, снижая неприятные симптомы гораздо быстрее, чем просто отдых.",
+            ],
+          },
+          {
+            heading: "Как записаться",
+            body: [
+              "Позвоните или напишите — медсестра Medline приедет на дом в Кишинёве, анонимно и 24/7. Оценит состояние и поставит подходящую капельницу.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "perfuzie-la-domiciliu-video",
     date: "2026-06-19",
     readMinutes: 1,
