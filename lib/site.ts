@@ -55,7 +55,7 @@ export const SITE = {
   /** Rețele sociale (lasă gol "" dacă nu există) */
   social: {
     facebook: "https://www.facebook.com/profile.php?id=61578767017537",
-    instagram: "https://instagram.com/medline_expert",
+    instagram: "https://instagram.com/medline_health",
     tiktok: "https://www.tiktok.com/@medlinehealth",
   },
 
