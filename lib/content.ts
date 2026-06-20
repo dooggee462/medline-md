@@ -807,6 +807,318 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "ghid-complet-iesire-din-binge",
+    date: "2026-06-20",
+    readMinutes: 9,
+    content: {
+      ro: {
+        metaTitle: "Ieșirea din Binge (Vivod iz Zapoya): Ghid Complet Pas cu Pas | Medline.md",
+        metaDescription:
+          "Ghid complet despre ieșirea din binge (beție prelungită) la domiciliu, în siguranță: ce este, de ce e periculos, ce să NU faci, cum decurge detoxifierea și recuperarea. Chișinău, 24/7.",
+        keywords: "iesire din binge, vivod iz zapoya Chisinau, betie prelungita ce fac, detoxifiere alcool la domiciliu, sevraj alcoolic",
+        title: "Ieșirea din binge: ghid complet pas cu pas",
+        excerpt: "Tot ce trebuie să știi despre ieșirea din binge la domiciliu, în siguranță — de la primele semne până la recuperare.",
+        sections: [
+          {
+            body: [
+              "O beție prelungită (binge sau „запой”) este o perioadă de consum continuu de alcool, de la câteva zile până la săptămâni, în care persoana nu mai poate să se oprească singură. Ieșirea din această stare necesită răbdare, sprijin și, de cele mai multe ori, ajutor medical. Acest ghid complet îți explică pas cu pas ce se întâmplă și cum poți ajuta — în siguranță și cu respect.",
+            ],
+          },
+          {
+            heading: "Ce este o beție prelungită (binge)",
+            body: [
+              "Spre deosebire de o seară cu exces de alcool, binge-ul este un consum repetat, zilnic, care se autoîntreține: persoana bea ca să evite simptomele neplăcute care apar când se oprește. Astfel se intră într-un cerc vicios greu de spart fără ajutor.",
+              "Recunoașterea problemei este primul pas. Nu este o chestiune de „voință slabă”, ci o stare medicală care răspunde la tratament corect.",
+            ],
+          },
+          {
+            heading: "De ce este periculos",
+            body: [
+              "### Sindromul de sevraj",
+              "Când organismul s-a obișnuit cu alcoolul, oprirea bruscă declanșează sevrajul: tremurături, transpirații, anxietate, greață, insomnie, tahicardie. În cazurile severe pot apărea halucinații sau convulsii (delirium tremens), care sunt urgențe medicale.",
+              "### Riscuri pentru sănătate",
+              "Deshidratarea, dezechilibrele electrolitice și epuizarea vitaminelor (mai ales B1) pot afecta inima, ficatul și creierul. De aceea, ieșirea din binge nu trebuie făcută oricum, ci cu sprijin medical.",
+            ],
+          },
+          {
+            heading: "Ce să NU faci niciodată",
+            body: [
+              "Nu forța persoana să se oprească brusc, fără supraveghere — sevrajul necontrolat e periculos. Nu o certa și nu o umili: rușinea adâncește problema. Nu-i da „încă un pahar ca să-i treacă” — doar prelungește binge-ul. Și nu ignora semnele grave (confuzie, convulsii, vărsături cu sânge) — sună imediat la 112.",
+            ],
+          },
+          {
+            heading: "Cum decurge ieșirea din binge la domiciliu",
+            body: [
+              "### 1. Evaluarea",
+              "Asistenta medicală evaluează starea generală, măsoară tensiunea, pulsul și întreabă despre durata și cantitatea consumului. Astfel stabilește tratamentul potrivit și depistează eventualele riscuri.",
+              "### 2. Perfuzia de detoxifiere",
+              "Se administrează o perfuzie cu soluții de rehidratare, vitamine (în special grupul B) și substanțe care reduc greața, tremurăturile și anxietatea. Organismul începe să se refacă, iar simptomele se ameliorează vizibil.",
+              "### 3. Monitorizarea",
+              "Pe durata procedurii, asistenta rămâne alături și urmărește reacția pacientului. La nevoie, ajustează tratamentul sau recomandă un consult suplimentar.",
+            ],
+          },
+          {
+            heading: "După detoxifiere: recuperarea",
+            body: [
+              "Refacerea continuă și după perfuzie: hidratare, somn, mese ușoare și evitarea efortului. Primele 24–48 de ore sunt cele mai importante pentru stabilizare.",
+              "Sprijinul emoțional al familiei, fără reproșuri, crește mult șansele de recuperare. Pentru mulți pacienți, acesta este momentul potrivit pentru a discuta despre pașii pe termen lung.",
+            ],
+          },
+          {
+            heading: "Codarea — pasul spre abstinență",
+            body: [
+              "Detoxifierea rezolvă starea fizică imediată, dar nu și dependența. Pentru cei care vor să rămână fără alcool, codarea (după o evaluare și o perioadă de abstinență) poate fi un pas eficient, mai ales împreună cu sprijin psihologic.",
+            ],
+          },
+          {
+            heading: "Întrebări frecvente",
+            body: [
+              "### Cât durează ieșirea din binge?",
+              "Ameliorarea simptomelor începe de obicei în câteva ore de la perfuzie, dar refacerea completă poate dura câteva zile, în funcție de durata consumului.",
+              "### Este confidențial?",
+              "Da, complet. Toate vizitele sunt discrete, la domiciliu, fără judecăți și fără divulgarea informațiilor.",
+              "### Pot face asta singur acasă, fără medic?",
+              "Nu este recomandat. Sevrajul necontrolat poate fi periculos. Supravegherea unei asistente medicale face procesul sigur și mult mai blând.",
+            ],
+          },
+          {
+            heading: "Concluzie",
+            body: [
+              "Ieșirea din binge este posibilă și sigură atunci când este făcută corect, cu sprijin medical și fără judecăți. Echipa Medline vine la domiciliu, în Chișinău, discret și 24/7. Dacă tu sau cineva drag are nevoie de ajutor, sună-ne — facem primul pas împreună.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Вывод из Запоя: Полный Гид Шаг за Шагом | Medline.md",
+        metaDescription:
+          "Полный гид по выводу из запоя на дому, безопасно: что это, чем опасно, чего НЕ делать, как проходит детоксикация и восстановление. Кишинёв, 24/7.",
+        keywords: "вывод из запоя, вывод из запоя Кишинёв, запой что делать, детоксикация на дому, алкогольная абстиненция",
+        title: "Вывод из запоя: полный гид шаг за шагом",
+        excerpt: "Всё, что нужно знать о выводе из запоя на дому безопасно — от первых признаков до восстановления.",
+        sections: [
+          {
+            body: [
+              "Запой — это период непрерывного употребления алкоголя, от нескольких дней до недель, когда человек уже не может остановиться сам. Выход из этого состояния требует терпения, поддержки и чаще всего — медицинской помощи. Этот полный гид шаг за шагом объясняет, что происходит и как помочь — безопасно и с уважением.",
+            ],
+          },
+          {
+            heading: "Что такое запой",
+            body: [
+              "В отличие от вечера с избытком алкоголя, запой — это повторяющееся, ежедневное употребление, которое само себя поддерживает: человек пьёт, чтобы избежать неприятных симптомов, возникающих при остановке. Так возникает порочный круг, который трудно разорвать без помощи.",
+              "Признание проблемы — первый шаг. Это не вопрос «слабой воли», а медицинское состояние, поддающееся правильному лечению.",
+            ],
+          },
+          {
+            heading: "Чем это опасно",
+            body: [
+              "### Абстинентный синдром",
+              "Когда организм привык к алкоголю, резкая остановка вызывает абстиненцию: тремор, потливость, тревогу, тошноту, бессонницу, тахикардию. В тяжёлых случаях возможны галлюцинации или судороги (белая горячка) — это неотложные состояния.",
+              "### Риски для здоровья",
+              "Обезвоживание, нарушение электролитов и истощение витаминов (особенно B1) могут навредить сердцу, печени и мозгу. Поэтому выход из запоя нельзя делать как попало — нужна медицинская поддержка.",
+            ],
+          },
+          {
+            heading: "Чего НЕЛЬЗЯ делать",
+            body: [
+              "Не заставляйте человека резко бросать без наблюдения — неконтролируемая абстиненция опасна. Не ругайте и не унижайте: стыд усугубляет проблему. Не давайте «ещё рюмку, чтобы полегчало» — это лишь продлевает запой. И не игнорируйте тяжёлые признаки (спутанность, судороги, рвота с кровью) — сразу звоните 112.",
+            ],
+          },
+          {
+            heading: "Как проходит вывод из запоя на дому",
+            body: [
+              "### 1. Оценка",
+              "Медсестра оценивает общее состояние, измеряет давление, пульс и расспрашивает о длительности и количестве употребления. Так подбирается подходящее лечение и выявляются риски.",
+              "### 2. Детокс-капельница",
+              "Ставится капельница с растворами для регидратации, витаминами (особенно группы B) и веществами, снижающими тошноту, тремор и тревогу. Организм начинает восстанавливаться, симптомы заметно облегчаются.",
+              "### 3. Наблюдение",
+              "Во время процедуры медсестра остаётся рядом и следит за реакцией пациента. При необходимости корректирует лечение или рекомендует доп. консультацию.",
+            ],
+          },
+          {
+            heading: "После детокса: восстановление",
+            body: [
+              "Восстановление продолжается и после капельницы: вода, сон, лёгкая еда и отказ от нагрузок. Первые 24–48 часов важнее всего для стабилизации.",
+              "Эмоциональная поддержка семьи, без упрёков, сильно повышает шансы на восстановление. Для многих это подходящий момент обсудить долгосрочные шаги.",
+            ],
+          },
+          {
+            heading: "Кодирование — шаг к трезвости",
+            body: [
+              "Детоксикация решает непосредственное физическое состояние, но не зависимость. Для тех, кто хочет остаться без алкоголя, кодирование (после оценки и периода трезвости) может быть эффективным шагом, особенно вместе с психологической поддержкой.",
+            ],
+          },
+          {
+            heading: "Частые вопросы",
+            body: [
+              "### Сколько длится вывод из запоя?",
+              "Облегчение симптомов обычно начинается через несколько часов после капельницы, но полное восстановление может занять несколько дней — в зависимости от длительности употребления.",
+              "### Это конфиденциально?",
+              "Да, полностью. Все визиты дискретны, на дому, без осуждения и без разглашения информации.",
+              "### Можно ли сделать это самому дома, без врача?",
+              "Не рекомендуется. Неконтролируемая абстиненция может быть опасной. Наблюдение медсестры делает процесс безопасным и гораздо мягче.",
+            ],
+          },
+          {
+            heading: "Заключение",
+            body: [
+              "Вывод из запоя возможен и безопасен, когда сделан правильно, с медицинской поддержкой и без осуждения. Команда Medline приезжает на дом в Кишинёве, анонимно и 24/7. Если вам или близкому нужна помощь — позвоните, сделаем первый шаг вместе.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ghid-complet-codare-anti-alcool",
+    date: "2026-06-10",
+    readMinutes: 8,
+    content: {
+      ro: {
+        metaTitle: "Codarea Anti-Alcool: Ghid Complet — Cum Funcționează | Medline.md",
+        metaDescription:
+          "Ghid complet despre codarea anti-alcool: ce este, cum funcționează, ce condiții trebuie îndeplinite, mituri și cum menții rezultatul. La domiciliu, în Chișinău.",
+        keywords: "codare anti-alcool, codare alcool Chisinau, kodirovka ot alkogolya, cum functioneaza codarea, codare la domiciliu",
+        title: "Codarea anti-alcool: ghid complet",
+        excerpt: "Cum funcționează codarea, ce condiții sunt necesare, mituri frecvente și cum menții rezultatul pe termen lung.",
+        sections: [
+          {
+            body: [
+              "Codarea este una dintre cele mai cunoscute metode de sprijin în lupta cu dependența de alcool. În jurul ei există însă multe neclarități și mituri. Acest ghid îți explică, pe înțelesul tuturor, ce este codarea, cum funcționează și ce trebuie să știi înainte de a o face.",
+            ],
+          },
+          {
+            heading: "Ce este codarea",
+            body: [
+              "Codarea este o procedură care urmărește să întărească decizia persoanei de a nu mai consuma alcool. Funcționează cel mai bine ca parte a unei hotărâri personale ferme și, ideal, însoțită de sprijin psihologic.",
+              "Important: codarea nu este o „vrajă” și nu înlocuiește dorința reală de a renunța. Este un instrument care ajută, nu un substitut al voinței.",
+            ],
+          },
+          {
+            heading: "Cum funcționează",
+            body: [
+              "Codarea creează o asociere puternică între consumul de alcool și consecințe neplăcute, întărind astfel abținerea. Efectul psihologic este adesea la fel de important ca cel fizic.",
+              "Procedura se efectuează numai după o evaluare medicală și cu acordul informat al pacientului, în condiții sterile și sigure.",
+            ],
+          },
+          {
+            heading: "Condiții înainte de codare",
+            body: [
+              "### Perioada de abstinență",
+              "Înainte de codare este necesară o perioadă fără alcool (durata se stabilește în funcție de caz). Codarea nu se face dacă persoana este sub influența alcoolului.",
+              "### Evaluarea stării de sănătate",
+              "Se verifică dacă există contraindicații. De aceea evaluarea prealabilă este obligatorie — siguranța pacientului este pe primul loc.",
+            ],
+          },
+          {
+            heading: "Mituri frecvente despre codare",
+            body: [
+              "„Codarea vindecă singură dependența” — fals: este un sprijin, nu un leac magic. „O dată codat, gata pe viață” — depinde de metodă și de implicarea persoanei. „Funcționează și fără voință” — nu: dorința de a renunța rămâne esențială.",
+            ],
+          },
+          {
+            heading: "Codarea vs alte abordări",
+            body: [
+              "Codarea este un pas, nu întreaga soluție. Cele mai bune rezultate apar când este combinată cu detoxifiere prealabilă (dacă e cazul), sprijin psihologic și un mediu familial care încurajează.",
+            ],
+          },
+          {
+            heading: "După codare: cum menții rezultatul",
+            body: [
+              "Evită mediile și situațiile asociate cu băutul, sprijină-te pe familie și prieteni, și ia în calcul consilierea psihologică. Recăderile nu înseamnă eșec — sunt parte din proces, iar ajutorul rămâne disponibil.",
+            ],
+          },
+          {
+            heading: "Întrebări frecvente",
+            body: [
+              "### Cât trebuie să nu beau înainte?",
+              "Perioada de abstinență se stabilește la evaluare, în funcție de caz. Te informăm exact când ne contactezi.",
+              "### Se poate face la domiciliu?",
+              "Da, oferim codare la domiciliu, în Chișinău, discret și în condiții sigure, după evaluarea prealabilă.",
+            ],
+          },
+          {
+            heading: "Concluzie",
+            body: [
+              "Codarea poate fi un pas eficient spre o viață fără alcool, atunci când este făcută corect și însoțită de o decizie fermă. Echipa Medline te ghidează cu profesionalism și discreție. Contactează-ne pentru o evaluare și îți explicăm toți pașii.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Кодирование от Алкоголя: Полный Гид — Как Работает | Medline.md",
+        metaDescription:
+          "Полный гид по кодированию от алкоголя: что это, как работает, какие условия нужны, мифы и как сохранить результат. На дому, в Кишинёве.",
+        keywords: "кодирование от алкоголя, кодировка от алкоголя Кишинёв, как работает кодирование, кодирование на дому",
+        title: "Кодирование от алкоголя: полный гид",
+        excerpt: "Как работает кодирование, какие условия нужны, частые мифы и как сохранить результат надолго.",
+        sections: [
+          {
+            body: [
+              "Кодирование — один из самых известных методов поддержки в борьбе с алкогольной зависимостью. Вокруг него много неясностей и мифов. Этот гид простыми словами объясняет, что такое кодирование, как оно работает и что нужно знать перед процедурой.",
+            ],
+          },
+          {
+            heading: "Что такое кодирование",
+            body: [
+              "Кодирование — это процедура, которая укрепляет решение человека больше не употреблять алкоголь. Лучше всего работает как часть твёрдого личного решения и, в идеале, вместе с психологической поддержкой.",
+              "Важно: кодирование — не «заговор» и не заменяет реальное желание бросить. Это инструмент, который помогает, а не замена воли.",
+            ],
+          },
+          {
+            heading: "Как работает",
+            body: [
+              "Кодирование создаёт сильную связь между употреблением алкоголя и неприятными последствиями, тем самым укрепляя воздержание. Психологический эффект часто так же важен, как и физический.",
+              "Процедура проводится только после медицинской оценки и с информированного согласия пациента, в стерильных и безопасных условиях.",
+            ],
+          },
+          {
+            heading: "Условия перед кодированием",
+            body: [
+              "### Период трезвости",
+              "Перед кодированием нужен период без алкоголя (срок зависит от случая). Кодирование не проводится, если человек под воздействием алкоголя.",
+              "### Оценка состояния здоровья",
+              "Проверяется наличие противопоказаний. Поэтому предварительная оценка обязательна — безопасность пациента на первом месте.",
+            ],
+          },
+          {
+            heading: "Частые мифы о кодировании",
+            body: [
+              "«Кодирование само лечит зависимость» — неправда: это поддержка, а не волшебное лекарство. «Закодировался — и всё, на всю жизнь» — зависит от метода и вовлечённости человека. «Работает и без воли» — нет: желание бросить остаётся ключевым.",
+            ],
+          },
+          {
+            heading: "Кодирование и другие подходы",
+            body: [
+              "Кодирование — это шаг, а не всё решение. Лучшие результаты — когда оно сочетается с предварительной детоксикацией (если нужно), психологической поддержкой и поддерживающей семейной средой.",
+            ],
+          },
+          {
+            heading: "После кодирования: как сохранить результат",
+            body: [
+              "Избегайте мест и ситуаций, связанных с выпивкой, опирайтесь на семью и друзей и рассмотрите психологическое консультирование. Срывы не означают провал — это часть процесса, и помощь остаётся доступной.",
+            ],
+          },
+          {
+            heading: "Частые вопросы",
+            body: [
+              "### Сколько нельзя пить перед процедурой?",
+              "Период трезвости определяется при оценке, в зависимости от случая. Мы сообщим точно, когда вы свяжетесь с нами.",
+              "### Можно ли сделать на дому?",
+              "Да, мы предлагаем кодирование на дому в Кишинёве, анонимно и в безопасных условиях, после предварительной оценки.",
+            ],
+          },
+          {
+            heading: "Заключение",
+            body: [
+              "Кодирование может быть эффективным шагом к жизни без алкоголя, когда сделано правильно и подкреплено твёрдым решением. Команда Medline сопровождает вас профессионально и деликатно. Свяжитесь с нами для оценки — объясним все шаги.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "ce-sa-faci-daca-cineva-a-baut-prea-mult",
     date: "2026-06-20",
     readMinutes: 5,

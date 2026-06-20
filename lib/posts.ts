@@ -136,7 +136,11 @@ function sectionsToBlocks(
   const blocks: Block[] = [];
   for (const s of sections) {
     if (s.heading) blocks.push({ type: "heading", level: 2, text: s.heading });
-    for (const p of s.body) blocks.push({ type: "paragraph", text: p });
+    for (const p of s.body) {
+      if (p.startsWith("#### ")) blocks.push({ type: "heading", level: 4, text: p.slice(5) });
+      else if (p.startsWith("### ")) blocks.push({ type: "heading", level: 3, text: p.slice(4) });
+      else blocks.push({ type: "paragraph", text: p });
+    }
   }
   return blocks;
 }
