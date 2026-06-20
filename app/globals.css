@@ -77,6 +77,21 @@ body {
   animation: page-in 0.4s ease-out both;
 }
 
+/* Bara de progres a caruselului (se umple în timpul auto-play) */
+@keyframes carousel-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.carousel-progress {
+  transform-origin: left;
+  animation: carousel-progress linear both;
+}
+
 /* Pattern decorativ medical subtil */
 .bg-grid {
   background-image: radial-gradient(

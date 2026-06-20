@@ -69,21 +69,34 @@ export function HeroCarousel({ locale }: { locale: Locale }) {
       role="region"
       aria-label={locale === "ro" ? "Servicii post-alcool" : "Услуги после алкоголя"}
     >
+      {/* decor + textură */}
       <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-gold-500/10 blur-3xl" aria-hidden />
+      <div className="pointer-events-none absolute -left-24 bottom-0 h-60 w-60 rounded-full bg-brand-500/10 blur-3xl" aria-hidden />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.12]"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.5) 1px, transparent 0)",
+          backgroundSize: "22px 22px",
+        }}
+        aria-hidden
+      />
+      {/* linie aurie sus */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-400/70 to-transparent" aria-hidden />
 
-      <div className="relative h-40 sm:h-36">
+      <div className="relative h-44 sm:h-40">
         {slides.map((s, idx) => {
           const Icon = s.Icon;
           const active = idx === i;
           return (
             <div
               key={idx}
-              className={`absolute inset-0 flex items-center transition-opacity duration-700 ${
-                active ? "opacity-100" : "pointer-events-none opacity-0"
+              className={`absolute inset-0 flex items-center transition-all duration-700 ${
+                active ? "scale-100 opacity-100" : "pointer-events-none scale-[0.98] opacity-0"
               }`}
             >
               <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-3 px-6 text-center sm:flex-row sm:gap-6 sm:px-12 sm:text-left lg:px-16">
-                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold-500/20 text-gold-300 sm:h-16 sm:w-16">
+                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-gold-400/30 to-gold-600/20 text-gold-300 ring-1 ring-gold-400/40 shadow-lg shadow-black/20 sm:h-16 sm:w-16">
                   <Icon className="h-7 w-7 sm:h-8 sm:w-8" />
                 </span>
                 <div className="sm:flex-1">
@@ -128,7 +141,7 @@ export function HeroCarousel({ locale }: { locale: Locale }) {
       </button>
 
       {/* dots */}
-      <div className="absolute inset-x-0 bottom-3 flex justify-center gap-2">
+      <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -137,6 +150,15 @@ export function HeroCarousel({ locale }: { locale: Locale }) {
             className={`h-2 rounded-full transition-all ${idx === i ? "w-6 bg-gold-400" : "w-2 bg-white/40 hover:bg-white/60"}`}
           />
         ))}
+      </div>
+
+      {/* bară de progres auto-play */}
+      <div className="absolute inset-x-0 bottom-0 h-1 bg-white/10">
+        <div
+          key={i}
+          className="carousel-progress h-full bg-gradient-to-r from-gold-300 to-gold-500"
+          style={{ animationDuration: "4500ms", animationPlayState: paused ? "paused" : "running" }}
+        />
       </div>
     </div>
   );
