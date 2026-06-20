@@ -56,7 +56,7 @@ export function FloatingContact({ dict }: { dict: Dictionary }) {
   ];
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+    <div className="pointer-events-none fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
       {/* Canale (apar la deschidere) */}
       <div
         className={`flex flex-col items-end gap-3 transition-all duration-300 ${
@@ -92,7 +92,7 @@ export function FloatingContact({ dict }: { dict: Dictionary }) {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={dict.nav.contact}
-        className={`grid h-16 w-16 place-items-center rounded-full text-white shadow-xl shadow-brand-900/30 transition-all hover:scale-105 ${
+        className={`pointer-events-auto grid h-16 w-16 place-items-center rounded-full text-white shadow-xl shadow-brand-900/30 transition-all hover:scale-105 ${
           open ? "bg-slate-700" : "bg-brand-600"
         }`}
       >
