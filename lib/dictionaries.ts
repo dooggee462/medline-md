@@ -32,6 +32,7 @@ export type Dictionary = {
     blog: string;
     prices: string;
     video: string;
+    detox: string;
     home: string;
     book: string;
     call: string;
@@ -81,6 +82,15 @@ export type Dictionary = {
     title: string;
     subtitle: string;
     items: Service[];
+  };
+  alcohol: {
+    eyebrow: string;
+    title: string;
+    titleAccent: string;
+    subtitle: string;
+    points: string[];
+    items: { title: string; desc: string; slug: string }[];
+    cta: string;
   };
   how: {
     eyebrow: string;
@@ -162,6 +172,7 @@ const ro: Dictionary = {
     blog: "Blog",
     prices: "Servicii prestate",
     video: "Video",
+    detox: "Detoxifiere",
     home: "Acasă",
     book: "Programează-te",
     call: "Sună acum",
@@ -255,6 +266,36 @@ const ro: Dictionary = {
         desc: "Tratarea și pansarea plăgilor postoperatorii, escarelor și rănilor cronice.",
       },
     ],
+  },
+  alcohol: {
+    eyebrow: "Serviciu specializat · 24/7",
+    title: "Detoxifiere post-alcool la domiciliu",
+    titleAccent: "discret și anonim",
+    subtitle:
+      "Ajutor medical rapid pentru detoxifiere și refacere după consum de alcool — perfuzii, ieșire din binge și codare, în confortul și intimitatea casei tale. Fără judecăți, cu confidențialitate deplină.",
+    points: [
+      "Anonim și confidențial",
+      "Intervenție rapidă 24/7",
+      "Asistente medicale autorizate",
+    ],
+    items: [
+      {
+        title: "Tratament post-alcool",
+        desc: "Perfuzii de detoxifiere și rehidratare care ameliorează rapid starea de rău după consum.",
+        slug: "tratament-post-alcool",
+      },
+      {
+        title: "Tratament post-alcool LUX",
+        desc: "Pachet extins de refacere, cu complex de vitamine și îngrijire premium la domiciliu.",
+        slug: "tratament-post-alcool",
+      },
+      {
+        title: "Codare anti-alcool",
+        desc: "Procedură de codare împotriva dependenței de alcool, sigur, sub supraveghere medicală.",
+        slug: "codare-anti-alcool",
+      },
+    ],
+    cta: "Cere ajutor acum",
   },
   how: {
     eyebrow: "Simplu și rapid",
@@ -418,6 +459,7 @@ const ru: Dictionary = {
     blog: "Блог",
     prices: "Перечень услуг",
     video: "Видео",
+    detox: "Вывод из запоя",
     home: "Главная",
     book: "Записаться",
     call: "Позвонить",
@@ -511,6 +553,36 @@ const ru: Dictionary = {
         desc: "Обработка и перевязка послеоперационных, пролежневых и хронических ран.",
       },
     ],
+  },
+  alcohol: {
+    eyebrow: "Специализированная услуга · 24/7",
+    title: "Вывод из запоя на дому",
+    titleAccent: "анонимно и конфиденциально",
+    subtitle:
+      "Быстрая медицинская помощь для детоксикации и восстановления после алкоголя — капельницы, вывод из запоя и кодирование, в комфорте и приватности вашего дома. Без осуждения, с полной конфиденциальностью.",
+    points: [
+      "Анонимно и конфиденциально",
+      "Быстрый выезд 24/7",
+      "Сертифицированные медсёстры",
+    ],
+    items: [
+      {
+        title: "Лечение после алкоголя",
+        desc: "Детокс-капельницы и регидратация, которые быстро облегчают состояние после употребления.",
+        slug: "tratament-post-alcool",
+      },
+      {
+        title: "Лечение после алкоголя LUX",
+        desc: "Расширенный пакет восстановления с витаминным комплексом и премиум-уходом на дому.",
+        slug: "tratament-post-alcool",
+      },
+      {
+        title: "Кодирование от алкоголя",
+        desc: "Процедура кодирования от алкогольной зависимости, безопасно, под медицинским наблюдением.",
+        slug: "codare-anti-alcool",
+      },
+    ],
+    cta: "Получить помощь",
   },
   how: {
     eyebrow: "Просто и быстро",

@@ -9,6 +9,7 @@ import { Footer, FloatingContact } from "@/components/Footer";
 import { SERVICES } from "@/lib/content";
 import {
   SERVICE_ICONS,
+  IconDrop,
   IconWhatsApp,
   IconPhone,
   IconMail,
@@ -170,6 +171,82 @@ export default async function Home({
                   </Link>
                 );
               })}
+            </div>
+          </div>
+        </section>
+
+        {/* ───────────── DETOXIFIERE POST-ALCOOL ───────────── */}
+        <section id="alcool" className="scroll-mt-20 bg-gradient-to-br from-forest-800 to-forest-950 py-20 text-white lg:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-gold-400">
+                {dict.alcohol.eyebrow}
+              </p>
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                {dict.alcohol.title}{" "}
+                <span className="bg-gradient-to-r from-gold-300 to-gold-500 bg-clip-text text-transparent">
+                  {dict.alcohol.titleAccent}
+                </span>
+              </h2>
+              <p className="mt-4 text-lg leading-relaxed text-brand-50/90">
+                {dict.alcohol.subtitle}
+              </p>
+              <ul className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
+                {dict.alcohol.points.map((p) => (
+                  <li key={p} className="flex items-center gap-2 text-sm font-medium text-brand-50">
+                    <IconCheck className="h-4 w-4 text-gold-400" />
+                    {p}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-6">
+                <Link href={`/${locale}/detoxifiere`} className="inline-flex items-center gap-1 font-semibold text-gold-300 hover:text-gold-200">
+                  {locale === "ro" ? "Vezi pagina completă" : "Открыть страницу"}
+                  <span aria-hidden>→</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {dict.alcohol.items.map((item, i) => {
+                const Icon = [IconDrop, IconStar, IconShield][i] ?? IconDrop;
+                return (
+                  <Link
+                    key={item.title}
+                    href={`/${locale}/servicii/${item.slug}`}
+                    className="group rounded-2xl bg-white/10 p-7 ring-1 ring-white/10 backdrop-blur transition-all hover:-translate-y-1 hover:bg-white/15"
+                  >
+                    <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gold-500/20 text-gold-300">
+                      <Icon className="h-7 w-7" />
+                    </span>
+                    <h3 className="mt-5 text-xl font-bold text-white">{item.title}</h3>
+                    <p className="mt-2 leading-relaxed text-brand-50/80">{item.desc}</p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gold-300">
+                      {dict.ui.readMore}
+                      <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+
+            <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <a
+                href={`tel:${SITE.phoneRaw}`}
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-8 py-4 text-base font-bold text-forest-950 shadow-lg transition-transform hover:scale-[1.02]"
+              >
+                <IconPhone className="h-5 w-5" />
+                {dict.alcohol.cta}
+              </a>
+              <a
+                href={whatsappLink(dict.booking.waMessageIntro)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-8 py-4 text-base font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                <IconWhatsApp className="h-5 w-5" />
+                WhatsApp
+              </a>
             </div>
           </div>
         </section>
