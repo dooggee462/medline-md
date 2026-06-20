@@ -908,10 +908,212 @@ export type Article = {
   slug: string;
   date: string; // ISO
   readMinutes: number;
+  /** Link complet TikTok (opțional) — dacă e setat, clipul apare în articol */
+  tiktok?: string;
   content: Record<Locale, ArticleContent>;
 };
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "perfuzie-la-domiciliu-video",
+    date: "2026-06-19",
+    readMinutes: 1,
+    tiktok: "https://www.tiktok.com/@medlinehealth/video/7584846822665981206",
+    content: {
+      ro: {
+        metaTitle: "Perfuzie la Domiciliu — Video | Medline.md",
+        metaDescription:
+          "Vezi pe video cum montăm o perfuzie la domiciliu în Chișinău, în siguranță, de către asistentă medicală autorizată.",
+        keywords: "perfuzie la domiciliu video, perfuzie acasa Chisinau, montare perfuzie",
+        title: "Perfuzie la domiciliu — vezi cum decurge",
+        excerpt: "Urmărește cum montăm o perfuzie în confortul casei tale, în deplină siguranță.",
+        sections: [
+          {
+            body: [
+              "În acest clip vezi cum decurge o perfuzie la domiciliu, efectuată de o asistentă medicală Medline — rapid, igienic și fără stresul deplasării la spital.",
+              "Ai nevoie de o perfuzie acasă? Programează o vizită și ajungem la tine.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Капельница на Дому — Видео | Medline.md",
+        metaDescription:
+          "Посмотрите на видео, как мы ставим капельницу на дому в Кишинёве — безопасно, сертифицированной медсестрой.",
+        keywords: "капельница на дому видео, капельница дома Кишинёв, поставить капельницу",
+        title: "Капельница на дому — как это происходит",
+        excerpt: "Посмотрите, как мы ставим капельницу в комфорте вашего дома, безопасно.",
+        sections: [
+          {
+            body: [
+              "В этом ролике видно, как проходит капельница на дому от медсестры Medline — быстро, гигиенично и без стресса поездки в больницу.",
+              "Нужна капельница на дому? Запишитесь на визит — мы приедем к вам.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "injectie-intramusculara-video",
+    date: "2026-06-18",
+    readMinutes: 1,
+    tiktok: "https://www.tiktok.com/@medlinehealth/video/7566715799537192214",
+    content: {
+      ro: {
+        metaTitle: "Injecție Intramusculară la Domiciliu — Video | Medline.md",
+        metaDescription:
+          "Prezentare video: cum facem o injecție intramusculară la domiciliu, corect și fără durere inutilă.",
+        keywords: "injectie intramusculara video, injectie la domiciliu Chisinau, injectie i/m",
+        title: "Injecție intramusculară — prezentare",
+        excerpt: "Vezi cum administrăm o injecție intramusculară corect, la tine acasă.",
+        sections: [
+          {
+            body: [
+              "Clip demonstrativ cu administrarea unei injecții intramusculare de către asistenta Medline — tehnică corectă, materiale sterile, disconfort minim.",
+              "Programează o injecție la domiciliu — venim la ora potrivită pentru tine.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Внутримышечная Инъекция на Дому — Видео | Medline.md",
+        metaDescription:
+          "Видео-презентация: как мы делаем внутримышечную инъекцию на дому — правильно и без лишней боли.",
+        keywords: "внутримышечная инъекция видео, укол на дому Кишинёв, инъекция в/м",
+        title: "Внутримышечная инъекция — презентация",
+        excerpt: "Посмотрите, как мы правильно делаем внутримышечную инъекцию у вас дома.",
+        sections: [
+          {
+            body: [
+              "Демонстрационный ролик с внутримышечной инъекцией от медсестры Medline — правильная техника, стерильные материалы, минимум дискомфорта.",
+              "Запишитесь на инъекцию на дому — приедем в удобное для вас время.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "masaj-asistenta-medicala-video",
+    date: "2026-06-17",
+    readMinutes: 1,
+    tiktok: "https://www.tiktok.com/@medlinehealth/video/7581119244792777987",
+    content: {
+      ro: {
+        metaTitle: "Masaj cu Asistentă Medicală la Domiciliu — Video | Medline.md",
+        metaDescription:
+          "Vezi pe video serviciul de masaj efectuat de asistenta medicală Medline, la domiciliu, în Chișinău.",
+        keywords: "masaj la domiciliu Chisinau, masaj asistenta medicala, masaj acasa",
+        title: "Masaj cu asistentă medicală",
+        excerpt: "Relaxare și recuperare prin masaj, efectuat profesional la tine acasă.",
+        sections: [
+          {
+            body: [
+              "În acest clip vezi serviciul de masaj realizat de asistenta medicală Medline, direct la domiciliu — util pentru relaxare și recuperare.",
+              "Vrei un masaj la domiciliu? Contactează-ne pentru o programare.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Массаж от Медсестры на Дому — Видео | Medline.md",
+        metaDescription:
+          "Посмотрите на видео услугу массажа от медсестры Medline на дому в Кишинёве.",
+        keywords: "массаж на дому Кишинёв, массаж медсестра, массаж дома",
+        title: "Массаж от медсестры",
+        excerpt: "Расслабление и восстановление через массаж, профессионально у вас дома.",
+        sections: [
+          {
+            body: [
+              "В этом ролике — услуга массажа от медсестры Medline прямо на дому, для расслабления и восстановления.",
+              "Хотите массаж на дому? Свяжитесь с нами для записи.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "tratament-post-alcool-lux-video",
+    date: "2026-06-16",
+    readMinutes: 1,
+    tiktok: "https://www.tiktok.com/@medlinehealth/video/7583404836935372034",
+    content: {
+      ro: {
+        metaTitle: "Tratament Post-Alcool LUX la Domiciliu — Video | Medline.md",
+        metaDescription:
+          "Vezi pe video tratamentul post-alcool LUX la domiciliu: detoxifiere și refacere, discret și în siguranță.",
+        keywords: "tratament post-alcool lux, iesire din binge Chisinau, detoxifiere alcool video",
+        title: "Tratament post-alcool LUX",
+        excerpt: "Pachetul LUX de detoxifiere și refacere după alcool, la domiciliu, discret.",
+        sections: [
+          {
+            body: [
+              "Clip cu tratamentul post-alcool LUX Medline — perfuzii de detoxifiere și refacere a organismului, în confortul și intimitatea propriei case.",
+              "Ai nevoie de ajutor rapid și discret? Sună-ne — venim 24/7.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Лечение после Алкоголя LUX на Дому — Видео | Medline.md",
+        metaDescription:
+          "Посмотрите на видео лечение после алкоголя LUX на дому: детокс и восстановление, анонимно и безопасно.",
+        keywords: "лечение после алкоголя lux, вывод из запоя Кишинёв, детокс алкоголь видео",
+        title: "Лечение после алкоголя LUX",
+        excerpt: "Пакет LUX для детокса и восстановления после алкоголя, на дому, анонимно.",
+        sections: [
+          {
+            body: [
+              "Ролик о лечении после алкоголя LUX от Medline — детокс-капельницы и восстановление организма в комфорте и приватности дома.",
+              "Нужна быстрая и анонимная помощь? Звоните — работаем 24/7.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "interviu-recenzii-video",
+    date: "2026-06-15",
+    readMinutes: 1,
+    tiktok: "https://www.tiktok.com/@medlinehealth/video/7574534105031806230",
+    content: {
+      ro: {
+        metaTitle: "Interviu & Recenzii Pacienți — Video | Medline.md",
+        metaDescription:
+          "Rubrica de interviu și recenzii Medline: ce spun pacienții despre asistența medicală la domiciliu.",
+        keywords: "recenzii Medline, pareri asistenta medicala domiciliu, interviu pacienti",
+        title: "Rubrica interviu & recenzii",
+        excerpt: "Ascultă direct de la pacienții noștri cum a fost experiența cu Medline.",
+        sections: [
+          {
+            body: [
+              "În rubrica noastră de interviu și recenzii, pacienții povestesc experiența reală cu serviciile Medline la domiciliu.",
+              "Vrei să faci parte din echipa de pacienți mulțumiți? Programează o vizită.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Интервью и Отзывы Пациентов — Видео | Medline.md",
+        metaDescription:
+          "Рубрика интервью и отзывов Medline: что говорят пациенты о медицинской помощи на дому.",
+        keywords: "отзывы Medline, мнения о медпомощи на дому, интервью пациентов",
+        title: "Рубрика интервью и отзывы",
+        excerpt: "Услышьте напрямую от наших пациентов, каким был опыт с Medline.",
+        sections: [
+          {
+            body: [
+              "В нашей рубрике интервью и отзывов пациенты рассказывают реальный опыт с услугами Medline на дому.",
+              "Хотите присоединиться к довольным пациентам? Запишитесь на визит.",
+            ],
+          },
+        ],
+      },
+    },
+  },
   {
     slug: "avantajele-asistentei-medicale-la-domiciliu",
     date: "2026-05-12",
@@ -1197,16 +1399,7 @@ export function getArticle(slug: string): Article | undefined {
   return ARTICLES.find((a) => a.slug === slug);
 }
 
-/* ────────────────────────────────────────────
-   TIKTOK — clipuri afișate pe pagina /video
-   Adaugă aici link-urile complete ale clipurilor TikTok.
-   Format: "https://www.tiktok.com/@medline/video/1234567890123456789"
-   ──────────────────────────────────────────── */
-
-export const TIKTOK_VIDEOS: string[] = [
-  // "https://www.tiktok.com/@medline/video/0000000000000000000",
-];
-
+/** Extrage ID-ul clipului dintr-un link TikTok */
 export function tiktokVideoId(url: string): string {
   return url.match(/video\/(\d+)/)?.[1] ?? "";
 }

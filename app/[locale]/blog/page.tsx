@@ -81,10 +81,22 @@ export default async function BlogPage({
                     href={`/${locale}/blog/${art.slug}`}
                     className="group flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-900/5"
                   >
-                    <div className="flex h-40 items-center justify-center bg-gradient-to-br from-brand-500 to-brand-700 text-white">
-                      <svg viewBox="0 0 24 24" className="h-14 w-14 opacity-90" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M12 4v16M4 12h16" />
-                      </svg>
+                    <div className="relative flex h-40 items-center justify-center bg-gradient-to-br from-brand-500 to-brand-700 text-white">
+                      {art.tiktok ? (
+                        <svg viewBox="0 0 24 24" className="h-16 w-16 opacity-95" fill="currentColor">
+                          <circle cx="12" cy="12" r="11" fill="rgba(255,255,255,0.15)" />
+                          <path d="M10 8.5v7l6-3.5-6-3.5Z" />
+                        </svg>
+                      ) : (
+                        <svg viewBox="0 0 24 24" className="h-14 w-14 opacity-90" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 4v16M4 12h16" />
+                        </svg>
+                      )}
+                      {art.tiktok && (
+                        <span className="absolute right-3 top-3 rounded-full bg-black/40 px-2.5 py-1 text-xs font-bold backdrop-blur">
+                          ▶ Video
+                        </span>
+                      )}
                     </div>
                     <div className="flex flex-1 flex-col p-6">
                       <time className="text-xs font-medium text-brand-600">

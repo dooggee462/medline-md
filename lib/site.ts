@@ -59,7 +59,7 @@ export const SITE = {
   social: {
     facebook: "https://facebook.com/MedLine",
     instagram: "https://instagram.com/medline_expert",
-    tiktok: "https://tiktok.com/@medline",
+    tiktok: "https://www.tiktok.com/@medlinehealth",
   },
 
   /** An înființare (pentru schema + footer) */

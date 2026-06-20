@@ -9,6 +9,7 @@ import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CtaBand } from "@/components/CtaBand";
 import { ReadingProgress, ShareButtons } from "@/components/ShareButtons";
+import { TikTokEmbed } from "@/components/TikTokEmbed";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) =>
@@ -104,6 +105,11 @@ export default async function ArticlePage({
 
         <section className="py-10 lg:py-14">
           <article className="mx-auto max-w-3xl space-y-6 px-4 sm:px-6 lg:px-8">
+            {art.tiktok && (
+              <div className="mb-4">
+                <TikTokEmbed url={art.tiktok} />
+              </div>
+            )}
             {c.sections.map((sec, i) => (
               <div key={i}>
                 {sec.heading && (
