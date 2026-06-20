@@ -13,6 +13,29 @@ import { TikTokEmbed } from "@/components/TikTokEmbed";
 
 export const dynamic = "force-dynamic";
 
+/** Transformă textul cu sintaxă [etichetă](/link) în noduri cu linkuri */
+function RichText({ text }: { text: string }) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g);
+  return (
+    <>
+      {parts.map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+        if (!m) return part;
+        const [, label, href] = m;
+        return href.startsWith("/") ? (
+          <Link key={i} href={href} className="font-semibold text-brand-700 hover:underline">
+            {label}
+          </Link>
+        ) : (
+          <a key={i} href={href} className="font-semibold text-brand-700 hover:underline">
+            {label}
+          </a>
+        );
+      })}
+    </>
+  );
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -117,7 +140,7 @@ export default async function ArticlePage({
                   return <h3 key={i} className="mt-6 text-xl font-bold text-slate-900">{b.text}</h3>;
                 return <h4 key={i} className="mt-5 text-lg font-semibold text-slate-900">{b.text}</h4>;
               }
-              return <p key={i} className="text-lg leading-relaxed text-slate-700">{b.text}</p>;
+              return <p key={i} className="text-lg leading-relaxed text-slate-700"><RichText text={b.text} /></p>;
             })}
 
             <div className="flex flex-col gap-6 border-t border-slate-100 pt-8 sm:flex-row sm:items-center sm:justify-between">

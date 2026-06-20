@@ -867,7 +867,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Codarea — pasul spre abstinență",
             body: [
-              "Detoxifierea rezolvă starea fizică imediată, dar nu și dependența. Pentru cei care vor să rămână fără alcool, codarea (după o evaluare și o perioadă de abstinență) poate fi un pas eficient, mai ales împreună cu sprijin psihologic.",
+              "Detoxifierea rezolvă starea fizică imediată, dar nu și dependența. Pentru cei care vor să rămână fără alcool, [codarea](/ro/servicii/codare-anti-alcool) (după o evaluare și o perioadă de abstinență) poate fi un pas eficient, mai ales împreună cu sprijin psihologic.",
             ],
           },
           {
@@ -945,7 +945,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Кодирование — шаг к трезвости",
             body: [
-              "Детоксикация решает непосредственное физическое состояние, но не зависимость. Для тех, кто хочет остаться без алкоголя, кодирование (после оценки и периода трезвости) может быть эффективным шагом, особенно вместе с психологической поддержкой.",
+              "Детоксикация решает непосредственное физическое состояние, но не зависимость. Для тех, кто хочет остаться без алкоголя, [кодирование](/ru/servicii/codare-anti-alcool) (после оценки и периода трезвости) может быть эффективным шагом, особенно вместе с психологической поддержкой.",
             ],
           },
           {
@@ -1153,7 +1153,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Cum ajută o perfuzie de detoxifiere la domiciliu",
             body: [
-              "După ce pericolul imediat a trecut, o perfuzie de detoxifiere ajută organismul să se refacă mai repede: rehidratare, vitamine și substanțe care reduc greața, tremurăturile și durerile de cap.",
+              "După ce pericolul imediat a trecut, o [perfuzie de detoxifiere](/ro/detoxifiere) ajută organismul să se refacă mai repede: rehidratare, vitamine și substanțe care reduc greața, tremurăturile și durerile de cap.",
               "Echipa Medline vine la domiciliu, în Chișinău, discret și 24/7. Sună-ne și te ajutăm să-ți revii în siguranță.",
             ],
           },
@@ -1189,7 +1189,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Как помогает капельница на дому",
             body: [
-              "Когда непосредственная опасность миновала, детокс-капельница помогает организму быстрее восстановиться: регидратация, витамины и вещества, снижающие тошноту, тремор и головную боль.",
+              "Когда непосредственная опасность миновала, [детокс-капельница](/ru/detoxifiere) помогает организму быстрее восстановиться: регидратация, витамины и вещества, снижающие тошноту, тремор и головную боль.",
               "Команда Medline приезжает на дом в Кишинёве, анонимно и 24/7. Позвоните — поможем восстановиться безопасно.",
             ],
           },
