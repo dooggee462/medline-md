@@ -78,7 +78,23 @@ export default async function Home({
                 </a>
               </div>
 
-              <dl className="mt-12 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
+              {/* Banner detoxifiere/codare — vizibil în hero */}
+              <Link
+                href={`/${locale}/detoxifiere`}
+                className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-gold-400/50 bg-gradient-to-br from-forest-800 to-forest-950 px-5 py-3.5 text-white shadow-lg transition-transform hover:scale-[1.01]"
+              >
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gold-500/20 text-gold-300">
+                  <IconDrop className="h-5 w-5" />
+                </span>
+                <span>
+                  <span className="block font-bold text-gold-300">{dict.alcohol.title}</span>
+                  <span className="block text-sm text-brand-100">
+                    {dict.alcohol.titleAccent} · 24/7 <span aria-hidden>→</span>
+                  </span>
+                </span>
+              </Link>
+
+              <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
                 {dict.hero.stats.map((s) => (
                   <div key={s.label}>
                     <dt className="text-3xl font-extrabold text-brand-700">
@@ -107,19 +123,23 @@ export default async function Home({
                   </div>
 
                   <div className="mt-8 space-y-3">
-                    {dict.services.items.slice(0, 4).map((s) => {
-                      const Icon = SERVICE_ICONS[s.icon] ?? IconCheck;
-                      return (
-                        <div
-                          key={s.title}
-                          className="flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3 backdrop-blur"
-                        >
-                          <Icon className="h-5 w-5 shrink-0 text-brand-100" />
-                          <span className="text-sm font-medium">{s.title}</span>
-                          <IconCheck className="ml-auto h-4 w-4 text-brand-200" />
-                        </div>
-                      );
-                    })}
+                    {[
+                      { Icon: IconDrop, label: dict.alcohol.items[0].title, hot: true },
+                      { Icon: IconShield, label: dict.alcohol.items[2].title, hot: true },
+                      { Icon: SERVICE_ICONS.syringe, label: dict.services.items[1].title, hot: false },
+                      { Icon: SERVICE_ICONS.heart, label: dict.services.items[2].title, hot: false },
+                    ].map(({ Icon, label, hot }) => (
+                      <div
+                        key={label}
+                        className={`flex items-center gap-3 rounded-xl px-4 py-3 backdrop-blur ${
+                          hot ? "bg-gold-500/15 ring-1 ring-gold-400/30" : "bg-white/10"
+                        }`}
+                      >
+                        <Icon className={`h-5 w-5 shrink-0 ${hot ? "text-gold-300" : "text-brand-100"}`} />
+                        <span className="text-sm font-medium">{label}</span>
+                        <IconCheck className={`ml-auto h-4 w-4 ${hot ? "text-gold-300" : "text-brand-200"}`} />
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
