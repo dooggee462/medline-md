@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
   // Căi statice (relative la locale)
-  const staticPaths = ["", "/servicii", "/preturi", "/despre-noi", "/blog", "/contact"];
+  const staticPaths = ["", "/servicii", "/preturi", "/video", "/despre-noi", "/blog", "/contact"];
 
   for (const locale of LOCALES) {
     for (const p of staticPaths) {

@@ -31,6 +31,7 @@ export type Dictionary = {
     about: string;
     blog: string;
     prices: string;
+    video: string;
     home: string;
     book: string;
     call: string;
@@ -61,6 +62,10 @@ export type Dictionary = {
     cookieText: string;
     cookieAccept: string;
     cookieReject: string;
+    videoTitle: string;
+    videoSubtitle: string;
+    videoEmpty: string;
+    videoFollow: string;
   };
   hero: {
     badge: string;
@@ -156,6 +161,7 @@ const ro: Dictionary = {
     about: "Despre noi",
     blog: "Blog",
     prices: "Servicii prestate",
+    video: "Video",
     home: "Acasă",
     book: "Programează-te",
     call: "Sună acum",
@@ -190,6 +196,12 @@ const ro: Dictionary = {
       "Folosim cookie-uri pentru a îmbunătăți experiența pe site. Continuând navigarea, ești de acord cu utilizarea lor.",
     cookieAccept: "Accept",
     cookieReject: "Refuz",
+    videoTitle: "Videoclipuri Medline",
+    videoSubtitle:
+      "Vezi cum lucrăm și ce înseamnă îngrijirea la domiciliu — clipuri direct de pe TikTok-ul nostru.",
+    videoEmpty:
+      "Clipurile apar aici în curând. Între timp, urmărește-ne pe TikTok pentru toate videoclipurile.",
+    videoFollow: "Vezi-ne pe TikTok",
   },
   hero: {
     badge: "Intervenție 24/7 în Chișinău și împrejurimi",
@@ -405,6 +417,7 @@ const ru: Dictionary = {
     about: "О нас",
     blog: "Блог",
     prices: "Перечень услуг",
+    video: "Видео",
     home: "Главная",
     book: "Записаться",
     call: "Позвонить",
@@ -439,6 +452,12 @@ const ru: Dictionary = {
       "Мы используем файлы cookie для улучшения работы сайта. Продолжая просмотр, вы соглашаетесь с их использованием.",
     cookieAccept: "Принять",
     cookieReject: "Отклонить",
+    videoTitle: "Видео Medline",
+    videoSubtitle:
+      "Посмотрите, как мы работаем и что такое уход на дому — ролики прямо из нашего TikTok.",
+    videoEmpty:
+      "Ролики скоро появятся здесь. А пока подписывайтесь на нас в TikTok, чтобы увидеть все видео.",
+    videoFollow: "Мы в TikTok",
   },
   hero: {
     badge: "Выезд 24/7 по Кишинёву и окрестностям",

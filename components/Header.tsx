@@ -28,6 +28,7 @@ export function Header({
     { href: `/${locale}`, label: dict.nav.home },
     { href: `/${locale}/servicii`, label: dict.nav.services },
     { href: `/${locale}/preturi`, label: dict.nav.prices },
+    { href: `/${locale}/video`, label: dict.nav.video },
     { href: `/${locale}/despre-noi`, label: dict.nav.about },
     { href: `/${locale}/blog`, label: dict.nav.blog },
     { href: `/${locale}/contact`, label: dict.nav.contact },

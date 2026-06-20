@@ -1198,6 +1198,20 @@ export function getArticle(slug: string): Article | undefined {
 }
 
 /* ────────────────────────────────────────────
+   TIKTOK — clipuri afișate pe pagina /video
+   Adaugă aici link-urile complete ale clipurilor TikTok.
+   Format: "https://www.tiktok.com/@medline/video/1234567890123456789"
+   ──────────────────────────────────────────── */
+
+export const TIKTOK_VIDEOS: string[] = [
+  // "https://www.tiktok.com/@medline/video/0000000000000000000",
+];
+
+export function tiktokVideoId(url: string): string {
+  return url.match(/video\/(\d+)/)?.[1] ?? "";
+}
+
+/* ────────────────────────────────────────────
    LISTA DE SERVICII PRESTATE (fără prețuri afișate)
    Editează lista aici. Prețurile se comunică la contact.
    ──────────────────────────────────────────── */
