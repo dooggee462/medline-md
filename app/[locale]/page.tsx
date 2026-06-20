@@ -137,44 +137,6 @@ export default async function Home({
           </div>
         </section>
 
-        {/* ───────────── SERVICII ───────────── */}
-        <section id="servicii" className="scroll-mt-20 py-20 lg:py-28">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <SectionHead
-              eyebrow={dict.services.eyebrow}
-              title={dict.services.title}
-              subtitle={dict.services.subtitle}
-            />
-            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {SERVICES.map((s) => {
-                const Icon = SERVICE_ICONS[s.icon] ?? IconCheck;
-                const c = s.content[locale];
-                return (
-                  <Link
-                    key={s.slug}
-                    href={`/${locale}/servicii/${s.slug}`}
-                    className="group rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-900/5"
-                  >
-                    <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-600 group-hover:text-white">
-                      <Icon className="h-7 w-7" />
-                    </span>
-                    <h3 className="mt-5 text-xl font-bold text-slate-900">
-                      {c.h1}
-                    </h3>
-                    <p className="mt-2 leading-relaxed text-slate-600">
-                      {c.short}
-                    </p>
-                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-600">
-                      {dict.ui.readMore}
-                      <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
         {/* ───────────── DETOXIFIERE POST-ALCOOL ───────────── */}
         <section id="alcool" className="scroll-mt-20 bg-gradient-to-br from-forest-800 to-forest-950 py-20 text-white lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -247,6 +209,44 @@ export default async function Home({
                 <IconWhatsApp className="h-5 w-5" />
                 WhatsApp
               </a>
+            </div>
+          </div>
+        </section>
+
+        {/* ───────────── SERVICII ───────────── */}
+        <section id="servicii" className="scroll-mt-20 py-20 lg:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <SectionHead
+              eyebrow={dict.services.eyebrow}
+              title={dict.services.title}
+              subtitle={dict.services.subtitle}
+            />
+            <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {SERVICES.map((s) => {
+                const Icon = SERVICE_ICONS[s.icon] ?? IconCheck;
+                const c = s.content[locale];
+                return (
+                  <Link
+                    key={s.slug}
+                    href={`/${locale}/servicii/${s.slug}`}
+                    className="group rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-900/5"
+                  >
+                    <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-600 group-hover:text-white">
+                      <Icon className="h-7 w-7" />
+                    </span>
+                    <h3 className="mt-5 text-xl font-bold text-slate-900">
+                      {c.h1}
+                    </h3>
+                    <p className="mt-2 leading-relaxed text-slate-600">
+                      {c.short}
+                    </p>
+                    <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-600">
+                      {dict.ui.readMore}
+                      <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
+                    </span>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
