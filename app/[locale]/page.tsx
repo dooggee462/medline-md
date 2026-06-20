@@ -43,8 +43,8 @@ export default async function Home({
           <div className="bg-grid absolute inset-0 opacity-60" aria-hidden />
           <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl" aria-hidden />
 
-          {/* Carusel de prezentare (servicii post-alcool) */}
-          <div className="relative mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8">
+          {/* Carusel de prezentare (servicii post-alcool) — pe toată lățimea */}
+          <div className="relative">
             <HeroCarousel locale={locale} />
           </div>
 
