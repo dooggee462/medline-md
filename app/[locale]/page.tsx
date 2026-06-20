@@ -78,19 +78,22 @@ export default async function Home({
                 </a>
               </div>
 
-              {/* Banner detoxifiere/codare — vizibil în hero */}
+              {/* Banner detoxifiere/codare — elegant, vizibil în hero */}
               <Link
                 href={`/${locale}/detoxifiere`}
-                className="mt-6 inline-flex items-center gap-3 rounded-2xl border border-gold-400/50 bg-gradient-to-br from-forest-800 to-forest-950 px-5 py-3.5 text-white shadow-lg transition-transform hover:scale-[1.01]"
+                className="group mt-6 flex max-w-md items-center gap-4 rounded-2xl border border-gold-300/70 bg-white px-5 py-4 shadow-md transition-all hover:border-gold-400 hover:shadow-lg"
               >
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gold-500/20 text-gold-300">
-                  <IconDrop className="h-5 w-5" />
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 text-white shadow-sm">
+                  <IconDrop className="h-6 w-6" />
                 </span>
-                <span>
-                  <span className="block font-bold text-gold-300">{dict.alcohol.title}</span>
-                  <span className="block text-sm text-brand-100">
-                    {dict.alcohol.titleAccent} · 24/7 <span aria-hidden>→</span>
+                <span className="flex-1">
+                  <span className="block font-bold text-slate-900">{dict.alcohol.title}</span>
+                  <span className="block text-sm text-slate-500">
+                    {dict.alcohol.titleAccent} · 24/7
                   </span>
+                </span>
+                <span aria-hidden className="text-lg font-bold text-gold-600 transition-transform group-hover:translate-x-0.5">
+                  →
                 </span>
               </Link>
 
