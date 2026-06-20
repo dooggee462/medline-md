@@ -6,6 +6,7 @@ import { Header } from "@/components/Header";
 import { BookingForm } from "@/components/BookingForm";
 import { JsonLd } from "@/components/JsonLd";
 import { Footer, FloatingContact } from "@/components/Footer";
+import { HeroCarousel } from "@/components/HeroCarousel";
 import { SERVICES } from "@/lib/content";
 import {
   SERVICE_ICONS,
@@ -41,17 +42,15 @@ export default async function Home({
         <section className="relative overflow-hidden bg-gradient-to-b from-brand-50/70 via-white to-white">
           <div className="bg-grid absolute inset-0 opacity-60" aria-hidden />
           <div className="absolute -right-24 -top-24 h-96 w-96 rounded-full bg-brand-200/40 blur-3xl" aria-hidden />
-          <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:py-24 lg:px-8">
-            <div className="animate-fade-up">
-              <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-brand-700 shadow-sm">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-brand-500" />
-                </span>
-                {dict.hero.badge}
-              </span>
 
-              <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+          {/* Carusel de prezentare (servicii post-alcool) */}
+          <div className="relative mx-auto max-w-7xl px-4 pt-10 sm:px-6 lg:px-8">
+            <HeroCarousel locale={locale} />
+          </div>
+
+          <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-10 sm:px-6 lg:grid-cols-2 lg:gap-8 lg:pb-24 lg:pt-12 lg:px-8">
+            <div className="animate-fade-up">
+              <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
                 {dict.hero.title}{" "}
                 <span className="bg-gradient-to-r from-brand-600 to-brand-500 bg-clip-text text-transparent">
                   {dict.hero.titleAccent}
@@ -77,25 +76,6 @@ export default async function Home({
                   {dict.hero.ctaSecondary}
                 </a>
               </div>
-
-              {/* Banner detoxifiere/codare — elegant, vizibil în hero */}
-              <Link
-                href={`/${locale}/detoxifiere`}
-                className="group mt-6 flex max-w-md items-center gap-4 rounded-2xl border border-gold-300/70 bg-white px-5 py-4 shadow-md transition-all hover:border-gold-400 hover:shadow-lg"
-              >
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 text-white shadow-sm">
-                  <IconDrop className="h-6 w-6" />
-                </span>
-                <span className="flex-1">
-                  <span className="block font-bold text-slate-900">{dict.alcohol.title}</span>
-                  <span className="block text-sm text-slate-500">
-                    {dict.alcohol.titleAccent} · 24/7
-                  </span>
-                </span>
-                <span aria-hidden className="text-lg font-bold text-gold-600 transition-transform group-hover:translate-x-0.5">
-                  →
-                </span>
-              </Link>
 
               <dl className="mt-10 grid grid-cols-2 gap-x-6 gap-y-6 sm:grid-cols-4">
                 {dict.hero.stats.map((s) => (
