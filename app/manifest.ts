@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: `${SITE.legalName} — Asistență medicală la domiciliu`,
     short_name: SITE.name,
     description:
-      "Asistență medicală profesională la domiciliu în Chișinău și Moldova.",
+      "Asistență medicală profesională la domiciliu în Chișinău.",
     start_url: "/ro",
     display: "standalone",
     background_color: "#ffffff",

@@ -156,10 +156,10 @@ const ro: Dictionary = {
     title:
       "Medline.md — Asistență Medicală la Domiciliu în Chișinău | Îngrijire 24/7",
     description:
-      "Asistență medicală profesională la domiciliu în Chișinău și toată Moldova: perfuzii, injecții, îngrijirea bolnavilor, consult medical, prelevare analize. Programare rapidă, asistente calificate, intervenție 24/7.",
+      "Asistență medicală profesională la domiciliu în Chișinău: perfuzii, injecții, îngrijirea bolnavilor, consult medical, prelevare analize. Programare rapidă, asistente calificate, intervenție 24/7.",
     keywords:
-      "asistenta medicala la domiciliu, ingrijire bolnavi la domiciliu Chisinau, perfuzii la domiciliu, injectii la domiciliu, asistenta medicala Moldova, consult medical domiciliu, prelevare analize domiciliu",
-    ogAlt: "Medline — asistență medicală la domiciliu în Moldova",
+      "asistenta medicala la domiciliu, ingrijire bolnavi la domiciliu Chisinau, perfuzii la domiciliu, injectii la domiciliu, asistenta medicala Chisinau, consult medical domiciliu, prelevare analize domiciliu",
+    ogAlt: "Medline — asistență medicală la domiciliu în Chișinău",
   },
   nav: {
     services: "Servicii",
@@ -217,7 +217,7 @@ const ro: Dictionary = {
   hero: {
     badge: "Intervenție 24/7 în Chișinău și împrejurimi",
     title: "Asistență medicală la domiciliu",
-    titleAccent: "în Chișinău și toată Moldova",
+    titleAccent: "în Chișinău",
     subtitle:
       "Echipa Medline aduce îngrijirea medicală profesională direct la tine acasă: perfuzii, injecții, îngrijirea bolnavilor și consult medical, cu asistente calificate și empatie.",
     ctaPrimary: "Programează o vizită",
@@ -379,7 +379,7 @@ const ro: Dictionary = {
     items: [
       {
         q: "În ce zone oferiți servicii?",
-        a: "Acoperim Chișinăul și localitățile din apropiere. Pentru alte regiuni din Moldova, contactează-ne și găsim o soluție.",
+        a: "Acoperim Chișinăul și localitățile din apropiere. Momentan oferim servicii doar în Chișinău și împrejurimi.",
       },
       {
         q: "Cât de repede puteți ajunge?",
@@ -443,10 +443,10 @@ const ru: Dictionary = {
     title:
       "Medline.md — Медицинская помощь на дому в Кишинёве | Уход 24/7",
     description:
-      "Профессиональная медицинская помощь на дому в Кишинёве и по всей Молдове: капельницы, инъекции, уход за больными, медицинский осмотр, забор анализов. Быстрая запись, квалифицированные медсёстры, выезд 24/7.",
+      "Профессиональная медицинская помощь на дому в Кишинёве: капельницы, инъекции, уход за больными, медицинский осмотр, забор анализов. Быстрая запись, квалифицированные медсёстры, выезд 24/7.",
     keywords:
-      "медицинская помощь на дому, уход за больными на дому Кишинёв, капельницы на дому, инъекции на дому, медсестра на дом Молдова, врач на дом, забор анализов на дому",
-    ogAlt: "Medline — медицинская помощь на дому в Молдове",
+      "медицинская помощь на дому, уход за больными на дому Кишинёв, капельницы на дому, инъекции на дому, медсестра на дом Кишинёв, врач на дом, забор анализов на дому",
+    ogAlt: "Medline — медицинская помощь на дому в Кишинёве",
   },
   nav: {
     services: "Услуги",
@@ -504,7 +504,7 @@ const ru: Dictionary = {
   hero: {
     badge: "Выезд 24/7 по Кишинёву и окрестностям",
     title: "Медицинская помощь на дому",
-    titleAccent: "в Кишинёве и по всей Молдове",
+    titleAccent: "в Кишинёве",
     subtitle:
       "Команда Medline привозит профессиональную медицинскую помощь прямо к вам домой: капельницы, инъекции, уход за больными и медосмотр — с квалифицированными медсёстрами и вниманием.",
     ctaPrimary: "Записаться на визит",
@@ -666,7 +666,7 @@ const ru: Dictionary = {
     items: [
       {
         q: "В каких районах вы работаете?",
-        a: "Мы обслуживаем Кишинёв и близлежащие населённые пункты. Для других регионов Молдовы свяжитесь с нами — найдём решение.",
+        a: "Мы обслуживаем Кишинёв и близлежащие населённые пункты. Сейчас мы работаем только в Кишинёве и пригородах.",
       },
       {
         q: "Как быстро вы можете приехать?",

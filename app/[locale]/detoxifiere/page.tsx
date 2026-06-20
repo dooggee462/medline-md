@@ -25,7 +25,7 @@ const DETOX: Record<
     metaDescription:
       "Detoxifiere post-alcool la domiciliu în Chișinău: perfuzii de detoxifiere, ieșire din binge, complex de vitamine și codare. Discret, anonim, 24/7. Sună acum.",
     keywords:
-      "detoxifiere post-alcool, iesire din binge Chisinau, detoxifiere alcool la domiciliu, vivod iz zapoya Chisinau, perfuzie dupa alcool, codare anti-alcool Moldova",
+      "detoxifiere post-alcool, iesire din binge Chisinau, detoxifiere alcool la domiciliu, vivod iz zapoya Chisinau, perfuzie dupa alcool, codare anti-alcool Chisinau",
     sections: [
       {
         heading: "Ce este detoxifierea post-alcool",
@@ -74,7 +74,7 @@ const DETOX: Record<
     metaDescription:
       "Вывод из запоя на дому в Кишинёве: детокс-капельницы, восстановление, витаминный комплекс и кодирование. Анонимно, конфиденциально, 24/7. Звоните.",
     keywords:
-      "вывод из запоя Кишинёв, детоксикация после алкоголя на дому, капельница после алкоголя, вывод из запоя на дому, кодирование от алкоголя Молдова",
+      "вывод из запоя Кишинёв, детоксикация после алкоголя на дому, капельница после алкоголя, вывод из запоя на дому, кодирование от алкоголя Кишинёв",
     sections: [
       {
         heading: "Что такое детоксикация после алкоголя",
