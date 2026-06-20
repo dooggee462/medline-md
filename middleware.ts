@@ -26,6 +26,6 @@ export function middleware(request: NextRequest) {
 export const config = {
   // Sare peste fișiere statice, API și fișierele SEO
   matcher: [
-    "/((?!_next|api|favicon.ico|robots.txt|sitemap.xml|manifest.webmanifest|.*\\.).*)",
+    "/((?!_next|api|admin|favicon.ico|robots.txt|sitemap.xml|manifest.webmanifest|.*\\.).*)",
   ],
 };

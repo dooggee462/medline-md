@@ -32,6 +32,10 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Folder de date persistent (articole din panou + poze încărcate)
+RUN mkdir -p /app/data && chown -R nextjs:nodejs /app/data
+ENV DATA_DIR=/app/data
+
 USER nextjs
 EXPOSE 3000
 ENV PORT=3000

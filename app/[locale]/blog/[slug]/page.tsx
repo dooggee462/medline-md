@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
-import { ARTICLES, getArticle } from "@/lib/content";
+import { getBlogPost } from "@/lib/posts";
 import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -11,11 +11,7 @@ import { CtaBand } from "@/components/CtaBand";
 import { ReadingProgress, ShareButtons } from "@/components/ShareButtons";
 import { TikTokEmbed } from "@/components/TikTokEmbed";
 
-export function generateStaticParams() {
-  return LOCALES.flatMap((locale) =>
-    ARTICLES.map((a) => ({ locale, slug: a.slug }))
-  );
-}
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -23,24 +19,23 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const art = getArticle(slug);
-  if (!art) return {};
-  const c = art.content[locale];
+  const post = await getBlogPost(slug, locale);
+  if (!post) return {};
   const path = `/${locale}/blog/${slug}`;
   return {
-    title: c.metaTitle,
-    description: c.metaDescription,
-    keywords: c.keywords,
+    title: `${post.title} | Medline.md`,
+    description: post.excerpt,
     alternates: {
       canonical: path,
       languages: { ro: `/ro/blog/${slug}`, ru: `/ru/blog/${slug}`, "x-default": `/ro/blog/${slug}` },
     },
     openGraph: {
       type: "article",
-      title: c.metaTitle,
-      description: c.metaDescription,
+      title: post.title,
+      description: post.excerpt,
       url: path,
-      publishedTime: art.date,
+      publishedTime: post.date,
+      images: post.cover ? [post.cover] : undefined,
     },
   };
 }
@@ -53,11 +48,10 @@ export default async function ArticlePage({
   const { locale: raw, slug } = await params;
   if (!LOCALES.includes(raw as Locale)) notFound();
   const locale = raw as Locale;
-  const art = getArticle(slug);
-  if (!art) notFound();
+  const post = await getBlogPost(slug, locale);
+  if (!post) notFound();
   const dict = getDictionary(locale);
-  const c = art.content[locale];
-  const dateLabel = new Date(art.date).toLocaleDateString(
+  const dateLabel = new Date(post.date).toLocaleDateString(
     locale === "ro" ? "ro-RO" : "ru-RU",
     { day: "numeric", month: "long", year: "numeric" }
   );
@@ -65,11 +59,12 @@ export default async function ArticlePage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
-    headline: c.title,
-    description: c.metaDescription,
-    datePublished: art.date,
-    dateModified: art.date,
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
     inLanguage: locale,
+    image: post.cover ? `${SITE.url}${post.cover}` : undefined,
     mainEntityOfPage: `${SITE.url}/${locale}/blog/${slug}`,
     author: { "@type": "Organization", name: SITE.legalName },
     publisher: {
@@ -91,35 +86,39 @@ export default async function ArticlePage({
               items={[
                 { name: dict.ui.breadcrumbHome, href: `/${locale}` },
                 { name: dict.nav.blog, href: `/${locale}/blog` },
-                { name: c.title, href: `/${locale}/blog/${slug}` },
+                { name: post.title, href: `/${locale}/blog/${slug}` },
               ]}
             />
             <time className="mt-6 block text-sm font-medium text-brand-600">
-              {dict.ui.publishedOn} {dateLabel} · {art.readMinutes} {dict.ui.minRead}
+              {dict.ui.publishedOn} {dateLabel} · {post.readMinutes} {dict.ui.minRead}
             </time>
             <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-              {c.title}
+              {post.title}
             </h1>
           </div>
         </section>
 
         <section className="py-10 lg:py-14">
           <article className="mx-auto max-w-3xl space-y-6 px-4 sm:px-6 lg:px-8">
-            {art.tiktok && (
+            {post.cover && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={post.cover} alt={post.title} className="w-full rounded-2xl object-cover" />
+            )}
+            {post.tiktok && (
               <div className="mb-4">
-                <TikTokEmbed url={art.tiktok} />
+                <TikTokEmbed url={post.tiktok} />
               </div>
             )}
-            {c.sections.map((sec, i) => (
-              <div key={i}>
-                {sec.heading && (
-                  <h2 className="mb-3 mt-4 text-2xl font-bold text-slate-900">{sec.heading}</h2>
-                )}
-                {sec.body.map((p, j) => (
-                  <p key={j} className="mt-3 text-lg leading-relaxed text-slate-700">{p}</p>
-                ))}
-              </div>
-            ))}
+            {post.blocks.map((b, i) => {
+              if (b.type === "heading") {
+                if (b.level === 2)
+                  return <h2 key={i} className="mt-8 text-2xl font-bold text-slate-900">{b.text}</h2>;
+                if (b.level === 3)
+                  return <h3 key={i} className="mt-6 text-xl font-bold text-slate-900">{b.text}</h3>;
+                return <h4 key={i} className="mt-5 text-lg font-semibold text-slate-900">{b.text}</h4>;
+              }
+              return <p key={i} className="text-lg leading-relaxed text-slate-700">{b.text}</p>;
+            })}
 
             <div className="flex flex-col gap-6 border-t border-slate-100 pt-8 sm:flex-row sm:items-center sm:justify-between">
               <Link href={`/${locale}/blog`} className="text-sm font-semibold text-brand-700 hover:underline">
@@ -127,7 +126,7 @@ export default async function ArticlePage({
               </Link>
               <ShareButtons
                 url={`${SITE.url}/${locale}/blog/${slug}`}
-                title={c.title}
+                title={post.title}
                 label={dict.ui.share}
               />
             </div>

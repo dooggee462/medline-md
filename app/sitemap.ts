@@ -1,10 +1,14 @@
 import type { MetadataRoute } from "next";
 import { SITE, LOCALES } from "@/lib/site";
-import { SERVICES, ARTICLES } from "@/lib/content";
+import { SERVICES } from "@/lib/content";
+import { getAllBlogSlugs } from "@/lib/posts";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export const dynamic = "force-dynamic";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
+  const blogSlugs = await getAllBlogSlugs();
 
   // Căi statice (relative la locale)
   const staticPaths = ["", "/servicii", "/preturi", "/despre-noi", "/blog", "/contact"];
@@ -41,17 +45,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
 
-    // Articole de blog
-    for (const a of ARTICLES) {
+    // Articole de blog (statice + adăugate din panou)
+    for (const slug of blogSlugs) {
       entries.push({
-        url: `${SITE.url}/${locale}/blog/${a.slug}`,
-        lastModified: new Date(a.date),
-        changeFrequency: "yearly",
+        url: `${SITE.url}/${locale}/blog/${slug}`,
+        lastModified: now,
+        changeFrequency: "monthly",
         priority: 0.6,
         alternates: {
           languages: {
-            ro: `${SITE.url}/ro/blog/${a.slug}`,
-            ru: `${SITE.url}/ru/blog/${a.slug}`,
+            ro: `${SITE.url}/ro/blog/${slug}`,
+            ru: `${SITE.url}/ru/blog/${slug}`,
           },
         },
       });

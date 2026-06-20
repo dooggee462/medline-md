@@ -19,6 +19,9 @@ npm-debug.log*
 .env*.local
 .env
 
+# admin data (articole + poze) — local
+/data
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
