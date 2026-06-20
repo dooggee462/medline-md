@@ -198,7 +198,7 @@ const ro: Dictionary = {
       "Procedurile medicale pe care le efectuăm la domiciliu. Pentru prețuri și programări, contactează-ne direct — îți răspundem rapid.",
     pricesFrom: "de la",
     pricesNote:
-      "Activăm 24/7 la domiciliul dvs. sau la oficiul central (str. Dacia 15/1, et. 3). Prețurile le comunicăm telefonic, pe WhatsApp sau Viber, în funcție de serviciu și de specificul cazului.",
+      "Activăm 24/7 la domiciliul dvs. Prețurile le comunicăm telefonic, pe WhatsApp sau Viber, în funcție de serviciu și de specificul cazului.",
     pricesCol: "Serviciu",
     pricesColPrice: "Preț",
     backToTop: "Înapoi sus",
@@ -480,7 +480,7 @@ const ru: Dictionary = {
       "Медицинские процедуры, которые мы выполняем на дому. По ценам и записи свяжитесь с нами напрямую — ответим быстро.",
     pricesFrom: "от",
     pricesNote:
-      "Работаем 24/7 у вас дома или в центральном офисе (ул. Dacia 15/1, эт. 3). Цены сообщаем по телефону, в WhatsApp или Viber — в зависимости от услуги и особенностей случая.",
+      "Работаем 24/7 у вас дома. Цены сообщаем по телефону, в WhatsApp или Viber — в зависимости от услуги и особенностей случая.",
     pricesCol: "Услуга",
     pricesColPrice: "Цена",
     backToTop: "Наверх",

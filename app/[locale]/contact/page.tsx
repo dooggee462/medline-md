@@ -81,8 +81,10 @@ export default async function ContactPage({
                 <Row icon={<IconMail className="h-5 w-5" />} label={dict.contact.email}>
                   <a href={`mailto:${SITE.email}`} className="hover:text-brand-700">{SITE.email}</a>
                 </Row>
-                <Row icon={<IconPin className="h-5 w-5" />} label={dict.contact.address}>
-                  {SITE.address.street}, {SITE.address.city}, {SITE.address.postalCode}
+                <Row icon={<IconPin className="h-5 w-5" />} label={locale === "ro" ? "Zonă deservită" : "Зона обслуживания"}>
+                  {locale === "ro"
+                    ? "La domiciliu, în Chișinău și împrejurimi"
+                    : "На дому, в Кишинёве и пригородах"}
                 </Row>
                 <Row icon={<IconClock className="h-5 w-5" />} label={dict.contact.hours}>
                   <span className="block">{dict.contact.hoursWeekdays}: {SITE.hours.weekdays}</span>
@@ -90,16 +92,6 @@ export default async function ContactPage({
                   <span className="block">{dict.contact.hoursSunday}: {SITE.hours.sunday}</span>
                 </Row>
               </ul>
-
-              <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200">
-                <iframe
-                  title="Medline.md — locație"
-                  src={`https://www.google.com/maps?q=${SITE.address.lat},${SITE.address.lng}&z=13&output=embed`}
-                  className="h-64 w-full"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
             </div>
 
             <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-brand-900/5 sm:p-8">

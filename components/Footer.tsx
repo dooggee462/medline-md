@@ -79,7 +79,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <ul className="mt-4 space-y-2.5 text-sm text-slate-500">
               <li className="flex items-center gap-2"><IconPhone className="h-4 w-4 text-brand-600" /> {SITE.phone}</li>
               <li className="flex items-center gap-2"><IconMail className="h-4 w-4 text-brand-600" /> {SITE.email}</li>
-              <li className="flex items-center gap-2"><IconPin className="h-4 w-4 text-brand-600" /> {SITE.address.street}, {SITE.address.city}</li>
+              <li className="flex items-center gap-2"><IconPin className="h-4 w-4 text-brand-600" /> {locale === "ro" ? "La domiciliu · Chișinău și împrejurimi" : "На дому · Кишинёв и пригороды"}</li>
             </ul>
             <div className="mt-5 flex gap-2 text-xs">
               <Link href="/ro" className="rounded border border-slate-200 px-2 py-1 font-semibold uppercase hover:border-brand-300">RO</Link>

@@ -388,8 +388,8 @@ export default async function Home({
                     {SITE.email}
                   </a>
                 </ContactRow>
-                <ContactRow icon={<IconPin className="h-5 w-5" />} label={dict.contact.address}>
-                  {SITE.address.street}, {SITE.address.city}
+                <ContactRow icon={<IconPin className="h-5 w-5" />} label={locale === "ro" ? "Zonă deservită" : "Зона обслуживания"}>
+                  {locale === "ro" ? "La domiciliu, în Chișinău și împrejurimi" : "На дому, в Кишинёве и пригородах"}
                 </ContactRow>
                 <ContactRow icon={<IconClock className="h-5 w-5" />} label={dict.contact.hours}>
                   <span className="block">

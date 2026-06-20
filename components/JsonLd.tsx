@@ -25,19 +25,7 @@ export function JsonLd({ locale }: { locale: Locale }) {
     logo: `${SITE.url}/icon.svg`,
     priceRange: "$$",
     medicalSpecialty: "Nursing",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: SITE.address.street,
-      addressLocality: SITE.address.city,
-      addressRegion: SITE.address.region,
-      postalCode: SITE.address.postalCode,
-      addressCountry: SITE.address.country,
-    },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: SITE.address.lat,
-      longitude: SITE.address.lng,
-    },
+    // Serviciu la domiciliu (fără sediu cu primire pacienți) — fără adresă fizică
     areaServed: { "@type": "City", name: SITE.address.city },
     openingHoursSpecification: [
       {
