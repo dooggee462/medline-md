@@ -156,9 +156,9 @@ const ro: Dictionary = {
     title:
       "Medline.md — Asistență Medicală la Domiciliu în Chișinău | Îngrijire 24/7",
     description:
-      "Asistență medicală profesională la domiciliu în Chișinău: perfuzii, injecții, îngrijirea bolnavilor, consult medical, prelevare analize. Programare rapidă, asistente calificate, intervenție 24/7.",
+      "Asistență medicală profesională la domiciliu în Chișinău: perfuzii, injecții, îngrijirea bolnavilor, consult medical. Programare rapidă, asistente calificate, intervenție 24/7.",
     keywords:
-      "asistenta medicala la domiciliu, ingrijire bolnavi la domiciliu Chisinau, perfuzii la domiciliu, injectii la domiciliu, asistenta medicala Chisinau, consult medical domiciliu, prelevare analize domiciliu",
+      "asistenta medicala la domiciliu, ingrijire bolnavi la domiciliu Chisinau, perfuzii la domiciliu, injectii la domiciliu, asistenta medicala Chisinau, consult medical domiciliu",
     ogAlt: "Medline — asistență medicală la domiciliu în Chișinău",
   },
   nav: {
@@ -254,11 +254,6 @@ const ro: Dictionary = {
         icon: "stethoscope",
         title: "Consult medical",
         desc: "Evaluare medicală la domiciliu, măsurarea funcțiilor vitale și recomandări personalizate.",
-      },
-      {
-        icon: "flask",
-        title: "Prelevare analize",
-        desc: "Recoltarea probelor de sânge și a analizelor de laborator fără să ieși din casă.",
       },
       {
         icon: "bandage",
@@ -443,9 +438,9 @@ const ru: Dictionary = {
     title:
       "Medline.md — Медицинская помощь на дому в Кишинёве | Уход 24/7",
     description:
-      "Профессиональная медицинская помощь на дому в Кишинёве: капельницы, инъекции, уход за больными, медицинский осмотр, забор анализов. Быстрая запись, квалифицированные медсёстры, выезд 24/7.",
+      "Профессиональная медицинская помощь на дому в Кишинёве: капельницы, инъекции, уход за больными, медицинский осмотр. Быстрая запись, квалифицированные медсёстры, выезд 24/7.",
     keywords:
-      "медицинская помощь на дому, уход за больными на дому Кишинёв, капельницы на дому, инъекции на дому, медсестра на дом Кишинёв, врач на дом, забор анализов на дому",
+      "медицинская помощь на дому, уход за больными на дому Кишинёв, капельницы на дому, инъекции на дому, медсестра на дом Кишинёв, врач на дом",
     ogAlt: "Medline — медицинская помощь на дому в Кишинёве",
   },
   nav: {
@@ -541,11 +536,6 @@ const ru: Dictionary = {
         icon: "stethoscope",
         title: "Медицинский осмотр",
         desc: "Медицинская оценка на дому, измерение жизненных показателей и индивидуальные рекомендации.",
-      },
-      {
-        icon: "flask",
-        title: "Забор анализов",
-        desc: "Забор крови и лабораторных анализов, не выходя из дома.",
       },
       {
         icon: "bandage",

@@ -27,8 +27,8 @@ export async function generateMetadata({
       : "Услуги Медицинской Помощи на Дому в Кишинёве | Medline.md";
   const description =
     locale === "ro"
-      ? "Toate serviciile medicale la domiciliu Medline: perfuzii, injecții, îngrijirea bolnavilor, consult medical, recoltare analize și pansamente în Chișinău."
-      : "Все услуги медицинской помощи на дому Medline: капельницы, инъекции, уход за больными, медосмотр, забор анализов и перевязки в Кишинёве.";
+      ? "Toate serviciile medicale la domiciliu Medline: perfuzii, injecții, îngrijirea bolnavilor, consult medical și pansamente în Chișinău."
+      : "Все услуги медицинской помощи на дому Medline: капельницы, инъекции, уход за больными, медосмотр и перевязки в Кишинёве.";
   return {
     title,
     description,

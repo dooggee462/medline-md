@@ -458,114 +458,6 @@ export const SERVICES: ServiceDetail[] = [
     },
   },
   {
-    slug: "recoltare-analize-la-domiciliu",
-    icon: "flask",
-    content: {
-      ro: {
-        metaTitle:
-          "Recoltare Analize la Domiciliu în Chișinău | Analize de Sânge Acasă — Medline.md",
-        metaDescription:
-          "Recoltare analize la domiciliu în Chișinău: prelevare sânge și probe de laborator acasă, fără cozi. Pentru vârstnici, copii și persoane ocupate. Programare rapidă.",
-        keywords:
-          "recoltare analize la domiciliu, analize de sange acasa, prelevare sange Chisinau, analize laborator domiciliu, recoltare probe Chisinau",
-        h1: "Recoltare analize la domiciliu",
-        short:
-          "Recoltarea probelor de sânge și a analizelor de laborator, fără să ieși din casă.",
-        lead: "Uită de cozile de la laborator. Cu serviciul de recoltare analize la domiciliu Medline, asistenta vine la tine acasă, prelevă probele de sânge în condiții sterile și le transportă în siguranță către laborator. Comod pentru vârstnici, copii și persoane ocupate.",
-        sections: [
-          {
-            heading: "Cum funcționează recoltarea la domiciliu",
-            body: [
-              "Programezi vizita, iar asistenta ajunge la ora stabilită cu trusa de recoltare. Prelevarea se face rapid, cu materiale sterile de unică folosință.",
-              "Probele sunt etichetate, păstrate corespunzător și transportate către laborator, astfel încât rezultatele să fie corecte și de încredere.",
-            ],
-          },
-          {
-            heading: "Pentru cine este recomandat",
-            body: [
-              "Serviciul este ideal pentru persoanele vârstnice, copii, pacienți imobilizați, gravide sau pur și simplu pentru cei care vor să economisească timp.",
-              "Recomandăm respectarea condițiilor de recoltare (de exemplu, repaus alimentar pentru anumite analize) — îți oferim toate instrucțiunile la programare.",
-            ],
-          },
-        ],
-        indications: [
-          "Analize de rutină și controale periodice",
-          "Pacienți vârstnici sau imobilizați",
-          "Copii care evită deplasarea la laborator",
-          "Persoane ocupate care economisesc timp",
-          "Monitorizarea bolilor cronice",
-        ],
-        benefits: [
-          "Fără cozi și fără stresul deplasării",
-          "Recoltare sterilă, în siguranță",
-          "Comod pentru toată familia",
-          "Instrucțiuni clare de pregătire",
-        ],
-        faq: [
-          {
-            q: "Cât de repede primesc rezultatele?",
-            a: "Timpul depinde de tipul analizei și de laborator. Îți comunicăm estimarea la programare.",
-          },
-          {
-            q: "Trebuie să fiu pe nemâncate?",
-            a: "Pentru anumite analize este necesar repausul alimentar. Îți spunem exact cum să te pregătești înainte de vizită.",
-          },
-        ],
-      },
-      ru: {
-        metaTitle:
-          "Забор Анализов на Дому в Кишинёве | Анализ Крови на Дому — Medline.md",
-        metaDescription:
-          "Забор анализов на дому в Кишинёве: взятие крови и лабораторных проб дома, без очередей. Для пожилых, детей и занятых людей. Быстрая запись.",
-        keywords:
-          "забор анализов на дому, анализ крови на дому, взятие крови Кишинёв, лабораторные анализы на дому, забор проб Кишинёв",
-        h1: "Забор анализов на дому",
-        short:
-          "Взятие крови и лабораторных анализов, не выходя из дома.",
-        lead: "Забудьте об очередях в лаборатории. С услугой забора анализов на дому Medline медсестра приезжает к вам, берёт пробы крови в стерильных условиях и безопасно доставляет их в лабораторию. Удобно для пожилых, детей и занятых людей.",
-        sections: [
-          {
-            heading: "Как работает забор на дому",
-            body: [
-              "Вы записываетесь, и медсестра приезжает в назначенное время с набором для забора. Взятие проб происходит быстро, одноразовыми стерильными материалами.",
-              "Пробы маркируются, правильно хранятся и доставляются в лабораторию, чтобы результаты были точными и надёжными.",
-            ],
-          },
-          {
-            heading: "Кому рекомендуется",
-            body: [
-              "Услуга идеальна для пожилых людей, детей, лежачих пациентов, беременных или просто для тех, кто хочет сэкономить время.",
-              "Рекомендуем соблюдать условия забора (например, голод для некоторых анализов) — все инструкции мы дадим при записи.",
-            ],
-          },
-        ],
-        indications: [
-          "Плановые анализы и периодические проверки",
-          "Пожилые или лежачие пациенты",
-          "Дети, избегающие поездки в лабораторию",
-          "Занятые люди, экономящие время",
-          "Контроль хронических заболеваний",
-        ],
-        benefits: [
-          "Без очередей и стресса поездки",
-          "Стерильный забор, безопасно",
-          "Удобно для всей семьи",
-          "Чёткие инструкции по подготовке",
-        ],
-        faq: [
-          {
-            q: "Как быстро я получу результаты?",
-            a: "Срок зависит от типа анализа и лаборатории. Оценку мы сообщим при записи.",
-          },
-          {
-            q: "Нужно ли сдавать натощак?",
-            a: "Для некоторых анализов нужен голод. Мы точно скажем, как подготовиться перед визитом.",
-          },
-        ],
-      },
-    },
-  },
-  {
     slug: "pansamente-ingrijire-plagi",
     icon: "bandage",
     content: {
@@ -1426,7 +1318,6 @@ export const SERVICE_LIST: ServiceListItem[] = [
   { ro: "Tratament post-alcool LUX", ru: "Лечение после алкоголя LUX" },
   { ro: "Codare (anti-alcool)", ru: "Кодирование от алкоголя", featured: true },
   { ro: "Pansamente și îngrijirea plăgilor", ru: "Перевязки и уход за ранами" },
-  { ro: "Recoltare analize la domiciliu", ru: "Забор анализов на дому" },
   { ro: "Consult medical la domiciliu", ru: "Медицинский осмотр на дому" },
   { ro: "Îngrijirea bolnavilor la domiciliu", ru: "Уход за больными на дому" },
 ];

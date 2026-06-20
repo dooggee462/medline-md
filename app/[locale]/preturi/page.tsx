@@ -26,8 +26,8 @@ export async function generateMetadata({
       : "Медицинские Услуги на Дому в Кишинёве — Полный Список | Medline.md";
   const description =
     locale === "ro"
-      ? "Lista serviciilor medicale la domiciliu Medline în Chișinău: injecții, perfuzii, complex de vitamine, tratament post-alcool, codare, pansamente, analize și îngrijirea bolnavilor. Activăm 24/7."
-      : "Список медицинских услуг на дому Medline в Кишинёве: инъекции, капельницы, витамины, лечение после алкоголя, кодирование, перевязки, анализы и уход за больными. Работаем 24/7.";
+      ? "Lista serviciilor medicale la domiciliu Medline în Chișinău: injecții, perfuzii, complex de vitamine, tratament post-alcool, codare, pansamente și îngrijirea bolnavilor. Activăm 24/7."
+      : "Список медицинских услуг на дому Medline в Кишинёве: инъекции, капельницы, витамины, лечение после алкоголя, кодирование, перевязки и уход за больными. Работаем 24/7.";
   return {
     title,
     description,

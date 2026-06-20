@@ -31,7 +31,7 @@ const ABOUT: Record<
         heading: "Misiunea noastră",
         body: [
           "Medline a luat naștere din convingerea că îngrijirea medicală ar trebui să fie accesibilă, confortabilă și umană. Pentru mulți pacienți — vârstnici, persoane imobilizate sau aflate în recuperare — deplasarea la spital este dificilă sau imposibilă.",
-          "De aceea aducem clinica la tine acasă: perfuzii, injecții, îngrijirea bolnavilor, consult medical, recoltare de analize și pansamente, toate efectuate de asistente medicale autorizate.",
+          "De aceea aducem clinica la tine acasă: perfuzii, injecții, îngrijirea bolnavilor, consult medical și pansamente, toate efectuate de asistente medicale autorizate.",
         ],
       },
       {
@@ -61,7 +61,7 @@ const ABOUT: Record<
         heading: "Наша миссия",
         body: [
           "Medline родилась из убеждения, что медицинская помощь должна быть доступной, комфортной и человечной. Для многих пациентов — пожилых, лежачих или восстанавливающихся — поездка в больницу трудна или невозможна.",
-          "Поэтому мы привозим клинику к вам домой: капельницы, инъекции, уход за больными, медосмотр, забор анализов и перевязки — всё выполняется сертифицированными медсёстрами.",
+          "Поэтому мы привозим клинику к вам домой: капельницы, инъекции, уход за больными, медосмотр и перевязки — всё выполняется сертифицированными медсёстрами.",
         ],
       },
       {
