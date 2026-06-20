@@ -21,7 +21,7 @@ export function JsonLd({ locale }: { locale: Locale }) {
     telephone: SITE.phoneRaw,
     email: SITE.email,
     foundingDate: SITE.founded,
-    image: `${SITE.url}/og-image.svg`,
+    image: `${SITE.url}/og-image.png`,
     logo: `${SITE.url}/icon.svg`,
     priceRange: "$$",
     medicalSpecialty: "Nursing",

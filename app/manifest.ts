@@ -6,13 +6,14 @@ export default function manifest(): MetadataRoute.Manifest {
     name: `${SITE.legalName} — Asistență medicală la domiciliu`,
     short_name: SITE.name,
     description:
-      "Asistență medicală profesională la domiciliu în Chișinău.",
+      "Asistență medicală la domiciliu în Chișinău: detoxifiere post-alcool, codare, perfuzii, injecții și îngrijire 24/7.",
     start_url: "/ro",
     display: "standalone",
     background_color: "#ffffff",
-    theme_color: "#059669",
+    theme_color: "#0c3a2d",
     icons: [
       { src: "/icon.svg", sizes: "any", type: "image/svg+xml" },
+      { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
     ],
   };
 }

@@ -6,6 +6,7 @@ import { getDictionary } from "@/lib/dictionaries";
 import { CookieConsent } from "@/components/CookieConsent";
 import { BackToTop } from "@/components/BackToTop";
 import { Analytics } from "@/components/Analytics";
+import { SiteSchema } from "@/components/SiteSchema";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -56,9 +57,10 @@ export async function generateMetadata({
       description: dict.meta.description,
       url: path,
       locale: locale === "ro" ? "ro_RO" : "ru_RU",
+      alternateLocale: locale === "ro" ? ["ru_RU"] : ["ro_RO"],
       images: [
         {
-          url: "/og-image.svg",
+          url: "/og-image.png",
           width: 1200,
           height: 630,
           alt: dict.meta.ogAlt,
@@ -69,7 +71,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: dict.meta.title,
       description: dict.meta.description,
-      images: ["/og-image.svg"],
+      images: ["/og-image.png"],
     },
     robots: {
       index: true,
@@ -93,6 +95,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale} className={`${inter.variable} ${cormorant.variable}`}>
       <body className="font-sans">
+        <SiteSchema locale={locale as Locale} />
         {children}
         <BackToTop label={dict.ui.backToTop} />
         <CookieConsent dict={dict} />

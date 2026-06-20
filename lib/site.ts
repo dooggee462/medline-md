@@ -74,6 +74,12 @@ export const SITE = {
     ga4: "",
     metaPixel: "",
   },
+
+  /**
+   * Codul de verificare Google Search Console (doar codul, ex. "abc123...").
+   * Îl iei din Search Console → metoda „HTML tag". Lasă gol până îl ai.
+   */
+  googleVerification: "",
 } as const;
 
 export type Locale = "ro" | "ru";
