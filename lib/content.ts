@@ -807,6 +807,427 @@ export type Article = {
 
 export const ARTICLES: Article[] = [
   {
+    slug: "metode-codare-anti-alcool",
+    date: "2026-06-21",
+    readMinutes: 8,
+    content: {
+      ro: {
+        metaTitle: "Metode de Codare Anti-Alcool: Tipuri și Cum Alegi | Medline.md",
+        metaDescription:
+          "Ghid complet despre metodele de codare anti-alcool: tipuri, cum funcționează fiecare, cum alegi metoda potrivită și ce condiții sunt necesare. Codare la domiciliu în Chișinău.",
+        keywords: "metode codare anti-alcool, tipuri de codare alcool, cum functioneaza codarea, codare alcool Chisinau, codare la domiciliu",
+        title: "Metode de codare anti-alcool: tipuri și cum alegi",
+        excerpt: "Ce metode de codare există, cum funcționează fiecare și cum o alegi pe cea potrivită pentru tine.",
+        sections: [
+          {
+            body: [
+              "Codarea anti-alcool este una dintre cele mai cunoscute forme de sprijin în renunțarea la alcool, dar puțini știu că există mai multe abordări. În acest ghid îți explicăm tipurile principale, cum funcționează și cum alegi metoda potrivită — pe înțelesul tuturor.",
+            ],
+          },
+          {
+            heading: "Pe scurt: ce este codarea",
+            body: [
+              "Codarea este o procedură care întărește decizia de a nu mai consuma alcool, funcționând cel mai bine ca parte a unei hotărâri ferme și, ideal, cu sprijin psihologic. Pentru detalii complete, vezi [pagina noastră despre codarea anti-alcool](/ro/servicii/codare-anti-alcool).",
+            ],
+          },
+          {
+            heading: "Tipurile principale de codare",
+            body: [
+              "### Codarea medicamentoasă",
+              "Se bazează pe substanțe care creează o reacție neplăcută în cazul consumului de alcool, descurajând astfel băutul. Se face numai după evaluare medicală și cu acordul informat al pacientului.",
+              "### Codarea psihoterapeutică",
+              "Folosește tehnici psihologice care întăresc respingerea alcoolului și motivația de a rămâne treaz. Funcționează cel mai bine la persoanele receptive și cu o decizie clară.",
+              "### Abordarea combinată",
+              "Multe cazuri răspund cel mai bine la o combinație: pregătire (inclusiv detoxifiere dacă e nevoie), codare și sprijin psihologic ulterior. Astfel se acoperă atât latura fizică, cât și cea mentală.",
+            ],
+          },
+          {
+            heading: "Cum se alege metoda potrivită",
+            body: [
+              "Alegerea depinde de starea de sănătate, de istoricul consumului și de preferințele pacientului. De aceea, o evaluare prealabilă este esențială — nu există o metodă universală.",
+              "Cel mai important factor rămâne decizia personală: codarea ajută, dar nu înlocuiește dorința reală de a renunța.",
+            ],
+          },
+          {
+            heading: "Condiții și evaluare prealabilă",
+            body: [
+              "Înainte de orice codare este necesară o perioadă de abstinență (stabilită în funcție de caz) și o evaluare a stării de sănătate, pentru a exclude contraindicațiile. Dacă persoana vine după o perioadă lungă de consum, poate fi nevoie întâi de [tratament post-alcool](/ro/servicii/tratament-post-alcool).",
+            ],
+          },
+          {
+            heading: "Ce rezultate să aștepți",
+            body: [
+              "Codarea poate fi un sprijin eficient, dar rezultatul pe termen lung depinde de implicarea persoanei și de mediul de susținere. Recăderile nu înseamnă eșec — fac parte din proces, iar ajutorul rămâne disponibil.",
+            ],
+          },
+          {
+            heading: "Codarea la domiciliu",
+            body: [
+              "La Medline oferim codare la domiciliu, în Chișinău, în condiții sigure și discrete, după evaluarea prealabilă. Totul este confidențial, fără judecăți.",
+            ],
+          },
+          {
+            heading: "Întrebări frecvente",
+            body: [
+              "### Care metodă e cea mai bună?",
+              "Nu există un răspuns unic — cea mai bună metodă e cea potrivită cazului tău, stabilită după evaluare.",
+              "### Codarea funcționează fără voință?",
+              "Nu. Dorința reală de a renunța rămâne factorul decisiv; codarea o susține.",
+            ],
+          },
+          {
+            heading: "Concluzie",
+            body: [
+              "Există mai multe metode de codare, iar alegerea corectă se face împreună cu un specialist, după o evaluare. Echipa Medline te ghidează cu profesionalism și discreție — contactează-ne pentru o evaluare.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Методы Кодирования от Алкоголя: Виды и Как Выбрать | Medline.md",
+        metaDescription:
+          "Полный гид по методам кодирования от алкоголя: виды, как работает каждый, как выбрать подходящий и какие условия нужны. Кодирование на дому в Кишинёве.",
+        keywords: "методы кодирования от алкоголя, виды кодирования, как работает кодирование, кодирование от алкоголя Кишинёв, кодирование на дому",
+        title: "Методы кодирования от алкоголя: виды и как выбрать",
+        excerpt: "Какие методы кодирования существуют, как работает каждый и как выбрать подходящий именно вам.",
+        sections: [
+          {
+            body: [
+              "Кодирование от алкоголя — одна из самых известных форм поддержки при отказе от алкоголя, но мало кто знает, что подходов несколько. В этом гиде мы простыми словами объясняем основные виды, как они работают и как выбрать подходящий метод.",
+            ],
+          },
+          {
+            heading: "Коротко: что такое кодирование",
+            body: [
+              "Кодирование — это процедура, которая укрепляет решение не употреблять алкоголь и работает лучше всего как часть твёрдого решения и, в идеале, с психологической поддержкой. Подробнее — на [нашей странице о кодировании](/ru/servicii/codare-anti-alcool).",
+            ],
+          },
+          {
+            heading: "Основные виды кодирования",
+            body: [
+              "### Медикаментозное кодирование",
+              "Основано на веществах, вызывающих неприятную реакцию при употреблении алкоголя, что отбивает желание пить. Проводится только после медицинской оценки и с информированного согласия пациента.",
+              "### Психотерапевтическое кодирование",
+              "Использует психологические техники, укрепляющие отторжение алкоголя и мотивацию оставаться трезвым. Работает лучше у людей восприимчивых и с чётким решением.",
+              "### Комбинированный подход",
+              "Многие случаи лучше всего отвечают на сочетание: подготовка (включая детоксикацию при необходимости), кодирование и последующая психологическая поддержка. Так охватывается и физическая, и ментальная сторона.",
+            ],
+          },
+          {
+            heading: "Как выбрать подходящий метод",
+            body: [
+              "Выбор зависит от состояния здоровья, истории употребления и предпочтений пациента. Поэтому предварительная оценка обязательна — универсального метода нет.",
+              "Самый важный фактор — личное решение: кодирование помогает, но не заменяет реальное желание бросить.",
+            ],
+          },
+          {
+            heading: "Условия и предварительная оценка",
+            body: [
+              "Перед любым кодированием нужен период трезвости (определяется по случаю) и оценка состояния здоровья, чтобы исключить противопоказания. Если человек приходит после долгого употребления, может сначала понадобиться [лечение после алкоголя](/ru/servicii/tratament-post-alcool).",
+            ],
+          },
+          {
+            heading: "Каких результатов ожидать",
+            body: [
+              "Кодирование может быть эффективной поддержкой, но долгосрочный результат зависит от вовлечённости человека и поддерживающей среды. Срывы не означают провал — это часть процесса, и помощь остаётся доступной.",
+            ],
+          },
+          {
+            heading: "Кодирование на дому",
+            body: [
+              "В Medline мы предлагаем кодирование на дому в Кишинёве, в безопасных и дискретных условиях, после предварительной оценки. Всё конфиденциально, без осуждения.",
+            ],
+          },
+          {
+            heading: "Частые вопросы",
+            body: [
+              "### Какой метод лучший?",
+              "Единого ответа нет — лучший метод тот, что подходит вашему случаю, и определяется после оценки.",
+              "### Работает ли кодирование без воли?",
+              "Нет. Реальное желание бросить остаётся решающим; кодирование его поддерживает.",
+            ],
+          },
+          {
+            heading: "Заключение",
+            body: [
+              "Методов кодирования несколько, и правильный выбор делается вместе со специалистом, после оценки. Команда Medline сопровождает вас профессионально и деликатно — свяжитесь с нами для оценки.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "codare-sau-tratament-post-alcool",
+    date: "2026-06-09",
+    readMinutes: 7,
+    content: {
+      ro: {
+        metaTitle: "Codare sau Tratament Post-Alcool? Diferențe și Cum Alegi | Medline.md",
+        metaDescription:
+          "Codare sau tratament post-alcool? Explicăm diferențele, când se folosește fiecare, ordinea corectă (detoxifiere apoi codare) și cum alegi. La domiciliu, în Chișinău.",
+        keywords: "codare sau tratament post-alcool, diferenta codare detoxifiere, ce alegi codare sau perfuzie, codare alcool Chisinau",
+        title: "Codare sau tratament post-alcool? Diferențe și cum alegi",
+        excerpt: "Care e diferența dintre codare și tratamentul post-alcool și cum alegi ce ai nevoie.",
+        sections: [
+          {
+            body: [
+              "Mulți confundă codarea cu tratamentul post-alcool, dar sunt două lucruri diferite care rezolvă probleme diferite. Acest articol îți explică clar diferențele și cum alegi.",
+            ],
+          },
+          {
+            heading: "Ce este tratamentul post-alcool",
+            body: [
+              "[Tratamentul post-alcool](/ro/servicii/tratament-post-alcool) (detoxifierea) ajută organismul să se refacă imediat după consum: perfuzii cu rehidratare și vitamine care reduc greața, tremurăturile și starea de rău. Rezolvă latura fizică.",
+            ],
+          },
+          {
+            heading: "Ce este codarea",
+            body: [
+              "[Codarea](/ro/servicii/codare-anti-alcool) țintește latura comportamentală: întărește decizia de a nu mai consuma alcool pe termen lung. Nu este un detox, ci un pas spre abstinență.",
+            ],
+          },
+          {
+            heading: "Diferențele cheie",
+            body: [
+              "### Scopul",
+              "Tratamentul post-alcool = refacere fizică imediată. Codarea = sprijin pentru abstinență pe termen lung.",
+              "### Momentul",
+              "Detoxifierea se face în/imediat după consum. Codarea se face după o perioadă de abstinență și o evaluare.",
+            ],
+          },
+          {
+            heading: "Care e ordinea corectă",
+            body: [
+              "De obicei, întâi detoxifierea (dacă persoana vine după consum), apoi, după stabilizare și o perioadă fără alcool, codarea. Astfel corpul e pregătit, iar decizia e luată cu mintea limpede.",
+            ],
+          },
+          {
+            heading: "Cum alegi",
+            body: [
+              "Dacă cineva tocmai a băut și se simte rău → tratament post-alcool. Dacă persoana vrea să renunțe definitiv și a trecut prin abstinență → codare. Cel mai bine, lasă un specialist să recomande după o evaluare.",
+            ],
+          },
+          {
+            heading: "Întrebări frecvente",
+            body: [
+              "### Pot face codare imediat după ce am băut?",
+              "Nu. Codarea necesită o perioadă de abstinență prealabilă. Întâi se stabilizează organismul.",
+              "### Pot face ambele?",
+              "Da, adesea sunt complementare: detoxifiere acum, codare ca pas următor.",
+            ],
+          },
+          {
+            heading: "Concluzie",
+            body: [
+              "Tratamentul post-alcool și codarea se completează: unul reface corpul, celălalt susține abstinența. Medline le oferă pe ambele, la domiciliu în Chișinău. Sună-ne și îți recomandăm ce ți se potrivește.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Кодирование или Лечение после Алкоголя? Отличия и Выбор | Medline.md",
+        metaDescription:
+          "Кодирование или лечение после алкоголя? Объясняем отличия, когда что применяется, правильный порядок (детокс, затем кодирование) и как выбрать. На дому в Кишинёве.",
+        keywords: "кодирование или лечение после алкоголя, разница кодирование детоксикация, что выбрать кодирование или капельница, кодирование Кишинёв",
+        title: "Кодирование или лечение после алкоголя? Отличия и выбор",
+        excerpt: "В чём разница между кодированием и лечением после алкоголя и как выбрать то, что нужно.",
+        sections: [
+          {
+            body: [
+              "Многие путают кодирование с лечением после алкоголя, но это две разные вещи, решающие разные задачи. Эта статья ясно объясняет отличия и как выбрать.",
+            ],
+          },
+          {
+            heading: "Что такое лечение после алкоголя",
+            body: [
+              "[Лечение после алкоголя](/ru/servicii/tratament-post-alcool) (детоксикация) помогает организму восстановиться сразу после употребления: капельницы с регидратацией и витаминами, снижающие тошноту, тремор и плохое самочувствие. Решает физическую сторону.",
+            ],
+          },
+          {
+            heading: "Что такое кодирование",
+            body: [
+              "[Кодирование](/ru/servicii/codare-anti-alcool) нацелено на поведенческую сторону: укрепляет решение не употреблять алкоголь надолго. Это не детокс, а шаг к трезвости.",
+            ],
+          },
+          {
+            heading: "Ключевые отличия",
+            body: [
+              "### Цель",
+              "Лечение после алкоголя = немедленное физическое восстановление. Кодирование = поддержка трезвости надолго.",
+              "### Момент",
+              "Детоксикация делается во время/сразу после употребления. Кодирование — после периода трезвости и оценки.",
+            ],
+          },
+          {
+            heading: "Какой правильный порядок",
+            body: [
+              "Обычно сначала детоксикация (если человек приходит после употребления), затем, после стабилизации и периода без алкоголя — кодирование. Так тело подготовлено, а решение принято на трезвую голову.",
+            ],
+          },
+          {
+            heading: "Как выбрать",
+            body: [
+              "Если человек только что выпил и плохо себя чувствует → лечение после алкоголя. Если хочет отказаться навсегда и прошёл период трезвости → кодирование. Лучше всего — пусть специалист порекомендует после оценки.",
+            ],
+          },
+          {
+            heading: "Частые вопросы",
+            body: [
+              "### Можно ли кодироваться сразу после выпивки?",
+              "Нет. Кодирование требует предварительного периода трезвости. Сначала стабилизируют организм.",
+              "### Можно ли сделать оба?",
+              "Да, часто они дополняют друг друга: детокс сейчас, кодирование как следующий шаг.",
+            ],
+          },
+          {
+            heading: "Заключение",
+            body: [
+              "Лечение после алкоголя и кодирование дополняют друг друга: одно восстанавливает тело, другое поддерживает трезвость. Medline предлагает оба, на дому в Кишинёве. Позвоните — порекомендуем, что вам подходит.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "pregatire-codare-anti-alcool",
+    date: "2026-06-08",
+    readMinutes: 7,
+    content: {
+      ro: {
+        metaTitle: "Pregătirea pentru Codarea Anti-Alcool: Ghid Pas cu Pas | Medline.md",
+        metaDescription:
+          "Cum te pregătești corect pentru codarea anti-alcool: perioada de abstinență, evaluarea medicală, ce să eviți și ce se întâmplă în ziua procedurii. La domiciliu, Chișinău.",
+        keywords: "pregatire codare anti-alcool, ce trebuie inainte de codare, perioada abstinenta codare, codare la domiciliu Chisinau",
+        title: "Pregătirea pentru codarea anti-alcool: ghid pas cu pas",
+        excerpt: "Tot ce trebuie să faci înainte de codare ca procedura să fie sigură și eficientă.",
+        sections: [
+          {
+            body: [
+              "O codare reușită începe cu o pregătire corectă. Acest ghid îți explică pas cu pas ce trebuie să faci înainte, ca procedura să fie sigură și cu șanse mari de rezultat.",
+            ],
+          },
+          {
+            heading: "De ce contează pregătirea",
+            body: [
+              "Pregătirea asigură siguranța (excluderea contraindicațiilor) și crește eficiența codării. Fără ea, procedura nu se poate face corect.",
+            ],
+          },
+          {
+            heading: "Pașii de pregătire",
+            body: [
+              "### 1. Perioada de abstinență",
+              "Înainte de codare este obligatorie o perioadă fără alcool, stabilită în funcție de caz. Codarea nu se face dacă persoana este sub influența alcoolului. Dacă vii după o perioadă lungă de consum, poate fi nevoie întâi de [tratament post-alcool](/ro/servicii/tratament-post-alcool).",
+              "### 2. Evaluarea medicală",
+              "Se verifică starea de sănătate și eventualele contraindicații. De aceea evaluarea prealabilă este obligatorie — siguranța ta este pe primul loc.",
+              "### 3. Decizia fermă",
+              "Codarea funcționează cel mai bine când vine dintr-o hotărâre personală clară. Discută cu cei apropiați și pregătește-te mental pentru schimbare.",
+            ],
+          },
+          {
+            heading: "Ce să eviți înainte",
+            body: [
+              "Evită consumul de alcool în perioada recomandată înainte de procedură și informează asistenta despre orice medicamente sau afecțiuni. Onestitatea la evaluare este esențială pentru siguranță.",
+            ],
+          },
+          {
+            heading: "În ziua procedurii",
+            body: [
+              "Asigură-te că ești odihnit și hidratat. Procedura se efectuează în condiții sterile, iar tu primești toate informațiile și îți dai acordul informat înainte.",
+            ],
+          },
+          {
+            heading: "După codare",
+            body: [
+              "Sprijinul familiei, evitarea mediilor asociate cu băutul și, ideal, consilierea psihologică ajută la menținerea rezultatului pe termen lung.",
+            ],
+          },
+          {
+            heading: "Întrebări frecvente",
+            body: [
+              "### Cât trebuie să nu beau înainte?",
+              "Perioada se stabilește la evaluare, în funcție de caz. Te informăm exact când ne contactezi.",
+              "### Se face la domiciliu?",
+              "Da, oferim [codare la domiciliu](/ro/servicii/codare-anti-alcool) în Chișinău, discret și în siguranță.",
+            ],
+          },
+          {
+            heading: "Concluzie",
+            body: [
+              "Pregătirea corectă face diferența între o codare sigură și eficientă și una riscantă. Echipa Medline te ghidează la fiecare pas. Contactează-ne pentru o evaluare și îți explicăm exact ce ai de făcut.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Подготовка к Кодированию от Алкоголя: Пошаговый Гид | Medline.md",
+        metaDescription:
+          "Как правильно подготовиться к кодированию от алкоголя: период трезвости, медицинская оценка, чего избегать и что происходит в день процедуры. На дому, Кишинёв.",
+        keywords: "подготовка к кодированию, что нужно перед кодированием, период трезвости кодирование, кодирование на дому Кишинёв",
+        title: "Подготовка к кодированию от алкоголя: пошаговый гид",
+        excerpt: "Всё, что нужно сделать перед кодированием, чтобы процедура была безопасной и эффективной.",
+        sections: [
+          {
+            body: [
+              "Успешное кодирование начинается с правильной подготовки. Этот гид пошагово объясняет, что нужно сделать заранее, чтобы процедура была безопасной и с высокими шансами на результат.",
+            ],
+          },
+          {
+            heading: "Почему важна подготовка",
+            body: [
+              "Подготовка обеспечивает безопасность (исключение противопоказаний) и повышает эффективность кодирования. Без неё процедуру нельзя провести правильно.",
+            ],
+          },
+          {
+            heading: "Шаги подготовки",
+            body: [
+              "### 1. Период трезвости",
+              "Перед кодированием обязателен период без алкоголя, определяемый по случаю. Кодирование не проводится, если человек под воздействием алкоголя. Если приходите после долгого употребления, может сначала понадобиться [лечение после алкоголя](/ru/servicii/tratament-post-alcool).",
+              "### 2. Медицинская оценка",
+              "Проверяется состояние здоровья и возможные противопоказания. Поэтому предварительная оценка обязательна — ваша безопасность на первом месте.",
+              "### 3. Твёрдое решение",
+              "Кодирование работает лучше всего, когда исходит из ясного личного решения. Поговорите с близкими и подготовьтесь к переменам морально.",
+            ],
+          },
+          {
+            heading: "Чего избегать заранее",
+            body: [
+              "Избегайте алкоголя в рекомендованный период перед процедурой и сообщите медсестре о любых препаратах или заболеваниях. Честность при оценке крайне важна для безопасности.",
+            ],
+          },
+          {
+            heading: "В день процедуры",
+            body: [
+              "Убедитесь, что вы отдохнули и достаточно пьёте воду. Процедура проводится в стерильных условиях, и вы получаете всю информацию и даёте информированное согласие заранее.",
+            ],
+          },
+          {
+            heading: "После кодирования",
+            body: [
+              "Поддержка семьи, избегание мест, связанных с выпивкой, и, в идеале, психологическое консультирование помогают сохранить результат надолго.",
+            ],
+          },
+          {
+            heading: "Частые вопросы",
+            body: [
+              "### Сколько нельзя пить заранее?",
+              "Период определяется при оценке, в зависимости от случая. Сообщим точно, когда вы свяжетесь с нами.",
+              "### Делается ли на дому?",
+              "Да, мы предлагаем [кодирование на дому](/ru/servicii/codare-anti-alcool) в Кишинёве, дискретно и безопасно.",
+            ],
+          },
+          {
+            heading: "Заключение",
+            body: [
+              "Правильная подготовка — это разница между безопасным, эффективным кодированием и рискованным. Команда Medline сопровождает вас на каждом шаге. Свяжитесь с нами для оценки — объясним, что именно нужно сделать.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "ghid-complet-iesire-din-binge",
     date: "2026-06-20",
     readMinutes: 9,
