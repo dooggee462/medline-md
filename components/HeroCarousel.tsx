@@ -3,6 +3,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 import { SITE, type Locale } from "@/lib/site";
+import { serviceHref } from "@/lib/content";
 import { IconDrop, IconShield, IconStar, IconPhone } from "./Icons";
 
 type Slide = {
@@ -30,14 +31,14 @@ export function HeroCarousel({ locale }: { locale: Locale }) {
       title: ro ? "Tratament post-alcool" : "Лечение после алкоголя",
       text: ro ? "Perfuzii de detoxifiere care te pun rapid pe picioare." : "Детокс-капельницы, которые быстро ставят на ноги.",
       cta: ro ? "Detalii" : "Подробнее",
-      href: `/${locale}/servicii/tratament-post-alcool`,
+      href: serviceHref(locale, "tratament-post-alcool"),
     },
     {
       Icon: IconShield,
       title: ro ? "Codare anti-alcool" : "Кодирование от алкоголя",
       text: ro ? "Un pas sigur spre o viață fără alcool, sub supraveghere." : "Уверенный шаг к жизни без алкоголя, под наблюдением.",
       cta: ro ? "Detalii" : "Подробнее",
-      href: `/${locale}/servicii/codare-anti-alcool`,
+      href: serviceHref(locale, "codare-anti-alcool"),
     },
     {
       Icon: IconPhone,

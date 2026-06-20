@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 import { IconPhone, IconMail, IconPin, IconWhatsApp, IconFacebook, IconInstagram, IconTiktok } from "./Icons";
 import { SITE, whatsappLink, type Locale } from "@/lib/site";
 import type { Dictionary } from "@/lib/dictionaries";
-import { SERVICES } from "@/lib/content";
+import { SERVICES, serviceHref } from "@/lib/content";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const wa = whatsappLink(dict.booking.waMessageIntro);
@@ -53,7 +53,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <ul className="mt-4 space-y-2.5 text-sm text-slate-500">
               {SERVICES.map((s) => (
                 <li key={s.slug}>
-                  <Link href={`/${locale}/servicii/${s.slug}`} className="hover:text-brand-700">
+                  <Link href={serviceHref(locale, s.slug)} className="hover:text-brand-700">
                     {s.content[locale].h1}
                   </Link>
                 </li>

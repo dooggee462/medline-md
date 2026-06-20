@@ -784,6 +784,64 @@ export function getService(slug: string): ServiceDetail | undefined {
 }
 
 /* ────────────────────────────────────────────
+   SLUG-URI LOCALIZATE PENTRU RU (transliterare rusă, bun pentru SEO)
+   Cheie = slug RO (canonic), valoare = slug RU.
+   Acoperă atât servicii, cât și articole de blog.
+   ──────────────────────────────────────────── */
+export const RU_SLUG: Record<string, string> = {
+  // Servicii
+  "perfuzii-la-domiciliu": "kapelnicy-na-domu",
+  "injectii-la-domiciliu": "inekcii-na-domu",
+  "ingrijire-bolnavi-la-domiciliu": "uhod-za-bolnymi-na-domu",
+  "consult-medical-la-domiciliu": "medicinskiy-osmotr-na-domu",
+  "pansamente-ingrijire-plagi": "perevyazki-i-uhod-za-ranami",
+  "tratament-post-alcool": "lechenie-posle-alkogolya",
+  "codare-anti-alcool": "kodirovanie-ot-alkogolya",
+  // Articole blog
+  "ghid-complet-iesire-din-binge": "vyvod-iz-zapoya-polnyy-gid",
+  "ghid-complet-codare-anti-alcool": "kodirovanie-polnyy-gid",
+  "metode-codare-anti-alcool": "metody-kodirovaniya",
+  "codare-sau-tratament-post-alcool": "kodirovanie-ili-lechenie",
+  "pregatire-codare-anti-alcool": "podgotovka-k-kodirovaniyu",
+  "ce-sa-faci-daca-cineva-a-baut-prea-mult": "chto-delat-esli-perepil",
+  "cum-ajuti-pe-cineva-sa-iasa-din-binge": "kak-pomoch-vyyti-iz-zapoya",
+  "mahmureala-severa-ce-sa-faci": "tyazheloe-pohmele",
+  "semne-ca-ai-nevoie-de-perfuzie-detoxifiere": "priznaki-nuzhna-kapelnica",
+  "avantajele-asistentei-medicale-la-domiciliu": "preimushestva-pomoshi-na-domu",
+  "cum-te-pregatesti-pentru-perfuzie-la-domiciliu": "kak-podgotovitsya-k-kapelnice",
+  "ingrijirea-varstnicilor-la-domiciliu-ghid": "uhod-za-pozhilymi-na-domu",
+  "perfuzie-la-domiciliu-video": "kapelnica-na-domu-video",
+  "injectie-intramusculara-video": "vnutrimyshechnaya-inekciya-video",
+  "masaj-asistenta-medicala-video": "massazh-medsestry-video",
+  "tratament-post-alcool-lux-video": "lechenie-posle-alkogolya-lux-video",
+  "interviu-recenzii-video": "intervyu-i-otzyvy-video",
+};
+
+const RU_TO_RO: Record<string, string> = Object.fromEntries(
+  Object.entries(RU_SLUG).map(([ro, ru]) => [ru, ro])
+);
+
+/** slug RO → slug afișat pentru limba dată */
+export function localizeSlug(roSlug: string, locale: Locale): string {
+  return locale === "ru" ? RU_SLUG[roSlug] ?? roSlug : roSlug;
+}
+
+/** slug din URL (orice limbă) → slug RO canonic */
+export function canonicalSlug(slug: string): string {
+  return RU_TO_RO[slug] ?? slug;
+}
+
+/** URL complet pentru un serviciu, pe limba dată (primește slug RO) */
+export function serviceHref(locale: Locale, roSlug: string): string {
+  return `/${locale}/servicii/${localizeSlug(roSlug, locale)}`;
+}
+
+/** Găsește serviciul după slug-ul din URL (RO sau RU) */
+export function getServiceByLocaleSlug(slug: string): ServiceDetail | undefined {
+  return getService(canonicalSlug(slug));
+}
+
+/* ────────────────────────────────────────────
    BLOG — articole pe cuvinte-cheie informaționale
    ──────────────────────────────────────────── */
 
@@ -899,7 +957,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Коротко: что такое кодирование",
             body: [
-              "Кодирование — это процедура, которая укрепляет решение не употреблять алкоголь и работает лучше всего как часть твёрдого решения и, в идеале, с психологической поддержкой. Подробнее — на [нашей странице о кодировании](/ru/servicii/codare-anti-alcool).",
+              "Кодирование — это процедура, которая укрепляет решение не употреблять алкоголь и работает лучше всего как часть твёрдого решения и, в идеале, с психологической поддержкой. Подробнее — на [нашей странице о кодировании](/ru/servicii/kodirovanie-ot-alkogolya).",
             ],
           },
           {
@@ -923,7 +981,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Условия и предварительная оценка",
             body: [
-              "Перед любым кодированием нужен период трезвости (определяется по случаю) и оценка состояния здоровья, чтобы исключить противопоказания. Если человек приходит после долгого употребления, может сначала понадобиться [лечение после алкоголя](/ru/servicii/tratament-post-alcool).",
+              "Перед любым кодированием нужен период трезвости (определяется по случаю) и оценка состояния здоровья, чтобы исключить противопоказания. Если человек приходит после долгого употребления, может сначала понадобиться [лечение после алкоголя](/ru/servicii/lechenie-posle-alkogolya).",
             ],
           },
           {
@@ -1041,13 +1099,13 @@ export const ARTICLES: Article[] = [
           {
             heading: "Что такое лечение после алкоголя",
             body: [
-              "[Лечение после алкоголя](/ru/servicii/tratament-post-alcool) (детоксикация) помогает организму восстановиться сразу после употребления: капельницы с регидратацией и витаминами, снижающие тошноту, тремор и плохое самочувствие. Решает физическую сторону.",
+              "[Лечение после алкоголя](/ru/servicii/lechenie-posle-alkogolya) (детоксикация) помогает организму восстановиться сразу после употребления: капельницы с регидратацией и витаминами, снижающие тошноту, тремор и плохое самочувствие. Решает физическую сторону.",
             ],
           },
           {
             heading: "Что такое кодирование",
             body: [
-              "[Кодирование](/ru/servicii/codare-anti-alcool) нацелено на поведенческую сторону: укрепляет решение не употреблять алкоголь надолго. Это не детокс, а шаг к трезвости.",
+              "[Кодирование](/ru/servicii/kodirovanie-ot-alkogolya) нацелено на поведенческую сторону: укрепляет решение не употреблять алкоголь надолго. Это не детокс, а шаг к трезвости.",
             ],
           },
           {
@@ -1183,7 +1241,7 @@ export const ARTICLES: Article[] = [
             heading: "Шаги подготовки",
             body: [
               "### 1. Период трезвости",
-              "Перед кодированием обязателен период без алкоголя, определяемый по случаю. Кодирование не проводится, если человек под воздействием алкоголя. Если приходите после долгого употребления, может сначала понадобиться [лечение после алкоголя](/ru/servicii/tratament-post-alcool).",
+              "Перед кодированием обязателен период без алкоголя, определяемый по случаю. Кодирование не проводится, если человек под воздействием алкоголя. Если приходите после долгого употребления, может сначала понадобиться [лечение после алкоголя](/ru/servicii/lechenie-posle-alkogolya).",
               "### 2. Медицинская оценка",
               "Проверяется состояние здоровья и возможные противопоказания. Поэтому предварительная оценка обязательна — ваша безопасность на первом месте.",
               "### 3. Твёрдое решение",
@@ -1214,7 +1272,7 @@ export const ARTICLES: Article[] = [
               "### Сколько нельзя пить заранее?",
               "Период определяется при оценке, в зависимости от случая. Сообщим точно, когда вы свяжетесь с нами.",
               "### Делается ли на дому?",
-              "Да, мы предлагаем [кодирование на дому](/ru/servicii/codare-anti-alcool) в Кишинёве, дискретно и безопасно.",
+              "Да, мы предлагаем [кодирование на дому](/ru/servicii/kodirovanie-ot-alkogolya) в Кишинёве, дискретно и безопасно.",
             ],
           },
           {
@@ -1366,7 +1424,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Кодирование — шаг к трезвости",
             body: [
-              "Детоксикация решает непосредственное физическое состояние, но не зависимость. Для тех, кто хочет остаться без алкоголя, [кодирование](/ru/servicii/codare-anti-alcool) (после оценки и периода трезвости) может быть эффективным шагом, особенно вместе с психологической поддержкой.",
+              "Детоксикация решает непосредственное физическое состояние, но не зависимость. Для тех, кто хочет остаться без алкоголя, [кодирование](/ru/servicii/kodirovanie-ot-alkogolya) (после оценки и периода трезвости) может быть эффективным шагом, особенно вместе с психологической поддержкой.",
             ],
           },
           {

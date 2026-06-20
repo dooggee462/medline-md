@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import type { Locale } from "./site";
-import { ARTICLES } from "./content";
+import { ARTICLES, localizeSlug, canonicalSlug } from "./content";
 
 /**
  * Stocarea articolelor adăugate din panoul de admin.
@@ -34,7 +34,9 @@ export type Block =
 
 /** Vedere unificată folosită de paginile publice de blog */
 export type BlogView = {
-  slug: string;
+  slug: string; // slug pentru limba curentă (RU = transliterat)
+  roSlug: string; // slug RO/canonic (pentru hreflang)
+  ruSlug: string; // slug RU (pentru hreflang)
   date: string;
   readMinutes: number;
   tiktok?: string;
@@ -148,7 +150,9 @@ function sectionsToBlocks(
 /** Lista de blog (statice + din panou), sortată descrescător după dată */
 export async function getBlogList(locale: Locale): Promise<BlogView[]> {
   const dynamic: BlogView[] = (await readPosts()).map((p) => ({
-    slug: p.slug,
+    slug: p.slug, // articolele din panou au același slug în ambele limbi
+    roSlug: p.slug,
+    ruSlug: p.slug,
     date: p.date,
     readMinutes: p.readMinutes,
     tiktok: p.tiktok,
@@ -160,7 +164,9 @@ export async function getBlogList(locale: Locale): Promise<BlogView[]> {
   }));
 
   const staticViews: BlogView[] = ARTICLES.map((a) => ({
-    slug: a.slug,
+    slug: localizeSlug(a.slug, locale),
+    roSlug: a.slug,
+    ruSlug: localizeSlug(a.slug, "ru"),
     date: a.date,
     readMinutes: a.readMinutes,
     tiktok: a.tiktok,
@@ -179,7 +185,8 @@ export async function getBlogPost(
   slug: string,
   locale: Locale
 ): Promise<BlogView | undefined> {
-  return (await getBlogList(locale)).find((b) => b.slug === slug);
+  const list = await getBlogList(locale);
+  return list.find((b) => b.slug === slug || b.roSlug === canonicalSlug(slug));
 }
 
 /** Toate slug-urile (pentru sitemap) */

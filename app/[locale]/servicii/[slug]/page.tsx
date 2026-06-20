@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
-import { SERVICES, getService } from "@/lib/content";
+import { SERVICES, getServiceByLocaleSlug, localizeSlug, serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -11,7 +11,7 @@ import { SERVICE_ICONS, IconCheck, IconClock } from "@/components/Icons";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) =>
-    SERVICES.map((s) => ({ locale, slug: s.slug }))
+    SERVICES.map((s) => ({ locale, slug: localizeSlug(s.slug, locale) }))
   );
 }
 
@@ -21,7 +21,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; slug: string }>;
 }): Promise<Metadata> {
   const { locale, slug } = await params;
-  const service = getService(slug);
+  const service = getServiceByLocaleSlug(slug);
   if (!service) return {};
   const c = service.content[locale];
   const path = `/${locale}/servicii/${slug}`;
@@ -32,9 +32,9 @@ export async function generateMetadata({
     alternates: {
       canonical: path,
       languages: {
-        ro: `/ro/servicii/${slug}`,
-        ru: `/ru/servicii/${slug}`,
-        "x-default": `/ro/servicii/${slug}`,
+        ro: `/ro/servicii/${service.slug}`,
+        ru: `/ru/servicii/${localizeSlug(service.slug, "ru")}`,
+        "x-default": `/ro/servicii/${service.slug}`,
       },
     },
     openGraph: { title: c.metaTitle, description: c.metaDescription, url: path },
@@ -49,12 +49,12 @@ export default async function ServiceDetail({
   const { locale: raw, slug } = await params;
   if (!LOCALES.includes(raw as Locale)) notFound();
   const locale = raw as Locale;
-  const service = getService(slug);
+  const service = getServiceByLocaleSlug(slug);
   if (!service) notFound();
   const dict = getDictionary(locale);
   const c = service.content[locale];
   const Icon = SERVICE_ICONS[service.icon] ?? IconCheck;
-  const related = SERVICES.filter((s) => s.slug !== slug).slice(0, 3);
+  const related = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -197,7 +197,7 @@ export default async function ServiceDetail({
                 return (
                   <Link
                     key={s.slug}
-                    href={`/${locale}/servicii/${s.slug}`}
+                    href={serviceHref(locale, s.slug)}
                     className="group rounded-2xl border border-slate-100 bg-white p-6 transition-all hover:border-brand-200 hover:shadow-lg"
                   >
                     <span className="grid h-11 w-11 place-items-center rounded-xl bg-brand-50 text-brand-600 group-hover:bg-brand-600 group-hover:text-white">

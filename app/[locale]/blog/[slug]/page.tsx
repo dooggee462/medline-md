@@ -50,7 +50,11 @@ export async function generateMetadata({
     description: post.excerpt,
     alternates: {
       canonical: path,
-      languages: { ro: `/ro/blog/${slug}`, ru: `/ru/blog/${slug}`, "x-default": `/ro/blog/${slug}` },
+      languages: {
+        ro: `/ro/blog/${post.roSlug}`,
+        ru: `/ru/blog/${post.ruSlug}`,
+        "x-default": `/ro/blog/${post.roSlug}`,
+      },
     },
     openGraph: {
       type: "article",

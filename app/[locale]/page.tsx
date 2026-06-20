@@ -7,7 +7,7 @@ import { BookingForm } from "@/components/BookingForm";
 import { JsonLd } from "@/components/JsonLd";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { HeroCarousel } from "@/components/HeroCarousel";
-import { SERVICES } from "@/lib/content";
+import { SERVICES, serviceHref } from "@/lib/content";
 import {
   SERVICE_ICONS,
   IconDrop,
@@ -178,7 +178,7 @@ export default async function Home({
                 return (
                   <Link
                     key={item.title}
-                    href={`/${locale}/servicii/${item.slug}`}
+                    href={serviceHref(locale, item.slug)}
                     className="group rounded-2xl bg-white/10 p-7 ring-1 ring-white/10 backdrop-blur transition-all hover:-translate-y-1 hover:bg-white/15"
                   >
                     <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gold-500/20 text-gold-300">
@@ -231,7 +231,7 @@ export default async function Home({
                 return (
                   <Link
                     key={s.slug}
-                    href={`/${locale}/servicii/${s.slug}`}
+                    href={serviceHref(locale, s.slug)}
                     className="group rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-900/5"
                   >
                     <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-600 group-hover:text-white">

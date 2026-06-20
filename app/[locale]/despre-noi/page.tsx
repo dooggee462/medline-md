@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
+import { serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -156,15 +157,15 @@ export default async function AboutPage({
                   {locale === "ro" ? "detoxifiere post-alcool" : "вывод из запоя"}
                 </Link>
                 {", "}
-                <Link href={`/${locale}/servicii/codare-anti-alcool`} className="font-semibold text-brand-700 hover:underline">
+                <Link href={serviceHref(locale, "codare-anti-alcool")} className="font-semibold text-brand-700 hover:underline">
                   {locale === "ro" ? "codare anti-alcool" : "кодирование от алкоголя"}
                 </Link>
                 {", "}
-                <Link href={`/${locale}/servicii/tratament-post-alcool`} className="font-semibold text-brand-700 hover:underline">
+                <Link href={serviceHref(locale, "tratament-post-alcool")} className="font-semibold text-brand-700 hover:underline">
                   {locale === "ro" ? "tratament post-alcool" : "лечение после алкоголя"}
                 </Link>
                 {", "}
-                <Link href={`/${locale}/servicii/perfuzii-la-domiciliu`} className="font-semibold text-brand-700 hover:underline">
+                <Link href={serviceHref(locale, "perfuzii-la-domiciliu")} className="font-semibold text-brand-700 hover:underline">
                   {locale === "ro" ? "perfuzii la domiciliu" : "капельницы на дому"}
                 </Link>
                 {locale === "ro" ? " și " : " и "}

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, whatsappLink, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
+import { serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -101,9 +102,9 @@ export default async function ContactPage({
                 <div className="mt-3 flex flex-wrap gap-2">
                   {[
                     { href: `/${locale}/detoxifiere`, ro: "Detoxifiere post-alcool", ru: "Вывод из запоя" },
-                    { href: `/${locale}/servicii/codare-anti-alcool`, ro: "Codare anti-alcool", ru: "Кодирование" },
-                    { href: `/${locale}/servicii/tratament-post-alcool`, ro: "Tratament post-alcool", ru: "Лечение после алкоголя" },
-                    { href: `/${locale}/servicii/perfuzii-la-domiciliu`, ro: "Perfuzii la domiciliu", ru: "Капельницы на дому" },
+                    { href: serviceHref(locale, "codare-anti-alcool"), ro: "Codare anti-alcool", ru: "Кодирование" },
+                    { href: serviceHref(locale, "tratament-post-alcool"), ro: "Tratament post-alcool", ru: "Лечение после алкоголя" },
+                    { href: serviceHref(locale, "perfuzii-la-domiciliu"), ro: "Perfuzii la domiciliu", ru: "Капельницы на дому" },
                   ].map((s) => (
                     <Link
                       key={s.href}

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
-import { SERVICES } from "@/lib/content";
+import { SERVICES, serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -80,7 +80,7 @@ export default async function ServicesPage({
                 return (
                   <Link
                     key={s.slug}
-                    href={`/${locale}/servicii/${s.slug}`}
+                    href={serviceHref(locale, s.slug)}
                     className="group flex flex-col rounded-2xl border border-slate-100 bg-white p-7 shadow-sm transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-xl hover:shadow-brand-900/5"
                   >
                     <span className="grid h-14 w-14 place-items-center rounded-2xl bg-brand-50 text-brand-600 transition-colors group-hover:bg-brand-600 group-hover:text-white">

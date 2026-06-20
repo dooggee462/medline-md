@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE, LOCALES } from "@/lib/site";
-import { SERVICES } from "@/lib/content";
+import { SERVICES, localizeSlug } from "@/lib/content";
 import { getAllBlogSlugs } from "@/lib/posts";
 
 export const dynamic = "force-dynamic";
@@ -29,17 +29,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       });
     }
 
-    // Pagini de serviciu
+    // Pagini de serviciu (slug localizat per limbă)
     for (const s of SERVICES) {
       entries.push({
-        url: `${SITE.url}/${locale}/servicii/${s.slug}`,
+        url: `${SITE.url}/${locale}/servicii/${localizeSlug(s.slug, locale)}`,
         lastModified: now,
         changeFrequency: "monthly",
         priority: 0.9,
         alternates: {
           languages: {
             ro: `${SITE.url}/ro/servicii/${s.slug}`,
-            ru: `${SITE.url}/ru/servicii/${s.slug}`,
+            ru: `${SITE.url}/ru/servicii/${localizeSlug(s.slug, "ru")}`,
           },
         },
       });
@@ -48,14 +48,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Articole de blog (statice + adăugate din panou)
     for (const slug of blogSlugs) {
       entries.push({
-        url: `${SITE.url}/${locale}/blog/${slug}`,
+        url: `${SITE.url}/${locale}/blog/${localizeSlug(slug, locale)}`,
         lastModified: now,
         changeFrequency: "monthly",
         priority: 0.6,
         alternates: {
           languages: {
             ro: `${SITE.url}/ro/blog/${slug}`,
-            ru: `${SITE.url}/ru/blog/${slug}`,
+            ru: `${SITE.url}/ru/blog/${localizeSlug(slug, "ru")}`,
           },
         },
       });
