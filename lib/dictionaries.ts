@@ -215,7 +215,7 @@ const ro: Dictionary = {
     videoFollow: "Vezi-ne pe TikTok",
   },
   hero: {
-    badge: "Intervenție 24/7 în Chișinău și împrejurimi",
+    badge: "Detoxificare alcoolică · intervenție 24/7 în Chișinău",
     title: "Asistență medicală la domiciliu",
     titleAccent: "în Chișinău",
     subtitle:
@@ -502,7 +502,7 @@ const ru: Dictionary = {
     videoFollow: "Мы в TikTok",
   },
   hero: {
-    badge: "Выезд 24/7 по Кишинёву и окрестностям",
+    badge: "Алкогольная детоксикация · выезд 24/7 по Кишинёву",
     title: "Медицинская помощь на дому",
     titleAccent: "в Кишинёве",
     subtitle:
