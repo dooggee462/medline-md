@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
@@ -142,6 +143,37 @@ export default async function AboutPage({
                 ))}
               </div>
             ))}
+
+            <div className="rounded-2xl border border-slate-100 bg-slate-50 p-7">
+              <h2 className="text-2xl font-bold text-slate-900">
+                {locale === "ro" ? "Serviciile noastre la domiciliu" : "Наши услуги на дому"}
+              </h2>
+              <p className="mt-3 leading-relaxed text-slate-600">
+                {locale === "ro"
+                  ? "Oferim o gamă completă de servicii medicale la domiciliu în Chișinău, printre care "
+                  : "Мы предлагаем полный спектр медицинских услуг на дому в Кишинёве, среди которых "}
+                <Link href={`/${locale}/detoxifiere`} className="font-semibold text-brand-700 hover:underline">
+                  {locale === "ro" ? "detoxifiere post-alcool" : "вывод из запоя"}
+                </Link>
+                {", "}
+                <Link href={`/${locale}/servicii/codare-anti-alcool`} className="font-semibold text-brand-700 hover:underline">
+                  {locale === "ro" ? "codare anti-alcool" : "кодирование от алкоголя"}
+                </Link>
+                {", "}
+                <Link href={`/${locale}/servicii/tratament-post-alcool`} className="font-semibold text-brand-700 hover:underline">
+                  {locale === "ro" ? "tratament post-alcool" : "лечение после алкоголя"}
+                </Link>
+                {", "}
+                <Link href={`/${locale}/servicii/perfuzii-la-domiciliu`} className="font-semibold text-brand-700 hover:underline">
+                  {locale === "ro" ? "perfuzii la domiciliu" : "капельницы на дому"}
+                </Link>
+                {locale === "ro" ? " și " : " и "}
+                <Link href={`/${locale}/servicii`} className="font-semibold text-brand-700 hover:underline">
+                  {locale === "ro" ? "multe altele" : "многое другое"}
+                </Link>
+                .
+              </p>
+            </div>
           </div>
         </section>
 

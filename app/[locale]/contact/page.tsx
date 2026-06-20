@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, whatsappLink, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
@@ -92,6 +93,28 @@ export default async function ContactPage({
                   <span className="block">{dict.contact.hoursSunday}: {SITE.hours.sunday}</span>
                 </Row>
               </ul>
+
+              <div className="mt-8">
+                <p className="text-sm font-medium text-slate-500">
+                  {locale === "ro" ? "Servicii populare:" : "Популярные услуги:"}
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {[
+                    { href: `/${locale}/detoxifiere`, ro: "Detoxifiere post-alcool", ru: "Вывод из запоя" },
+                    { href: `/${locale}/servicii/codare-anti-alcool`, ro: "Codare anti-alcool", ru: "Кодирование" },
+                    { href: `/${locale}/servicii/tratament-post-alcool`, ro: "Tratament post-alcool", ru: "Лечение после алкоголя" },
+                    { href: `/${locale}/servicii/perfuzii-la-domiciliu`, ro: "Perfuzii la domiciliu", ru: "Капельницы на дому" },
+                  ].map((s) => (
+                    <Link
+                      key={s.href}
+                      href={s.href}
+                      className="rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-sm font-medium text-slate-700 transition-colors hover:border-brand-300 hover:text-brand-700"
+                    >
+                      {locale === "ro" ? s.ro : s.ru}
+                    </Link>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="rounded-3xl border border-slate-100 bg-white p-6 shadow-xl shadow-brand-900/5 sm:p-8">
