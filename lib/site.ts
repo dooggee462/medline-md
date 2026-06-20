@@ -24,11 +24,8 @@ export const SITE = {
   /** Viber — număr în format internațional, cu + (pentru viber://chat) */
   viber: "+37361003863",
 
-  /**
-   * Facebook Messenger — username-ul paginii (m.me/USERNAME)
-   * ⚠️ Verifică username-ul exact al paginii Facebook (poate diferi de „MedLine").
-   */
-  messenger: "MedLine",
+  /** Facebook Messenger — ID-ul paginii (m.me/ID) */
+  messenger: "61578767017537",
 
   /** Email de contact / destinația programărilor — ⚠️ înlocuiește cu email real */
   email: "contact@medline.md",
@@ -57,7 +54,7 @@ export const SITE = {
 
   /** Rețele sociale (lasă gol "" dacă nu există) */
   social: {
-    facebook: "https://facebook.com/MedLine",
+    facebook: "https://www.facebook.com/profile.php?id=61578767017537",
     instagram: "https://instagram.com/medline_expert",
     tiktok: "https://www.tiktok.com/@medlinehealth",
   },

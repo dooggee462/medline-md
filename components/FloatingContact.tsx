@@ -56,7 +56,7 @@ export function FloatingContact({ dict }: { dict: Dictionary }) {
   ];
 
   return (
-    <div className="pointer-events-none fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
+    <div className="pointer-events-none fixed bottom-5 right-5 z-50 hidden flex-col items-end gap-3 lg:flex">
       {/* Canale (apar la deschidere) */}
       <div
         className={`flex flex-col items-end gap-3 transition-all duration-300 ${

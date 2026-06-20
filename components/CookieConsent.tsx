@@ -28,7 +28,7 @@ export function CookieConsent({ dict }: { dict: Dictionary }) {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-x-3 bottom-3 z-[60] mx-auto max-w-2xl rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-2xl shadow-black/10 backdrop-blur sm:p-5">
+    <div className="fixed inset-x-3 bottom-20 z-[60] mx-auto max-w-2xl lg:bottom-3 rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-2xl shadow-black/10 backdrop-blur sm:p-5">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
         <p className="flex-1 text-sm leading-relaxed text-slate-600">
           🍪 {dict.ui.cookieText}

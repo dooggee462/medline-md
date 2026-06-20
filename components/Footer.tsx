@@ -89,6 +89,14 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         </div>
 
         <div className="mt-12 border-t border-slate-100 pt-8 text-center text-sm text-slate-400">
+          <div className="mb-3 flex flex-wrap justify-center gap-x-5 gap-y-2">
+            <Link href={`/${locale}/confidentialitate`} className="hover:text-brand-700">
+              {locale === "ro" ? "Confidențialitate" : "Конфиденциальность"}
+            </Link>
+            <Link href={`/${locale}/termeni`} className="hover:text-brand-700">
+              {locale === "ro" ? "Termeni și condiții" : "Условия использования"}
+            </Link>
+          </div>
           <p>© {new Date().getFullYear()} {SITE.legalName}. {dict.footer.rights}</p>
           <p className="mt-2 text-xs">{dict.footer.legal}</p>
         </div>

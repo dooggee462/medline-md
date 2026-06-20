@@ -5,6 +5,7 @@ import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { CookieConsent } from "@/components/CookieConsent";
 import { BackToTop } from "@/components/BackToTop";
+import { MobileCallBar } from "@/components/MobileCallBar";
 import { Analytics } from "@/components/Analytics";
 import { SiteSchema } from "@/components/SiteSchema";
 
@@ -94,10 +95,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={`${inter.variable} ${cormorant.variable}`}>
-      <body className="font-sans">
+      <body className="font-sans pb-14 lg:pb-0">
         <SiteSchema locale={locale as Locale} />
         {children}
         <BackToTop label={dict.ui.backToTop} />
+        <MobileCallBar dict={dict} />
         <CookieConsent dict={dict} />
         <Analytics />
       </body>
