@@ -59,6 +59,13 @@ export const SITE = {
     tiktok: "https://www.tiktok.com/@medlinehealth",
   },
 
+  /**
+   * Link direct pentru lăsat recenzie pe Google (din Google Business Profile).
+   * Format: https://g.page/r/XXXX/review  sau  https://search.google.com/local/writereview?placeid=XXXX
+   * Lasă gol "" până ai profilul Google — atunci butonul Google apare automat.
+   */
+  reviewUrl: "",
+
   /** An înființare (pentru schema + footer) */
   founded: "2015",
 

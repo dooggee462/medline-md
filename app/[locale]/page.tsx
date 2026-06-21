@@ -20,6 +20,7 @@ import {
   IconShield,
   IconStar,
   IconPlus,
+  IconFacebook,
 } from "@/components/Icons";
 
 export default async function Home({
@@ -429,6 +430,64 @@ export default async function Home({
                   <p className="pb-5 leading-relaxed text-slate-600">{f.a}</p>
                 </details>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ───────────── LASĂ O RECENZIE ───────────── */}
+        <section className="bg-gradient-to-br from-forest-800 to-forest-950 py-16 text-white lg:py-20">
+          <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+            <div className="mb-4 flex justify-center gap-1 text-gold-400">
+              {[...Array(5)].map((_, i) => (
+                <IconStar key={i} className="h-6 w-6" />
+              ))}
+            </div>
+            <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+              {locale === "ro"
+                ? "Ai fost pacientul nostru? Lasă o recenzie"
+                : "Были нашим пациентом? Оставьте отзыв"}
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-brand-50/90">
+              {locale === "ro"
+                ? "Părerea ta ne ajută să creștem și îi ajută pe alți pacienți să aibă încredere. Îți mulțumim!"
+                : "Ваш отзыв помогает нам расти и помогает другим пациентам доверять нам. Спасибо!"}
+            </p>
+            <div className="mt-8 flex flex-col flex-wrap justify-center gap-3 sm:flex-row">
+              {SITE.reviewUrl && (
+                <a
+                  href={SITE.reviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-7 py-3.5 text-base font-bold text-forest-950 shadow-lg transition-transform hover:scale-[1.02]"
+                >
+                  <IconStar className="h-5 w-5" />
+                  {locale === "ro" ? "Recenzie pe Google" : "Отзыв на Google"}
+                </a>
+              )}
+              {SITE.social.facebook && (
+                <a
+                  href={SITE.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
+                >
+                  <IconFacebook className="h-5 w-5" />
+                  Facebook
+                </a>
+              )}
+              <a
+                href={whatsappLink(
+                  locale === "ro"
+                    ? "Bună ziua! Vreau să las o recenzie despre serviciile Medline:"
+                    : "Здравствуйте! Хочу оставить отзыв об услугах Medline:"
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-white/10"
+              >
+                <IconWhatsApp className="h-5 w-5" />
+                WhatsApp
+              </a>
             </div>
           </div>
         </section>
