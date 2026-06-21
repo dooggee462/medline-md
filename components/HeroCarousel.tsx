@@ -85,7 +85,7 @@ export function HeroCarousel({ locale }: { locale: Locale }) {
       {/* linie aurie sus */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-400/70 to-transparent" aria-hidden />
 
-      <div className="relative h-44 sm:h-40">
+      <div className="relative h-52 sm:h-40">
         {slides.map((s, idx) => {
           const Icon = s.Icon;
           const active = idx === i;
@@ -96,25 +96,25 @@ export function HeroCarousel({ locale }: { locale: Locale }) {
                 active ? "scale-100 opacity-100" : "pointer-events-none scale-[0.98] opacity-0"
               }`}
             >
-              <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-3 px-6 text-center sm:flex-row sm:gap-6 sm:px-12 sm:text-left lg:px-16">
-                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-gold-400/30 to-gold-600/20 text-gold-300 ring-1 ring-gold-400/40 shadow-lg shadow-black/20 sm:h-16 sm:w-16">
-                  <Icon className="h-7 w-7 sm:h-8 sm:w-8" />
+              <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center gap-2.5 px-5 pb-7 text-center sm:flex-row sm:gap-6 sm:px-12 sm:pb-0 sm:text-left lg:px-16">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-gold-400/30 to-gold-600/20 text-gold-300 ring-1 ring-gold-400/40 shadow-lg shadow-black/20 sm:h-16 sm:w-16">
+                  <Icon className="h-6 w-6 sm:h-8 sm:w-8" />
                 </span>
-                <div className="sm:flex-1">
-                  <h2 className="text-xl font-extrabold text-white sm:text-2xl">{s.title}</h2>
-                  <p className="mt-1 text-brand-50/85">{s.text}</p>
+                <div className="min-w-0 sm:flex-1">
+                  <h2 className="text-base font-extrabold leading-snug text-white sm:text-2xl">{s.title}</h2>
+                  <p className="mt-0.5 line-clamp-2 text-xs text-brand-50/85 sm:mt-1 sm:line-clamp-none sm:text-base">{s.text}</p>
                 </div>
                 {s.tel ? (
                   <a
                     href={s.href}
-                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-6 py-3 font-bold text-forest-950 shadow-lg transition-transform hover:scale-105"
+                    className="inline-flex shrink-0 items-center gap-2 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-5 py-2.5 text-sm font-bold text-forest-950 shadow-lg transition-transform hover:scale-105 sm:px-6 sm:py-3 sm:text-base"
                   >
-                    <IconPhone className="h-5 w-5" /> {s.cta}
+                    <IconPhone className="h-4 w-4 sm:h-5 sm:w-5" /> {s.cta}
                   </a>
                 ) : (
                   <Link
                     href={s.href}
-                    className="inline-flex items-center gap-1 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-6 py-3 font-bold text-forest-950 shadow-lg transition-transform hover:scale-105"
+                    className="inline-flex shrink-0 items-center gap-1 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-5 py-2.5 text-sm font-bold text-forest-950 shadow-lg transition-transform hover:scale-105 sm:px-6 sm:py-3 sm:text-base"
                   >
                     {s.cta} <span aria-hidden>→</span>
                   </Link>
