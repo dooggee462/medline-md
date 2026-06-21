@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { IconPhone } from "./Icons";
 import { SITE, type Locale } from "@/lib/site";
+import { canonicalSlug, localizeSlug } from "@/lib/content";
 import type { Dictionary } from "@/lib/dictionaries";
 
 export function Header({
@@ -36,6 +38,19 @@ export function Header({
 
   const other: Locale = locale === "ro" ? "ru" : "ro";
 
+  // Schimbă limba PĂSTRÂND pagina curentă (traduce și slug-ul servicii/blog)
+  const pathname = usePathname() || `/${locale}`;
+  const switchLocaleHref = (target: Locale): string => {
+    const parts = pathname.split("/");
+    if (parts.length < 2) return `/${target}`;
+    parts[1] = target;
+    if (parts.length >= 4 && (parts[2] === "servicii" || parts[2] === "blog")) {
+      parts[3] = localizeSlug(canonicalSlug(parts[3]), target);
+    }
+    return parts.join("/") || `/${target}`;
+  };
+  const otherHref = switchLocaleHref(other);
+
   return (
     <header
       className={`sticky top-0 z-50 border-b transition-all ${
@@ -64,7 +79,7 @@ export function Header({
         <div className="flex items-center gap-2">
           {/* Comutator de limbă */}
           <Link
-            href={`/${other}`}
+            href={otherHref}
             className="hidden rounded-full border border-white/25 px-3 py-1.5 text-xs font-semibold uppercase text-white/80 transition-colors hover:border-gold-400 hover:text-gold-300 sm:inline-flex"
             aria-label={`Switch to ${other}`}
           >
@@ -123,7 +138,8 @@ export function Header({
                 {dict.nav.book}
               </Link>
               <Link
-                href={`/${other}`}
+                href={otherHref}
+                onClick={() => setOpen(false)}
                 className="rounded-full border border-white/25 px-4 py-2.5 text-sm font-semibold uppercase text-white/80"
               >
                 {other}
