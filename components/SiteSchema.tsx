@@ -17,6 +17,11 @@ export function SiteSchema({ locale }: { locale: Locale }) {
     image: `${SITE.url}/og-image.png`,
     foundingDate: SITE.founded,
     slogan: SITE.slogan,
+    founder: {
+      "@type": "Person",
+      name: "Sochirean Victor",
+      jobTitle: "Asistent medical",
+    },
     areaServed: { "@type": "City", name: SITE.address.city },
     contactPoint: {
       "@type": "ContactPoint",

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
@@ -131,6 +132,35 @@ export default async function AboutPage({
             />
             <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">{a.h1}</h1>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">{a.lead}</p>
+          </div>
+        </section>
+
+        {/* Fondator */}
+        <section className="py-10 lg:py-14">
+          <div className="mx-auto grid max-w-5xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-[320px_1fr] lg:gap-12 lg:px-8">
+            <div className="mx-auto w-full max-w-xs overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-brand-900/10">
+              <Image
+                src="/founder.jpg"
+                alt={locale === "ro" ? "Sochirean Victor — asistent medical, fondator Medline" : "Сокирян Виктор — медицинский ассистент, основатель Medline"}
+                width={590}
+                height={1153}
+                className="aspect-[3/4] w-full object-cover object-top"
+              />
+            </div>
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">
+                {locale === "ro" ? "Fondator" : "Основатель"}
+              </p>
+              <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900">Sochirean Victor</h2>
+              <p className="mt-1 font-semibold text-brand-700">
+                {locale === "ro" ? "Asistent medical · Fondator Medline" : "Медицинский ассистент · Основатель Medline"}
+              </p>
+              <p className="mt-4 leading-relaxed text-slate-600">
+                {locale === "ro"
+                  ? "Victor a fondat Medline cu o convingere simplă: îngrijirea medicală de calitate trebuie să ajungă la oameni acasă, cu profesionalism, discreție și empatie. Coordonează personal echipa de asistente, asigurându-se că fiecare pacient primește atenția și siguranța pe care le merită."
+                  : "Виктор основал Medline с простым убеждением: качественная медицинская помощь должна приходить к людям домой — с профессионализмом, деликатностью и заботой. Он лично руководит командой медсестёр, следя за тем, чтобы каждый пациент получал внимание и безопасность, которых заслуживает."}
+              </p>
+            </div>
           </div>
         </section>
 
