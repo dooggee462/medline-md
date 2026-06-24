@@ -75,7 +75,7 @@ export const SITE = {
    * metaPixel: din Facebook/Meta Events Manager (ex. "123456789012345")
    */
   analytics: {
-    ga4: "",
+    ga4: "G-VN876JXGD8",
     metaPixel: "",
   },
 
