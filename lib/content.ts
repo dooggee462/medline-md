@@ -35,7 +35,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Perfuzii la domiciliu în Chișinău: montare perfuzie, soluții intravenoase, rehidratare și vitaminoterapie acasă, de către asistente medicale autorizate. Programare 24/7.",
         keywords:
-          "perfuzii la domiciliu, montare perfuzie acasa, perfuzie intravenoasa Chisinau, rehidratare la domiciliu, vitaminoterapie domiciliu, asistenta perfuzie Chisinau",
+          "perfuzii la domiciliu, perfuzie la domiciliu, montare perfuzie acasa, perfuzie acasa Chisinau, perfuzie intravenoasa Chisinau, perfuzii la domiciliu pret, rehidratare la domiciliu, vitaminoterapie domiciliu, perfuzie cu vitamine, perfuzie ser fiziologic, asistenta perfuzie Chisinau",
         h1: "Perfuzii la domiciliu în Chișinău",
         short:
           "Montare de perfuzii și soluții intravenoase la tine acasă, în siguranță deplină.",
@@ -86,7 +86,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Капельницы на дому в Кишинёве: постановка капельницы, внутривенные растворы, регидратация и витаминотерапия на дому сертифицированными медсёстрами. Запись 24/7.",
         keywords:
-          "капельницы на дому, поставить капельницу дома, внутривенно Кишинёв, регидратация на дому, витаминотерапия на дому, медсестра капельница Кишинёв",
+          "капельницы на дому, капельница на дому Кишинёв, поставить капельницу дома, капельница на дому цена, внутривенно Кишинёв, регидратация на дому, витаминотерапия на дому, капельница с витаминами, медсестра на дом капельница Кишинёв",
         h1: "Капельницы на дому в Кишинёве",
         short:
           "Постановка капельниц и внутривенных растворов у вас дома, в полной безопасности.",
@@ -575,7 +575,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Tratament post-alcool și ieșire din binge la domiciliu în Chișinău: perfuzii de detoxifiere, rehidratare și refacere, sub supravegherea unei asistente medicale. Discret, 24/7.",
         keywords:
-          "tratament post-alcool, iesire din binge la domiciliu, detoxifiere alcool Chisinau, perfuzie dupa alcool, capatul betiei, vivod iz zapoya Chisinau",
+          "tratament post-alcool, tratament post-alcool la domiciliu, iesire din binge la domiciliu, detoxifiere alcool Chisinau, perfuzie dupa alcool, perfuzie dupa betie, scoatere din betie, capatul betiei, perfuzie mahmureala, vivod iz zapoya Chisinau",
         h1: "Tratament post-alcool la domiciliu",
         short:
           "Detoxifiere și refacere a organismului după consum de alcool, prin perfuzii, la domiciliu.",
@@ -625,7 +625,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Вывод из запоя и лечение после алкоголя на дому в Кишинёве: детокс-капельницы, регидратация и восстановление под наблюдением медсестры. Анонимно, 24/7.",
         keywords:
-          "вывод из запоя Кишинёв, вывод из запоя на дому, капельница после алкоголя, детоксикация алкоголь, лечение после алкоголя Кишинёв",
+          "вывод из запоя Кишинёв, вывод из запоя на дому, вывод из запоя цена, капельница после алкоголя, капельница от запоя на дом, прокапаться от алкоголя, снятие алкогольной интоксикации, детоксикация алкоголь, лечение после алкоголя Кишинёв",
         h1: "Вывод из запоя на дому",
         short:
           "Детоксикация и восстановление организма после алкоголя через капельницы, на дому.",
@@ -681,7 +681,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Codare anti-alcool la domiciliu în Chișinău, în condiții sigure și confidențiale, sub supraveghere medicală. Programare discretă, asistente calificate.",
         keywords:
-          "codare anti-alcool, codare alcool Chisinau, codare la domiciliu, kodirovka ot alkogolya Chisinau, codare impotriva alcoolului Chisinau",
+          "codare anti-alcool, codare la domiciliu, codare la domiciliu Chisinau, codare alcool Chisinau, codare alcool pret, codare anti-alcool la domiciliu, codare impotriva alcoolului, codare alcoolism Chisinau, kodirovka ot alkogolya Chisinau",
         h1: "Codare anti-alcool la domiciliu",
         short:
           "Procedură de codare împotriva dependenței de alcool, în condiții sigure și confidențiale.",
@@ -731,7 +731,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Кодирование от алкоголя на дому в Кишинёве — в безопасных и анонимных условиях, под медицинским наблюдением. Дискретная запись, квалифицированные медсёстры.",
         keywords:
-          "кодирование от алкоголя, кодировка от алкоголя Кишинёв, кодирование на дому, кодировка от алкоголизма Кишинёв",
+          "кодирование от алкоголя, кодирование от алкоголя на дому, кодирование от алкоголя цена, кодировка от алкоголя Кишинёв, закодироваться от алкоголя, кодирование на дому, кодировка от алкоголизма Кишинёв",
         h1: "Кодирование от алкоголя на дому",
         short:
           "Процедура кодирования от алкогольной зависимости в безопасных и анонимных условиях.",

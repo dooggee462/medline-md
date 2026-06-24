@@ -158,7 +158,7 @@ const ro: Dictionary = {
     description:
       "Asistență medicală la domiciliu în Chișinău: detoxifiere post-alcool, codare, perfuzii, injecții, îngrijirea bolnavilor și consult medical. Discret, asistente calificate, 24/7.",
     keywords:
-      "asistenta medicala la domiciliu, detoxifiere post-alcool Chisinau, codare anti-alcool, iesire din binge, perfuzii la domiciliu, injectii la domiciliu, ingrijire bolnavi la domiciliu Chisinau, consult medical domiciliu",
+      "asistenta medicala la domiciliu, detoxifiere post-alcool Chisinau, codare la domiciliu, codare anti-alcool, iesire din binge, perfuzii la domiciliu, perfuzie la domiciliu, tratament post-alcool, injectii la domiciliu, ingrijire bolnavi la domiciliu Chisinau, consult medical domiciliu",
     ogAlt: "Medline — asistență medicală la domiciliu în Chișinău",
   },
   nav: {
@@ -440,7 +440,7 @@ const ru: Dictionary = {
     description:
       "Медицинская помощь на дому в Кишинёве: вывод из запоя, кодирование, капельницы, инъекции, уход за больными и осмотр. Анонимно, квалифицированные медсёстры, 24/7.",
     keywords:
-      "медицинская помощь на дому, вывод из запоя Кишинёв, кодирование от алкоголя, детоксикация после алкоголя, капельницы на дому, инъекции на дому, уход за больными на дому Кишинёв, врач на дом",
+      "медицинская помощь на дому, вывод из запоя Кишинёв, кодирование от алкоголя, кодирование на дому, детоксикация после алкоголя, капельницы на дому, капельница на дому Кишинёв, инъекции на дому, уход за больными на дому Кишинёв, врач на дом",
     ogAlt: "Medline — медицинская помощь на дому в Кишинёве",
   },
   nav: {
