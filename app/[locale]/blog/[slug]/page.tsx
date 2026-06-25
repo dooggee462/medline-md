@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
-import { getBlogPost } from "@/lib/posts";
+import { getBlogPost, getBlogList } from "@/lib/posts";
 import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -62,7 +62,7 @@ export async function generateMetadata({
       description: post.excerpt,
       url: path,
       publishedTime: post.date,
-      images: post.cover ? [post.cover] : undefined,
+      images: [post.cover || "/og-image.png"],
     },
   };
 }
@@ -78,6 +78,9 @@ export default async function ArticlePage({
   const post = await getBlogPost(slug, locale);
   if (!post) notFound();
   const dict = getDictionary(locale);
+  const related = (await getBlogList(locale))
+    .filter((b) => b.slug !== post.slug)
+    .slice(0, 3);
   const dateLabel = new Date(post.date).toLocaleDateString(
     locale === "ro" ? "ro-RO" : "ru-RU",
     { day: "numeric", month: "long", year: "numeric" }
@@ -159,6 +162,34 @@ export default async function ArticlePage({
             </div>
           </article>
         </section>
+
+        {/* Articole conexe */}
+        {related.length > 0 && (
+          <section className="border-t border-slate-100 bg-slate-50 py-12 lg:py-16">
+            <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold text-slate-900">
+                {locale === "ro" ? "Citește și" : "Читайте также"}
+              </h2>
+              <div className="mt-6 grid gap-6 sm:grid-cols-3">
+                {related.map((r) => (
+                  <Link
+                    key={r.slug}
+                    href={`/${locale}/blog/${r.slug}`}
+                    className="group rounded-2xl border border-slate-100 bg-white p-5 transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg"
+                  >
+                    <time className="text-xs font-medium text-brand-600">
+                      {new Date(r.date).toLocaleDateString(locale === "ro" ? "ro-RO" : "ru-RU", { day: "numeric", month: "long", year: "numeric" })}
+                    </time>
+                    <h3 className="mt-2 font-bold leading-snug text-slate-900 group-hover:text-brand-700">
+                      {r.title}
+                    </h3>
+                    <p className="mt-1 line-clamp-2 text-sm text-slate-600">{r.excerpt}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <CtaBand locale={locale} dict={dict} />
       </main>
