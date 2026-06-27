@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   verification: {
     ...(SITE.googleVerification ? { google: SITE.googleVerification } : {}),
-    yandex: "af605a53168bb75b",
+    yandex: "3a15d19e9bf1504b",
   },
 };
 
