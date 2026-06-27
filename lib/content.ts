@@ -143,7 +143,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Injecții la domiciliu în Chișinău: intramusculare, intravenoase și subcutanate, administrate de asistente medicale autorizate, conform prescripției. Rapid, sigur, 24/7.",
         keywords:
-          "injectii la domiciliu, injectii intramusculare acasa, injectie intravenoasa Chisinau, asistenta injectii Chisinau, administrare tratament injectabil domiciliu",
+          "injectii la domiciliu, injectie la domiciliu, injectii intramusculare acasa, injectie intramusculara Chisinau, injectie intravenoasa Chisinau, injectie subcutanata, injectie acasa, asistenta injectii Chisinau, administrare tratament injectabil domiciliu",
         h1: "Injecții la domiciliu în Chișinău",
         short:
           "Injecții intramusculare, intravenoase și subcutanate, conform prescripției medicului.",
@@ -194,7 +194,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Инъекции на дому в Кишинёве: внутримышечные, внутривенные и подкожные, выполняются сертифицированными медсёстрами по назначению. Быстро, безопасно, 24/7.",
         keywords:
-          "инъекции на дому, уколы на дому Кишинёв, внутримышечно дома, внутривенная инъекция, медсестра уколы Кишинёв, инъекционное лечение на дому",
+          "инъекции на дому, укол на дому, уколы на дому Кишинёв, поставить укол дома, внутримышечно дома, внутривенная инъекция, подкожная инъекция, медсестра уколы Кишинёв, инъекционное лечение на дому",
         h1: "Инъекции на дому в Кишинёве",
         short:
           "Внутримышечные, внутривенные и подкожные инъекции по назначению врача.",
@@ -251,7 +251,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Îngrijirea bolnavilor la domiciliu în Chișinău: îngrijire vârstnici, persoane imobilizate și pacienți în recuperare — igienă, mobilizare, monitorizare. Personal medical empatic.",
         keywords:
-          "ingrijire bolnavi la domiciliu, ingrijire varstnici Chisinau, ingrijire persoane imobilizate, asistent personal bolnav, ingrijire batrani Chisinau, ingrijire paliativa domiciliu",
+          "ingrijire bolnavi la domiciliu, ingrijire la domiciliu Chisinau, ingrijire varstnici Chisinau, ingrijire persoane imobilizate, ingrijire post-operatorie, asistent personal bolnav, dadaca medicala batrani, ingrijire batrani Chisinau, ingrijire paliativa domiciliu",
         h1: "Îngrijirea bolnavilor la domiciliu",
         short:
           "Îngrijire pentru persoane imobilizate, vârstnici sau în recuperare, cu empatie.",
@@ -302,7 +302,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Уход за больными на дому в Кишинёве: уход за пожилыми, лежачими и восстанавливающимися пациентами — гигиена, мобилизация, наблюдение. Внимательный медперсонал.",
         keywords:
-          "уход за больными на дому, уход за пожилыми Кишинёв, уход за лежачими, сиделка на дом, уход за стариками Кишинёв, паллиативный уход на дому",
+          "уход за больными на дому, уход на дому Кишинёв, уход за пожилыми Кишинёв, уход за лежачими больными, послеоперационный уход, сиделка на дом, сиделка для пожилых, уход за стариками Кишинёв, паллиативный уход на дому",
         h1: "Уход за больными на дому",
         short:
           "Уход за лежачими, пожилыми и восстанавливающимися пациентами — с заботой.",
@@ -359,7 +359,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Consult medical la domiciliu în Chișinău: evaluare medicală acasă, măsurarea funcțiilor vitale, recomandări personalizate. Pentru vârstnici și pacienți care nu se pot deplasa.",
         keywords:
-          "consult medical la domiciliu, medic la domiciliu Chisinau, evaluare medicala acasa, masurare tensiune domiciliu, consultatie acasa Chisinau",
+          "consult medical la domiciliu, medic la domiciliu Chisinau, vizita medic acasa, chemare medic la domiciliu, evaluare medicala acasa, masurare tensiune domiciliu, masurare glicemie domiciliu, consultatie acasa Chisinau",
         h1: "Consult medical la domiciliu",
         short:
           "Evaluare medicală acasă, măsurarea funcțiilor vitale și recomandări.",
@@ -410,7 +410,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Медицинский осмотр на дому в Кишинёве: оценка состояния, измерение жизненных показателей, индивидуальные рекомендации. Для пожилых и маломобильных пациентов.",
         keywords:
-          "медицинский осмотр на дому, врач на дом Кишинёв, осмотр на дому, измерение давления на дому, консультация на дому Кишинёв",
+          "медицинский осмотр на дому, вызов врача на дом Кишинёв, врач на дом, осмотр на дому, измерение давления на дому, измерение сахара на дому, консультация на дому Кишинёв",
         h1: "Медицинский осмотр на дому",
         short:
           "Оценка состояния дома, измерение жизненных показателей и рекомендации.",
@@ -467,7 +467,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Pansamente la domiciliu în Chișinău: tratarea plăgilor postoperatorii, escarelor și rănilor cronice de către asistente autorizate. Îngrijire sterilă, programare rapidă.",
         keywords:
-          "pansamente la domiciliu, ingrijire plagi acasa, tratare escare Chisinau, pansament postoperator domiciliu, ingrijire rani cronice Chisinau",
+          "pansamente la domiciliu, pansament la domiciliu Chisinau, ingrijire plagi acasa, schimbare pansament acasa, tratare escare Chisinau, ingrijire escare, pansament picior diabetic, pansament postoperator domiciliu, ingrijire rani cronice Chisinau",
         h1: "Pansamente și îngrijirea plăgilor la domiciliu",
         short:
           "Tratarea și pansarea plăgilor postoperatorii, escarelor și rănilor cronice.",
@@ -518,7 +518,7 @@ export const SERVICES: ServiceDetail[] = [
         metaDescription:
           "Перевязки на дому в Кишинёве: обработка послеоперационных ран, пролежней и хронических ран сертифицированными медсёстрами. Стерильный уход, быстрая запись.",
         keywords:
-          "перевязки на дому, уход за ранами на дому, лечение пролежней Кишинёв, послеоперационная перевязка на дому, уход за хроническими ранами Кишинёв",
+          "перевязки на дому, перевязка на дому Кишинёв, уход за ранами на дому, смена повязки на дому, лечение пролежней Кишинёв, уход за пролежнями, перевязка диабетической стопы, послеоперационная перевязка на дому, уход за хроническими ранами Кишинёв",
         h1: "Перевязки и уход за ранами на дому",
         short:
           "Обработка и перевязка послеоперационных, пролежневых и хронических ран.",
