@@ -64,7 +64,7 @@ export const SITE = {
    * Format: https://g.page/r/XXXX/review  sau  https://search.google.com/local/writereview?placeid=XXXX
    * Lasă gol "" până ai profilul Google — atunci butonul Google apare automat.
    */
-  reviewUrl: "",
+  reviewUrl: "https://g.page/r/CViJVna_59QmEAI/review",
 
   /** An înființare (pentru schema + footer) */
   founded: "2015",
