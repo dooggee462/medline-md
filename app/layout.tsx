@@ -21,9 +21,10 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  ...(SITE.googleVerification
-    ? { verification: { google: SITE.googleVerification } }
-    : {}),
+  verification: {
+    ...(SITE.googleVerification ? { google: SITE.googleVerification } : {}),
+    yandex: "af605a53168bb75b",
+  },
 };
 
 export const viewport: Viewport = {
