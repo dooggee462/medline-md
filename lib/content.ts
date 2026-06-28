@@ -815,6 +815,10 @@ export const RU_SLUG: Record<string, string> = {
   "masaj-asistenta-medicala-video": "massazh-medsestry-video",
   "tratament-post-alcool-lux-video": "lechenie-posle-alkogolya-lux-video",
   "interviu-recenzii-video": "intervyu-i-otzyvy-video",
+  "perfuzii-cu-vitamine-beneficii": "vitaminnye-kapelnicy-polza",
+  "cat-costa-perfuzie-detoxifiere": "skolko-stoit-kapelnica-detoks",
+  "ingrijire-parinte-imobilizat": "uhod-za-lezhachim-rodstvennikom",
+  "semne-varstnic-are-nevoie-ingrijire": "priznaki-pozhilomu-nuzhen-uhod",
 };
 
 const RU_TO_RO: Record<string, string> = Object.fromEntries(
@@ -864,6 +868,392 @@ export type Article = {
 };
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "perfuzii-cu-vitamine-beneficii",
+    date: "2026-06-29",
+    readMinutes: 6,
+    content: {
+      ro: {
+        metaTitle: "Perfuzii cu Vitamine la Domiciliu: Beneficii și Când Ai Nevoie | Medline.md",
+        metaDescription:
+          "Perfuzii cu vitamine la domiciliu în Chișinău: ce conțin, ce beneficii au, când sunt recomandate și cum se administrează în siguranță. Programare 24/7.",
+        keywords: "perfuzii cu vitamine, perfuzie vitamine la domiciliu, vitaminoterapie Chisinau, perfuzie pentru imunitate, perfuzie de refacere",
+        title: "Perfuzii cu vitamine la domiciliu: beneficii și când ai nevoie",
+        excerpt: "Ce sunt perfuziile cu vitamine, ce beneficii aduc și în ce situații te ajută cel mai mult.",
+        sections: [
+          {
+            body: [
+              "Perfuziile cu vitamine au devenit o metodă populară de a sprijini rapid organismul, mai ales în perioade de oboseală, după boală sau după excese. Administrate corect, la domiciliu, sunt o soluție comodă și sigură.",
+            ],
+          },
+          {
+            heading: "Ce sunt perfuziile cu vitamine",
+            body: [
+              "Sunt soluții administrate intravenos care conțin vitamine, minerale și electroliți. Avantajul față de pastile: substanțele ajung direct în sânge, cu absorbție rapidă și completă.",
+            ],
+          },
+          {
+            heading: "Ce beneficii au",
+            body: [
+              "### Energie și refacere",
+              "Ajută la combaterea oboselii, epuizării și a stării de slăbiciune, mai ales după boală, efort sau stres prelungit.",
+              "### Hidratare și echilibru",
+              "Reechilibrează rapid organismul în caz de deshidratare (după gastroenterite, febră sau consum de alcool).",
+              "### Sprijin pentru imunitate",
+              "Vitaminele din grupul B și C, împreună cu mineralele, susțin sistemul imunitar.",
+            ],
+          },
+          {
+            heading: "Când sunt recomandate",
+            body: [
+              "Oboseală cronică, perioade de stres, recuperare după boală, deshidratare, sau ca parte a [tratamentului post-alcool](/ro/servicii/tratament-post-alcool). Pentru detalii, vezi pagina de [perfuzii la domiciliu](/ro/servicii/perfuzii-la-domiciliu).",
+            ],
+          },
+          {
+            heading: "Sunt sigure?",
+            body: [
+              "Da, atunci când sunt administrate de o asistentă medicală autorizată, cu materiale sterile și după o scurtă evaluare. Medline le aduce la domiciliu, în Chișinău, rapid și în siguranță.",
+            ],
+          },
+          {
+            heading: "Concluzie",
+            body: [
+              "Perfuziile cu vitamine sunt un mod eficient de a-ți reda energia și de a-ți susține organismul. Sună-ne pentru o programare la domiciliu.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Витаминные Капельницы на Дому: Польза и Когда Нужны | Medline.md",
+        metaDescription:
+          "Витаминные капельницы на дому в Кишинёве: что содержат, какая польза, когда рекомендуются и как ставятся безопасно. Запись 24/7.",
+        keywords: "витаминные капельницы, капельница с витаминами на дому, витаминотерапия Кишинёв, капельница для иммунитета, восстановительная капельница",
+        title: "Витаминные капельницы на дому: польза и когда нужны",
+        excerpt: "Что такое витаминные капельницы, какую пользу приносят и в каких ситуациях помогают больше всего.",
+        sections: [
+          {
+            body: [
+              "Витаминные капельницы стали популярным способом быстро поддержать организм — особенно при усталости, после болезни или излишеств. При правильном проведении на дому это удобное и безопасное решение.",
+            ],
+          },
+          {
+            heading: "Что такое витаминные капельницы",
+            body: [
+              "Это растворы для внутривенного введения с витаминами, минералами и электролитами. Преимущество перед таблетками: вещества попадают прямо в кровь, с быстрым и полным усвоением.",
+            ],
+          },
+          {
+            heading: "Какая польза",
+            body: [
+              "### Энергия и восстановление",
+              "Помогают бороться с усталостью, истощением и слабостью — особенно после болезни, нагрузок илидлительного стресса.",
+              "### Гидратация и баланс",
+              "Быстро восстанавливают организм при обезвоживании (после кишечных инфекций, температуры или алкоголя).",
+              "### Поддержка иммунитета",
+              "Витамины группы B и C вместе с минералами поддерживают иммунную систему.",
+            ],
+          },
+          {
+            heading: "Когда рекомендуются",
+            body: [
+              "Хроническая усталость, периоды стресса, восстановление после болезни, обезвоживание или как часть [лечения после алкоголя](/ru/servicii/lechenie-posle-alkogolya). Подробнее — на странице [капельницы на дому](/ru/servicii/kapelnicy-na-domu).",
+            ],
+          },
+          {
+            heading: "Это безопасно?",
+            body: [
+              "Да, если их ставит сертифицированная медсестра, стерильными материалами и после короткой оценки. Medline привозит их на дом в Кишинёве — быстро и безопасно.",
+            ],
+          },
+          {
+            heading: "Заключение",
+            body: [
+              "Витаминные капельницы — эффективный способ вернуть энергию и поддержать организм. Позвоните для записи на дом.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "cat-costa-perfuzie-detoxifiere",
+    date: "2026-06-28",
+    readMinutes: 5,
+    content: {
+      ro: {
+        metaTitle: "Cât Costă o Perfuzie / Detoxifiere la Domiciliu — Ghid | Medline.md",
+        metaDescription:
+          "De ce depinde prețul unei perfuzii sau detoxifieri la domiciliu în Chișinău și cum afli tariful exact. Transparent, fără costuri ascunse.",
+        keywords: "cat costa perfuzie la domiciliu, pret detoxifiere alcool, cat costa codare, pret perfuzie Chisinau, tarife asistenta medicala domiciliu",
+        title: "Cât costă o perfuzie sau detoxifiere la domiciliu",
+        excerpt: "De ce depinde prețul și cum afli tariful exact, fără costuri ascunse.",
+        sections: [
+          {
+            body: [
+              "Una dintre primele întrebări ale pacienților este „cât costă?”. Răspunsul corect depinde de câțiva factori — îți explicăm transparent cum se formează prețul.",
+            ],
+          },
+          {
+            heading: "De ce depinde prețul",
+            body: [
+              "Prețul variază în funcție de: tipul serviciului (perfuzie simplă, complex de vitamine, detoxifiere, codare), complexitatea cazului, materialele și medicamentele necesare și momentul (urgență de noapte).",
+            ],
+          },
+          {
+            heading: "De ce nu afișăm prețuri fixe",
+            body: [
+              "Fiecare caz e diferit. Un preț fix afișat ar fi adesea inexact. De aceea îți comunicăm tariful exact înainte de vizită, ca să știi clar la ce să te aștepți — fără costuri ascunse.",
+            ],
+          },
+          {
+            heading: "Cum afli prețul exact",
+            body: [
+              "Sună-ne sau scrie-ne pe WhatsApp/Viber, spune-ne de ce ai nevoie, iar noi îți spunem prețul pe loc. Vezi și lista de [servicii prestate](/ro/preturi) sau pagina de [detoxifiere](/ro/detoxifiere).",
+            ],
+          },
+          {
+            heading: "Concluzie",
+            body: [
+              "La Medline, prețul e transparent și comunicat înainte de programare. Contactează-ne pentru o ofertă exactă, fără obligații.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Сколько Стоит Капельница / Детокс на Дому — Гид | Medline.md",
+        metaDescription:
+          "От чего зависит цена капельницы или детоксикации на дому в Кишинёве и как узнать точную стоимость. Прозрачно, без скрытых платежей.",
+        keywords: "сколько стоит капельница на дому, цена вывода из запоя, сколько стоит кодирование, цена капельницы Кишинёв, тарифы медпомощи на дому",
+        title: "Сколько стоит капельница или детоксикация на дому",
+        excerpt: "От чего зависит цена и как узнать точную стоимость, без скрытых платежей.",
+        sections: [
+          {
+            body: [
+              "Один из первых вопросов пациентов — «сколько стоит?». Правильный ответ зависит от нескольких факторов — объясняем прозрачно, как формируется цена.",
+            ],
+          },
+          {
+            heading: "От чего зависит цена",
+            body: [
+              "Цена зависит от: типа услуги (простая капельница, витаминный комплекс, детокс, кодирование), сложности случая, необходимых материалов и препаратов и времени (срочный ночной вызов).",
+            ],
+          },
+          {
+            heading: "Почему мы не показываем фиксированные цены",
+            body: [
+              "Каждый случай разный. Фиксированная цена часто была бы неточной. Поэтому мы сообщаем точную стоимость до визита, чтобы вы чётко знали, чего ожидать — без скрытых платежей.",
+            ],
+          },
+          {
+            heading: "Как узнать точную цену",
+            body: [
+              "Позвоните или напишите в WhatsApp/Viber, скажите, что нужно, и мы назовём цену сразу. Смотрите также [перечень услуг](/ru/preturi) или страницу [вывод из запоя](/ru/detoxifiere).",
+            ],
+          },
+          {
+            heading: "Заключение",
+            body: [
+              "В Medline цена прозрачна и сообщается до записи. Свяжитесь с нами для точного расчёта, без обязательств.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ingrijire-parinte-imobilizat",
+    date: "2026-06-27",
+    readMinutes: 6,
+    content: {
+      ro: {
+        metaTitle: "Îngrijirea unui Părinte Imobilizat la Domiciliu: Ghid Practic | Medline.md",
+        metaDescription:
+          "Cum îngrijești un părinte imobilizat la domiciliu: prevenirea escarelor, igienă, mobilizare, alimentație și sprijin medical. Ghid practic + ajutor profesionist.",
+        keywords: "ingrijire parinte imobilizat, ingrijire persoana imobilizata, prevenire escare, ingrijire la pat, ingrijire bolnav imobilizat Chisinau",
+        title: "Îngrijirea unui părinte imobilizat la domiciliu: ghid practic",
+        excerpt: "Sfaturi practice pentru o îngrijire sigură și demnă a unei persoane imobilizate la pat.",
+        sections: [
+          {
+            body: [
+              "Îngrijirea unui părinte imobilizat este o responsabilitate plină de iubire, dar solicitantă fizic și emoțional. Acest ghid îți oferă repere practice ca îngrijirea să fie sigură și demnă.",
+            ],
+          },
+          {
+            heading: "Prevenirea escarelor",
+            body: [
+              "Escarele (rănile de presiune) apar la persoanele care stau mult la pat. Schimbă poziția pacientului la fiecare 2 ore, folosește saltele speciale și menține pielea curată și uscată.",
+            ],
+          },
+          {
+            heading: "Igiena zilnică",
+            body: [
+              "Igiena regulată previne infecțiile și menține confortul. Pentru persoanele imobilizate există tehnici de igienă la pat — o asistentă medicală te poate ghida sau prelua aceste sarcini.",
+            ],
+          },
+          {
+            heading: "Alimentația și hidratarea",
+            body: [
+              "Mese mici și dese, ușor de înghițit, cu hidratare suficientă. Atenție la poziția în timpul mesei pentru a evita înecul.",
+            ],
+          },
+          {
+            heading: "Sprijinul medical la domiciliu",
+            body: [
+              "Pansamentele, perfuziile, injecțiile și monitorizarea funcțiilor vitale pot fi făcute acasă de o asistentă. Vezi serviciul nostru de [îngrijire a bolnavilor la domiciliu](/ro/servicii/ingrijire-bolnavi-la-domiciliu).",
+            ],
+          },
+          {
+            heading: "Ai grijă și de tine",
+            body: [
+              "Îngrijitorii obosesc. Acceptă ajutor — fie de la familie, fie de la o echipă profesionistă. Medline poate prelua sarcinile medicale, ca tu să ai timp pentru relația cu cel drag.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Уход за Лежачим Родителем на Дому: Практический Гид | Medline.md",
+        metaDescription:
+          "Как ухаживать за лежачим родителем на дому: профилактика пролежней, гигиена, мобилизация, питание и медицинская поддержка. Практический гид + помощь специалиста.",
+        keywords: "уход за лежачим родителем, уход за лежачим больным, профилактика пролежней, уход за лежачими на дому Кишинёв",
+        title: "Уход за лежачим родителем на дому: практический гид",
+        excerpt: "Практичные советы для безопасного и достойного ухода за лежачим человеком.",
+        sections: [
+          {
+            body: [
+              "Уход за лежачим родителем — это ответственность, полная любви, но трудная физически и эмоционально. Этот гид даёт практичные ориентиры, чтобы уход был безопасным и достойным.",
+            ],
+          },
+          {
+            heading: "Профилактика пролежней",
+            body: [
+              "Пролежни появляются у тех, кто долго лежит. Меняйте положение пациента каждые 2 часа, используйте специальные матрасы и держите кожу чистой и сухой.",
+            ],
+          },
+          {
+            heading: "Ежедневная гигиена",
+            body: [
+              "Регулярная гигиена предотвращает инфекции и поддерживает комфорт. Для лежачих есть техники гигиены в постели — медсестра подскажет или возьмёт это на себя.",
+            ],
+          },
+          {
+            heading: "Питание и гидратация",
+            body: [
+              "Частые небольшие приёмы пищи, лёгкие для глотания, с достаточным питьём. Следите за положением во время еды, чтобы избежать поперхивания.",
+            ],
+          },
+          {
+            heading: "Медицинская поддержка на дому",
+            body: [
+              "Перевязки, капельницы, инъекции и контроль показателей можно делать дома силами медсестры. Смотрите нашу услугу [уход за больными на дому](/ru/servicii/uhod-za-bolnymi-na-domu).",
+            ],
+          },
+          {
+            heading: "Берегите и себя",
+            body: [
+              "Те, кто ухаживает, устают. Принимайте помощь — от семьи или профессиональной команды. Medline может взять на себя медицинские задачи, чтобы у вас оставалось время на близкого человека.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "semne-varstnic-are-nevoie-ingrijire",
+    date: "2026-06-26",
+    readMinutes: 5,
+    content: {
+      ro: {
+        metaTitle: "Semne că un Vârstnic Are Nevoie de Îngrijire la Domiciliu | Medline.md",
+        metaDescription:
+          "Cum îți dai seama că un vârstnic are nevoie de ajutor la domiciliu: semne fizice, cognitive și de siguranță. Ghid pentru familii + sprijin profesionist în Chișinău.",
+        keywords: "semne varstnic are nevoie de ingrijire, ingrijire varstnici la domiciliu, ajutor batrani acasa, ingrijire batrani Chisinau",
+        title: "Semne că un vârstnic are nevoie de îngrijire la domiciliu",
+        excerpt: "Semnele la care să fii atent ca să știi când e momentul să ceri ajutor pentru un părinte vârstnic.",
+        sections: [
+          {
+            body: [
+              "Mulți vârstnici nu cer ajutor, ca să nu-și împovăreze familia. De aceea e important să recunoști semnele că au nevoie de sprijin la domiciliu.",
+            ],
+          },
+          {
+            heading: "Semne fizice",
+            body: [
+              "Slăbiciune, căderi frecvente, dificultăți la deplasare, scădere în greutate, igienă personală neglijată sau dificultăți la activitățile zilnice (gătit, îmbrăcat).",
+            ],
+          },
+          {
+            heading: "Semne cognitive",
+            body: [
+              "Uitarea medicamentelor, confuzie, dezorientare, repetarea acelorași întrebări sau neglijarea facturilor și treburilor casnice.",
+            ],
+          },
+          {
+            heading: "Semne de siguranță",
+            body: [
+              "Aragaz lăsat aprins, uși descuiate, rătăcirea prin casă, sau accidente casnice repetate. Acestea indică nevoia urgentă de supraveghere.",
+            ],
+          },
+          {
+            heading: "Ce poți face",
+            body: [
+              "Nu aștepta o criză. O asistentă medicală la domiciliu poate ajuta cu medicația, igiena, monitorizarea sănătății și companie. Vezi serviciul de [îngrijire a vârstnicilor la domiciliu](/ro/servicii/ingrijire-bolnavi-la-domiciliu).",
+            ],
+          },
+          {
+            heading: "Concluzie",
+            body: [
+              "Recunoașterea din timp a acestor semne îți protejează părintele. Medline oferă îngrijire la domiciliu în Chișinău, cu profesionalism și empatie — contactează-ne.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Признаки, что Пожилому Нужен Уход на Дому | Medline.md",
+        metaDescription:
+          "Как понять, что пожилому человеку нужна помощь на дому: физические, когнитивные признаки и признаки безопасности. Гид для семей + помощь специалиста в Кишинёве.",
+        keywords: "признаки что нужен уход пожилому, уход за пожилыми на дому, помощь пожилым дома, уход за стариками Кишинёв",
+        title: "Признаки, что пожилому человеку нужен уход на дому",
+        excerpt: "Признаки, на которые стоит обратить внимание, чтобы понять, когда пора просить помощь для пожилого родителя.",
+        sections: [
+          {
+            body: [
+              "Многие пожилые не просят помощи, чтобы не обременять семью. Поэтому важно распознать признаки того, что им нужна поддержка на дому.",
+            ],
+          },
+          {
+            heading: "Физические признаки",
+            body: [
+              "Слабость, частые падения, трудности с передвижением, потеря веса, запущенная личная гигиена или трудности с повседневными делами (готовка, одевание).",
+            ],
+          },
+          {
+            heading: "Когнитивные признаки",
+            body: [
+              "Забывание лекарств, спутанность, дезориентация, повторение одних и тех же вопросов или запущенные счета и домашние дела.",
+            ],
+          },
+          {
+            heading: "Признаки безопасности",
+            body: [
+              "Оставленная включённая плита, незапертые двери, блуждание по дому или повторяющиеся бытовые происшествия. Это указывает на срочную необходимость присмотра.",
+            ],
+          },
+          {
+            heading: "Что можно сделать",
+            body: [
+              "Не ждите кризиса. Медсестра на дому поможет с лекарствами, гигиеной, контролем здоровья и общением. Смотрите услугу [уход за пожилыми на дому](/ru/servicii/uhod-za-bolnymi-na-domu).",
+            ],
+          },
+          {
+            heading: "Заключение",
+            body: [
+              "Раннее распознавание этих признаков защищает вашего родителя. Medline предоставляет уход на дому в Кишинёве, с профессионализмом и заботой — свяжитесь с нами.",
+            ],
+          },
+        ],
+      },
+    },
+  },
   {
     slug: "metode-codare-anti-alcool",
     date: "2026-06-21",
