@@ -392,6 +392,30 @@ const ro: Dictionary = {
         q: "Asistentele sunt autorizate?",
         a: "Da, toți membrii echipei sunt asistente medicale autorizate, cu experiență în îngrijire la domiciliu.",
       },
+      {
+        q: "Faceți detoxifiere post-alcool și ieșire din binge la domiciliu?",
+        a: "Da, oferim detoxifiere post-alcool și ieșire din binge la domiciliu în Chișinău, prin perfuzii de detoxifiere, discret și disponibil 24/7.",
+      },
+      {
+        q: "Codarea anti-alcool la domiciliu este sigură și confidențială?",
+        a: "Da. Codarea se face după o evaluare prealabilă, în condiții sterile, la domiciliu, cu confidențialitate deplină și fără judecăți.",
+      },
+      {
+        q: "Cât costă codarea sau detoxifierea?",
+        a: "Prețul variază în funcție de serviciu și de specificul cazului. Îți comunicăm tariful exact la telefon, pe WhatsApp sau Viber, înainte de vizită.",
+      },
+      {
+        q: "Faceți perfuzii cu vitamine la domiciliu?",
+        a: "Da, administrăm perfuzii intravenoase și complexe de vitamine la domiciliu, pentru rehidratare și refacerea organismului.",
+      },
+      {
+        q: "Lucrați noaptea și în weekend?",
+        a: "Da, suntem disponibili non-stop, 24/7, inclusiv noaptea și în weekend, pentru urgențe la domiciliu.",
+      },
+      {
+        q: "Pot face o programare pentru un membru al familiei?",
+        a: "Desigur. Ne poți contacta în numele unei persoane dragi — venim la adresa indicată, cu discreție și grijă.",
+      },
     ],
   },
   booking: {
@@ -673,6 +697,30 @@ const ru: Dictionary = {
       {
         q: "Медсёстры сертифицированы?",
         a: "Да, все члены команды — сертифицированные медсёстры с опытом ухода на дому.",
+      },
+      {
+        q: "Делаете ли вывод из запоя и детоксикацию после алкоголя на дому?",
+        a: "Да, мы делаем вывод из запоя и детоксикацию после алкоголя на дому в Кишинёве — с помощью детокс-капельниц, анонимно и круглосуточно (24/7).",
+      },
+      {
+        q: "Кодирование от алкоголя на дому — это безопасно и анонимно?",
+        a: "Да. Кодирование проводится после предварительной оценки, в стерильных условиях, на дому, с полной конфиденциальностью и без осуждения.",
+      },
+      {
+        q: "Сколько стоит кодирование или вывод из запоя?",
+        a: "Цена зависит от услуги и особенностей случая. Точную стоимость сообщаем по телефону, в WhatsApp или Viber до визита.",
+      },
+      {
+        q: "Делаете ли капельницы с витаминами на дому?",
+        a: "Да, мы ставим внутривенные капельницы и витаминные комплексы на дому — для регидратации и восстановления организма.",
+      },
+      {
+        q: "Вы работаете ночью и в выходные?",
+        a: "Да, мы доступны круглосуточно, 24/7, включая ночь и выходные, для срочных вызовов на дом.",
+      },
+      {
+        q: "Можно ли записать члена семьи?",
+        a: "Конечно. Вы можете связаться с нами от имени близкого человека — мы приедем по указанному адресу, деликатно и с заботой.",
       },
     ],
   },
