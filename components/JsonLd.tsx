@@ -19,7 +19,6 @@ export function JsonLd({ locale }: { locale: Locale }) {
     description: dict.meta.description,
     url,
     telephone: SITE.phoneRaw,
-    email: SITE.email,
     foundingDate: SITE.founded,
     image: `${SITE.url}/og-image.png`,
     logo: `${SITE.url}/icon.svg`,

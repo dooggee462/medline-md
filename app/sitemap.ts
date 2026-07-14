@@ -11,7 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogSlugs = await getAllBlogSlugs();
 
   // Căi statice (relative la locale)
-  const staticPaths = ["", "/servicii", "/detoxifiere", "/preturi", "/despre-noi", "/blog", "/contact", "/confidentialitate", "/termeni"];
+  const staticPaths = ["", "/servicii", "/detoxifiere", "/codare", "/preturi", "/despre-noi", "/blog", "/contact", "/confidentialitate", "/termeni"];
 
   for (const locale of LOCALES) {
     for (const p of staticPaths) {

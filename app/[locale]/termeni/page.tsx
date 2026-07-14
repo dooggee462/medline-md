@@ -55,7 +55,7 @@ const CONTENT: Record<
       {
         heading: "Contact",
         body: [
-          `Pentru întrebări legate de acești termeni, contactează-ne la ${SITE.phone} sau ${SITE.email}.`,
+          `Pentru întrebări legate de acești termeni, contactează-ne la ${SITE.phone}.`,
         ],
       },
     ],
@@ -105,7 +105,7 @@ const CONTENT: Record<
       {
         heading: "Контакты",
         body: [
-          `По вопросам об этих условиях свяжитесь с нами: ${SITE.phone} или ${SITE.email}.`,
+          `По вопросам об этих условиях свяжитесь с нами: ${SITE.phone}.`,
         ],
       },
     ],

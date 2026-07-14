@@ -13,7 +13,6 @@ import {
   IconDrop,
   IconWhatsApp,
   IconPhone,
-  IconMail,
   IconPin,
   IconClock,
   IconCheck,
@@ -382,11 +381,6 @@ export default async function Home({
                     className="hover:text-brand-700"
                   >
                     {SITE.phone}
-                  </a>
-                </ContactRow>
-                <ContactRow icon={<IconMail className="h-5 w-5" />} label={dict.contact.email}>
-                  <a href={`mailto:${SITE.email}`} className="hover:text-brand-700">
-                    {SITE.email}
                   </a>
                 </ContactRow>
                 <ContactRow icon={<IconPin className="h-5 w-5" />} label={locale === "ro" ? "Zonă deservită" : "Зона обслуживания"}>

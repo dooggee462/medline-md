@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { IconPhone, IconMail, IconPin, IconWhatsApp, IconFacebook, IconInstagram, IconTiktok } from "./Icons";
+import { IconPhone, IconPin, IconWhatsApp, IconFacebook, IconInstagram, IconTiktok } from "./Icons";
 import { SITE, whatsappLink, type Locale } from "@/lib/site";
 import type { Dictionary } from "@/lib/dictionaries";
 import { SERVICES, serviceHref } from "@/lib/content";
@@ -24,9 +24,6 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               </a>
               <a href={`tel:${SITE.phoneRaw}`} className="grid h-10 w-10 place-items-center rounded-full bg-brand-50 text-brand-600 transition-colors hover:bg-brand-100" aria-label="Phone">
                 <IconPhone className="h-5 w-5" />
-              </a>
-              <a href={`mailto:${SITE.email}`} className="grid h-10 w-10 place-items-center rounded-full bg-brand-50 text-brand-600 transition-colors hover:bg-brand-100" aria-label="Email">
-                <IconMail className="h-5 w-5" />
               </a>
             </div>
             <div className="mt-3 flex gap-3">
@@ -67,6 +64,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               <li><Link href={`/${locale}`} className="hover:text-brand-700">{dict.nav.home}</Link></li>
               <li><Link href={`/${locale}/servicii`} className="hover:text-brand-700">{dict.nav.services}</Link></li>
               <li><Link href={`/${locale}/detoxifiere`} className="hover:text-brand-700">{dict.nav.detox}</Link></li>
+              <li><Link href={`/${locale}/codare`} className="hover:text-brand-700">{locale === "ro" ? "Codare anti-alcool" : "Кодирование"}</Link></li>
               <li><Link href={`/${locale}/preturi`} className="hover:text-brand-700">{dict.nav.prices}</Link></li>
               <li><Link href={`/${locale}/despre-noi`} className="hover:text-brand-700">{dict.nav.about}</Link></li>
               <li><Link href={`/${locale}/blog`} className="hover:text-brand-700">{dict.nav.blog}</Link></li>
@@ -78,7 +76,6 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <h3 className="font-semibold text-slate-900">{dict.contact.title}</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-slate-500">
               <li className="flex items-center gap-2"><IconPhone className="h-4 w-4 text-brand-600" /> {SITE.phone}</li>
-              <li className="flex items-center gap-2"><IconMail className="h-4 w-4 text-brand-600" /> {SITE.email}</li>
               <li className="flex items-center gap-2"><IconPin className="h-4 w-4 text-brand-600" /> {locale === "ro" ? "La domiciliu · Chișinău și împrejurimi" : "На дому · Кишинёв и пригороды"}</li>
             </ul>
             <div className="mt-5 flex gap-2 text-xs">

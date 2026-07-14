@@ -17,7 +17,7 @@ const CONTENT: Record<
       {
         heading: "Cine suntem",
         body: [
-          `Acest site este operat de ${SITE.legalName} („Medline", „noi"). Ne poți contacta la telefon ${SITE.phone} sau pe email ${SITE.email}.`,
+          `Acest site este operat de ${SITE.legalName} („Medline", „noi"). Ne poți contacta la telefon ${SITE.phone}.`,
         ],
       },
       {
@@ -67,7 +67,7 @@ const CONTENT: Record<
       {
         heading: "Кто мы",
         body: [
-          `Этот сайт управляется ${SITE.legalName} («Medline», «мы»). Связаться с нами можно по телефону ${SITE.phone} или по email ${SITE.email}.`,
+          `Этот сайт управляется ${SITE.legalName} («Medline», «мы»). Связаться с нами можно по телефону ${SITE.phone}.`,
         ],
       },
       {
