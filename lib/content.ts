@@ -21,6 +21,8 @@ export type ServiceContent = {
 export type ServiceDetail = {
   slug: string;
   icon: string;
+  /** Slug-uri RO de articole pe aceeași temă — leagă serviciul de clusterul lui de conținut (SEO intern) */
+  relatedArticles?: string[];
   content: Record<Locale, ServiceContent>;
 };
 
@@ -28,6 +30,11 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "perfuzii-la-domiciliu",
     icon: "drop",
+    relatedArticles: [
+      "perfuzii-cu-vitamine-beneficii",
+      "cum-te-pregatesti-pentru-perfuzie-la-domiciliu",
+      "perfuzie-la-domiciliu-video",
+    ],
     content: {
       ro: {
         metaTitle:
@@ -136,6 +143,11 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "injectii-la-domiciliu",
     icon: "syringe",
+    relatedArticles: [
+      "ce-injectii-se-pot-face-la-domiciliu",
+      "injectie-intramusculara-video",
+      "avantajele-asistentei-medicale-la-domiciliu",
+    ],
     content: {
       ro: {
         metaTitle:
@@ -244,6 +256,11 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "ingrijire-bolnavi-la-domiciliu",
     icon: "heart",
+    relatedArticles: [
+      "ingrijire-parinte-imobilizat",
+      "semne-varstnic-are-nevoie-ingrijire",
+      "ingrijirea-varstnicilor-la-domiciliu-ghid",
+    ],
     content: {
       ro: {
         metaTitle:
@@ -352,6 +369,11 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "consult-medical-la-domiciliu",
     icon: "stethoscope",
+    relatedArticles: [
+      "avantajele-asistentei-medicale-la-domiciliu",
+      "semne-varstnic-are-nevoie-ingrijire",
+      "ingrijirea-varstnicilor-la-domiciliu-ghid",
+    ],
     content: {
       ro: {
         metaTitle:
@@ -460,6 +482,10 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "pansamente-ingrijire-plagi",
     icon: "bandage",
+    relatedArticles: [
+      "ingrijirea-plagilor-si-escarelor-la-domiciliu",
+      "ingrijire-parinte-imobilizat",
+    ],
     content: {
       ro: {
         metaTitle:
@@ -568,6 +594,12 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "tratament-post-alcool",
     icon: "drop",
+    relatedArticles: [
+      "ghid-complet-iesire-din-binge",
+      "semne-ca-ai-nevoie-de-perfuzie-detoxifiere",
+      "mahmureala-severa-ce-sa-faci",
+      "cat-costa-perfuzie-detoxifiere",
+    ],
     content: {
       ro: {
         metaTitle:
@@ -674,6 +706,12 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "codare-anti-alcool",
     icon: "shield",
+    relatedArticles: [
+      "ghid-complet-codare-anti-alcool",
+      "metode-codare-anti-alcool",
+      "pregatire-codare-anti-alcool",
+      "codare-sau-tratament-post-alcool",
+    ],
     content: {
       ro: {
         metaTitle:
@@ -798,6 +836,8 @@ export const RU_SLUG: Record<string, string> = {
   "tratament-post-alcool": "lechenie-posle-alkogolya",
   "codare-anti-alcool": "kodirovanie-ot-alkogolya",
   // Articole blog
+  "ce-injectii-se-pot-face-la-domiciliu": "kakie-ukoly-mozhno-stavit-na-domu",
+  "ingrijirea-plagilor-si-escarelor-la-domiciliu": "uhod-za-ranami-i-prolezhnyami-na-domu",
   "ghid-complet-iesire-din-binge": "vyvod-iz-zapoya-polnyy-gid",
   "ghid-complet-codare-anti-alcool": "kodirovanie-polnyy-gid",
   "metode-codare-anti-alcool": "metody-kodirovaniya",
@@ -868,6 +908,196 @@ export type Article = {
 };
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "ce-injectii-se-pot-face-la-domiciliu",
+    date: "2026-07-14",
+    readMinutes: 5,
+    content: {
+      ro: {
+        metaTitle: "Ce Injecții se Pot Face la Domiciliu în Chișinău | Medline.md",
+        metaDescription:
+          "Ce tipuri de injecții se pot administra la domiciliu în Chișinău: intramusculare, intravenoase, subcutanate. Când e sigur, cum decurge și ce trebuie să pregătești.",
+        keywords: "ce injectii se pot face la domiciliu, injectie intramusculara acasa, injectie la domiciliu Chisinau, injectie subcutanata acasa, cine face injectii la domiciliu",
+        title: "Ce injecții se pot face la domiciliu",
+        excerpt: "Ce tipuri de injecții se administrează în siguranță acasă, cum decurge vizita și ce e bine să pregătești dinainte.",
+        sections: [
+          {
+            body: [
+              "Nu mai e nevoie să stai la coadă la spital sau la policlinică pentru o injecție prescrisă de medic. Multe tratamente injectabile se pot administra în siguranță la domiciliu, de către o asistentă medicală autorizată — mai comod, mai rapid și fără stresul deplasării.",
+            ],
+          },
+          {
+            heading: "Ce tipuri de injecții se pot face acasă",
+            body: [
+              "### Injecții intramusculare (i.m.)",
+              "Cele mai frecvente — antibiotice, antiinflamatoare, vitamine (ex. B12), analgezice. Se administrează în mușchi și sunt printre cele mai simple de făcut la domiciliu.",
+              "### Injecții intravenoase (i.v.)",
+              "Administrare directă în venă, pentru tratamente care necesită efect rapid. Necesită experiență — de aceea le face doar personal medical calificat.",
+              "### Injecții subcutanate (s.c.)",
+              "Sub piele — de exemplu anticoagulante (heparine), insulină sau alte tratamente cronice. Se pot administra zilnic, la ore fixe.",
+            ],
+          },
+          {
+            heading: "Cum decurge o vizită",
+            body: [
+              "Ne suni sau ne scrii, ne spui ce injecție ai prescrisă și stabilim ora. Asistenta vine cu materiale sterile de unică folosință, verifică prescripția și medicamentul, administrează injecția corect și rămâne câteva minute pentru a se asigura că totul e în regulă.",
+            ],
+          },
+          {
+            heading: "Ce trebuie să pregătești",
+            body: [
+              "Prescripția medicului și medicamentul (dacă îl ai deja). Restul — seringi, ace, dezinfectant, mănuși — le aduce asistenta. E util să ai la îndemână și lista tratamentelor pe care le urmezi.",
+            ],
+          },
+          {
+            heading: "Este sigur?",
+            body: [
+              "Da, atât timp cât injecția e administrată de o asistentă medicală autorizată, cu respectarea prescripției și cu materiale sterile. Vezi pagina de [injecții la domiciliu](/ro/servicii/injectii-la-domiciliu) pentru detalii sau sună-ne direct pentru o programare.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Какие Уколы Можно Ставить на Дому в Кишинёве | Medline.md",
+        metaDescription:
+          "Какие виды инъекций можно ставить на дому в Кишинёве: внутримышечные, внутривенные, подкожные. Когда это безопасно, как проходит визит и что подготовить.",
+        keywords: "какие уколы можно ставить на дому, внутримышечный укол на дому, инъекция на дому Кишинёв, подкожная инъекция дома, кто ставит уколы на дому",
+        title: "Какие уколы можно ставить на дому",
+        excerpt: "Какие виды инъекций безопасно ставить дома, как проходит визит и что стоит подготовить заранее.",
+        sections: [
+          {
+            body: [
+              "Больше не нужно стоять в очереди в больнице или поликлинике ради назначенного врачом укола. Многие инъекционные препараты можно безопасно вводить на дому — сертифицированной медсестрой, удобнее, быстрее и без стресса от поездки.",
+            ],
+          },
+          {
+            heading: "Какие виды уколов можно ставить дома",
+            body: [
+              "### Внутримышечные (в/м)",
+              "Самые частые — антибиотики, противовоспалительные, витамины (например B12), обезболивающие. Вводятся в мышцу и проще всего выполняются на дому.",
+              "### Внутривенные (в/в)",
+              "Введение прямо в вену, для препаратов, требующих быстрого эффекта. Требует опыта — поэтому их делает только квалифицированный медперсонал.",
+              "### Подкожные (п/к)",
+              "Под кожу — например антикоагулянты (гепарины), инсулин или другое хроническое лечение. Можно вводить ежедневно, в фиксированное время.",
+            ],
+          },
+          {
+            heading: "Как проходит визит",
+            body: [
+              "Вы звоните или пишете, говорите, какой укол назначен, и мы согласуем время. Медсестра приезжает со стерильными одноразовыми материалами, проверяет назначение и препарат, правильно ставит инъекцию и остаётся на несколько минут, чтобы убедиться, что всё в порядке.",
+            ],
+          },
+          {
+            heading: "Что нужно подготовить",
+            body: [
+              "Назначение врача и препарат (если он уже у вас). Остальное — шприцы, иглы, дезинфектант, перчатки — привозит медсестра. Полезно иметь под рукой список принимаемых препаратов.",
+            ],
+          },
+          {
+            heading: "Это безопасно?",
+            body: [
+              "Да, пока укол ставит сертифицированная медсестра, по назначению и стерильными материалами. Смотрите страницу [инъекции на дому](/ru/servicii/inekcii-na-domu) для деталей или звоните напрямую для записи.",
+            ],
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ingrijirea-plagilor-si-escarelor-la-domiciliu",
+    date: "2026-07-13",
+    readMinutes: 6,
+    content: {
+      ro: {
+        metaTitle: "Îngrijirea Plăgilor și Escarelor la Domiciliu în Chișinău | Medline.md",
+        metaDescription:
+          "Cum se îngrijesc plăgile postoperatorii, escarele și rănile cronice la domiciliu în Chișinău. Semne de infecție, cum previi escarele și când chemi asistenta.",
+        keywords: "ingrijire plagi la domiciliu, pansament la domiciliu Chisinau, tratare escare, prevenire escare pacient imobilizat, ingrijire rani postoperatorii acasa",
+        title: "Îngrijirea plăgilor și escarelor la domiciliu",
+        excerpt: "Cum se îngrijesc corect plăgile postoperatorii și escarele acasă, cum previi complicațiile și când e nevoie de o asistentă.",
+        sections: [
+          {
+            body: [
+              "Îngrijirea corectă a unei plăgi face diferența între o vindecare rapidă și o infecție care întârzie recuperarea. Pentru pacienții operați recent sau imobilizați la pat, pansamentele și prevenirea escarelor sunt esențiale — și se pot face în siguranță la domiciliu.",
+            ],
+          },
+          {
+            heading: "Tipuri de plăgi care necesită îngrijire",
+            body: [
+              "### Plăgi postoperatorii",
+              "După o intervenție chirurgicală, plaga trebuie curățată și pansată periodic pentru a preveni infecția și a favoriza vindecarea.",
+              "### Escare (răni de presiune)",
+              "Apar la pacienții imobilizați, în zonele de presiune (spate, șold, călcâie). Netratate, se pot adânci rapid.",
+              "### Răni cronice",
+              "Ulcere venoase, picior diabetic sau alte răni care se vindecă greu și necesită pansamente specializate.",
+            ],
+          },
+          {
+            heading: "Cum previi escarele la un pacient imobilizat",
+            body: [
+              "Schimbă poziția pacientului la fiecare 2 ore, menține pielea curată și uscată, folosește saltele antiescară și verifică zilnic zonele de presiune. La primul semn de roșeață care nu dispare, cere sfatul unei asistente — e mult mai ușor de prevenit decât de tratat.",
+            ],
+          },
+          {
+            heading: "Semne că o plagă s-a infectat",
+            body: [
+              "Roșeață care se extinde, umflătură, durere crescândă, secreție cu miros neplăcut sau puroi, febră. Dacă apar, nu aștepta — o plagă infectată tratată la timp se vindecă mult mai repede.",
+            ],
+          },
+          {
+            heading: "Când chemi o asistentă medicală",
+            body: [
+              "Pentru pansamente sterile regulate, tratarea escarelor sau a rănilor cronice, ai nevoie de personal calificat. Medline face [pansamente și îngrijirea plăgilor](/ro/servicii/pansamente-ingrijire-plagi) la domiciliu în Chișinău, iar pentru pacienții imobilizați oferim și [îngrijire de durată](/ro/servicii/ingrijire-bolnavi-la-domiciliu).",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Уход за Ранами и Пролежнями на Дому в Кишинёве | Medline.md",
+        metaDescription:
+          "Как ухаживать за послеоперационными ранами, пролежнями и хроническими ранами на дому в Кишинёве. Признаки инфекции, профилактика пролежней и когда звать медсестру.",
+        keywords: "уход за ранами на дому, перевязка на дому Кишинёв, лечение пролежней, профилактика пролежней у лежачих, уход за послеоперационными ранами дома",
+        title: "Уход за ранами и пролежнями на дому",
+        excerpt: "Как правильно ухаживать за послеоперационными ранами и пролежнями дома, как предотвратить осложнения и когда нужна медсестра.",
+        sections: [
+          {
+            body: [
+              "Правильный уход за раной определяет, будет ли заживление быстрым или начнётся инфекция, которая затянет восстановление. Для недавно прооперированных или лежачих пациентов перевязки и профилактика пролежней критически важны — и их можно безопасно делать на дому.",
+            ],
+          },
+          {
+            heading: "Виды ран, требующих ухода",
+            body: [
+              "### Послеоперационные раны",
+              "После хирургического вмешательства рану нужно периодически очищать и перевязывать, чтобы предотвратить инфекцию и способствовать заживлению.",
+              "### Пролежни (раны от давления)",
+              "Возникают у лежачих пациентов в зонах давления (спина, бедро, пятки). Без лечения быстро углубляются.",
+              "### Хронические раны",
+              "Венозные язвы, диабетическая стопа или другие трудно заживающие раны, требующие специальных перевязок.",
+            ],
+          },
+          {
+            heading: "Как предотвратить пролежни у лежачего пациента",
+            body: [
+              "Меняйте положение пациента каждые 2 часа, держите кожу чистой и сухой, используйте противопролежневые матрасы и ежедневно проверяйте зоны давления. При первом признаке покраснения, которое не проходит, обратитесь к медсестре — предотвратить намного проще, чем лечить.",
+            ],
+          },
+          {
+            heading: "Признаки инфицирования раны",
+            body: [
+              "Распространяющееся покраснение, отёк, нарастающая боль, выделения с неприятным запахом или гной, температура. Если они появились, не ждите — вовремя обработанная рана заживает намного быстрее.",
+            ],
+          },
+          {
+            heading: "Когда звать медсестру",
+            body: [
+              "Для регулярных стерильных перевязок, лечения пролежней или хронических ран нужен квалифицированный персонал. Medline делает [перевязки и уход за ранами](/ru/servicii/perevyazki-i-uhod-za-ranami) на дому в Кишинёве, а для лежачих пациентов предлагаем и [длительный уход](/ru/servicii/uhod-za-bolnymi-na-domu).",
+            ],
+          },
+        ],
+      },
+    },
+  },
   {
     slug: "perfuzii-cu-vitamine-beneficii",
     date: "2026-06-29",

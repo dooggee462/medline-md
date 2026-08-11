@@ -46,8 +46,11 @@ export async function generateMetadata({
   if (!post) return {};
   const path = `/${locale}/blog/${slug}`;
   return {
-    title: `${post.title} | Medline.md`,
-    description: post.excerpt,
+    title: post.metaTitle.includes("Medline")
+      ? post.metaTitle
+      : `${post.metaTitle} | Medline.md`,
+    description: post.metaDescription,
+    keywords: post.keywords,
     alternates: {
       canonical: path,
       languages: {

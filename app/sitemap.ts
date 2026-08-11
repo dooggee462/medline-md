@@ -1,14 +1,22 @@
 import type { MetadataRoute } from "next";
 import { SITE, LOCALES } from "@/lib/site";
 import { SERVICES, localizeSlug } from "@/lib/content";
-import { getAllBlogSlugs } from "@/lib/posts";
+import { getBlogList } from "@/lib/posts";
 
 export const dynamic = "force-dynamic";
 
+/**
+ * Data build-ului — se schimbă doar la deploy, când paginile chiar se regenerează.
+ * NU folosi `new Date()` la fiecare cerere: Google vede tot site-ul „modificat acum",
+ * își dă seama că lastmod minte și îl ignoră cu totul.
+ */
+const BUILD_DATE = new Date();
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date();
+  const now = BUILD_DATE;
   const entries: MetadataRoute.Sitemap = [];
-  const blogSlugs = await getAllBlogSlugs();
+  // Articolele își poartă data reală de publicare
+  const posts = await getBlogList("ro");
 
   // Căi statice (relative la locale)
   const staticPaths = ["", "/servicii", "/detoxifiere", "/codare", "/preturi", "/despre-noi", "/blog", "/contact", "/confidentialitate", "/termeni"];
@@ -46,16 +54,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
 
     // Articole de blog (statice + adăugate din panou)
-    for (const slug of blogSlugs) {
+    for (const p of posts) {
       entries.push({
-        url: `${SITE.url}/${locale}/blog/${localizeSlug(slug, locale)}`,
-        lastModified: now,
+        url: `${SITE.url}/${locale}/blog/${localizeSlug(p.roSlug, locale)}`,
+        lastModified: new Date(p.date),
         changeFrequency: "monthly",
         priority: 0.6,
         alternates: {
           languages: {
-            ro: `${SITE.url}/ro/blog/${slug}`,
-            ru: `${SITE.url}/ru/blog/${localizeSlug(slug, "ru")}`,
+            ro: `${SITE.url}/ro/blog/${p.roSlug}`,
+            ru: `${SITE.url}/ru/blog/${localizeSlug(p.roSlug, "ru")}`,
           },
         },
       });

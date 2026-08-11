@@ -26,11 +26,15 @@ export async function generateMetadata({
       : "Контакты и Запись — Медпомощь на Дому | Medline.md";
   const description =
     locale === "ro"
-      ? "Contactează Medline pentru o programare la domiciliu în Chișinău. Telefon, WhatsApp, email și formular de programare rapidă. Răspundem 24/7."
-      : "Свяжитесь с Medline для записи на дому в Кишинёве. Телефон, WhatsApp, email и форма быстрой записи. Отвечаем 24/7.";
+      ? "Contactează Medline pentru o programare la domiciliu în Chișinău. Telefon, WhatsApp, Viber și formular de programare rapidă. Răspundem 24/7."
+      : "Свяжитесь с Medline для записи на дому в Кишинёве. Телефон, WhatsApp, Viber и форма быстрой записи. Отвечаем 24/7.";
   return {
     title,
     description,
+    keywords:
+      locale === "ro"
+        ? "contact Medline Chisinau, programare asistenta medicala la domiciliu, telefon perfuzii domiciliu, chemare asistenta la domiciliu Chisinau, programare 24/7"
+        : "контакты Medline Кишинёв, запись медпомощь на дому, телефон капельница на дому, вызов медсестры на дом Кишинёв, запись 24/7",
     alternates: {
       canonical: `/${locale}/contact`,
       languages: { ro: "/ro/contact", ru: "/ru/contact", "x-default": "/ro/contact" },

@@ -43,6 +43,10 @@ export type BlogView = {
   cover?: string;
   title: string;
   excerpt: string;
+  /** Meta SEO — la articolele din panou cad pe title/excerpt */
+  metaTitle: string;
+  metaDescription: string;
+  keywords?: string;
   blocks: Block[];
   editable: boolean; // true = vine din panou (JSON)
 };
@@ -159,6 +163,8 @@ export async function getBlogList(locale: Locale): Promise<BlogView[]> {
     cover: p.cover,
     title: p[locale].title,
     excerpt: p[locale].excerpt,
+    metaTitle: p[locale].title,
+    metaDescription: p[locale].excerpt,
     blocks: parseBlocks(p[locale].body),
     editable: true,
   }));
@@ -172,6 +178,9 @@ export async function getBlogList(locale: Locale): Promise<BlogView[]> {
     tiktok: a.tiktok,
     title: a.content[locale].title,
     excerpt: a.content[locale].excerpt,
+    metaTitle: a.content[locale].metaTitle,
+    metaDescription: a.content[locale].metaDescription,
+    keywords: a.content[locale].keywords,
     blocks: sectionsToBlocks(a.content[locale].sections),
     editable: false,
   }));

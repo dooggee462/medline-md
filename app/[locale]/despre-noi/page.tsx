@@ -99,6 +99,10 @@ export async function generateMetadata({
   return {
     title: a.metaTitle,
     description: a.metaDescription,
+    keywords:
+      locale === "ro"
+        ? "despre Medline, clinica asistenta medicala la domiciliu Chisinau, echipa asistente medicale, ingrijire la domiciliu Chisinau, servicii medicale acasa"
+        : "о Medline, клиника медпомощи на дому Кишинёв, команда медсестёр, уход на дому Кишинёв, медицинские услуги на дому",
     alternates: {
       canonical: `/${locale}/despre-noi`,
       languages: { ro: "/ro/despre-noi", ru: "/ru/despre-noi", "x-default": "/ro/despre-noi" },

@@ -28,6 +28,10 @@ export async function generateMetadata({
   return {
     title,
     description,
+    keywords:
+      locale === "ro"
+        ? "blog medical Chisinau, sfaturi ingrijire la domiciliu, cum decurge o perfuzie, ingrijire varstnici sfaturi, detoxifiere sfaturi, articole medicale Moldova, sfaturi asistenta medicala"
+        : "медицинский блог Кишинёв, советы по уходу на дому, как проходит капельница, уход за пожилыми советы, детоксикация советы, медицинские статьи Молдова, советы медсестры",
     alternates: {
       canonical: `/${locale}/blog`,
       languages: { ro: "/ro/blog", ru: "/ru/blog", "x-default": "/ro/blog" },

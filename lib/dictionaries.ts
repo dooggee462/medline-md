@@ -40,6 +40,7 @@ export type Dictionary = {
   ui: {
     breadcrumbHome: string;
     relatedServices: string;
+    readAlso: string;
     indications: string;
     benefits: string;
     bookThisService: string;
@@ -158,7 +159,7 @@ const ro: Dictionary = {
     description:
       "Asistență medicală la domiciliu în Chișinău: detoxifiere post-alcool, codare, perfuzii, injecții, îngrijirea bolnavilor și consult medical. Discret, asistente calificate, 24/7.",
     keywords:
-      "asistenta medicala la domiciliu, detoxifiere post-alcool Chisinau, codare la domiciliu, codare anti-alcool, iesire din binge, perfuzii la domiciliu, perfuzie la domiciliu, tratament post-alcool, injectii la domiciliu, ingrijire bolnavi la domiciliu Chisinau, consult medical domiciliu",
+      "asistenta medicala la domiciliu, asistenta medicala la domiciliu Chisinau, sora medicala la domiciliu, medic la domiciliu Chisinau, detoxifiere post-alcool Chisinau, detoxifiere la domiciliu, dezalcoolizare Chisinau, codare la domiciliu, codare anti-alcool, codare alcool Chisinau, iesire din binge, perfuzii la domiciliu, perfuzie la domiciliu, perfuzie vitamine, perfuzie glucoza, vitaminoterapie la domiciliu, tratament post-alcool, tratament mahmureala, injectii la domiciliu, injectie intramusculara la domiciliu, injectie intravenoasa la domiciliu, ingrijire bolnavi la domiciliu Chisinau, ingrijire varstnici la domiciliu, ingrijire pacienti imobilizati, escare ingrijire, pansamente la domiciliu, ingrijire plagi la domiciliu, consult medical domiciliu, recoltare analize la domiciliu, asistenta medicala non stop, servicii medicale 24/7 Chisinau, chemare asistenta la domiciliu, ajutor medical acasa Chisinau, servicii medicale private Moldova",
     ogAlt: "Medline — asistență medicală la domiciliu în Chișinău",
   },
   nav: {
@@ -180,6 +181,7 @@ const ro: Dictionary = {
   ui: {
     breadcrumbHome: "Acasă",
     relatedServices: "Servicii conexe",
+    readAlso: "Citește și",
     indications: "Când este recomandat",
     benefits: "Beneficii",
     bookThisService: "Programează acest serviciu",
@@ -464,7 +466,7 @@ const ru: Dictionary = {
     description:
       "Медицинская помощь на дому в Кишинёве: вывод из запоя, кодирование, капельницы, инъекции, уход за больными и осмотр. Анонимно, квалифицированные медсёстры, 24/7.",
     keywords:
-      "медицинская помощь на дому, вывод из запоя Кишинёв, кодирование от алкоголя, кодирование на дому, детоксикация после алкоголя, капельницы на дому, капельница на дому Кишинёв, инъекции на дому, уход за больными на дому Кишинёв, врач на дом",
+      "медицинская помощь на дому, медпомощь на дому Кишинёв, медсестра на дом, медсестра на дом Кишинёв, врач на дом, врач на дом Кишинёв, вывод из запоя Кишинёв, вывод из запоя на дому, кодирование от алкоголя, кодирование на дому, кодирование от алкоголя Кишинёв, детоксикация после алкоголя, детокс на дому, капельницы на дому, капельница на дому Кишинёв, витаминная капельница, капельница с глюкозой, витаминотерапия на дому, лечение похмелья, лечение после алкоголя, инъекции на дому, внутримышечная инъекция на дому, внутривенная инъекция на дому, уход за больными на дому Кишинёв, уход за пожилыми на дому, уход за лежачими больными, пролежни уход, перевязки на дому, обработка ран на дому, осмотр врача на дому, забор анализов на дому, медпомощь круглосуточно, медицинские услуги 24/7 Кишинёв, вызов медсестры на дом, помощь на дому Кишинёв, частные медицинские услуги Молдова",
     ogAlt: "Medline — медицинская помощь на дому в Кишинёве",
   },
   nav: {
@@ -486,6 +488,7 @@ const ru: Dictionary = {
   ui: {
     breadcrumbHome: "Главная",
     relatedServices: "Похожие услуги",
+    readAlso: "Читайте также",
     indications: "Когда рекомендуется",
     benefits: "Преимущества",
     bookThisService: "Записаться на услугу",

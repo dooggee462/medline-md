@@ -32,6 +32,10 @@ export async function generateMetadata({
   return {
     title,
     description,
+    keywords:
+      locale === "ro"
+        ? "servicii medicale la domiciliu Chisinau, asistenta medicala la domiciliu, perfuzii la domiciliu, injectii la domiciliu, ingrijire bolnavi, consult medical domiciliu, pansamente la domiciliu"
+        : "медицинские услуги на дому Кишинёв, медпомощь на дому, капельницы на дому, инъекции на дому, уход за больными, медосмотр на дому, перевязки на дому",
     alternates: {
       canonical: `/${locale}/servicii`,
       languages: { ro: "/ro/servicii", ru: "/ru/servicii", "x-default": "/ro/servicii" },

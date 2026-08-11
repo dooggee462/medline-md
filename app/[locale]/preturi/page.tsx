@@ -31,6 +31,10 @@ export async function generateMetadata({
   return {
     title,
     description,
+    keywords:
+      locale === "ro"
+        ? "preturi servicii medicale la domiciliu Chisinau, cat costa perfuzie, pret injectie la domiciliu, pret codare, cat costa detoxifiere, tarife asistenta medicala domiciliu"
+        : "цены медицинские услуги на дому Кишинёв, сколько стоит капельница, цена инъекции на дому, цена кодирования, стоимость детокса, тарифы медпомощь на дому",
     alternates: {
       canonical: `/${locale}/preturi`,
       languages: { ro: "/ro/preturi", ru: "/ru/preturi", "x-default": "/ro/preturi" },

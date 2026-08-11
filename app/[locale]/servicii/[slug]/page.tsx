@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
-import { SERVICES, getServiceByLocaleSlug, localizeSlug, serviceHref } from "@/lib/content";
+import { SERVICES, getArticle, getServiceByLocaleSlug, localizeSlug, serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -55,6 +55,10 @@ export default async function ServiceDetail({
   const c = service.content[locale];
   const Icon = SERVICE_ICONS[service.icon] ?? IconCheck;
   const related = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
+  // Articole pe aceeași temă — slug-urile inexistente sunt ignorate, nu strică pagina
+  const articles = (service.relatedArticles ?? [])
+    .map((s) => getArticle(s))
+    .filter((a) => a !== undefined);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -62,11 +66,15 @@ export default async function ServiceDetail({
     name: c.h1,
     description: c.metaDescription,
     url: `${SITE.url}/${locale}/servicii/${slug}`,
+    inLanguage: locale,
+    // Același @id ca entitatea din JsonLd.tsx → Google le unifică într-una singură
     provider: {
       "@type": "MedicalClinic",
+      "@id": `${SITE.url}/#clinic`,
       name: SITE.legalName,
+      url: SITE.url,
       telephone: SITE.phoneRaw,
-      areaServed: SITE.address.city,
+      areaServed: { "@type": "City", name: SITE.address.city },
     },
   };
   const faqLd = {
@@ -183,6 +191,33 @@ export default async function ServiceDetail({
                 ))}
               </div>
             </div>
+
+            {/* Articole pe aceeași temă — leagă serviciul de clusterul lui de conținut */}
+            {articles.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold text-slate-900">{dict.ui.readAlso}</h2>
+                <ul className="mt-5 space-y-3">
+                  {articles.map((a) => (
+                    <li key={a.slug}>
+                      <Link
+                        href={`/${locale}/blog/${localizeSlug(a.slug, locale)}`}
+                        className="group flex gap-3 rounded-xl border border-slate-100 bg-white p-4 transition-all hover:border-brand-200 hover:shadow-md"
+                      >
+                        <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-500" />
+                        <span>
+                          <span className="font-semibold text-slate-900 group-hover:text-brand-700">
+                            {a.content[locale].title}
+                          </span>
+                          <span className="mt-1 block text-sm leading-relaxed text-slate-600">
+                            {a.content[locale].excerpt}
+                          </span>
+                        </span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
         </section>
 
