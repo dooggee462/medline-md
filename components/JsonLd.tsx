@@ -1,5 +1,6 @@
 import { SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
+import type { GoogleReviews } from "@/lib/reviews";
 
 /**
  * Structured data (schema.org) pentru rich results în Google:
@@ -7,7 +8,14 @@ import { getDictionary } from "@/lib/dictionaries";
  * - FAQPage                          (rich snippet cu întrebări)
  * - BreadcrumbList                   (breadcrumbs în SERP)
  */
-export function JsonLd({ locale }: { locale: Locale }) {
+export function JsonLd({
+  locale,
+  reviews,
+}: {
+  locale: Locale;
+  /** Recenzii reale din Google — doar cu ele se emite aggregateRating */
+  reviews?: GoogleReviews | null;
+}) {
   const dict = getDictionary(locale);
   const url = `${SITE.url}/${locale}`;
 
@@ -52,9 +60,19 @@ export function JsonLd({ locale }: { locale: Locale }) {
       name: s.title,
       description: s.desc,
     })),
-    // NOTĂ: aggregateRating a fost eliminat — Google penalizează rating-urile
-    // false/neverificabile. Reintrodu-l DOAR cu recenzii reale (ex. importate
-    // din Google Business Profile).
+    // aggregateRating apare DOAR cu note reale din Google Business Profile.
+    // Fără ele rămâne absent — rating-urile inventate sunt penalizate.
+    ...(reviews && reviews.total > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: reviews.rating,
+            reviewCount: reviews.total,
+            bestRating: 5,
+            worstRating: 1,
+          },
+        }
+      : {}),
   };
 
   const faq = {
