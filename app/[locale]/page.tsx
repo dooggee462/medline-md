@@ -312,7 +312,8 @@ export default async function Home({
           </div>
         </section>
 
-        {/* ───────────── RECENZII ───────────── */}
+        {/* ───────────── RECENZII (doar reale — vezi lib/dictionaries.ts) ───────────── */}
+        {dict.reviews.items.length > 0 && (
         <section id="recenzii" className="scroll-mt-20 bg-gradient-to-br from-forest-800 to-forest-950 py-20 text-white lg:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
@@ -349,8 +350,21 @@ export default async function Home({
                 </figure>
               ))}
             </div>
+            {SITE.reviewUrl && (
+              <div className="mt-10 text-center">
+                <a
+                  href={SITE.reviewUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                >
+                  {dict.reviews.seeAll}
+                </a>
+              </div>
+            )}
           </div>
         </section>
+        )}
 
         {/* ───────────── PROGRAMARE + CONTACT ───────────── */}
         <section id="programare" className="scroll-mt-20 py-20 lg:py-28">

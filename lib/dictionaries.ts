@@ -108,6 +108,12 @@ export type Dictionary = {
   reviews: {
     eyebrow: string;
     title: string;
+    seeAll: string;
+    /**
+     * Recenzii REALE, copiate manual din Google Business Profile.
+     * Lasă gol dacă nu ai — secțiunea nu se afișează.
+     * ⚠️ Nu inventa mărturii: pe un site medical e conținut înșelător.
+     */
     items: { name: string; text: string; role: string }[];
   };
   faq: {
@@ -352,23 +358,8 @@ const ro: Dictionary = {
   reviews: {
     eyebrow: "Recenzii",
     title: "Ce spun pacienții noștri",
-    items: [
-      {
-        name: "Maria C.",
-        role: "fiica unui pacient",
-        text: "Au îngrijit-o pe mama cu o blândețe extraordinară. Asistentele sunt profesioniste și mereu punctuale. Recomand cu toată inima!",
-      },
-      {
-        name: "Andrei P.",
-        role: "pacient post-operație",
-        text: "După operație nu mă puteam deplasa. Au venit zilnic pentru pansamente. Serviciu impecabil, oameni de încredere.",
-      },
-      {
-        name: "Elena V.",
-        role: "îngrijitoare",
-        text: "Perfuziile la domiciliu ne-au scutit de drumuri grele la spital. Răspund rapid și sunt foarte atenți. Mulțumesc, Medline!",
-      },
-    ],
+    seeAll: "Vezi toate recenziile pe Google",
+    items: [],
   },
   faq: {
     eyebrow: "Întrebări frecvente",
@@ -659,23 +650,8 @@ const ru: Dictionary = {
   reviews: {
     eyebrow: "Отзывы",
     title: "Что говорят наши пациенты",
-    items: [
-      {
-        name: "Мария К.",
-        role: "дочь пациента",
-        text: "Они ухаживали за мамой с невероятной нежностью. Медсёстры профессиональны и всегда пунктуальны. Рекомендую от всего сердца!",
-      },
-      {
-        name: "Андрей П.",
-        role: "пациент после операции",
-        text: "После операции я не мог передвигаться. Они приезжали каждый день на перевязки. Безупречный сервис, надёжные люди.",
-      },
-      {
-        name: "Елена В.",
-        role: "сиделка",
-        text: "Капельницы на дому избавили нас от тяжёлых поездок в больницу. Отвечают быстро и очень внимательны. Спасибо, Medline!",
-      },
-    ],
+    seeAll: "Смотреть все отзывы в Google",
+    items: [],
   },
   faq: {
     eyebrow: "Частые вопросы",
