@@ -8,7 +8,6 @@ import { JsonLd } from "@/components/JsonLd";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { SERVICES, serviceHref } from "@/lib/content";
-import { getGoogleReviews } from "@/lib/reviews";
 import {
   SERVICE_ICONS,
   IconDrop,
@@ -32,11 +31,10 @@ export default async function Home({
   if (!LOCALES.includes(raw as Locale)) notFound();
   const locale = raw as Locale;
   const dict = getDictionary(locale);
-  const reviews = await getGoogleReviews(locale);
 
   return (
     <>
-      <JsonLd locale={locale} reviews={reviews} />
+      <JsonLd locale={locale} />
       <Header locale={locale} dict={dict} />
 
       <main>
@@ -314,75 +312,45 @@ export default async function Home({
           </div>
         </section>
 
-        {/* ───────────── RECENZII (reale, din Google) ───────────── */}
-        {reviews && (
-          <section id="recenzii" className="scroll-mt-20 bg-gradient-to-br from-forest-800 to-forest-950 py-20 text-white lg:py-28">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="mx-auto max-w-2xl text-center">
-                <p className="text-sm font-semibold uppercase tracking-wider text-brand-200">
-                  {dict.reviews.eyebrow}
-                </p>
-                <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
-                  {dict.reviews.title}
-                </h2>
-                <p className="mt-4 flex items-center justify-center gap-2 text-brand-100">
-                  <span className="flex gap-0.5 text-amber-300">
-                    {[...Array(5)].map((_, i) => (
-                      <IconStar key={i} className="h-5 w-5" />
-                    ))}
-                  </span>
-                  <strong className="text-lg">{reviews.rating.toFixed(1)}</strong>
-                  <span className="text-sm">
-                    {dict.reviews.onGoogle.replace("{n}", String(reviews.total))}
-                  </span>
-                </p>
-              </div>
-              <div className="mt-14 grid gap-6 lg:grid-cols-3">
-                {reviews.items.slice(0, 3).map((r) => (
-                  <figure
-                    key={r.author + r.when}
-                    className="rounded-2xl bg-white/10 p-7 backdrop-blur ring-1 ring-white/10"
-                  >
-                    <div className="flex gap-1 text-amber-300">
-                      {[...Array(r.rating)].map((_, i) => (
-                        <IconStar key={i} className="h-4 w-4" />
-                      ))}
-                    </div>
-                    <blockquote className="mt-4 leading-relaxed text-brand-50">
-                      “{r.text}”
-                    </blockquote>
-                    <figcaption className="mt-5 flex items-center gap-3">
-                      <span className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full bg-white/20 font-bold">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        {r.photo ? (
-                          <img src={r.photo} alt="" className="h-full w-full object-cover" loading="lazy" />
-                        ) : (
-                          r.author.charAt(0)
-                        )}
-                      </span>
-                      <div>
-                        <p className="font-semibold">{r.author}</p>
-                        <p className="text-sm text-brand-200">{r.when}</p>
-                      </div>
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-              {SITE.reviewUrl && (
-                <div className="mt-10 text-center">
-                  <a
-                    href={SITE.reviewUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-                  >
-                    {dict.reviews.seeAll}
-                  </a>
-                </div>
-              )}
+        {/* ───────────── RECENZII ───────────── */}
+        <section id="recenzii" className="scroll-mt-20 bg-gradient-to-br from-forest-800 to-forest-950 py-20 text-white lg:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-sm font-semibold uppercase tracking-wider text-brand-200">
+                {dict.reviews.eyebrow}
+              </p>
+              <h2 className="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+                {dict.reviews.title}
+              </h2>
             </div>
-          </section>
-        )}
+            <div className="mt-14 grid gap-6 lg:grid-cols-3">
+              {dict.reviews.items.map((r) => (
+                <figure
+                  key={r.name}
+                  className="rounded-2xl bg-white/10 p-7 backdrop-blur ring-1 ring-white/10"
+                >
+                  <div className="flex gap-1 text-amber-300">
+                    {[...Array(5)].map((_, i) => (
+                      <IconStar key={i} className="h-4 w-4" />
+                    ))}
+                  </div>
+                  <blockquote className="mt-4 leading-relaxed text-brand-50">
+                    “{r.text}”
+                  </blockquote>
+                  <figcaption className="mt-5 flex items-center gap-3">
+                    <span className="grid h-10 w-10 place-items-center rounded-full bg-white/20 font-bold">
+                      {r.name.charAt(0)}
+                    </span>
+                    <div>
+                      <p className="font-semibold">{r.name}</p>
+                      <p className="text-sm text-brand-200">{r.role}</p>
+                    </div>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
 
         {/* ───────────── PROGRAMARE + CONTACT ───────────── */}
         <section id="programare" className="scroll-mt-20 py-20 lg:py-28">

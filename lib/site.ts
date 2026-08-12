@@ -66,14 +66,6 @@ export const SITE = {
    */
   reviewUrl: "https://g.page/r/CViJVna_59QmEAI/review",
 
-  /**
-   * Place ID din Google (arată ca „ChIJ...”) — necesar pentru a afișa recenziile
-   * reale pe site. Îl iei de aici: https://developers.google.com/maps/documentation/places/web-service/place-id
-   * Lasă gol "" până îl ai — secțiunea de recenzii nu se afișează fără el.
-   * Cheia API se pune separat, în .env.local ca GOOGLE_PLACES_API_KEY.
-   */
-  googlePlaceId: "",
-
   /** An înființare (pentru schema + footer) */
   founded: "2015",
 
