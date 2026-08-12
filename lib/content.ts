@@ -23,6 +23,12 @@ export type ServiceDetail = {
   icon: string;
   /** Slug-uri RO de articole pe aceeași temă — leagă serviciul de clusterul lui de conținut (SEO intern) */
   relatedArticles?: string[];
+  /**
+   * Cale (fără locale) către pagina dedicată care tratează același subiect mai
+   * pe larg — ex. "/codare". Când e setată, pagina de serviciu o declară drept
+   * canonică și iese din sitemap, ca cele două să nu se canibalizeze în Google.
+   */
+  canonicalTo?: string;
   content: Record<Locale, ServiceContent>;
 };
 
@@ -706,6 +712,8 @@ export const SERVICES: ServiceDetail[] = [
   {
     slug: "codare-anti-alcool",
     icon: "shield",
+    // /codare tratează același subiect mult mai pe larg (604 vs 348 cuvinte, 6 vs 3 FAQ)
+    canonicalTo: "/codare",
     relatedArticles: [
       "ghid-complet-codare-anti-alcool",
       "metode-codare-anti-alcool",

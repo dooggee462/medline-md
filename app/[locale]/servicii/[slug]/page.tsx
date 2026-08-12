@@ -25,18 +25,27 @@ export async function generateMetadata({
   if (!service) return {};
   const c = service.content[locale];
   const path = `/${locale}/servicii/${slug}`;
+  // Când există o pagină dedicată pe același subiect, ea e cea canonică —
+  // altfel Google le vede ca duplicate și nu clasează niciuna (vezi canonicalTo)
+  const canonical = service.canonicalTo
+    ? `/${locale}${service.canonicalTo}`
+    : path;
+  const langs = service.canonicalTo
+    ? {
+        ro: `/ro${service.canonicalTo}`,
+        ru: `/ru${service.canonicalTo}`,
+        "x-default": `/ro${service.canonicalTo}`,
+      }
+    : {
+        ro: `/ro/servicii/${service.slug}`,
+        ru: `/ru/servicii/${localizeSlug(service.slug, "ru")}`,
+        "x-default": `/ro/servicii/${service.slug}`,
+      };
   return {
     title: c.metaTitle,
     description: c.metaDescription,
     keywords: c.keywords,
-    alternates: {
-      canonical: path,
-      languages: {
-        ro: `/ro/servicii/${service.slug}`,
-        ru: `/ru/servicii/${localizeSlug(service.slug, "ru")}`,
-        "x-default": `/ro/servicii/${service.slug}`,
-      },
-    },
+    alternates: { canonical, languages: langs },
     openGraph: { title: c.metaTitle, description: c.metaDescription, url: path },
   };
 }

@@ -39,6 +39,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Pagini de serviciu (slug localizat per limbă)
     for (const s of SERVICES) {
+      // Serviciile care indică altă pagină drept canonică nu intră în sitemap:
+      // ar contrazice propriul lor canonical
+      if (s.canonicalTo) continue;
       entries.push({
         url: `${SITE.url}/${locale}/servicii/${localizeSlug(s.slug, locale)}`,
         lastModified: now,
