@@ -6,7 +6,7 @@
 
 - [Perfuzii la domiciliu](https://medline.md/ro/servicii/perfuzii-la-domiciliu): Montare de perfuzii și soluții intravenoase la domiciliu, efectuate de asistente medicale calificate, cu FAQ despre procedură.
 - [Tratament post-alcool la domiciliu](https://medline.md/ro/servicii/tratament-post-alcool): Detoxifiere după consum de alcool și ieșire din binge: perfuzii de rehidratare și refacere, discret, 24/7.
-- [Codare anti-alcool la domiciliu](https://medline.md/ro/servicii/codare-anti-alcool): Procedură de codare împotriva dependenței de alcool, după evaluare prealabilă și cu acord informat, confidențial.
+- [Codare anti-alcool la domiciliu](https://medline.md/ro/codare): Procedură de codare împotriva dependenței de alcool, după evaluare prealabilă și cu acord informat. Pagina explică metodele, pregătirea, contraindicațiile și cum decurge procedura. Confidențial, la domiciliu, 24/7.
 - [Injecții la domiciliu](https://medline.md/ro/servicii/injectii-la-domiciliu): Injecții intramusculare, intravenoase și subcutanate la domiciliu, conform prescripției medicului.
 - [Îngrijire bolnavi la domiciliu](https://medline.md/ro/servicii/ingrijire-bolnavi-la-domiciliu): Îngrijire pentru persoane imobilizate, vârstnici sau pacienți în recuperare, ocazional sau de durată.
 - [Consult medical la domiciliu](https://medline.md/ro/servicii/consult-medical-la-domiciliu): Evaluare medicală acasă, măsurarea funcțiilor vitale și recomandări de tratament.
@@ -15,8 +15,7 @@
 ## Docs
 
 - [Detoxifiere la domiciliu](https://medline.md/ro/detoxifiere): Pagină dedicată detoxifierii post-alcool la domiciliu în Chișinău: cum decurge, indicații și programare.
-- [Codare anti-alcool în Chișinău](https://medline.md/ro/codare): Pagină dedicată codării anti-alcool la domiciliu: cum decurge, pregătire, preț și întrebări frecvente.
-- [Prețuri](https://medline.md/ro/preturi): Lista de prețuri orientative pentru toate serviciile medicale la domiciliu.
+- [Servicii prestate](https://medline.md/ro/preturi): Lista procedurilor efectuate la domiciliu. Prețurile nu sunt publicate pe site — se comunică telefonic, pe WhatsApp sau Viber, în funcție de caz.
 - [Toate serviciile](https://medline.md/ro/servicii): Prezentarea completă a serviciilor medicale la domiciliu oferite de Medline.
 - [Despre noi](https://medline.md/ro/despre-noi): Istoria Medline, fondatorul Victor Sochirean (asistent medical) și valorile echipei.
 - [Contact și programare](https://medline.md/ro/contact): Telefon, WhatsApp, Viber, adresă și formular de programare online, disponibil non-stop.
@@ -34,7 +33,7 @@
 
 ## Optional
 
-- [Versiunea în rusă](https://medline.md/ru): Întregul site este disponibil și în limba rusă la /ru (servicii, blog, prețuri, contact).
+- [Versiunea în rusă](https://medline.md/ru): Întregul site este disponibil și în limba rusă la /ru (servicii, blog, contact).
 - [Politica de confidențialitate](https://medline.md/ro/confidentialitate): Politica de prelucrare a datelor personale.
 - [Termeni și condiții](https://medline.md/ro/termeni): Termenii de utilizare a site-ului și a serviciilor.
 

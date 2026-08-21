@@ -70,6 +70,17 @@ export const SITE = {
   founded: "2015",
 
   /**
+   * Persoana cu calificare medicală în spatele conținutului.
+   * Google cere pentru subiecte de sănătate (YMYL) un autor identificabil, cu
+   * competență declarată — altfel conținutul e tratat ca anonim și e mai puțin
+   * probabil să fie citat în rezumatele AI. Datele trebuie să fie REALE.
+   */
+  author: {
+    name: "Sochirean Victor",
+    jobTitle: "Asistent medical",
+  },
+
+  /**
    * Analytics — lasă gol "" până ai ID-urile (nu se încarcă nimic dacă sunt goale).
    * ga4: din Google Analytics (ex. "G-XXXXXXXXXX")
    * metaPixel: din Facebook/Meta Events Manager (ex. "123456789012345")

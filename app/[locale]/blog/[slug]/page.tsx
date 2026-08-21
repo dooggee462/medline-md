@@ -91,7 +91,9 @@ export default async function ArticlePage({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    // MedicalWebPage semnalează explicit conținut de sănătate — ajută Google să
+    // înțeleagă contextul și crește șansa de a fi citat în rezumatele AI
+    "@type": ["Article", "MedicalWebPage"],
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
@@ -99,7 +101,13 @@ export default async function ArticlePage({
     inLanguage: locale,
     image: post.cover ? `${SITE.url}${post.cover}` : undefined,
     mainEntityOfPage: `${SITE.url}/${locale}/blog/${slug}`,
-    author: { "@type": "Organization", name: SITE.legalName },
+    // Autor cu calificare, nu doar organizația — cerință E-E-A-T pentru sănătate
+    author: {
+      "@type": "Person",
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle,
+      affiliation: { "@type": "MedicalOrganization", name: SITE.legalName },
+    },
     publisher: {
       "@type": "Organization",
       name: SITE.legalName,
