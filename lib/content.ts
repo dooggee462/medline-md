@@ -1437,6 +1437,11 @@ export function canonicalSlug(slug: string): string {
 
 /** URL complet pentru un serviciu, pe limba dată (primește slug RO) */
 export function serviceHref(locale: Locale, roSlug: string): string {
+  // Serviciile cu pagină dedicată (canonicalTo) trimit direct acolo: toate
+  // legăturile interne duc în același loc în care Google indexează, iar
+  // autoritatea nu se împarte între două URL-uri.
+  const svc = getService(roSlug);
+  if (svc?.canonicalTo) return `/${locale}${svc.canonicalTo}`;
   return `/${locale}/servicii/${localizeSlug(roSlug, locale)}`;
 }
 
