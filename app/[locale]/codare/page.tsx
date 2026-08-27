@@ -81,6 +81,40 @@ const CODARE: Record<
           "Prețul depinde de metoda aleasă și de durata efectului dorit — de aceea nu afișăm un tarif unic. Sună-ne și, după o scurtă discuție despre situația ta, îți spunem exact costul, fără taxe ascunse. Consultarea telefonică este gratuită și confidențială.",
         ],
       },
+      {
+        heading: "Cum te pregătești pentru codare",
+        body: [
+          "Condiția principală este abstinența înainte de procedură. Perioada exactă depinde de cât și cât de recent s-a consumat, iar asistentul o stabilește la discuția inițială — nu este o formalitate, ci o condiție de siguranță: codarea efectuată cu alcool încă prezent în organism poate provoca reacții periculoase.",
+          "Dacă pacientul nu reușește să se oprească singur, începem cu detoxifierea. Perfuziile de refacere ajută organismul să treacă peste primele zile, iar codarea se face abia după aceea. Sunt două etape distincte, iar sărirea peste prima nu ajută pe nimeni.",
+          "Pregătește actul de identitate și, dacă există, documentele medicale: analize recente, tratamente în curs, diagnostice cunoscute. Asistentul trebuie să știe ce medicamente ia pacientul, pentru că unele nu se combină cu procedura.",
+          "Ajută mult dacă familia discută deschis cu pacientul înainte. Un om care vine la procedură împăcat cu decizia lui are cu totul alte șanse decât unul adus prin insistențe.",
+        ],
+      },
+      {
+        heading: "Ce se întâmplă după procedură",
+        body: [
+          "Primele zile sunt cele mai importante. Efectul codării este real, dar el ține de o barieră — nu schimbă singur obiceiurile, anturajul sau motivele pentru care s-a ajuns la consum.",
+          "Îți spunem clar, înainte de procedură, ce se întâmplă dacă pacientul consumă alcool după codare. În funcție de metodă, reacția poate fi severă, iar pacientul trebuie să înțeleagă exact acest lucru — acordul informat înseamnă tocmai asta: că știe la ce se angajează.",
+          "Recomandăm ca în primele săptămâni familia să reducă expunerea la situații cu alcool și să nu trateze subiectul ca pe o problemă rezolvată definitiv. Codarea deschide o fereastră de timp; ce se construiește în ea decide rezultatul pe termen lung.",
+          "Rămânem disponibili și după procedură. Dacă apar întrebări sau semne care îngrijorează familia, sună-ne — e mai bine să întrebi decât să aștepți.",
+        ],
+      },
+      {
+        heading: "Când codarea nu se poate face",
+        body: [
+          "Există situații în care procedura este amânată sau contraindicată, iar asistentul le stabilește la evaluarea de la fața locului. Cele mai frecvente: pacientul este sub influența alcoolului, se află în plin sevraj, are afecțiuni cardiace grave, boli hepatice avansate, epilepsie, tulburări psihice acute sau este însărcinată.",
+          "Preferăm să pierdem o vizită decât să efectuăm o procedură care poate face rău. Dacă starea pacientului nu permite codarea, îți explicăm de ce și îți spunem ce se poate face în schimb — de multe ori detoxifierea este primul pas corect.",
+          "Nu efectuăm codarea fără acordul pacientului. Nu este doar o chestiune legală: o procedură făcută împotriva voinței cuiva nu funcționează și distruge încrederea de care are nevoie recuperarea.",
+        ],
+      },
+      {
+        heading: "Ce nu este codarea",
+        body: [
+          "Codarea nu vindecă dependența. Este un sprijin puternic pentru o decizie deja luată, nu un înlocuitor al deciziei. Cine speră că procedura va schimba singură dorința de a bea va fi dezamăgit.",
+          "Nu este nici o pedeapsă, nici un mijloc de control asupra cuiva. Familiile ne sună uneori întrebând dacă se poate face pe ascuns — răspunsul este nu, iar motivul nu ține doar de lege.",
+          "Rezultatele cele mai bune apar când codarea este combinată cu sprijin psihologic și cu schimbări reale în viața de zi cu zi. Îți spunem asta de la început, chiar dacă sună mai puțin comod decât o promisiune.",
+        ],
+      },
     ],
     faq: [
       {
@@ -98,6 +132,26 @@ const CODARE: Record<
       {
         q: "Este confidențial?",
         a: "Absolut. Vizita are loc la domiciliu, discret, fără înregistrări inutile și fără divulgarea informațiilor. Confidențialitatea este principiul nostru de bază.",
+      },
+      {
+        q: "Cât durează procedura în sine?",
+        a: "Vizita durează în mod obișnuit sub o oră, incluzând evaluarea, procedura propriu-zisă și discuția de după. Ajungem la domiciliu în 25-45 de minute de la apel, în Chișinău.",
+      },
+      {
+        q: "Ce se întâmplă dacă pacientul bea după codare?",
+        a: "În funcție de metodă, consumul după procedură poate provoca reacții severe. Îți explicăm exact acest lucru înainte, iar pacientul își dă acordul cunoscând consecințele — asta înseamnă acord informat.",
+      },
+      {
+        q: "Cât timp ține efectul codării?",
+        a: "Depinde de metoda aleasă; se stabilește împreună cu pacientul la evaluare, în funcție de situație și de ce își dorește. Îți spunem exact durata înainte de procedură, nu după.",
+      },
+      {
+        q: "Se poate face codarea dacă pacientul are boli cronice?",
+        a: "Depinde de afecțiune. Bolile cardiace grave, afecțiunile hepatice avansate, epilepsia, tulburările psihice acute și sarcina sunt contraindicații. Asistentul evaluează situația la fața locului și îți spune deschis dacă procedura este posibilă.",
+      },
+      {
+        q: "Veniți și noaptea sau în weekend?",
+        a: "Da, lucrăm non-stop. Pentru codare stabilim însă ora împreună, pentru că e nevoie de perioada de abstinență dinainte — nu e o procedură care se face din impuls, la orice oră.",
       },
       {
         q: "Se poate face codarea fără acordul persoanei?",
@@ -158,6 +212,40 @@ const CODARE: Record<
           "Цена зависит от выбранного метода и желаемой длительности эффекта, поэтому мы не публикуем единый тариф. Позвоните нам — после короткого разговора о вашей ситуации мы назовём точную стоимость, без скрытых платежей. Телефонная консультация бесплатна и конфиденциальна.",
         ],
       },
+      {
+        heading: "Как подготовиться к кодированию",
+        body: [
+          "Главное условие — воздержание перед процедурой. Точный срок зависит от того, сколько и как недавно было выпито; медработник определяет его при первом разговоре. Это не формальность, а условие безопасности: кодирование при остатках алкоголя в организме может вызвать опасные реакции.",
+          "Если пациент не может остановиться самостоятельно, начинаем с детоксикации. Восстановительные капельницы помогают пережить первые дни, и только после этого проводится кодирование. Это два разных этапа, и пропуск первого не помогает никому.",
+          "Подготовьте удостоверение личности и, если есть, медицинские документы: свежие анализы, текущее лечение, известные диагнозы. Медработник должен знать, какие препараты принимает пациент — некоторые несовместимы с процедурой.",
+          "Очень помогает, если семья заранее откровенно поговорит с пациентом. Человек, пришедший к процедуре в согласии со своим решением, имеет совсем другие шансы, чем тот, кого привели уговорами.",
+        ],
+      },
+      {
+        heading: "Что происходит после процедуры",
+        body: [
+          "Первые дни самые важные. Эффект кодирования реален, но это барьер — он сам по себе не меняет привычки, окружение или причины, по которым дошло до злоупотребления.",
+          "Мы честно объясняем до процедуры, что произойдёт, если пациент выпьет после кодирования. В зависимости от метода реакция может быть тяжёлой, и пациент должен это ясно понимать — информированное согласие означает именно это: он знает, на что идёт.",
+          "Рекомендуем в первые недели снизить контакт с ситуациями, где присутствует алкоголь, и не считать вопрос закрытым окончательно. Кодирование открывает окно времени; то, что построено в нём, определяет долгосрочный результат.",
+          "Мы остаёмся на связи и после процедуры. Если появятся вопросы или тревожные признаки — звоните, лучше спросить, чем ждать.",
+        ],
+      },
+      {
+        heading: "Когда кодирование провести нельзя",
+        body: [
+          "Есть ситуации, когда процедура откладывается или противопоказана; медработник определяет их при осмотре на месте. Самые частые: пациент под воздействием алкоголя, в разгар синдрома отмены, тяжёлые заболевания сердца, запущенные болезни печени, эпилепсия, острые психические расстройства или беременность.",
+          "Мы лучше потеряем выезд, чем проведём процедуру, способную навредить. Если состояние пациента не позволяет кодирование, мы объясняем почему и говорим, что можно сделать вместо этого — часто правильный первый шаг именно детоксикация.",
+          "Мы не проводим кодирование без согласия пациента. Дело не только в законе: процедура, сделанная против воли человека, не работает и разрушает доверие, необходимое для восстановления.",
+        ],
+      },
+      {
+        heading: "Чем кодирование не является",
+        body: [
+          "Кодирование не излечивает зависимость. Это сильная поддержка уже принятого решения, а не замена самого решения. Тот, кто надеется, что процедура сама изменит тягу к алкоголю, будет разочарован.",
+          "Это и не наказание, и не средство контроля над кем-то. Семьи иногда звонят и спрашивают, можно ли сделать втайне — ответ нет, и причина не только юридическая.",
+          "Лучшие результаты появляются, когда кодирование сочетается с психологической поддержкой и реальными изменениями в повседневной жизни. Мы говорим об этом сразу, даже если это звучит менее удобно, чем обещание.",
+        ],
+      },
     ],
     faq: [
       {
@@ -175,6 +263,26 @@ const CODARE: Record<
       {
         q: "Это конфиденциально?",
         a: "Абсолютно. Визит проходит на дому, дискретно, без лишних записей и разглашения информации. Конфиденциальность — наш базовый принцип.",
+      },
+      {
+        q: "Сколько длится сама процедура?",
+        a: "Визит обычно занимает меньше часа, включая осмотр, саму процедуру и разговор после. Приезжаем на дом за 25-45 минут после звонка, в пределах Кишинёва.",
+      },
+      {
+        q: "Что будет, если пациент выпьет после кодирования?",
+        a: "В зависимости от метода употребление после процедуры может вызвать тяжёлую реакцию. Мы объясняем это заранее, и пациент даёт согласие, зная последствия — это и есть информированное согласие.",
+      },
+      {
+        q: "Сколько держится эффект кодирования?",
+        a: "Зависит от выбранного метода; срок определяется вместе с пациентом при осмотре, исходя из ситуации и его пожеланий. Мы называем точную длительность до процедуры, а не после.",
+      },
+      {
+        q: "Можно ли кодировать при хронических заболеваниях?",
+        a: "Зависит от заболевания. Тяжёлые болезни сердца, запущенные заболевания печени, эпилепсия, острые психические расстройства и беременность являются противопоказаниями. Медработник оценивает ситуацию на месте и прямо говорит, возможна ли процедура.",
+      },
+      {
+        q: "Вы приезжаете ночью и в выходные?",
+        a: "Да, работаем круглосуточно. Но время кодирования согласуем заранее: нужен период воздержания до процедуры — это не то, что делается спонтанно, в любой час.",
       },
       {
         q: "Можно ли закодировать человека без его согласия?",
