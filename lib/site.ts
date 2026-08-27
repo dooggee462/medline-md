@@ -84,8 +84,25 @@ export const SITE = {
    */
   reviewUrl: "https://g.page/r/CViJVna_59QmEAI/review",
 
-  /** An înființare (pentru schema). Confirmat de client: activitate din 2024. */
-  founded: "2024",
+  /** Data înregistrării în Registrul de Stat (infodebit.md / IDNO de mai jos) */
+  founded: "2025-11-04",
+
+  /**
+   * Datele firmei din Registrul de Stat — informație PUBLICĂ, verificabilă
+   * oricine. Se folosesc în schema.org ca să lege site-ul de o entitate
+   * juridică reală: pentru Google, un site medical cu firmă identificabilă
+   * are altă greutate decât unul anonim.
+   *
+   * Documentele propriu-zise (diplome, licențe) NU se publică — conțin date
+   * cu caracter personal. Registrul public e suficient.
+   */
+  company: {
+    legalName: "Societatea cu Răspundere Limitată MEDLINE HEALTH",
+    shortName: "MEDLINE HEALTH SRL",
+    idno: "1025607003895",
+    /** Adresa juridică din registru — NU e sediu cu primire de pacienți */
+    registeredAddress: "mun. Chișinău, str. Gh. Asachi 53, ap. 44, MD-2065",
+  },
 
   /**
    * Analytics — lasă gol "" până ai ID-urile (nu se încarcă nimic dacă sunt goale).

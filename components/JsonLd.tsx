@@ -16,6 +16,9 @@ export function JsonLd({ locale }: { locale: Locale }) {
     "@type": ["MedicalClinic", "MedicalBusiness", "LocalBusiness"],
     "@id": `${SITE.url}/#clinic`,
     name: SITE.legalName,
+    // Entitate juridică verificabilă în Registrul de Stat — semnal de încredere
+    legalName: SITE.company.legalName,
+    taxID: SITE.company.idno,
     description: dict.meta.description,
     url,
     telephone: SITE.phoneRaw,

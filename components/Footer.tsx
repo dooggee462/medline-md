@@ -95,6 +95,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             </Link>
           </div>
           <p>© {new Date().getFullYear()} {SITE.legalName}. {dict.footer.rights}</p>
+          {/* Date publice din Registrul de Stat — arată că în spate e o firmă reală */}
+          <p className="mt-2 text-xs">
+            {SITE.company.shortName} · IDNO {SITE.company.idno}
+          </p>
           <p className="mt-2 text-xs">{dict.footer.legal}</p>
         </div>
       </div>

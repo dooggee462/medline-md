@@ -11,6 +11,8 @@ export function SiteSchema({ locale }: { locale: Locale }) {
     "@type": ["Organization", "MedicalOrganization"],
     "@id": `${SITE.url}/#organization`,
     name: SITE.legalName,
+    legalName: SITE.company.legalName,
+    taxID: SITE.company.idno,
     alternateName: SITE.name,
     url: SITE.url,
     logo: `${SITE.url}/icon.svg`,
