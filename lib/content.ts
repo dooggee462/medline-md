@@ -68,6 +68,37 @@ export const SERVICES: ServiceDetail[] = [
               "Pe durata perfuziei rămâne lângă tine, reglează ritmul de curgere și urmărește eventualele semne de disconfort. La final, retrage cateterul, aplică pansamentul și îți oferă recomandări.",
             ],
           },
+          {
+            heading: "În cât timp ajungem la tine",
+            body: [
+              "Ajungem la domiciliu în 25-45 de minute de la apel, în Chișinău. Nu lucrăm cu program fix: echipa pornește în momentul în care ne suni, indiferent de oră.",
+              "Serviciul este disponibil non-stop, inclusiv noaptea, în weekend și de sărbători. Dacă ai nevoie de o perfuzie la domiciliu urgent, la 3 dimineața, ne suni și venim — nu te punem pe listă de așteptare pentru a doua zi.",
+            ],
+          },
+          {
+            heading: "Ce trebuie să pregătești înainte de vizită",
+            body: [
+              "Practic nimic. Asistenta vine cu tot necesarul: perfuzor, catetere, ace, soluții, dezinfectant, mănuși și pansamente sterile, toate de unică folosință. Nu trebuie să cumperi nimic de la farmacie și nu trebuie să procuri tu materialele.",
+              "Ajută dacă pregătești un loc unde pacientul poate sta întins confortabil 30-90 de minute — un pat sau o canapea, cu o masă sau un scaun alături. E util și un pahar cu apă la îndemână.",
+              "Dacă pacientul urmează deja un tratament sau are afecțiuni cronice, ține la îndemână documentele medicale și lista medicamentelor. Asistenta le verifică înainte de a începe.",
+            ],
+          },
+          {
+            heading: "Cât durează o perfuzie și ce simți",
+            body: [
+              "O perfuzie la domiciliu durează în mod obișnuit între 30 și 90 de minute, în funcție de soluția administrată și de ritmul potrivit pentru pacient. Perfuziile de rehidratare sunt de regulă mai scurte, cele cu vitamine sau de refacere pot dura mai mult.",
+              "Singurul moment ușor neplăcut este înțepătura pentru montarea cateterului — comparabilă cu o recoltare de sânge, câteva secunde. După ce cateterul e fixat, nu mai simți durere; unii pacienți simt o ușoară răcoare pe braț, ceea ce e normal.",
+              "Nu rămâi singur în timpul procedurii. Asistenta stă lângă tine pe toată durata perfuziei, urmărește ritmul și starea generală, iar la final scoate cateterul și îți spune ce e de urmărit în orele următoare.",
+            ],
+          },
+          {
+            heading: "Când perfuzia la domiciliu nu este suficientă",
+            body: [
+              "Perfuzia la domiciliu acoperă majoritatea situațiilor de rehidratare, refacere și tratament intravenos prescris, dar nu înlocuiește spitalul în urgențe majore.",
+              "Sună la 112, nu la noi, dacă apar: durere în piept, dificultăți severe de respirație, pierderea cunoștinței, convulsii, semne de accident vascular (față asimetrică, vorbire neclară, slăbiciune pe o parte a corpului) sau sângerare care nu se oprește.",
+              "La evaluarea de la fața locului, asistenta poate stabili că starea pacientului depășește ce se poate rezolva acasă — în acest caz îți spune direct și te îndrumă către spital. Preferăm să pierdem o vizită decât să riscăm sănătatea pacientului.",
+            ],
+          },
         ],
         indications: [
           "Rehidratare după gastroenterite, febră sau deshidratare",
@@ -90,6 +121,26 @@ export const SERVICES: ServiceDetail[] = [
           {
             q: "Cât durează o perfuzie la domiciliu?",
             a: "În funcție de soluție, o perfuzie durează de obicei între 30 și 90 de minute. Asistenta rămâne cu tine pe tot parcursul.",
+          },
+          {
+            q: "În cât timp ajungeți la domiciliu?",
+            a: "Ajungem în 25-45 de minute de la apel, în Chișinău. Pornim în momentul în care ne suni, nu la o oră programată dinainte.",
+          },
+          {
+            q: "Veniți și noaptea sau în weekend?",
+            a: "Da, lucrăm non-stop: noaptea, în weekend și de sărbători. Nu există supliment de așteptare — dacă suni la 3 dimineața, echipa pornește atunci.",
+          },
+          {
+            q: "Ce trebuie să pregătesc sau să cumpăr înainte?",
+            a: "Nimic. Asistenta aduce tot necesarul: perfuzor, catetere, soluții, dezinfectant și pansamente sterile, de unică folosință. Pregătește doar un loc unde pacientul poate sta întins confortabil.",
+          },
+          {
+            q: "Doare când se montează perfuzia?",
+            a: "Doar înțepătura de la început, câteva secunde, comparabilă cu o recoltare de sânge. După ce cateterul e fixat, nu mai simți durere.",
+          },
+          {
+            q: "Pot rămâne singur în timpul perfuziei?",
+            a: "Nu e cazul — asistenta rămâne lângă pacient pe toată durata procedurii, urmărește ritmul de administrare și starea generală, până la scoaterea cateterului.",
           },
         ],
       },
@@ -119,6 +170,37 @@ export const SERVICES: ServiceDetail[] = [
               "Во время капельницы она остаётся рядом, регулирует скорость и следит за признаками дискомфорта. В конце снимает катетер, накладывает повязку и даёт рекомендации.",
             ],
           },
+          {
+            heading: "Как быстро мы приезжаем",
+            body: [
+              "Приезжаем на дом за 25-45 минут после звонка, в пределах Кишинёва. Мы не работаем по фиксированному графику: бригада выезжает в момент вашего звонка, в любое время суток.",
+              "Услуга доступна круглосуточно — ночью, в выходные и праздники. Если капельница на дому нужна срочно, в три часа ночи, вы звоните и мы выезжаем, а не записываем вас на следующий день.",
+            ],
+          },
+          {
+            heading: "Что нужно подготовить до приезда",
+            body: [
+              "Практически ничего. Медсестра привозит всё необходимое: систему, катетеры, иглы, растворы, антисептик, перчатки и стерильные повязки — всё одноразовое. Покупать что-либо в аптеке не нужно.",
+              "Пригодится место, где пациент сможет удобно полежать 30-90 минут — кровать или диван, рядом стол или стул. Полезно поставить рядом стакан воды.",
+              "Если пациент уже принимает лечение или имеет хронические заболевания, держите под рукой медицинские документы и список препаратов — медсестра проверит их перед началом.",
+            ],
+          },
+          {
+            heading: "Сколько длится капельница и что вы чувствуете",
+            body: [
+              "Капельница на дому обычно занимает от 30 до 90 минут — в зависимости от раствора и подходящей пациенту скорости введения. Регидратационные капельницы, как правило, короче, витаминные и восстановительные могут длиться дольше.",
+              "Единственный слегка неприятный момент — прокол при установке катетера, сравнимый со сдачей крови, несколько секунд. После фиксации катетера боли нет; некоторые пациенты ощущают лёгкую прохладу по руке, это нормально.",
+              "Вы не остаётесь одни во время процедуры. Медсестра находится рядом всё время, следит за скоростью введения и общим состоянием, в конце снимает катетер и объясняет, за чем следить в ближайшие часы.",
+            ],
+          },
+          {
+            heading: "Когда капельницы на дому недостаточно",
+            body: [
+              "Капельница на дому закрывает большинство ситуаций: регидратацию, восстановление и назначенное внутривенное лечение. Но она не заменяет больницу при тяжёлых неотложных состояниях.",
+              "Звоните 112, а не нам, если появились: боль в груди, выраженная одышка, потеря сознания, судороги, признаки инсульта (асимметрия лица, невнятная речь, слабость в одной половине тела) или кровотечение, которое не останавливается.",
+              "При осмотре на месте медсестра может определить, что состояние пациента выходит за рамки того, что решается дома — тогда она скажет об этом прямо и направит в больницу. Мы лучше потеряем выезд, чем рискнём здоровьем пациента.",
+            ],
+          },
         ],
         indications: [
           "Регидратация после кишечных инфекций, температуры или обезвоживания",
@@ -141,6 +223,26 @@ export const SERVICES: ServiceDetail[] = [
           {
             q: "Сколько длится капельница на дому?",
             a: "В зависимости от раствора капельница обычно длится от 30 до 90 минут. Медсестра остаётся с вами всё это время.",
+          },
+          {
+            q: "Как быстро вы приезжаете на дом?",
+            a: "Приезжаем за 25-45 минут после звонка, в пределах Кишинёва. Выезжаем в момент вашего звонка, а не к заранее назначенному часу.",
+          },
+          {
+            q: "Вы приезжаете ночью и в выходные?",
+            a: "Да, работаем круглосуточно: ночью, в выходные и праздники. Если вы звоните в три часа ночи, бригада выезжает сразу.",
+          },
+          {
+            q: "Что нужно подготовить или купить заранее?",
+            a: "Ничего. Медсестра привозит всё необходимое: систему, катетеры, растворы, антисептик и стерильные повязки, всё одноразовое. Подготовьте только место, где пациент сможет удобно полежать.",
+          },
+          {
+            q: "Больно ли ставить капельницу?",
+            a: "Только сам прокол в начале, несколько секунд, сравнимо со сдачей крови. После установки катетера боли нет.",
+          },
+          {
+            q: "Могу ли я остаться один во время капельницы?",
+            a: "В этом нет необходимости — медсестра находится рядом с пациентом всю процедуру, следит за скоростью введения и состоянием, вплоть до снятия катетера.",
           },
         ],
       },
