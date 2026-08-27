@@ -232,9 +232,9 @@ const ro: Dictionary = {
     ctaSecondary: "Sună: rezolvăm rapid",
     // Doar cifre confirmate de client — nimic estimat sau rotunjit în sus
     stats: [
+      { value: "1500+", label: "pacienți îngrijiți" },
       { value: "24/7", label: "non-stop, inclusiv noaptea" },
       { value: "25-45 min", label: "timp de sosire" },
-      { value: "8", label: "servicii la domiciliu" },
       { value: "RO / RU", label: "vorbim ambele limbi" },
     ],
   },
@@ -525,9 +525,9 @@ const ru: Dictionary = {
     ctaSecondary: "Позвоните — решим быстро",
     // Только подтверждённые клиентом цифры — ничего оценочного
     stats: [
+      { value: "1500+", label: "пациентов" },
       { value: "24/7", label: "круглосуточно, включая ночь" },
       { value: "25-45 мин", label: "время приезда" },
-      { value: "8", label: "услуг на дому" },
       { value: "RO / RU", label: "говорим на обоих языках" },
     ],
   },
