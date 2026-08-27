@@ -30,9 +30,13 @@ export const SITE = {
   /** Email de contact / destinația programărilor — ⚠️ înlocuiește cu email real */
   email: "contact@medline.md",
 
-  /** Adresa fizică (oficiul central) */
+  /**
+   * NU există sediu cu primire de pacienți — serviciile se fac exclusiv la
+   * domiciliul pacientului (confirmat de client). Se folosește doar `city`,
+   * pentru areaServed în schema.org; strada rămâne nefolosită.
+   */
   address: {
-    street: "str. Dacia 15/1, et. 3",
+    street: "",
     city: "Chișinău",
     region: "Chișinău",
     postalCode: "MD-2001",
@@ -41,6 +45,20 @@ export const SITE = {
     lat: 46.9817,
     lng: 28.8835,
   },
+
+  /**
+   * Localitățile deservite, în afară de Chișinău (confirmate de client).
+   * Apar în schema.org areaServed și pe pagina de contact.
+   */
+  areaServed: [
+    "Ciorescu",
+    "Tohatin",
+    "Ialoveni",
+    "Vatra",
+    "Sîngera",
+    "Bubuieci",
+    "Băcioi",
+  ],
 
   /** Sloganul brandului */
   slogan: "Ușor. Rapid. Acasă.",
@@ -66,8 +84,8 @@ export const SITE = {
    */
   reviewUrl: "https://g.page/r/CViJVna_59QmEAI/review",
 
-  /** An înființare (pentru schema + footer) */
-  founded: "2015",
+  /** An înființare (pentru schema). Confirmat de client: activitate din 2024. */
+  founded: "2024",
 
   /**
    * Analytics — lasă gol "" până ai ID-urile (nu se încarcă nimic dacă sunt goale).

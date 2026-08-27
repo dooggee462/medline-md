@@ -25,7 +25,11 @@ export function JsonLd({ locale }: { locale: Locale }) {
     priceRange: "$$",
     medicalSpecialty: "Nursing",
     // Serviciu la domiciliu (fără sediu cu primire pacienți) — fără adresă fizică
-    areaServed: { "@type": "City", name: SITE.address.city },
+    // Chișinău + suburbiile deservite — semnal de acoperire pentru căutările locale
+    areaServed: [
+      { "@type": "City", name: SITE.address.city },
+      ...SITE.areaServed.map((name) => ({ "@type": "Place", name })),
+    ],
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

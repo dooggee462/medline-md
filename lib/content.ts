@@ -490,6 +490,29 @@ export const SERVICES: ServiceDetail[] = [
               "Pentru pacienții imobilizați acordăm atenție specială prevenirii escarelor, igienei și mobilizării corecte.",
             ],
           },
+          {
+            heading: "Cum se organizează îngrijirea",
+            body: [
+              "Lucrăm în două formule, în funcție de ce are nevoie familia. Prima este îngrijirea pe ore: venim pentru un interval stabilit, facem ce e de făcut și plecăm — potrivită când familia se descurcă în rest, dar are nevoie de ajutor la anumite momente ale zilei.",
+              "A doua este îngrijirea permanentă, 24 de ore din 24, cu tarif corespunzător. Aici cineva rămâne cu pacientul non-stop, inclusiv noaptea.",
+              "Preluăm și cazuri de lungă durată, pe luni de zile. Pentru acestea stabilim un program regulat, cu revizuirea situației o dată la una-două săptămâni, ca îngrijirea să fie ajustată pe măsură ce starea pacientului se schimbă.",
+            ],
+          },
+          {
+            heading: "Ce presupune îngrijirea unui pacient imobilizat",
+            body: [
+              "Îngrijirea unei persoane care nu se poate ridica din pat înseamnă mai mult decât prezență. Cea mai importantă parte este prevenirea escarelor: schimbarea poziției la câteva ore, verificarea zonelor de sprijin — călcâie, șolduri, spate — și igiena atentă a pielii.",
+              "Se adaugă igiena zilnică, ajutorul la alimentare și hidratare, administrarea medicamentelor la orele stabilite și urmărirea funcțiilor vitale.",
+              "Familia primește și îndrumare practică: cum se mobilizează corect pacientul fără să vă accidentați, ce semne cer atenție imediată și cum se organizează camera ca îngrijirea zilnică să fie mai ușoară.",
+            ],
+          },
+          {
+            heading: "Când familia nu mai face față singură",
+            body: [
+              "Nu trebuie să așteptați epuizarea completă ca să cereți ajutor. Semnele că îngrijirea depășește puterile familiei apar devreme: nopți nedormite în serie, imposibilitatea de a merge la serviciu, pacient care a căzut deja o dată, sau răni pe piele care nu se vindecă.",
+              "Îngrijirea unui bolnav imobilizat cere efort fizic real și cunoștințe pe care nimeni nu le are din instinct. Un ajutor calificat câteva ore pe zi schimbă complet situația, atât pentru pacient, cât și pentru cei din jur.",
+            ],
+          },
         ],
         indications: [
           "Persoane vârstnice care necesită supraveghere",
@@ -539,6 +562,29 @@ export const SERVICES: ServiceDetail[] = [
             body: [
               "Для пожилых людей мы предлагаем общение, наблюдение и помощь в повседневных делах, сохраняя достоинство и комфорт пациента.",
               "Для лежачих пациентов уделяем особое внимание профилактике пролежней, гигиене и правильной мобилизации.",
+            ],
+          },
+          {
+            heading: "Как организован уход",
+            body: [
+              "Мы работаем в двух форматах, в зависимости от потребностей семьи. Первый — уход по часам: приезжаем на оговорённый интервал, выполняем необходимое и уезжаем. Подходит, когда семья справляется в целом, но нуждается в помощи в определённые часы.",
+              "Второй — круглосуточный уход, 24 часа в сутки, с соответствующей оплатой. Здесь человек находится рядом с пациентом постоянно, включая ночь.",
+              "Берём и длительные случаи, на месяцы. Для них составляем регулярный график с пересмотром ситуации раз в одну-две недели, чтобы уход подстраивался под изменения состояния пациента.",
+            ],
+          },
+          {
+            heading: "Что включает уход за лежачим пациентом",
+            body: [
+              "Уход за человеком, который не встаёт с постели, — это больше, чем присутствие рядом. Важнейшая часть — профилактика пролежней: смена положения каждые несколько часов, проверка опорных зон (пятки, бёдра, спина) и тщательная гигиена кожи.",
+              "К этому добавляются ежедневная гигиена, помощь с питанием и питьём, приём препаратов по часам и контроль жизненных показателей.",
+              "Семья получает и практические рекомендации: как правильно перемещать пациента, не травмируя себя, какие признаки требуют немедленного внимания и как организовать комнату, чтобы ежедневный уход был легче.",
+            ],
+          },
+          {
+            heading: "Когда семья перестаёт справляться",
+            body: [
+              "Не нужно ждать полного истощения, чтобы попросить помощь. Признаки появляются рано: бессонные ночи подряд, невозможность выйти на работу, пациент, который уже однажды упал, или незаживающие раны на коже.",
+              "Уход за лежачим больным требует реальных физических усилий и знаний, которых нет ни у кого по наитию. Квалифицированная помощь несколько часов в день полностью меняет ситуацию — и для пациента, и для близких.",
             ],
           },
         ],
@@ -603,6 +649,29 @@ export const SERVICES: ServiceDetail[] = [
               "Pentru situații care necesită investigații suplimentare, te putem îndruma către serviciile potrivite.",
             ],
           },
+          {
+            heading: "Ce se măsoară la un consult",
+            body: [
+              "Consultul la domiciliu include verificarea tuturor indicilor vitali: temperatura, pulsul, tensiunea arterială, glicemia și saturația de oxigen din sânge.",
+              "Pe lângă cifre, contează evaluarea stării generale — cum arată pacientul, cum respiră, dacă e orientat, cum se alimentează, ce simptome descrie. Un pacient poate avea valori acceptabile și, totuși, să necesite atenție medicală.",
+              "La final primiți o imagine clară a situației și recomandări concrete: ce se poate trata acasă, ce necesită investigații suplimentare și când e cazul să vă adresați medicului de familie sau spitalului.",
+            ],
+          },
+          {
+            heading: "Consult cu asistent sau cu medic",
+            body: [
+              "În funcție de problemă, consultul se face de către asistentul medical sau de către medic. Când ne sunați, descrieți situația și noi stabilim cine este potrivit să vină.",
+              "Pentru monitorizarea unor parametri, verificarea unei stări cunoscute sau evaluarea de rutină a unui pacient cronic, asistentul medical este suficient. Pentru situații care cer diagnostic sau schimbarea unui tratament, vine medicul.",
+            ],
+          },
+          {
+            heading: "Ce nu facem la domiciliu",
+            body: [
+              "Nu recoltăm analize de laborator la domiciliu. Dacă în urma consultului reies analize necesare, vă spunem exact care sunt și unde le puteți face.",
+              "Nu efectuăm investigații imagistice — ecografie, radiografie, tomografie — acestea necesită aparatură de clinică.",
+              "În urgențe majore — durere în piept, dificultăți severe de respirație, pierderea cunoștinței, semne de accident vascular — sunați la 112. Un consult programat nu înlocuiește intervenția de urgență.",
+            ],
+          },
         ],
         indications: [
           "Persoane vârstnice cu deplasare dificilă",
@@ -652,6 +721,29 @@ export const SERVICES: ServiceDetail[] = [
             body: [
               "Осмотр на дому идеален для пожилых людей, маломобильных пациентов, тех, кто восстанавливается, или семей, предпочитающих комфорт собственного дома.",
               "Для ситуаций, требующих дополнительных обследований, мы направим вас к подходящим услугам.",
+            ],
+          },
+          {
+            heading: "Что измеряется на приёме",
+            body: [
+              "Осмотр на дому включает проверку всех жизненных показателей: температуры, пульса, артериального давления, уровня глюкозы и насыщения крови кислородом.",
+              "Помимо цифр важна оценка общего состояния — как пациент выглядит, как дышит, ориентирован ли он, как питается, какие симптомы описывает. Показатели могут быть приемлемыми, а состояние всё равно требовать внимания.",
+              "В конце вы получаете ясную картину и конкретные рекомендации: что можно лечить дома, что требует дополнительных обследований и когда следует обратиться к семейному врачу или в больницу.",
+            ],
+          },
+          {
+            heading: "Осмотр медсестрой или врачом",
+            body: [
+              "В зависимости от проблемы осмотр проводит медработник или врач. При звонке опишите ситуацию — мы определим, кто должен приехать.",
+              "Для контроля показателей, проверки известного состояния или планового наблюдения хронического пациента достаточно медработника. Для ситуаций, требующих диагноза или изменения лечения, приезжает врач.",
+            ],
+          },
+          {
+            heading: "Чего мы не делаем на дому",
+            body: [
+              "Мы не берём анализы на дому. Если по итогам осмотра нужны анализы, мы точно скажем какие и где их можно сдать.",
+              "Не проводим визуализирующие исследования — УЗИ, рентген, томографию: для них нужна аппаратура клиники.",
+              "При неотложных состояниях — боль в груди, выраженная одышка, потеря сознания, признаки инсульта — звоните 112. Плановый осмотр не заменяет экстренную помощь.",
             ],
           },
         ],
@@ -715,6 +807,29 @@ export const SERVICES: ServiceDetail[] = [
               "Asistenta evaluează evoluția rănii la fiecare vizită și ajustează îngrijirea, colaborând cu medicul curant când este necesar.",
             ],
           },
+          {
+            heading: "Ce tipuri de pansamente efectuăm",
+            body: [
+              "Efectuăm toate tipurile de pansamente: plăgi postoperatorii, plăgi cronice care se vindecă greu, escare în diferite stadii, arsuri și leziuni traumatice.",
+              "Scoatem firele de sutură, agrafele chirurgicale și atelele postoperatorii, la termenul indicat de medicul care a operat. Nu e nevoie să vă deplasați la spital pentru asta.",
+              "Fiecare pansament se face cu materiale sterile de unică folosință, iar plaga este evaluată de fiecare dată — culoare, secreții, miros, marginile rănii. Aceste detalii spun dacă vindecarea decurge normal sau apare o complicație.",
+            ],
+          },
+          {
+            heading: "Consultația chirurgului la domiciliu",
+            body: [
+              "Pentru pacienții cu escare avansate sau complicații postoperatorii, aducem la domiciliu și consultația unui medic chirurg. Sunt situații în care pansamentul singur nu rezolvă: rana are nevoie de o evaluare de specialitate și, uneori, de o intervenție locală.",
+              "Așa se evită deplasarea unui pacient imobilizat la spital — dificilă, dureroasă și, în cazul plăgilor deschise, cu risc de contaminare.",
+              "Dacă asistentul constată la fața locului că situația depășește îngrijirea obișnuită, vă spune direct și organizăm consultația.",
+            ],
+          },
+          {
+            heading: "Semne că plaga nu evoluează bine",
+            body: [
+              "Anunțați-ne, sau mergeți la medic, dacă apar: roșeață care se întinde în jurul rănii, umflătură crescândă, secreție cu miros neplăcut sau puroi, febră, durere care se intensifică de la o zi la alta, sau margini ale plăgii care se depărtează.",
+              "În cazul escarelor, orice zonă de piele care se înnegrește ori rana care se adâncește vizibil cere evaluare rapidă — escarele avansate se complică repede și devin greu de tratat.",
+            ],
+          },
         ],
         indications: [
           "Plăgi postoperatorii care necesită pansare",
@@ -764,6 +879,29 @@ export const SERVICES: ServiceDetail[] = [
             body: [
               "Правильно обработанная рана заживает быстрее и имеет гораздо меньший риск инфекции или осложнений.",
               "Медсестра оценивает динамику раны при каждом визите и корректирует уход, при необходимости сотрудничая с лечащим врачом.",
+            ],
+          },
+          {
+            heading: "Какие перевязки мы делаем",
+            body: [
+              "Мы выполняем все виды перевязок: послеоперационные раны, хронические долго заживающие раны, пролежни разных стадий, ожоги и травматические повреждения.",
+              "Снимаем швы, хирургические скобы и послеоперационные шины в сроки, указанные оперировавшим врачом. Ехать для этого в больницу не нужно.",
+              "Каждая перевязка выполняется стерильными одноразовыми материалами, и рана оценивается заново при каждом визите: цвет, отделяемое, запах, края раны. Эти детали показывают, идёт заживление нормально или развивается осложнение.",
+            ],
+          },
+          {
+            heading: "Консультация хирурга на дому",
+            body: [
+              "Для пациентов с запущенными пролежнями или послеоперационными осложнениями мы организуем на дому и консультацию врача-хирурга. Бывают ситуации, когда одной перевязки недостаточно: рана требует специализированной оценки, а иногда и местного вмешательства.",
+              "Так удаётся избежать перевозки лежачего пациента в больницу — трудной, болезненной и, при открытых ранах, связанной с риском загрязнения.",
+              "Если медработник на месте видит, что ситуация выходит за рамки обычного ухода, он говорит об этом прямо и мы организуем консультацию.",
+            ],
+          },
+          {
+            heading: "Признаки, что рана заживает плохо",
+            body: [
+              "Сообщите нам или обратитесь к врачу, если появились: краснота, распространяющаяся вокруг раны, нарастающий отёк, отделяемое с неприятным запахом или гноем, температура, усиливающаяся день ото дня боль или расходящиеся края раны.",
+              "При пролежнях любой участок чернеющей кожи или заметно углубляющаяся рана требуют быстрой оценки — запущенные пролежни осложняются быстро и трудно поддаются лечению.",
             ],
           },
         ],
@@ -829,6 +967,29 @@ export const SERVICES: ServiceDetail[] = [
               "Pentru cazurile severe sau cu afecțiuni asociate, recomandăm și un consult medical de specialitate. Te putem îndruma.",
             ],
           },
+          {
+            heading: "Cât durează și câte zile sunt necesare",
+            body: [
+              "O intervenție durează între 45 și 60 de minute. Numărul de zile depinde de gradul de intoxicare: în cazurile ușoare o singură vizită este suficientă, iar în situațiile severe tratamentul se poate întinde până la 10 zile.",
+              "Nu stabilim durata la telefon. Asistentul medical evaluează starea la fața locului și vă spune realist la ce să vă așteptați — o beție de o seară și un consum continuu de câteva săptămâni sunt situații complet diferite.",
+            ],
+          },
+          {
+            heading: "Ce se întâmplă pe durata perfuziei",
+            body: [
+              "Asistentul medical rămâne lângă pacient pe toată durata perfuziei. Verifică permanent indicii vitali — puls, tensiune, saturație — și menține contactul cu pacientul, pentru a observa din timp orice schimbare a stării.",
+              "Pe lângă partea medicală se face și o discuție de sprijin psihologic. Momentul de după consum este adesea singurul în care persoana recunoaște că are o problemă, iar o discuție calmă atunci contează mai mult decât zece conversații purtate în alte zile.",
+              "Nu judecăm și nu ținem morală. Rolul nostru este să stabilizăm pacientul și să-i arătăm că există un drum mai departe, dacă vrea să-l urmeze.",
+            ],
+          },
+          {
+            heading: "Când este nevoie de spital, nu de tratament la domiciliu",
+            body: [
+              "Sunați la 112 dacă apar: convulsii, pierderea cunoștinței, vărsături cu sânge, halucinații, dezorientare severă sau tremurături puternice însoțite de febră. Acestea pot indica un sevraj complicat, care se tratează exclusiv în spital.",
+              "Sevrajul alcoolic sever poate pune viața în pericol. Dacă pacientul consumă zilnic de luni de zile și încearcă să se oprească brusc, întrebați-ne înainte — oprirea neasistată nu este întotdeauna sigură.",
+              "Dacă la evaluare starea depășește ce se poate trata acasă, vă spunem direct și vă îndrumăm către spital.",
+            ],
+          },
         ],
         indications: [
           "Stare de rău după consum excesiv de alcool",
@@ -877,6 +1038,29 @@ export const SERVICES: ServiceDetail[] = [
             body: [
               "Мы понимаем, что это деликатная ситуация — поэтому предлагаем конфиденциальные услуги, без осуждения, в комфорте и приватности собственного дома.",
               "Для тяжёлых случаев или при сопутствующих заболеваниях рекомендуем также консультацию специалиста. Мы подскажем.",
+            ],
+          },
+          {
+            heading: "Сколько длится и сколько дней нужно",
+            body: [
+              "Одна процедура занимает от 45 до 60 минут. Количество дней зависит от степени интоксикации: в лёгких случаях достаточно одного визита, при тяжёлых лечение может занять до 10 дней.",
+              "Мы не определяем длительность по телефону. Медработник оценивает состояние на месте и реалистично объясняет, чего ожидать — вечернее злоупотребление и непрерывное употребление в течение нескольких недель это совершенно разные ситуации.",
+            ],
+          },
+          {
+            heading: "Что происходит во время капельницы",
+            body: [
+              "Медработник находится рядом с пациентом всё время процедуры. Постоянно контролирует жизненные показатели — пульс, давление, сатурацию — и поддерживает контакт с пациентом, чтобы вовремя заметить любое изменение состояния.",
+              "Помимо медицинской части проводится и психологическая поддержка. Момент после употребления часто оказывается единственным, когда человек признаёт наличие проблемы, и спокойный разговор в этот момент значит больше, чем десять бесед в другие дни.",
+              "Мы не осуждаем и не читаем нотаций. Наша задача — стабилизировать пациента и показать, что есть путь дальше, если он захочет по нему пойти.",
+            ],
+          },
+          {
+            heading: "Когда нужна больница, а не лечение на дому",
+            body: [
+              "Звоните 112, если появились: судороги, потеря сознания, рвота с кровью, галлюцинации, тяжёлая дезориентация или сильная дрожь с температурой. Это может указывать на осложнённый синдром отмены, который лечится только в стационаре.",
+              "Тяжёлый алкогольный абстинентный синдром может быть опасен для жизни. Если пациент пьёт ежедневно месяцами и пытается резко прекратить, спросите нас заранее — прекращение без наблюдения не всегда безопасно.",
+              "Если при осмотре состояние выходит за рамки того, что лечится дома, мы говорим об этом прямо и направляем в больницу.",
             ],
           },
         ],
