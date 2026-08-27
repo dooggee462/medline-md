@@ -17,7 +17,6 @@ export function SiteSchema({ locale }: { locale: Locale }) {
     url: SITE.url,
     logo: `${SITE.url}/icon.svg`,
     image: `${SITE.url}/og-image.png`,
-    foundingDate: SITE.founded,
     slogan: SITE.slogan,
     founder: {
       "@type": "Person",

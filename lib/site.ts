@@ -84,9 +84,6 @@ export const SITE = {
    */
   reviewUrl: "https://g.page/r/CViJVna_59QmEAI/review",
 
-  /** Data înregistrării în Registrul de Stat (infodebit.md / IDNO de mai jos) */
-  founded: "2025-11-04",
-
   /**
    * Datele firmei din Registrul de Stat — informație PUBLICĂ, verificabilă
    * oricine. Se folosesc în schema.org ca să lege site-ul de o entitate
