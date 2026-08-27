@@ -360,7 +360,23 @@ const ro: Dictionary = {
     eyebrow: "Recenzii",
     title: "Ce spun pacienții noștri",
     seeAll: "Vezi toate recenziile pe Google",
-    items: [],
+    items: [
+      {
+        name: "Alla S.",
+        role: "recenzie pe Google",
+        text: "Sunt extrem de mulțumită de tratamentul cu perfuzii pe care le-am făcut și de profesionalismul medicului care mi le-a administrat. Am simțit o diferență semnificativă chiar după primele ședințe.",
+      },
+      {
+        name: "Uliana Culea",
+        role: "recenzie pe Google",
+        text: "Mulțumesc din suflet echipei Medline pentru ajutor, grijă și atitudine omenoasă. Am simțit sprijin, răbdare și profesionalism. Vă sunt recunoscătoare pentru tot ce ați făcut și vă recomand cu încredere.",
+      },
+      {
+        name: "Lilian",
+        role: "recenzie pe Google",
+        text: "Am avut o experiență foarte bună cu Medline. Serviciile medicale la domiciliu sunt de calitate, iar totul a decurs organizat și eficient. Recomand cu încredere tuturor celor care au nevoie de îngrijire medicală la domiciliu.",
+      },
+    ],
   },
   faq: {
     eyebrow: "Întrebări frecvente",
@@ -653,7 +669,24 @@ const ru: Dictionary = {
     eyebrow: "Отзывы",
     title: "Что говорят наши пациенты",
     seeAll: "Смотреть все отзывы в Google",
-    items: [],
+    // Отзывы оставлены на румынском — перевод, оригинал в Google по ссылке ниже
+    items: [
+      {
+        name: "Alla S.",
+        role: "отзыв в Google",
+        text: "Я очень довольна лечением капельницами и профессионализмом специалиста, который их ставил. Я почувствовала значительную разницу уже после первых сеансов.",
+      },
+      {
+        name: "Uliana Culea",
+        role: "отзыв в Google",
+        text: "От души благодарю команду Medline за помощь, заботу и человеческое отношение. Я почувствовала поддержку, терпение и профессионализм. Благодарна за всё, что вы сделали, и рекомендую с уверенностью.",
+      },
+      {
+        name: "Lilian",
+        role: "отзыв в Google",
+        text: "У меня был очень хороший опыт с Medline. Медицинские услуги на дому качественные, всё прошло организованно и эффективно. Рекомендую всем, кому нужен медицинский уход на дому.",
+      },
+    ],
   },
   faq: {
     eyebrow: "Частые вопросы",

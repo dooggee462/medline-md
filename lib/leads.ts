@@ -55,9 +55,20 @@ export async function readLeads(): Promise<Leads> {
 }
 
 /** Incrementează contorul de azi pentru tipul și pagina date */
+/**
+ * Ziua curentă în ora Moldovei, nu UTC: serverul rulează pe UTC, iar Chișinăul
+ * e cu 2-3 ore înainte. Cu `toISOString()`, un apel primit la 01:00 noaptea ar
+ * fi contorizat pe ziua precedentă — exact intervalul în care clinica lucrează.
+ */
+function today(): string {
+  return new Intl.DateTimeFormat("sv-SE", {
+    timeZone: "Europe/Chisinau",
+  }).format(new Date());
+}
+
 export async function recordLead(type: LeadType, page: string): Promise<void> {
   const leads = await readLeads();
-  const day = new Date().toISOString().slice(0, 10);
+  const day = today();
   const byPage = (leads[day] = leads[day] ?? {});
   const counts = (byPage[page] = byPage[page] ?? {});
   counts[type] = (counts[type] ?? 0) + 1;
@@ -74,7 +85,8 @@ export type LeadSummary = {
 
 /** Totaluri pe ultimele `days` zile (implicit 30) */
 export function summarize(leads: Leads, days = 30): LeadSummary {
-  const from = new Date(Date.now() - (days - 1) * 864e5).toISOString().slice(0, 10);
+  const from = new Intl.DateTimeFormat("sv-SE", { timeZone: "Europe/Chisinau" })
+    .format(new Date(Date.now() - (days - 1) * 864e5));
   const byType = Object.fromEntries(LEAD_TYPES.map((t) => [t, 0])) as Record<LeadType, number>;
   const dayRows: LeadSummary["days"] = [];
   const pageMap = new Map<string, Partial<Record<LeadType, number>>>();

@@ -58,9 +58,18 @@ export function JsonLd({ locale }: { locale: Locale }) {
       name: s.title,
       description: s.desc,
     })),
-    // NOTĂ: aggregateRating a fost eliminat — Google penalizează rating-urile
-    // false/neverificabile. Reintrodu-l DOAR cu recenzii reale (ex. importate
-    // din Google Business Profile).
+    /**
+     * Nota reală din Google Business Profile, verificabilă public de oricine.
+     * ⚠️ Se actualizează MANUAL: când numărul de recenzii crește, schimbă aici.
+     * Un rating care nu corespunde cu profilul Google e tratat ca dată falsă.
+     */
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      reviewCount: "10",
+      bestRating: "5",
+      worstRating: "1",
+    },
   };
 
   const faq = {
