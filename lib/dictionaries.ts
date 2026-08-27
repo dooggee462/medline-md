@@ -33,6 +33,7 @@ export type Dictionary = {
     prices: string;
     video: string;
     detox: string;
+    coding: string;
     home: string;
     book: string;
     call: string;
@@ -180,6 +181,7 @@ const ro: Dictionary = {
     prices: "Servicii prestate",
     video: "Video",
     detox: "Detoxifiere",
+    coding: "Codare",
     home: "Acasă",
     book: "Programează-te",
     call: "Sună acum",
@@ -489,6 +491,7 @@ const ru: Dictionary = {
     prices: "Перечень услуг",
     video: "Видео",
     detox: "Вывод из запоя",
+    coding: "Кодирование",
     home: "Главная",
     book: "Записаться",
     call: "Позвонить",

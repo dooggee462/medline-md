@@ -30,6 +30,7 @@ export function Header({
     { href: `/${locale}`, label: dict.nav.home },
     { href: `/${locale}/servicii`, label: dict.nav.services },
     { href: `/${locale}/detoxifiere`, label: dict.nav.detox },
+    { href: `/${locale}/codare`, label: dict.nav.coding },
     { href: `/${locale}/preturi`, label: dict.nav.prices },
     { href: `/${locale}/despre-noi`, label: dict.nav.about },
     { href: `/${locale}/blog`, label: dict.nav.blog },
