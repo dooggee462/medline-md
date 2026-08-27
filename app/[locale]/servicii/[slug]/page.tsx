@@ -72,12 +72,6 @@ export default async function ServiceDetail({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalProcedure",
-    // Conținut atribuit unei persoane cu calificare medicală (E-E-A-T / YMYL)
-    author: {
-      "@type": "Person",
-      name: SITE.author.name,
-      jobTitle: SITE.author.jobTitle,
-    },
     name: c.h1,
     description: c.metaDescription,
     url: `${SITE.url}/${locale}/servicii/${slug}`,
