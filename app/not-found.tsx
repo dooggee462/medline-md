@@ -14,12 +14,20 @@ export default function NotFound() {
             <p className="mt-2 text-slate-600">
               Ne pare rău, pagina căutată nu există.
             </p>
-            <Link
-              href="/ro"
-              className="mt-6 inline-block rounded-full bg-brand-600 px-6 py-3 font-semibold text-white"
+            <p className="mt-6 text-slate-600">
+              Ai nevoie de asistență medicală? Sună-ne, răspundem non-stop.
+            </p>
+            <a
+              href={`tel:${SITE.phoneRaw}`}
+              className="mt-3 inline-block rounded-full bg-brand-600 px-7 py-3.5 text-lg font-bold text-white"
             >
-              Înapoi la {SITE.name}.md
-            </Link>
+              {SITE.phone}
+            </a>
+            <div className="mt-6">
+              <Link href="/ro" className="font-semibold text-brand-700 underline">
+                Înapoi la {SITE.name}.md
+              </Link>
+            </div>
           </div>
         </main>
       </body>

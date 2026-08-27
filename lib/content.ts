@@ -283,6 +283,37 @@ export const SERVICES: ServiceDetail[] = [
               "Pentru pacienții care urmează cure de mai multe zile, putem stabili un program regulat de vizite la aceeași oră, ca să nu pierzi nicio doză.",
             ],
           },
+          {
+            heading: "Cum decurge o vizită pentru injecție",
+            body: [
+              "Vizita este scurtă: în mod obișnuit durează 10-15 minute. Asistenta verifică prescripția și medicamentul, confirmă doza, alege locul potrivit pentru administrare și face injecția.",
+              "Rămâne apoi câteva minute cu tine, ca să se asigure că nu apare o reacție imediată — mai ales la prima administrare a unui medicament nou. Înainte de plecare îți spune la ce să fii atent în orele următoare.",
+            ],
+          },
+          {
+            heading: "Cine procură medicamentul",
+            body: [
+              "Ai două variante, alegi tu care e mai comodă: fie procuri medicamentul de la farmacie pe baza rețetei, fie îl cumpărăm noi și îl aducem odată cu vizita. Spune-ne când suni și ne ocupăm.",
+              "Consumabilele intră oricum în serviciu: seringi și ace sterile de unică folosință, dezinfectant, mănuși, tampoane și recipient pentru deșeuri medicale. Nu trebuie să ai nimic din astea în casă.",
+              "Dacă medicamentul îl ai deja, verifică termenul de valabilitate și cum a fost păstrat — unele preparate se țin la frigider și își pierd eficiența dacă au stat la căldură.",
+            ],
+          },
+          {
+            heading: "Cure de tratament pe mai multe zile",
+            body: [
+              "Multe tratamente injectabile nu înseamnă o singură administrare, ci o cură: antibiotice timp de 5-7 zile, anticoagulante zilnic după o intervenție chirurgicală, sau vitamine în serie.",
+              "Pentru astfel de situații venim zilnic, la aceeași oră, pe toată durata curei. Fixăm intervalul de la prima vizită, ca să nu fie nevoie să suni de fiecare dată — iar administrarea la ore constante contează pentru eficiența tratamentului.",
+              "Dacă tratamentul se întinde pe mai multe săptămâni, stabilim programul dinainte pentru toată perioada.",
+            ],
+          },
+          {
+            heading: "Când injecția la domiciliu nu este soluția potrivită",
+            body: [
+              "Administrăm injecții prescrise de medic, dar nu punem diagnostice și nu recomandăm noi tratamente injectabile — aceasta rămâne decizia medicului curant.",
+              "Dacă pacientul are febră mare care nu cedează, durere puternică de cauză necunoscută, semne de infecție extinsă sau starea se agravează de la o zi la alta, nu amâna cu injecții la domiciliu: e nevoie de o consultație, iar în urgențe de 112.",
+              "Spune-ne dinainte dacă pacientul a avut vreodată o reacție alergică la un medicament injectabil. Sunt situații în care administrarea trebuie făcută în cabinet, unde există dotarea necesară pentru o reacție severă.",
+            ],
+          },
         ],
         indications: [
           "Cure de antibiotice prescrise de medic",
@@ -304,7 +335,23 @@ export const SERVICES: ServiceDetail[] = [
           },
           {
             q: "Aduceți voi medicamentul?",
-            a: "De regulă medicamentul este procurat de pacient conform rețetei. Te putem ghida unde îl găsești.",
+            a: "Cum îți este mai comod: fie îl procuri tu de la farmacie pe baza rețetei, fie îl cumpărăm noi și îl aducem odată cu vizita. Spune-ne când ne suni.",
+          },
+          {
+            q: "Cât durează o vizită pentru o injecție?",
+            a: "În mod obișnuit 10-15 minute. Asistenta rămâne câteva minute după administrare, ca să se asigure că nu apare vreo reacție.",
+          },
+          {
+            q: "Veniți mai multe zile la rând, pentru o cură?",
+            a: "Da. Pentru cure de antibiotice, anticoagulante sau vitamine venim zilnic, la aceeași oră, pe toată durata tratamentului. Programul se stabilește de la prima vizită.",
+          },
+          {
+            q: "În cât timp ajungeți după ce sun?",
+            a: "În 25-45 de minute, în Chișinău. Lucrăm non-stop, deci și noaptea sau în weekend echipa pornește în momentul apelului.",
+          },
+          {
+            q: "Ce tipuri de injecții administrați?",
+            a: "Intramusculare, intravenoase și subcutanate, conform prescripției medicale — de la antibiotice și anticoagulante până la vitamine injectabile.",
           },
         ],
       },
@@ -334,6 +381,37 @@ export const SERVICES: ServiceDetail[] = [
               "Для пациентов на многодневных курсах мы можем составить регулярный график визитов в одно и то же время, чтобы вы не пропустили ни одной дозы.",
             ],
           },
+          {
+            heading: "Как проходит визит для инъекции",
+            body: [
+              "Визит короткий: обычно 10-15 минут. Медсестра проверяет назначение и препарат, подтверждает дозу, выбирает подходящее место введения и делает инъекцию.",
+              "После этого она остаётся с вами на несколько минут, чтобы убедиться, что нет немедленной реакции — особенно при первом введении нового препарата. Перед уходом объясняет, за чем следить в ближайшие часы.",
+            ],
+          },
+          {
+            heading: "Кто покупает препарат",
+            body: [
+              "У вас два варианта, выбирайте как удобнее: либо вы покупаете препарат в аптеке по рецепту, либо мы приобретаем его и привозим вместе с визитом. Скажите об этом при звонке.",
+              "Расходные материалы в любом случае входят в услугу: стерильные одноразовые шприцы и иглы, антисептик, перчатки, салфетки и контейнер для медицинских отходов. Ничего из этого держать дома не нужно.",
+              "Если препарат у вас уже есть, проверьте срок годности и условия хранения — некоторые препараты хранятся в холодильнике и теряют эффективность, если находились в тепле.",
+            ],
+          },
+          {
+            heading: "Курсы лечения на несколько дней",
+            body: [
+              "Многие инъекционные назначения — это не одно введение, а курс: антибиотики на 5-7 дней, антикоагулянты ежедневно после операции или витамины серией.",
+              "В таких случаях мы приезжаем ежедневно, в одно и то же время, на весь курс. Интервал фиксируем с первого визита, чтобы не приходилось звонить каждый раз — а введение в постоянные часы влияет на эффективность лечения.",
+              "Если лечение растянуто на несколько недель, составляем график заранее на весь период.",
+            ],
+          },
+          {
+            heading: "Когда инъекция на дому не подходит",
+            body: [
+              "Мы делаем инъекции по назначению врача, но не ставим диагнозы и не назначаем инъекционное лечение сами — это остаётся решением лечащего врача.",
+              "Если у пациента высокая температура, которая не спадает, сильная боль неясного происхождения, признаки распространённой инфекции или состояние ухудшается день ото дня — не откладывайте, обращаясь к инъекциям на дому: нужен осмотр врача, а при неотложных состояниях 112.",
+              "Предупредите заранее, если у пациента когда-либо была аллергическая реакция на инъекционный препарат. В части случаев введение должно проходить в кабинете, где есть оснащение на случай тяжёлой реакции.",
+            ],
+          },
         ],
         indications: [
           "Курсы антибиотиков по назначению врача",
@@ -355,7 +433,23 @@ export const SERVICES: ServiceDetail[] = [
           },
           {
             q: "Вы привозите препарат?",
-            a: "Как правило, препарат приобретает пациент по рецепту. Мы подскажем, где его найти.",
+            a: "Как вам удобнее: либо вы покупаете его в аптеке по рецепту, либо мы приобретаем и привозим вместе с визитом. Скажите об этом при звонке.",
+          },
+          {
+            q: "Сколько длится визит для инъекции?",
+            a: "Обычно 10-15 минут. Медсестра остаётся ещё на несколько минут после введения, чтобы убедиться в отсутствии реакции.",
+          },
+          {
+            q: "Приезжаете ли вы несколько дней подряд, на курс?",
+            a: "Да. Для курсов антибиотиков, антикоагулянтов или витаминов приезжаем ежедневно, в одно и то же время, на весь период лечения. График составляем с первого визита.",
+          },
+          {
+            q: "Как быстро вы приезжаете после звонка?",
+            a: "За 25-45 минут в пределах Кишинёва. Работаем круглосуточно, поэтому ночью и в выходные бригада выезжает сразу после звонка.",
+          },
+          {
+            q: "Какие виды инъекций вы делаете?",
+            a: "Внутримышечные, внутривенные и подкожные, по назначению врача — от антибиотиков и антикоагулянтов до инъекционных витаминов.",
           },
         ],
       },
