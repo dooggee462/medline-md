@@ -27,8 +27,12 @@ export const SITE = {
   /** Facebook Messenger — ID-ul paginii (m.me/ID) */
   messenger: "61578767017537",
 
-  /** Email de contact / destinația programărilor — ⚠️ înlocuiește cu email real */
-  email: "contact@medline.md",
+  /**
+   * Email de contact. Funcționează prin ImprovMX (redirecționare), nu e o
+   * cutie poștală proprie: mesajele ajung în contul Gmail al firmei.
+   * Alias-uri active: info@, contact@, programare@, admin@, victor@
+   */
+  email: "info@medline.md",
 
   /**
    * NU există sediu cu primire de pacienți — serviciile se fac exclusiv la

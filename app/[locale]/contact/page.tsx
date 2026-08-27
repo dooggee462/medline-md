@@ -8,7 +8,7 @@ import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BookingForm } from "@/components/BookingForm";
-import { IconPhone, IconWhatsApp, IconPin, IconClock } from "@/components/Icons";
+import { IconPhone, IconWhatsApp, IconMail, IconPin, IconClock } from "@/components/Icons";
 
 export function generateStaticParams() {
   return LOCALES.map((locale) => ({ locale }));
@@ -83,6 +83,9 @@ export default async function ContactPage({
                 </Row>
                 <Row icon={<IconWhatsApp className="h-5 w-5" />} label="WhatsApp">
                   <a href={whatsappLink(dict.booking.waMessageIntro)} target="_blank" rel="noopener noreferrer" className="hover:text-brand-700">{SITE.phone}</a>
+                </Row>
+                <Row icon={<IconMail className="h-5 w-5" />} label={dict.contact.email}>
+                  <a href={`mailto:${SITE.email}`} className="hover:text-brand-700">{SITE.email}</a>
                 </Row>
                 <Row icon={<IconPin className="h-5 w-5" />} label={locale === "ro" ? "Zonă deservită" : "Зона обслуживания"}>
                   {locale === "ro"
