@@ -110,6 +110,40 @@ export default async function ContactsPage({
         </div>
       )}
 
+      <h2 className="mt-10 text-lg font-bold text-slate-800">
+        De pe ce pagini se contactează
+      </h2>
+      {s.pages.length === 0 ? (
+        <p className="mt-4 text-sm text-slate-500">Încă nimic de arătat.</p>
+      ) : (
+        <div className="mt-4 overflow-hidden rounded-xl border border-slate-200 bg-white">
+          {s.pages.map((p) => (
+            <div key={p.page} className="flex items-center gap-3 border-b border-slate-100 px-4 py-3 last:border-0">
+              <a
+                href={p.page}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="min-w-0 flex-1 truncate text-sm font-medium text-brand-700 hover:underline"
+                title={p.page}
+              >
+                {p.page}
+              </a>
+              <span className="hidden shrink-0 gap-2 text-xs text-slate-500 sm:flex">
+                {LEAD_TYPES.filter((t) => p.byType[t]).map((t) => (
+                  <span key={t} className="flex items-center gap-1">
+                    <span className={`h-2 w-2 rounded-full ${COLORS[t]}`} />
+                    {p.byType[t]}
+                  </span>
+                ))}
+              </span>
+              <span className="w-10 shrink-0 text-right text-sm font-bold text-slate-900">
+                {p.total}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
+
       <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-xs text-slate-500">
         {LEAD_TYPES.map((t) => (
           <span key={t} className="flex items-center gap-1.5">

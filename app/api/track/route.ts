@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { isLeadType, recordLead } from "@/lib/leads";
+import { cleanPath, isLeadType, recordLead } from "@/lib/leads";
 
 /**
  * Înregistrează un contact venit de pe site (apel, WhatsApp, formular…).
@@ -12,11 +12,11 @@ import { isLeadType, recordLead } from "@/lib/leads";
  */
 export async function POST(req: Request) {
   try {
-    const { type } = await req.json();
+    const { type, page } = await req.json();
     if (!isLeadType(type)) {
       return NextResponse.json({ ok: false }, { status: 400 });
     }
-    await recordLead(type);
+    await recordLead(type, cleanPath(page));
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ ok: false }, { status: 400 });

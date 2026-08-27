@@ -29,7 +29,7 @@ export function ContactTracker() {
       fetch("/api/track", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ type }),
+        body: JSON.stringify({ type, page: location.pathname }),
         keepalive: true,
       }).catch(() => {});
     }
@@ -45,7 +45,7 @@ export function trackFormSubmit() {
   fetch("/api/track", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ type: "form" }),
+    body: JSON.stringify({ type: "form", page: location.pathname }),
     keepalive: true,
   }).catch(() => {});
 }
