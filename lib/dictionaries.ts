@@ -232,7 +232,7 @@ const ro: Dictionary = {
     ctaSecondary: "Sună: rezolvăm rapid",
     // Doar cifre confirmate de client — nimic estimat sau rotunjit în sus
     stats: [
-      { value: "1000+", label: "pacienți ajutați și lecuiți" },
+      { value: "1000+", label: "pacienți ajutați" },
       { value: "24/7", label: "non-stop, inclusiv noaptea" },
       { value: "25-45 min", label: "timp de sosire" },
       { value: "RO / RU", label: "vorbim ambele limbi" },
