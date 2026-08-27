@@ -5,6 +5,7 @@ import { SITE, whatsappLink, type Locale } from "@/lib/site";
 import type { Dictionary } from "@/lib/dictionaries";
 import { SERVICE_LIST } from "@/lib/content";
 import { IconWhatsApp, IconPhone } from "./Icons";
+import { trackFormSubmit } from "./ContactTracker";
 
 export function BookingForm({
   dict,
@@ -53,6 +54,7 @@ export function BookingForm({
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!validate()) return;
+    trackFormSubmit();
     window.open(whatsappLink(buildMessage()), "_blank", "noopener,noreferrer");
   }
 

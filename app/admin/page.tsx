@@ -17,6 +17,9 @@ export default async function AdminDashboard() {
           Medline <span className="text-brand-600">Admin</span>
         </h1>
         <div className="flex items-center gap-3">
+          <Link href="/admin/contacte" className="text-sm font-semibold text-brand-700 hover:underline">
+            Contacte de pe site
+          </Link>
           <a href="/ro/blog" target="_blank" className="text-sm font-medium text-slate-500 hover:text-brand-700">
             Vezi blogul ↗
           </a>

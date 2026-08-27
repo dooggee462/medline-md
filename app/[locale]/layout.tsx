@@ -8,6 +8,7 @@ import { BackToTop } from "@/components/BackToTop";
 import { MobileCallBar } from "@/components/MobileCallBar";
 import { Analytics } from "@/components/Analytics";
 import { SiteSchema } from "@/components/SiteSchema";
+import { ContactTracker } from "@/components/ContactTracker";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -102,6 +103,7 @@ export default async function LocaleLayout({
         <MobileCallBar dict={dict} />
         <CookieConsent dict={dict} />
         <Analytics />
+        <ContactTracker />
       </body>
     </html>
   );
