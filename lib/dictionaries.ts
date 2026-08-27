@@ -235,7 +235,7 @@ const ro: Dictionary = {
       { value: "1000+", label: "pacienți ajutați" },
       { value: "24/7", label: "non-stop, inclusiv noaptea" },
       { value: "25-45 min", label: "timp de sosire" },
-      { value: "RO / RU", label: "vorbim ambele limbi" },
+      { value: "10+", label: "ani experiență medicală" },
     ],
   },
   services: {
@@ -528,7 +528,7 @@ const ru: Dictionary = {
       { value: "1000+", label: "пациентов, которым помогли" },
       { value: "24/7", label: "круглосуточно, включая ночь" },
       { value: "25-45 мин", label: "время приезда" },
-      { value: "RO / RU", label: "говорим на обоих языках" },
+      { value: "10+", label: "лет медицинского опыта" },
     ],
   },
   services: {
