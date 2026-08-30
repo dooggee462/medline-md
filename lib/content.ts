@@ -935,6 +935,7 @@ export const SERVICES: ServiceDetail[] = [
     slug: "tratament-post-alcool",
     icon: "drop",
     relatedArticles: [
+      "cum-convingi-pe-cineva-sa-se-trateze-de-alcool",
       "ghid-complet-iesire-din-binge",
       "semne-ca-ai-nevoie-de-perfuzie-detoxifiere",
       "mahmureala-severa-ce-sa-faci",
@@ -1224,6 +1225,7 @@ export const RU_SLUG: Record<string, string> = {
   "tratament-post-alcool": "lechenie-posle-alkogolya",
   "codare-anti-alcool": "kodirovanie-ot-alkogolya",
   // Articole blog
+  "cum-convingi-pe-cineva-sa-se-trateze-de-alcool": "kak-ubedit-lechitsya-ot-alkogolya",
   "ce-injectii-se-pot-face-la-domiciliu": "kakie-ukoly-mozhno-stavit-na-domu",
   "ingrijirea-plagilor-si-escarelor-la-domiciliu": "uhod-za-ranami-i-prolezhnyami-na-domu",
   "ghid-complet-iesire-din-binge": "vyvod-iz-zapoya-polnyy-gid",
@@ -1301,6 +1303,145 @@ export type Article = {
 };
 
 export const ARTICLES: Article[] = [
+  {
+    slug: "cum-convingi-pe-cineva-sa-se-trateze-de-alcool",
+    date: "2026-08-28",
+    readMinutes: 8,
+    content: {
+      ro: {
+        metaTitle: "Cum Convingi pe Cineva să se Trateze de Alcool | Ghid pentru Familie — Medline.md",
+        metaDescription:
+          "Ce funcționează și ce nu, când vrei să convingi un apropiat să se trateze de alcool. Ghid practic pentru familii din Chișinău: ce să spui, ce să eviți, când să ceri ajutor medical.",
+        keywords: "cum convingi pe cineva sa se trateze de alcool, sotul bea ce fac, cum ajut un alcoolic, familia unui alcoolic, convingere tratament alcool, ajutor dependenta alcool Chisinau",
+        title: "Cum convingi pe cineva să se trateze de alcool",
+        excerpt:
+          "Ce funcționează și ce nu, când încerci să convingi un apropiat să accepte ajutor. Un ghid onest pentru familii, scris din ce vedem la domiciliu.",
+        sections: [
+          {
+            body: [
+              "Dacă ai ajuns să cauți asta, probabil ai încercat deja multe: ai vorbit frumos, ai țipat, ai amenințat cu plecarea, ai turnat sticle în chiuvetă. Și probabil nimic nu a ținut mai mult de câteva zile.",
+              "Nu e vina ta că n-a funcționat. Metodele care par logice sunt, de cele mai multe ori, exact cele care întăresc rezistența. Textul de mai jos nu promite o formulă magică — descrie ce vedem că funcționează și ce nu, la sute de vizite la domiciliu.",
+            ],
+          },
+          {
+            heading: "De ce nu funcționează cearta și amenințările",
+            body: [
+              "Persoana dependentă știe deja că are o problemă. Nu are nevoie să i se spună — are nevoie să nu se mai simtă atacată, pentru că apărarea consumă exact energia care i-ar trebui ca să accepte ajutor.",
+              "Cearta creează un tipar previzibil: tu ataci, el se apără, apoi bea ca să scape de tensiunea creată de ceartă. Ai devenit, fără să vrei, parte din motivul pentru care bea. E dureros de auzit, dar e important.",
+              "Amenințările nefolosite funcționează și mai rău. Dacă spui „plec cu copiii” a cincea oară și nu pleci, ai anunțat că nimic nu se schimbă indiferent ce face. Spune doar ce ești pregătit să duci până la capăt.",
+            ],
+          },
+          {
+            heading: "Momentul contează mai mult decât cuvintele",
+            body: [
+              "Nu discuta niciodată când persoana e băută. Nu ține minte, nu procesează, iar tu te epuizezi degeaba. Ai o discuție reală doar cu un om treaz.",
+              "Cea mai bună fereastră e a doua zi dimineața, în perioada de rușine și rău fizic. Atunci apărarea e cea mai slabă și conștiința problemei cea mai clară. Nu e manipulare — e singurul moment în care te aude.",
+              "A doua fereastră apare după un incident: o cădere, o ceartă cu martori, o zi de muncă pierdută, o sperietură medicală. Acolo, în primele 24 de ore, se iau cele mai multe decizii de tratament.",
+            ],
+          },
+          {
+            heading: "Ce să spui, concret",
+            body: [
+              "Vorbește despre tine, nu despre el. „Mi-e frică” ajunge mai departe decât „ești alcoolic”. Prima e o afirmație pe care nu o poate contesta; a doua e o etichetă împotriva căreia se va apăra.",
+              "Fii concret și fără reproș: „Marți nu te-ai trezit la telefon și am crezut că ai murit” spune mai mult decât „bei prea mult”.",
+              "Oferă un pas mic, nu o transformare. „Hai să vină cineva să-ți verifice tensiunea și analizele” e acceptabil. „Trebuie să te lași definitiv” e o cerere pe care nimeni nu o poate accepta pe loc.",
+              "Nu cere o promisiune pe viață. Cere o singură zi, o singură vizită, o singură discuție cu cineva calificat.",
+            ],
+          },
+          {
+            heading: "Ce nu poți face, oricât ai vrea",
+            body: [
+              "Nu poți trata pe cineva fără acordul lui. Ni se cere des să venim „pe ascuns”, să spunem că e o vizită de rutină, sau să facem codarea fără ca persoana să știe. Nu facem asta — și niciun serviciu serios nu o face.",
+              "Motivul nu e doar legal. O procedură făcută împotriva voinței cuiva nu funcționează: bariera fizică rămâne, decizia nu apare, iar încrederea în familie se rupe definitiv. Pierzi și tratamentul, și relația.",
+              "Nu poți nici să-l salvezi de consecințe la nesfârșit. Când plătești datoriile, suni la serviciu să-l scuzi și cureți după el, ștergi exact realitatea care l-ar putea determina să se oprească.",
+            ],
+          },
+          {
+            heading: "Când e nevoie de ajutor medical, nu de discuții",
+            body: [
+              "Sunt situații în care nu mai e vorba de convingere, ci de siguranță. Cere ajutor medical urgent dacă apar: tremurături puternice, transpirații abundente, halucinații, confuzie severă, convulsii sau vărsături cu sânge.",
+              "Sevrajul alcoolic sever poate pune viața în pericol. Dacă persoana bea zilnic de săptămâni sau luni și se oprește brusc, oprirea neasistată nu e sigură — sună înainte și întreabă.",
+              "Dacă persoana e într-un consum continuu de mai multe zile, prima etapă nu e codarea, ci [detoxifierea la domiciliu](/ro/detoxifiere): organismul trebuie stabilizat înainte de orice altceva.",
+            ],
+          },
+          {
+            heading: "Ce facem noi, dacă acceptă",
+            body: [
+              "Venim la domiciliu, discret, fără însemne pe mașină, în 25-45 de minute de la apel, la orice oră. Pentru mulți oameni, faptul că nu trebuie să intre pe ușa unei clinici e exact ce face pasul posibil.",
+              "Asistentul evaluează starea, explică opțiunile și spune deschis ce se poate și ce nu. Dacă e nevoie de detoxifiere înainte de [codare](/ro/codare), o spunem — nu vindem proceduri care nu ajută.",
+              "Poți suna și doar ca să întrebi, fără ca persoana să știe încă. Discuția e gratuită și confidențială, iar de multe ori ajută să vorbești cu cineva care a văzut situația asta de sute de ori.",
+            ],
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Как Убедить Человека Лечиться от Алкоголя | Гид для Семьи — Medline.md",
+        metaDescription:
+          "Что работает, а что нет, когда вы хотите убедить близкого лечиться от алкоголя. Практический гид для семей в Кишинёве: что говорить, чего избегать, когда нужна медицинская помощь.",
+        keywords: "как убедить лечиться от алкоголя, муж пьёт что делать, как помочь алкоголику, семья алкоголика, помощь при алкогольной зависимости Кишинёв",
+        title: "Как убедить человека лечиться от алкоголя",
+        excerpt:
+          "Что работает и что нет, когда вы пытаетесь убедить близкого принять помощь. Честный гид для семей, основанный на том, что мы видим на дому.",
+        sections: [
+          {
+            body: [
+              "Если вы это ищете, вы наверняка уже многое перепробовали: говорили по-хорошему, кричали, грозили уйти, выливали бутылки. И, скорее всего, ничего не продержалось дольше нескольких дней.",
+              "Это не ваша вина. Методы, которые кажутся логичными, чаще всего как раз и усиливают сопротивление. Ниже — не волшебная формула, а то, что мы видим работающим и не работающим на сотнях выездов на дом.",
+            ],
+          },
+          {
+            heading: "Почему ссоры и угрозы не работают",
+            body: [
+              "Зависимый человек и так знает, что у него проблема. Ему не нужно об этом говорить — ему нужно перестать чувствовать себя атакованным, потому что защита съедает ровно ту энергию, которая нужна, чтобы принять помощь.",
+              "Ссора создаёт предсказуемый круг: вы нападаете, он защищается, потом пьёт, чтобы снять напряжение от ссоры. Вы невольно стали частью причины, по которой он пьёт. Это тяжело слышать, но важно.",
+              "Невыполненные угрозы работают ещё хуже. Если вы в пятый раз говорите «я уйду с детьми» и не уходите, вы объявили, что ничего не изменится, что бы он ни делал. Говорите только то, что готовы довести до конца.",
+            ],
+          },
+          {
+            heading: "Момент важнее слов",
+            body: [
+              "Никогда не разговаривайте, когда человек пьян. Он не запомнит, не осмыслит, а вы выгорите зря. Настоящий разговор возможен только с трезвым.",
+              "Лучшее время — следующее утро, в период стыда и физического недомогания. Тогда защита слабее всего, а осознание проблемы — яснее всего. Это не манипуляция, это единственный момент, когда он вас слышит.",
+              "Второе окно появляется после происшествия: падение, ссора при свидетелях, потерянный рабочий день, испуг из-за здоровья. Именно в первые 24 часа принимается большинство решений о лечении.",
+            ],
+          },
+          {
+            heading: "Что говорить конкретно",
+            body: [
+              "Говорите о себе, а не о нём. «Мне страшно» доходит лучше, чем «ты алкоголик». Первое нельзя оспорить, второе — ярлык, от которого он будет защищаться.",
+              "Будьте конкретны и без упрёка: «Во вторник ты не брал трубку, и я думала, что ты умер» говорит больше, чем «ты слишком много пьёшь».",
+              "Предлагайте маленький шаг, а не полное преображение. «Пусть приедут, измерят давление и посмотрят анализы» — приемлемо. «Ты должен бросить навсегда» — просьба, которую невозможно принять сразу.",
+              "Не требуйте обещания на всю жизнь. Попросите один день, один визит, один разговор со специалистом.",
+            ],
+          },
+          {
+            heading: "Чего вы не можете сделать, как бы ни хотели",
+            body: [
+              "Нельзя лечить человека без его согласия. Нас часто просят приехать «незаметно», сказать, что это плановый осмотр, или провести кодирование втайне. Мы этого не делаем — и ни одна серьёзная служба не делает.",
+              "Причина не только юридическая. Процедура против воли человека не работает: физический барьер остаётся, решение не появляется, а доверие в семье рушится окончательно. Вы теряете и лечение, и отношения.",
+              "Нельзя и бесконечно ограждать его от последствий. Оплачивая долги, оправдывая его на работе и убирая за ним, вы стираете ту самую реальность, которая могла бы его остановить.",
+            ],
+          },
+          {
+            heading: "Когда нужна медицинская помощь, а не разговоры",
+            body: [
+              "Есть ситуации, где речь уже не об убеждении, а о безопасности. Срочно обращайтесь за медицинской помощью при: сильной дрожи, обильной потливости, галлюцинациях, тяжёлой спутанности сознания, судорогах или рвоте с кровью.",
+              "Тяжёлый алкогольный абстинентный синдром может быть опасен для жизни. Если человек пьёт ежедневно неделями или месяцами и резко прекращает, прекращение без наблюдения небезопасно — позвоните и спросите заранее.",
+              "Если человек в запое несколько дней, первый этап — не кодирование, а [детоксикация на дому](/ru/detoxifiere): организм нужно сначала стабилизировать.",
+            ],
+          },
+          {
+            heading: "Что делаем мы, если он согласится",
+            body: [
+              "Приезжаем на дом незаметно, без опознавательных знаков, за 25-45 минут после звонка, в любое время суток. Для многих именно то, что не надо входить в дверь клиники, и делает шаг возможным.",
+              "Медработник оценивает состояние, объясняет варианты и прямо говорит, что возможно, а что нет. Если перед [кодированием](/ru/codare) нужна детоксикация, мы это скажем — мы не продаём процедуры, которые не помогут.",
+              "Позвонить можно и просто чтобы спросить, пока человек ещё не знает. Разговор бесплатный и конфиденциальный, и часто помогает поговорить с тем, кто видел такую ситуацию сотни раз.",
+            ],
+          },
+        ],
+      },
+    },
+  },
   {
     slug: "ce-injectii-se-pot-face-la-domiciliu",
     date: "2026-07-14",
