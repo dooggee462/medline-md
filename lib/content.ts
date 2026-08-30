@@ -956,6 +956,350 @@ export const SERVICES: ServiceDetail[] = [
     },
   },
   {
+    slug: "ingrijire-paliativa-la-domiciliu",
+    icon: "heart",
+    relatedArticles: [
+      "ingrijire-parinte-imobilizat",
+      "ingrijirea-plagilor-si-escarelor-la-domiciliu",
+      "semne-varstnic-are-nevoie-ingrijire",
+    ],
+    content: {
+      ro: {
+        metaTitle: "Îngrijire Paliativă la Domiciliu în Chișinău | Pacienți în Stadii Avansate — Medline.md",
+        metaDescription:
+          "Îngrijire la domiciliu pentru pacienți în stadii avansate de boală, în Chișinău: igienă, prevenirea escarelor, administrarea tratamentului prescris, sprijin pentru familie. Program pe ore sau 24/24.",
+        keywords:
+          "ingrijire paliativa la domiciliu Chisinau, ingrijire pacienti stadii avansate, ingrijire bolnav terminal acasa, asistenta medicala pacient oncologic domiciliu, ingrijire 24 din 24 pacient imobilizat, sprijin familie pacient grav",
+        h1: "Îngrijire la domiciliu pentru pacienți în stadii avansate",
+        short:
+          "Sprijin medical și uman pentru pacienți cu boli avansate și pentru familiile care îi îngrijesc acasă.",
+        lead: "Când un pacient ajunge în stadiul în care spitalul nu mai are ce să ofere în plus, cele mai multe familii aleg să-l îngrijească acasă. E o decizie firească și, de cele mai multe ori, cea potrivită — dar înseamnă o încărcare pe care puțini o pot duce singuri. Venim să preluăm partea medicală și să vă arătăm cum se face restul.",
+        sections: [
+          {
+            heading: "Ce facem, concret",
+            body: [
+              "Administrăm tratamentul prescris de medicul curant: injecții, perfuzii, medicație pentru controlul durerii, conform indicațiilor. Pentru schemele cu administrare la ore fixe, inclusiv de mai multe ori pe zi, venim la program stabilit.",
+              "Igienă completă la pat, schimbarea poziției pentru prevenirea escarelor, îngrijirea pielii și a zonelor de sprijin. La un pacient imobilizat, escarele apar în câteva zile de neglijență și se vindecă în luni.",
+              "Îngrijirea sondei urinare, pansamentele, urmărirea funcțiilor vitale și a semnelor care arată o schimbare a stării. Familia află de la noi ce înseamnă fiecare schimbare și când trebuie sunat medicul.",
+              "Îngrijirea se organizează pe ore, dacă familia se descurcă în rest, sau permanent, 24 de ore din 24, cu tarif corespunzător. Pentru situațiile de lungă durată stabilim un program regulat, revizuit la una-două săptămâni pe măsură ce starea se schimbă.",
+            ],
+          },
+          {
+            heading: "Sprijinul pentru familie face jumătate din muncă",
+            body: [
+              "Cea mai grea parte nu e tehnica, ci epuizarea. Nopți întrerupte săptămâni la rând, teama de a face ceva greșit, sentimentul că nu ai voie să obosești pentru că e vorba de părintele tău.",
+              "Vă arătăm ce puteți face singuri, corect: cum se mobilizează pacientul fără să vă accidentați, cum se face igiena, cum se recunosc semnele importante. Nu ca să vă lăsăm singuri, ci ca să nu depindeți de prezența noastră pentru fiecare lucru.",
+              "Câteva ore de îngrijire calificată pe zi schimbă complet situația unei familii. Nu trebuie să așteptați epuizarea totală ca să cereți ajutor — de cele mai multe ori, când ni se sună, oamenii sunt deja la capătul puterilor de câteva săptămâni.",
+            ],
+          },
+          {
+            heading: "Ce nu putem face",
+            body: [
+              "Nu stabilim și nu modificăm schema de tratament pentru durere — aceasta rămâne decizia medicului curant sau a echipei de specialitate care urmărește pacientul. Noi administrăm ce este prescris și semnalăm când controlul durerii nu mai e suficient.",
+              "Nu înlocuim o echipă specializată de îngrijiri paliative acolo unde este nevoie de ea. Dacă situația depășește ce se poate face prin îngrijire la domiciliu, vă spunem deschis și vă îndrumăm către serviciile potrivite.",
+              "Nu promitem ce nu se poate promite. Rolul nostru este să facem zilele pacientului mai suportabile și să sprijinim familia — nu să schimbăm evoluția bolii.",
+            ],
+          },
+          {
+            heading: "Când să ne suni",
+            body: [
+              "Sună-ne când pacientul nu se mai poate ridica singur din pat, când apar primele zone roșii pe piele, când tratamentul injectabil devine zilnic sau când în familie nu mai are cine să preia noaptea.",
+              "Sună și dacă nu ești sigur ce se poate face — discuția e gratuită. De multe ori, oamenii amână pentru că nu știu dacă situația lor „se califică” pentru ajutor. Se califică.",
+            ],
+          },
+        ],
+        indications: [
+          "Pacienți în stadii avansate de boală, îngrijiți acasă",
+          "Imobilizare la pat cu risc de escare",
+          "Tratament injectabil zilnic sau la ore fixe",
+          "Familii epuizate de îngrijirea continuă",
+          "Nevoie de îngrijire permanentă, 24 de ore din 24",
+        ],
+        benefits: [
+          "Program pe ore sau permanent, adaptat situației",
+          "Prevenirea escarelor, nu doar tratarea lor",
+          "Îndrumarea familiei pentru îngrijirea zilnică",
+          "Reevaluare regulată pe măsură ce starea se schimbă",
+        ],
+        faq: [
+          {
+            q: "Se poate îngrijire permanentă, 24 de ore din 24?",
+            a: "Da. Lucrăm pe ore sau permanent, cu tarif corespunzător. Pentru cazurile de lungă durată stabilim un program regulat, revizuit la una-două săptămâni.",
+          },
+          {
+            q: "Administrați medicația pentru durere?",
+            a: "Administrăm ce a prescris medicul curant, inclusiv scheme cu ore fixe. Nu stabilim și nu modificăm noi tratamentul, dar vă semnalăm când controlul durerii nu mai pare suficient.",
+          },
+          {
+            q: "Preluați pacienți pe termen lung, luni de zile?",
+            a: "Da. Stabilim un program regulat și îl ajustăm pe măsură ce starea pacientului se schimbă.",
+          },
+          {
+            q: "Ne învățați și pe noi cum să îngrijim?",
+            a: "Da, e o parte importantă din ce facem: cum se mobilizează pacientul, cum se face igiena la pat, cum se previn escarele și ce semne cer atenție imediată.",
+          },
+          {
+            q: "Cât costă?",
+            a: "Depinde de formula aleasă — pe ore sau permanent — și de ce presupune îngrijirea. Sunați și vă spunem exact, după o scurtă discuție despre situație.",
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Паллиативный Уход на Дому в Кишинёве | Пациенты на Поздних Стадиях — Medline.md",
+        metaDescription:
+          "Уход на дому за пациентами на поздних стадиях болезни в Кишинёве: гигиена, профилактика пролежней, введение назначенного лечения, поддержка семьи. Почасово или круглосуточно.",
+        keywords:
+          "паллиативный уход на дому Кишинёв, уход за пациентами на поздних стадиях, уход за тяжелобольным дома, медсестра онкологическому пациенту на дом, круглосуточный уход за лежачим, поддержка семьи тяжелобольного",
+        h1: "Уход на дому за пациентами на поздних стадиях",
+        short:
+          "Медицинская и человеческая поддержка пациентов с тяжёлыми заболеваниями и семей, которые ухаживают за ними дома.",
+        lead: "Когда пациент доходит до стадии, на которой больница уже не может предложить большего, большинство семей выбирают уход дома. Это естественное и чаще всего правильное решение — но оно означает нагрузку, которую мало кто выдерживает в одиночку. Мы приезжаем, чтобы взять на себя медицинскую часть и показать, как делается остальное.",
+        sections: [
+          {
+            heading: "Что мы делаем конкретно",
+            body: [
+              "Вводим лечение, назначенное лечащим врачом: инъекции, капельницы, препараты для контроля боли — согласно предписаниям. Для схем со строгим временем введения, в том числе несколько раз в день, приезжаем по установленному графику.",
+              "Полная гигиена в постели, смена положения для профилактики пролежней, уход за кожей и опорными зонами. У лежачего пациента пролежни появляются за несколько дней небрежности, а заживают месяцами.",
+              "Уход за мочевым катетером, перевязки, контроль жизненных показателей и признаков изменения состояния. Семья узнаёт от нас, что означает каждое изменение и когда нужно звонить врачу.",
+              "Уход организуется почасово, если семья справляется в остальном, либо круглосуточно, с соответствующей оплатой. Для длительных случаев составляем регулярный график, пересматриваемый раз в одну-две недели по мере изменения состояния.",
+            ],
+          },
+          {
+            heading: "Поддержка семьи — половина работы",
+            body: [
+              "Самое тяжёлое здесь не техника, а истощение. Прерванные ночи неделями подряд, страх сделать что-то не так, чувство, что нельзя уставать, ведь речь о родном человеке.",
+              "Мы показываем, что вы можете делать сами и правильно: как перемещать пациента, не травмируя себя, как проводить гигиену, как распознавать важные признаки. Не чтобы оставить вас одних, а чтобы вы не зависели от нашего присутствия в каждой мелочи.",
+              "Несколько часов квалифицированного ухода в день полностью меняют положение семьи. Не нужно ждать полного истощения, чтобы попросить помощь — чаще всего, когда нам звонят, люди уже несколько недель на пределе.",
+            ],
+          },
+          {
+            heading: "Чего мы не делаем",
+            body: [
+              "Мы не назначаем и не меняем схему обезболивания — это остаётся решением лечащего врача или профильной команды, наблюдающей пациента. Мы вводим назначенное и сообщаем, когда контроль боли перестаёт быть достаточным.",
+              "Мы не заменяем специализированную команду паллиативной помощи там, где она необходима. Если ситуация выходит за рамки домашнего ухода, мы говорим об этом прямо и направляем к нужным службам.",
+              "Мы не обещаем того, чего обещать нельзя. Наша роль — сделать дни пациента более переносимыми и поддержать семью, а не изменить течение болезни.",
+            ],
+          },
+          {
+            heading: "Когда звонить",
+            body: [
+              "Звоните, когда пациент перестал вставать с постели самостоятельно, когда появились первые покраснения на коже, когда инъекционное лечение стало ежедневным или когда в семье больше некому дежурить ночью.",
+              "Звоните и если не уверены, что можно сделать — разговор бесплатный. Часто люди откладывают, не зная, «подходит» ли их случай для помощи. Подходит.",
+            ],
+          },
+        ],
+        indications: [
+          "Пациенты на поздних стадиях болезни, дома",
+          "Лежачее положение с риском пролежней",
+          "Ежедневное инъекционное лечение или по часам",
+          "Семьи, истощённые непрерывным уходом",
+          "Необходимость круглосуточного ухода",
+        ],
+        benefits: [
+          "Почасово или постоянно, по ситуации",
+          "Профилактика пролежней, а не только лечение",
+          "Обучение семьи ежедневному уходу",
+          "Регулярный пересмотр по мере изменения состояния",
+        ],
+        faq: [
+          {
+            q: "Возможен ли круглосуточный уход?",
+            a: "Да. Работаем почасово или круглосуточно, с соответствующей оплатой. Для длительных случаев составляем регулярный график, пересматриваемый раз в одну-две недели.",
+          },
+          {
+            q: "Вводите ли вы обезболивающие?",
+            a: "Вводим то, что назначил лечащий врач, включая схемы по часам. Мы не назначаем и не меняем лечение сами, но сообщаем, когда контроль боли перестаёт быть достаточным.",
+          },
+          {
+            q: "Берёте ли вы пациентов на месяцы?",
+            a: "Да. Составляем регулярный график и корректируем его по мере изменения состояния пациента.",
+          },
+          {
+            q: "Научите ли вы нас ухаживать самим?",
+            a: "Да, это важная часть услуги: как перемещать пациента, как проводить гигиену в постели, как предотвращать пролежни и какие признаки требуют немедленного внимания.",
+          },
+          {
+            q: "Сколько это стоит?",
+            a: "Зависит от формата — почасово или постоянно — и от того, что включает уход. Позвоните, и мы назовём точную стоимость после короткого разговора о ситуации.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ingrijire-dupa-avc-la-domiciliu",
+    icon: "heart",
+    relatedArticles: [
+      "ingrijire-parinte-imobilizat",
+      "ingrijirea-varstnicilor-la-domiciliu-ghid",
+      "semne-varstnic-are-nevoie-ingrijire",
+    ],
+    content: {
+      ro: {
+        metaTitle: "Îngrijire După AVC la Domiciliu în Chișinău | Recuperare Acasă — Medline.md",
+        metaDescription:
+          "Îngrijire la domiciliu după accident vascular cerebral, în Chișinău: prevenirea escarelor, monitorizarea tensiunii, administrarea tratamentului, sprijin pentru familie după externare.",
+        keywords:
+          "ingrijire dupa AVC la domiciliu, recuperare dupa accident vascular acasa, ingrijire pacient dupa AVC Chisinau, asistenta medicala dupa AVC, ingrijire pacient paralizat acasa, monitorizare tensiune dupa AVC",
+        h1: "Îngrijire după AVC, la domiciliu",
+        short:
+          "Sprijin pentru primele săptămâni acasă după un accident vascular: îngrijire, monitorizare și îndrumare pentru familie.",
+        lead: "Externarea după un AVC vine de obicei brusc, iar familia se trezește acasă cu un pacient care nu se mai poate ridica singur, uneori nu poate vorbi clar, și cu un teanc de recomandări greu de aplicat. Primele săptămâni decid mult din ce urmează. Venim să vă ajutăm exact atunci.",
+        sections: [
+          {
+            heading: "Ce se întâmplă în primele săptămâni acasă",
+            body: [
+              "Riscul cel mai mare imediat după externare nu e un nou AVC, ci complicațiile imobilizării: escarele, infecțiile urinare și pneumonia de aspirație, care apar când pacientul are dificultăți la înghițire.",
+              "Escarele se formează în câteva zile la un pacient care stă în aceeași poziție și se vindecă în luni. Prevenirea înseamnă schimbarea poziției la câteva ore, verificarea zonelor de sprijin și igienă atentă a pielii — simplu de descris, greu de susținut nopți la rând.",
+              "Tensiunea trebuie măsurată regulat și notată. Valorile mari cresc riscul unui nou accident, iar tratamentul se ajustează pe baza acestor măsurători, nu la întâmplare.",
+            ],
+          },
+          {
+            heading: "Ce facem la fiecare vizită",
+            body: [
+              "Măsurăm și notăm funcțiile vitale: tensiune, puls, saturație, glicemie. Evidența pe zile îi arată medicului curant dacă tratamentul funcționează.",
+              "Îngrijirea pielii și schimbarea poziției, cu verificarea zonelor de risc — călcâie, șolduri, sacru, coate. Dacă apare prima zonă roșie, o semnalăm imediat: la acel stadiu se rezolvă, mai târziu nu.",
+              "Administrăm tratamentul prescris, inclusiv injecțiile anticoagulante zilnice, frecvente după un AVC. Pentru cure de mai multe zile venim la aceeași oră.",
+              "Igienă completă la pat, îngrijirea sondei urinare dacă există, ajutor la alimentare pentru pacienții cu dificultăți de înghițire — cu atenție la poziția corectă, pentru că aspirația e un risc real.",
+            ],
+          },
+          {
+            heading: "Ce învață familia de la noi",
+            body: [
+              "Cum se mobilizează pacientul fără să vă accidentați. Ridicarea greșită a unui adult imobilizat e cea mai frecventă cauză de probleme de spate la aparținători.",
+              "Cum se face igiena la pat, cum se schimbă poziția eficient și cum se organizează camera ca îngrijirea zilnică să fie mai ușoară.",
+              "La ce semne trebuie reacționat imediat: modificarea bruscă a stării de conștiență, asimetrie nouă a feței, dificultate nouă de vorbire sau slăbiciune care se agravează — pot indica un nou accident, iar acolo minutele contează. Se sună 112, nu noi.",
+            ],
+          },
+          {
+            heading: "Îngrijire pe ore sau permanentă",
+            body: [
+              "Pentru multe familii, câteva ore de îngrijire calificată pe zi sunt suficiente: acoperă partea medicală și igiena, iar restul zilei se descurcă singure.",
+              "Pentru pacienții complet dependenți sau când în familie nu are cine să preia noaptea, organizăm îngrijire permanentă, 24 de ore din 24, cu tarif corespunzător.",
+              "Recuperarea după AVC durează luni. Stabilim un program regulat și îl ajustăm pe măsură ce pacientul își recapătă din funcții — de multe ori, nevoia de îngrijire scade treptat, iar programul se reduce.",
+            ],
+          },
+        ],
+        indications: [
+          "Externare recentă după accident vascular cerebral",
+          "Pacient imobilizat, cu risc de escare",
+          "Tratament anticoagulant sau antihipertensiv zilnic",
+          "Nevoie de monitorizare regulată a tensiunii",
+          "Familie fără experiență în îngrijirea unui pacient dependent",
+        ],
+        benefits: [
+          "Prevenirea complicațiilor, nu doar reacția la ele",
+          "Evidența funcțiilor vitale, utilă medicului curant",
+          "Îndrumare practică pentru familie",
+          "Program ajustabil pe măsura recuperării",
+        ],
+        faq: [
+          {
+            q: "Cât de repede după externare trebuie să începem?",
+            a: "Ideal, din prima zi acasă. Primele săptămâni sunt cele în care apar complicațiile imobilizării, iar prevenirea e mult mai ușoară decât tratarea lor.",
+          },
+          {
+            q: "Faceți și recuperare fizică, kinetoterapie?",
+            a: "Nu efectuăm kinetoterapie. Ne ocupăm de îngrijire, monitorizare și administrarea tratamentului, și vă îndrumăm către un kinetoterapeut pentru partea de recuperare motorie.",
+          },
+          {
+            q: "Cum știm dacă pacientul face un nou AVC?",
+            a: "Semnele sunt: asimetrie nouă a feței, vorbire neclară apărută brusc, slăbiciune într-o parte a corpului, confuzie sau pierderea cunoștinței. În aceste situații sunați imediat 112 — nu pe noi.",
+          },
+          {
+            q: "Se poate îngrijire 24 din 24?",
+            a: "Da, pentru pacienți complet dependenți sau când familia nu poate acoperi noaptea. Lucrăm și pe ore, dacă asta e suficient.",
+          },
+          {
+            q: "Preluați pacienți pe termen lung?",
+            a: "Da, pe luni de zile, cu program regulat și reevaluare la una-două săptămâni, pe măsură ce starea se schimbă.",
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Уход После Инсульта на Дому в Кишинёве | Восстановление Дома — Medline.md",
+        metaDescription:
+          "Уход на дому после инсульта в Кишинёве: профилактика пролежней, контроль давления, введение лечения, поддержка семьи после выписки.",
+        keywords:
+          "уход после инсульта на дому, восстановление после инсульта дома, уход за пациентом после инсульта Кишинёв, медсестра после инсульта, уход за парализованным дома, контроль давления после инсульта",
+        h1: "Уход после инсульта, на дому",
+        short:
+          "Поддержка в первые недели дома после инсульта: уход, контроль состояния и обучение семьи.",
+        lead: "Выписка после инсульта обычно происходит внезапно, и семья оказывается дома с пациентом, который не может встать сам, иногда невнятно говорит, и со стопкой рекомендаций, которые трудно применить. Первые недели решают многое из того, что будет дальше. Мы приезжаем помочь именно тогда.",
+        sections: [
+          {
+            heading: "Что происходит в первые недели дома",
+            body: [
+              "Наибольший риск сразу после выписки — не новый инсульт, а осложнения обездвиженности: пролежни, инфекции мочевых путей и аспирационная пневмония, возникающая при нарушении глотания.",
+              "Пролежни образуются за несколько дней у пациента, лежащего в одном положении, а заживают месяцами. Профилактика — это смена положения каждые несколько часов, проверка опорных зон и тщательная гигиена кожи: просто описать, тяжело выдерживать ночь за ночью.",
+              "Давление нужно измерять регулярно и записывать. Высокие значения повышают риск нового инсульта, а лечение корректируется на основе этих измерений, а не наугад.",
+            ],
+          },
+          {
+            heading: "Что мы делаем при каждом визите",
+            body: [
+              "Измеряем и записываем жизненные показатели: давление, пульс, сатурацию, глюкозу. Записи по дням показывают лечащему врачу, работает ли лечение.",
+              "Уход за кожей и смена положения с проверкой зон риска — пятки, бёдра, крестец, локти. Если появляется первое покраснение, мы сразу сообщаем: на этой стадии всё решается, позже — нет.",
+              "Вводим назначенное лечение, включая ежедневные антикоагулянтные инъекции, частые после инсульта. Для многодневных курсов приезжаем в одно и то же время.",
+              "Полная гигиена в постели, уход за мочевым катетером при его наличии, помощь с кормлением при нарушении глотания — с вниманием к правильному положению, поскольку аспирация это реальный риск.",
+            ],
+          },
+          {
+            heading: "Чему семья учится у нас",
+            body: [
+              "Как перемещать пациента, не травмируя себя. Неправильный подъём обездвиженного взрослого — самая частая причина проблем со спиной у родственников.",
+              "Как проводить гигиену в постели, как эффективно менять положение и как организовать комнату, чтобы ежедневный уход был легче.",
+              "На какие признаки реагировать немедленно: резкое изменение сознания, новая асимметрия лица, внезапное нарушение речи или нарастающая слабость — это может означать новый инсульт, где счёт идёт на минуты. Тогда звонят 112, а не нам.",
+            ],
+          },
+          {
+            heading: "Уход почасово или постоянный",
+            body: [
+              "Многим семьям достаточно нескольких часов квалифицированного ухода в день: он закрывает медицинскую часть и гигиену, а с остальным они справляются сами.",
+              "Для полностью зависимых пациентов или когда в семье некому дежурить ночью, организуем круглосуточный уход, с соответствующей оплатой.",
+              "Восстановление после инсульта занимает месяцы. Мы составляем регулярный график и корректируем его по мере того, как пациент восстанавливает функции — часто потребность в уходе постепенно снижается, и график сокращается.",
+            ],
+          },
+        ],
+        indications: [
+          "Недавняя выписка после инсульта",
+          "Обездвиженный пациент с риском пролежней",
+          "Ежедневное антикоагулянтное или гипотензивное лечение",
+          "Необходимость регулярного контроля давления",
+          "Семья без опыта ухода за зависимым пациентом",
+        ],
+        benefits: [
+          "Профилактика осложнений, а не реакция на них",
+          "Записи жизненных показателей для лечащего врача",
+          "Практическое обучение семьи",
+          "График, корректируемый по мере восстановления",
+        ],
+        faq: [
+          {
+            q: "Как скоро после выписки нужно начинать?",
+            a: "В идеале с первого дня дома. Первые недели — это когда возникают осложнения обездвиженности, а предотвратить их намного легче, чем лечить.",
+          },
+          {
+            q: "Проводите ли вы реабилитацию, кинезиотерапию?",
+            a: "Кинезиотерапию мы не проводим. Мы занимаемся уходом, контролем состояния и введением лечения, и направляем к кинезиотерапевту для двигательного восстановления.",
+          },
+          {
+            q: "Как понять, что случился новый инсульт?",
+            a: "Признаки: новая асимметрия лица, внезапно невнятная речь, слабость в одной половине тела, спутанность сознания или его потеря. В этих случаях немедленно звоните 112, а не нам.",
+          },
+          {
+            q: "Возможен ли круглосуточный уход?",
+            a: "Да, для полностью зависимых пациентов или когда семья не может дежурить ночью. Работаем и почасово, если этого достаточно.",
+          },
+          {
+            q: "Берёте ли вы пациентов на длительный срок?",
+            a: "Да, на месяцы, с регулярным графиком и пересмотром раз в одну-две недели по мере изменения состояния.",
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "consult-medical-la-domiciliu",
     icon: "stethoscope",
     relatedArticles: [
@@ -1905,6 +2249,8 @@ export const RU_SLUG: Record<string, string> = {
   "asistenta-medicala-noaptea": "medpomoshch-nochyu",
   "ingrijire-bolnavi-la-domiciliu": "uhod-za-bolnymi-na-domu",
   "ingrijire-postoperatorie-la-domiciliu": "posleoperacionnyy-uhod-na-domu",
+  "ingrijire-paliativa-la-domiciliu": "palliativnyy-uhod-na-domu",
+  "ingrijire-dupa-avc-la-domiciliu": "uhod-posle-insulta-na-domu",
   "consult-medical-la-domiciliu": "medicinskiy-osmotr-na-domu",
   "vitaminoterapie-la-domiciliu": "vitaminoterapiya-na-domu",
   "sonda-urinara-si-clisma-la-domiciliu": "mochevoy-kateter-i-klizma-na-domu",
