@@ -456,6 +456,179 @@ export const SERVICES: ServiceDetail[] = [
     },
   },
   {
+    slug: "asistenta-medicala-noaptea",
+    icon: "stethoscope",
+    relatedArticles: [
+      "ce-sa-faci-daca-cineva-a-baut-prea-mult",
+      "semne-ca-ai-nevoie-de-perfuzie-detoxifiere",
+      "avantajele-asistentei-medicale-la-domiciliu",
+    ],
+    content: {
+      ro: {
+        metaTitle: "Asistență Medicală Noaptea la Domiciliu în Chișinău | Non-Stop — Medline.md",
+        metaDescription:
+          "Asistență medicală la domiciliu noaptea, în Chișinău: perfuzii, injecții, detoxifiere, evaluare medicală. Pornim în momentul apelului, ajungem în 25-45 de minute, inclusiv la 3 dimineața.",
+        keywords:
+          "asistenta medicala noaptea Chisinau, asistenta medicala non stop, medic la domiciliu noaptea, perfuzie noaptea Chisinau, ajutor medical noaptea, asistenta la domiciliu 24 din 24, servicii medicale nocturne Chisinau",
+        h1: "Asistență medicală noaptea, la domiciliu",
+        short:
+          "Nu așteptăm dimineața. Echipa pornește în momentul în care suni, la orice oră, inclusiv noaptea și în weekend.",
+        lead: "Problemele medicale nu țin cont de program. Cele mai multe apeluri le primim între miezul nopții și 5 dimineața — atunci când clinicile sunt închise, iar spitalul pare o soluție prea mare pentru ce se întâmplă acasă. Ajungem în 25-45 de minute, în Chișinău și suburbii.",
+        sections: [
+          {
+            heading: "Ce înseamnă non-stop, concret",
+            body: [
+              "Nu avem tură de noapte cu personal de gardă care preia mesaje. Când suni la 3 dimineața, discuți direct cu cineva care poate veni, iar echipa pornește imediat după ce înțelege situația.",
+              "Nu percepem taxă de așteptare și nu programăm pentru a doua zi ceea ce se poate rezolva acum. Dacă situația permite amânarea până dimineață, îți spunem asta deschis — dar decizia rămâne a ta.",
+              "Lucrăm la fel noaptea, în weekend și de sărbători. Nu există zile în care nu răspundem.",
+            ],
+          },
+          {
+            heading: "Pentru ce se sună cel mai des noaptea",
+            body: [
+              "Detoxifiere după consum de alcool. Este cel mai frecvent motiv al apelurilor nocturne: familia realizează târziu cât de rău e, iar dimineața pare foarte departe. Perfuziile de rehidratare și refacere se pot administra la orice oră.",
+              "Deshidratare severă după vărsături sau diaree, mai ales la vârstnici și la copii, unde starea se agravează repede și nu poate aștepta.",
+              "Febră care nu cedează la medicamentele obișnuite, stare generală alterată, tensiune mult crescută sau scăzută — situații în care e nevoie de o evaluare, nu neapărat de o ambulanță.",
+              "Injecții din tratamente care nu pot fi întrerupte, la pacienți externați recent sau aflați în cure cu administrare la ore fixe.",
+            ],
+          },
+          {
+            heading: "Când să suni la 112, nu la noi",
+            body: [
+              "Sună imediat la 112 dacă apar: durere în piept, dificultăți severe de respirație, pierderea cunoștinței, convulsii, semne de accident vascular (față asimetrică, vorbire neclară, slăbiciune pe o parte a corpului), sângerare care nu se oprește sau traumatism grav.",
+              "Acestea necesită ambulanță și spital, nu asistență la domiciliu. Într-o urgență vitală, minutele pierdute sunând în altă parte contează.",
+              "Dacă nu ești sigur în ce categorie se încadrează situația, sună-ne și descrie ce se întâmplă. Îți spunem sincer dacă e cazul de 112 — preferăm să te trimitem la ambulanță decât să pierdem timp prețios.",
+            ],
+          },
+          {
+            heading: "De ce contează că venim acasă",
+            body: [
+              "Noaptea, deplasarea unui om bolnav e cel mai greu de organizat: nu ai cu cine lăsa copiii, nu ai mașină, taxiul refuză un pasager în stare gravă, iar așteptarea la camera de gardă poate dura ore.",
+              "Pentru un vârstnic dezorientat sau un pacient imobilizat, drumul în sine agravează starea. Pentru cineva care trece printr-o problemă cu alcoolul, intimitatea propriei case face diferența dintre a accepta ajutorul și a-l refuza.",
+              "Venim discret, fără însemne pe mașină și fără uniformă vizibilă. Vecinii nu au de ce să afle ce se întâmplă la tine în casă.",
+            ],
+          },
+        ],
+        indications: [
+          "Detoxifiere după consum de alcool, la orice oră",
+          "Deshidratare după vărsături sau diaree",
+          "Febră persistentă și stare generală alterată",
+          "Tratamente injectabile care nu pot fi întrerupte",
+          "Situații în care deplasarea noaptea nu este posibilă",
+        ],
+        benefits: [
+          "Pornim la apel, fără programare pentru a doua zi",
+          "25-45 de minute până la domiciliu, în Chișinău",
+          "Fără taxă de noapte pentru așteptare",
+          "Discreție deplină, la orice oră",
+        ],
+        faq: [
+          {
+            q: "Chiar veniți la 3 dimineața?",
+            a: "Da. Echipa pornește în momentul apelului, indiferent de oră. Cele mai multe solicitări le primim între miezul nopții și 5 dimineața.",
+          },
+          {
+            q: "Costă mai mult noaptea?",
+            a: "Prețul depinde de serviciu și de specificul cazului, nu de oră. Îl comunicăm la telefon, înainte de deplasare.",
+          },
+          {
+            q: "În cât timp ajungeți noaptea?",
+            a: "În 25-45 de minute în Chișinău. Noaptea traficul e mai liber, deci de obicei ajungem mai repede decât în timpul zilei.",
+          },
+          {
+            q: "Veniți și în suburbii noaptea?",
+            a: "Da: Ciorescu, Tohatin, Ialoveni, Vatra, Sîngera, Bubuieci, Băcioi. Spune-ne localitatea la telefon și îți confirmăm timpul de sosire.",
+          },
+          {
+            q: "Ce fac dacă nu știu dacă e urgență sau nu?",
+            a: "Sună și descrie situația. Dacă e nevoie de ambulanță, îți spunem direct să apelezi 112 — nu ne deplasăm ca să pierdem timp într-o urgență vitală.",
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Медицинская Помощь Ночью на Дому в Кишинёве | Круглосуточно — Medline.md",
+        metaDescription:
+          "Медицинская помощь на дому ночью в Кишинёве: капельницы, инъекции, вывод из запоя, осмотр. Выезжаем в момент звонка, приезжаем за 25-45 минут, даже в 3 часа ночи.",
+        keywords:
+          "медицинская помощь ночью Кишинёв, медпомощь круглосуточно, врач на дом ночью, капельница ночью Кишинёв, помощь ночью на дому, медсестра на дом 24 часа, ночные медицинские услуги Кишинёв",
+        h1: "Медицинская помощь ночью, на дому",
+        short:
+          "Мы не ждём утра. Бригада выезжает в момент вашего звонка, в любое время суток, включая ночь и выходные.",
+        lead: "Медицинские проблемы не считаются с графиком. Больше всего звонков мы получаем между полуночью и 5 утра — когда клиники закрыты, а больница кажется слишком крупным решением для того, что происходит дома. Приезжаем за 25-45 минут, в Кишинёве и пригородах.",
+        sections: [
+          {
+            heading: "Что означает круглосуточно, конкретно",
+            body: [
+              "У нас нет ночной смены, которая только принимает сообщения. Когда вы звоните в три часа ночи, вы говорите напрямую с тем, кто может приехать, и бригада выезжает сразу после того, как поймёт ситуацию.",
+              "Мы не берём плату за ожидание и не переносим на завтра то, что можно решить сейчас. Если ситуация позволяет подождать до утра, мы скажем об этом прямо — но решение остаётся за вами.",
+              "Работаем одинаково ночью, в выходные и праздники. Дней, когда мы не отвечаем, не существует.",
+            ],
+          },
+          {
+            heading: "По каким поводам звонят ночью чаще всего",
+            body: [
+              "Детоксикация после употребления алкоголя. Это самая частая причина ночных звонков: семья поздно осознаёт, насколько всё плохо, а утро кажется очень далёким. Капельницы для регидратации и восстановления можно поставить в любое время.",
+              "Тяжёлое обезвоживание после рвоты или диареи, особенно у пожилых и детей, где состояние ухудшается быстро и ждать нельзя.",
+              "Температура, не сбивающаяся обычными препаратами, нарушенное общее состояние, сильно повышенное или пониженное давление — ситуации, где нужен осмотр, но не обязательно скорая.",
+              "Инъекции из курсов лечения, которые нельзя прерывать, у недавно выписанных пациентов или тех, кому препарат вводится в строго определённые часы.",
+            ],
+          },
+          {
+            heading: "Когда звонить 112, а не нам",
+            body: [
+              "Немедленно звоните 112, если появились: боль в груди, выраженная одышка, потеря сознания, судороги, признаки инсульта (асимметрия лица, невнятная речь, слабость в одной половине тела), кровотечение, которое не останавливается, или тяжёлая травма.",
+              "Это требует скорой помощи и больницы, а не помощи на дому. При угрозе жизни минуты, потраченные на звонок не туда, имеют значение.",
+              "Если вы не уверены, к какой категории относится ситуация, позвоните и опишите, что происходит. Мы честно скажем, если нужно вызывать 112 — лучше направить вас к скорой, чем терять драгоценное время.",
+            ],
+          },
+          {
+            heading: "Почему важно, что мы приезжаем домой",
+            body: [
+              "Ночью перевозку больного организовать сложнее всего: не с кем оставить детей, нет машины, такси отказывается везти пассажира в тяжёлом состоянии, а ожидание в приёмном покое может занять часы.",
+              "Для дезориентированного пожилого человека или лежачего пациента сама дорога ухудшает состояние. Для того, кто переживает проблему с алкоголем, приватность собственного дома решает, примет он помощь или откажется.",
+              "Приезжаем незаметно, без опознавательных знаков на машине и без заметной формы. Соседям незачем знать, что происходит у вас дома.",
+            ],
+          },
+        ],
+        indications: [
+          "Детоксикация после алкоголя, в любое время",
+          "Обезвоживание после рвоты или диареи",
+          "Стойкая температура и нарушенное общее состояние",
+          "Инъекционное лечение, которое нельзя прерывать",
+          "Ситуации, когда поездка ночью невозможна",
+        ],
+        benefits: [
+          "Выезжаем по звонку, без переноса на завтра",
+          "25-45 минут до дома, в пределах Кишинёва",
+          "Без ночной наценки за ожидание",
+          "Полная конфиденциальность, в любой час",
+        ],
+        faq: [
+          {
+            q: "Вы правда приезжаете в 3 часа ночи?",
+            a: "Да. Бригада выезжает в момент звонка, независимо от времени. Больше всего вызовов мы получаем между полуночью и 5 утра.",
+          },
+          {
+            q: "Ночью дороже?",
+            a: "Цена зависит от услуги и особенностей ситуации, а не от времени суток. Мы называем её по телефону, до выезда.",
+          },
+          {
+            q: "Как быстро вы приезжаете ночью?",
+            a: "За 25-45 минут в пределах Кишинёва. Ночью дороги свободнее, поэтому обычно получается быстрее, чем днём.",
+          },
+          {
+            q: "Вы выезжаете ночью в пригороды?",
+            a: "Да: Чореску, Тохатин, Яловены, Ватра, Сынжера, Бубуечь, Бачой. Назовите населённый пункт по телефону, и мы подтвердим время приезда.",
+          },
+          {
+            q: "Что делать, если я не знаю, неотложное это или нет?",
+            a: "Позвоните и опишите ситуацию. Если нужна скорая, мы прямо скажем вызывать 112 — мы не выезжаем, чтобы терять время при угрозе жизни.",
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "ingrijire-bolnavi-la-domiciliu",
     icon: "heart",
     relatedArticles: [
@@ -609,6 +782,174 @@ export const SERVICES: ServiceDetail[] = [
           {
             q: "Помогаете ли с паллиативным уходом?",
             a: "Мы поддерживаем комфорт пациентов с тяжёлыми заболеваниями совместно с лечащим врачом. Свяжитесь с нами за деталями.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "ingrijire-postoperatorie-la-domiciliu",
+    icon: "bandage",
+    relatedArticles: [
+      "ingrijirea-plagilor-si-escarelor-la-domiciliu",
+      "ce-injectii-se-pot-face-la-domiciliu",
+    ],
+    content: {
+      ro: {
+        metaTitle: "Îngrijire După Operație la Domiciliu în Chișinău | Recuperare Acasă — Medline.md",
+        metaDescription:
+          "Îngrijire postoperatorie la domiciliu în Chișinău: pansarea plăgii, scoaterea firelor și agrafelor, injecții prescrise, monitorizarea recuperării. Consultația chirurgului acasă la nevoie.",
+        keywords:
+          "ingrijire postoperatorie la domiciliu, recuperare dupa operatie acasa, scoatere fire de sutura la domiciliu, scoatere agrafe chirurgicale, pansament postoperator Chisinau, ingrijire dupa interventie chirurgicala, asistenta dupa externare",
+        h1: "Îngrijire după operație, la domiciliu",
+        short:
+          "Tot ce urmează după externare: pansamente, scoaterea firelor, injecții prescrise și urmărirea recuperării, fără drumuri la spital.",
+        lead: "Externarea nu înseamnă că îngrijirea s-a terminat. Urmează pansamente la interval regulat, scoaterea firelor la termen, uneori injecții zilnice — iar fiecare dintre ele presupune, în mod normal, un drum la spital. Le facem acasă la tine, în perioada în care deplasarea e cel mai greu de suportat.",
+        sections: [
+          {
+            heading: "Ce cuprinde îngrijirea postoperatorie",
+            body: [
+              "Pansarea plăgii la intervalul indicat de medicul care a operat, cu materiale sterile de unică folosință. La fiecare vizită plaga este evaluată: culoare, secreții, miros, aspectul marginilor — semnele care arată dacă vindecarea decurge normal.",
+              "Scoaterea firelor de sutură, a agrafelor chirurgicale și a atelelor postoperatorii, la termenul stabilit. Nu e nevoie să te deplasezi la spital pentru o procedură care durează câteva minute.",
+              "Administrarea tratamentului injectabil prescris la externare — cel mai des anticoagulante, antibiotice sau analgezice. Pentru curele de mai multe zile venim zilnic, la aceeași oră.",
+              "Măsurarea funcțiilor vitale la fiecare vizită: temperatură, tensiune, puls, saturație. Febra apărută la câteva zile după operație e unul dintre primele semne de infecție, iar cu cât e observată mai devreme, cu atât se rezolvă mai ușor.",
+            ],
+          },
+          {
+            heading: "De ce contează primele două săptămâni",
+            body: [
+              "Majoritatea complicațiilor postoperatorii apar în primele 14 zile. Infecția plăgii, desfacerea suturii, formarea unei colecții sub piele — toate au semne care se văd la o evaluare atentă, înainte să devină probleme serioase.",
+              "Un pacient care se deplasează cu greutate amână de obicei controlul, iar problema e descoperită târziu. Când asistentul vine acasă, evaluarea se face oricum, la fiecare pansament.",
+              "Deplasarea în sine e un risc: o plagă proaspătă expusă în transportul public, un pacient slăbit care se sprijină greu, drumuri lungi cu durere. Recuperarea merge mai bine când pacientul nu iese din casă.",
+            ],
+          },
+          {
+            heading: "Consultația chirurgului la domiciliu",
+            body: [
+              "Dacă plaga nu evoluează bine sau apar complicații, aducem la domiciliu și consultația unui medic chirurg. Sunt situații în care pansamentul singur nu rezolvă și e nevoie de evaluare de specialitate, uneori de o intervenție locală.",
+              "Asistentul îți spune direct când e cazul. Nu tergiversăm și nu continuăm pansamente pe o plagă care are nevoie de altceva.",
+            ],
+          },
+          {
+            heading: "Semne la care trebuie să reacționezi imediat",
+            body: [
+              "Sună-ne, sau mergi la medic, dacă apar: febră peste 38°C la câteva zile după operație, roșeață care se extinde în jurul plăgii, umflătură crescândă, secreție cu miros neplăcut sau puroi, durere care se intensifică de la o zi la alta în loc să scadă.",
+              "Mergi de urgență la spital, nu ne aștepta pe noi, dacă apar: sângerare abundentă care nu se oprește, desfacerea plăgii, durere bruscă și intensă în piept, dificultăți severe de respirație sau umflarea dureroasă a unui picior — ultimele pot indica o complicație vasculară care se tratează în urgență.",
+            ],
+          },
+        ],
+        indications: [
+          "Externare recentă după intervenție chirurgicală",
+          "Plagă operatorie care necesită pansare regulată",
+          "Fire, agrafe sau atele de scos la termen",
+          "Tratament injectabil prescris la externare",
+          "Pacienți care se deplasează greu după operație",
+        ],
+        benefits: [
+          "Evaluarea plăgii la fiecare vizită, nu doar schimbarea pansamentului",
+          "Fără deplasări dureroase în perioada de recuperare",
+          "Consultația chirurgului acasă, dacă apar complicații",
+          "Program regulat, stabilit de la prima vizită",
+        ],
+        faq: [
+          {
+            q: "Puteți scoate firele de sutură la domiciliu?",
+            a: "Da, la termenul indicat de medicul care a operat. Scoatem fire, agrafe chirurgicale și atele postoperatorii, iar plaga e evaluată în același timp.",
+          },
+          {
+            q: "Cât de des trebuie schimbat pansamentul?",
+            a: "Intervalul îl stabilește medicul care a operat, în funcție de tipul intervenției. Cel mai frecvent la 1-3 zile. Venim la programul stabilit, fără să suni de fiecare dată.",
+          },
+          {
+            q: "Faceți și injecțiile prescrise la externare?",
+            a: "Da. Anticoagulante, antibiotice sau analgezice — inclusiv curele zilnice pe mai multe zile, la aceeași oră. Medicamentul îl poți procura tu sau îl aducem noi.",
+          },
+          {
+            q: "Ce faceți dacă plaga se infectează?",
+            a: "Asistentul recunoaște semnele la evaluare și îți spune direct. În funcție de situație, aducem consultația chirurgului la domiciliu sau te îndrumăm către spital, dacă depășește ce se poate trata acasă.",
+          },
+          {
+            q: "În cât timp ajungeți?",
+            a: "În 25-45 de minute în Chișinău. Pentru îngrijirea postoperatorie stabilim însă un program regulat de la prima vizită, ca să nu depindeți de apeluri zilnice.",
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Уход После Операции на Дому в Кишинёве | Восстановление Дома — Medline.md",
+        metaDescription:
+          "Послеоперационный уход на дому в Кишинёве: перевязки, снятие швов и скоб, назначенные инъекции, контроль восстановления. Консультация хирурга на дому при необходимости.",
+        keywords:
+          "послеоперационный уход на дому, восстановление после операции дома, снятие швов на дому, снятие хирургических скоб, послеоперационная перевязка Кишинёв, уход после операции, помощь после выписки",
+        h1: "Уход после операции, на дому",
+        short:
+          "Всё, что следует после выписки: перевязки, снятие швов, назначенные инъекции и контроль восстановления — без поездок в больницу.",
+        lead: "Выписка не означает, что уход закончен. Впереди перевязки через определённые интервалы, снятие швов в срок, иногда ежедневные инъекции — и каждая из этих процедур обычно требует поездки в больницу. Мы делаем их у вас дома, в период, когда передвигаться тяжелее всего.",
+        sections: [
+          {
+            heading: "Что включает послеоперационный уход",
+            body: [
+              "Перевязка раны через интервал, указанный оперировавшим врачом, стерильными одноразовыми материалами. При каждом визите рана оценивается: цвет, отделяемое, запах, состояние краёв — признаки, показывающие, нормально ли идёт заживление.",
+              "Снятие швов, хирургических скоб и послеоперационных шин в установленный срок. Ехать в больницу ради процедуры, занимающей несколько минут, не нужно.",
+              "Введение инъекционного лечения, назначенного при выписке — чаще всего антикоагулянтов, антибиотиков или обезболивающих. Для курсов на несколько дней приезжаем ежедневно, в одно и то же время.",
+              "Измерение жизненных показателей при каждом визите: температура, давление, пульс, сатурация. Температура, появившаяся через несколько дней после операции, — один из первых признаков инфекции, и чем раньше она замечена, тем проще решается проблема.",
+            ],
+          },
+          {
+            heading: "Почему важны первые две недели",
+            body: [
+              "Большинство послеоперационных осложнений возникает в первые 14 дней. Инфекция раны, расхождение шва, скопление жидкости под кожей — у всего этого есть признаки, заметные при внимательной оценке, до того как проблема станет серьёзной.",
+              "Пациент, которому тяжело передвигаться, обычно откладывает контроль, и проблема обнаруживается поздно. Когда медработник приезжает домой, оценка происходит в любом случае, при каждой перевязке.",
+              "Сама поездка — это риск: свежая рана в общественном транспорте, ослабленный пациент, долгая дорога с болью. Восстановление идёт лучше, когда пациент не выходит из дома.",
+            ],
+          },
+          {
+            heading: "Консультация хирурга на дому",
+            body: [
+              "Если рана заживает плохо или появляются осложнения, мы организуем на дому консультацию врача-хирурга. Бывают ситуации, когда одной перевязки недостаточно и нужна специализированная оценка, иногда местное вмешательство.",
+              "Медработник прямо скажет, когда это необходимо. Мы не тянем время и не продолжаем перевязки на ране, которой нужно другое.",
+            ],
+          },
+          {
+            heading: "Признаки, требующие немедленной реакции",
+            body: [
+              "Позвоните нам или обратитесь к врачу, если появились: температура выше 38°C через несколько дней после операции, распространяющаяся вокруг раны краснота, нарастающий отёк, отделяемое с неприятным запахом или гноем, боль, которая усиливается день ото дня вместо того, чтобы утихать.",
+              "Срочно в больницу, не дожидаясь нас, если появились: обильное кровотечение, которое не останавливается, расхождение раны, внезапная сильная боль в груди, выраженная одышка или болезненный отёк одной ноги — последнее может указывать на сосудистое осложнение, требующее неотложной помощи.",
+            ],
+          },
+        ],
+        indications: [
+          "Недавняя выписка после хирургического вмешательства",
+          "Операционная рана, требующая регулярных перевязок",
+          "Швы, скобы или шины, которые нужно снять в срок",
+          "Инъекционное лечение, назначенное при выписке",
+          "Пациенты, которым тяжело передвигаться после операции",
+        ],
+        benefits: [
+          "Оценка раны при каждом визите, а не только смена повязки",
+          "Без болезненных поездок в период восстановления",
+          "Консультация хирурга на дому при осложнениях",
+          "Регулярный график, составленный с первого визита",
+        ],
+        faq: [
+          {
+            q: "Можете ли вы снять швы на дому?",
+            a: "Да, в срок, указанный оперировавшим врачом. Снимаем швы, хирургические скобы и послеоперационные шины, одновременно оценивая рану.",
+          },
+          {
+            q: "Как часто нужно менять повязку?",
+            a: "Интервал определяет оперировавший врач, в зависимости от типа вмешательства. Чаще всего каждые 1-3 дня. Приезжаем по установленному графику, без звонка каждый раз.",
+          },
+          {
+            q: "Делаете ли вы инъекции, назначенные при выписке?",
+            a: "Да. Антикоагулянты, антибиотики или обезболивающие — включая ежедневные курсы на несколько дней, в одно и то же время. Препарат можете купить вы или привезём мы.",
+          },
+          {
+            q: "Что делать, если рана инфицировалась?",
+            a: "Медработник распознаёт признаки при осмотре и скажет прямо. В зависимости от ситуации мы организуем консультацию хирурга на дому или направим в больницу, если это выходит за рамки домашнего лечения.",
+          },
+          {
+            q: "Как быстро вы приезжаете?",
+            a: "За 25-45 минут в пределах Кишинёва. Но для послеоперационного ухода мы составляем регулярный график с первого визита, чтобы не зависеть от ежедневных звонков.",
           },
         ],
       },
@@ -938,6 +1279,178 @@ export const SERVICES: ServiceDetail[] = [
           {
             q: "Как быстро вы приезжаете на дом?",
             a: "За 25-45 минут в пределах Кишинёва. Записаться можно в любое время, включая вечер и выходные.",
+          },
+        ],
+      },
+    },
+  },
+  {
+    slug: "sonda-urinara-si-clisma-la-domiciliu",
+    icon: "drop",
+    relatedArticles: [
+      "ingrijire-parinte-imobilizat",
+      "ingrijirea-varstnicilor-la-domiciliu-ghid",
+    ],
+    content: {
+      ro: {
+        metaTitle: "Sondă Urinară și Clismă la Domiciliu în Chișinău | Cateter Vezical — Medline.md",
+        metaDescription:
+          "Montarea și schimbarea sondei urinare, cateter vezical și clisme la domiciliu în Chișinău. Proceduri efectuate steril, de asistenți medicali autorizați, pentru pacienți imobilizați.",
+        keywords:
+          "sonda urinara la domiciliu, cateter urinar Chisinau, montare sonda vezicala, schimbare sonda urinara, clisma la domiciliu, clisma evacuatorie Chisinau, cateterizare vezicala la domiciliu, sonda foley domiciliu",
+        h1: "Sondă urinară și clismă la domiciliu",
+        short:
+          "Montarea și schimbarea sondei urinare, cateter vezical și clisme, efectuate steril acasă la pacient.",
+        lead: "Sunt proceduri care par simple, dar cer tehnică sterilă și experiență: o sondă montată greșit provoacă infecții urinare, iar o clismă efectuată nepotrivit poate face rău unui pacient fragil. Le efectuăm la domiciliu, de către asistenți medicali autorizați, fără ca pacientul să fie deplasat.",
+        sections: [
+          {
+            heading: "Sonda urinară: montare și schimbare",
+            body: [
+              "Montăm sonde urinare la pacienții care nu pot urina spontan sau la care medicul a indicat drenajul vezical: după intervenții chirurgicale, în afecțiuni de prostată, la pacienți imobilizați sau cu leziuni neurologice.",
+              "Schimbarea sondei se face la intervalul recomandat de medic, de obicei la 2-4 săptămâni, în funcție de tipul sondei. Amânarea peste termen crește semnificativ riscul de infecție și de blocare.",
+              "Procedura se efectuează cu material steril de unică folosință și cu respectarea strictă a tehnicii aseptice. Tractul urinar este ușor de contaminat, iar o infecție urinară la un pacient slăbit se complică repede.",
+              "Verificăm la fiecare vizită funcționarea sistemului: debitul, aspectul urinei, starea zonei de inserție și integritatea pungii colectoare. Învățăm familia cum să golească punga și la ce semne să fie atentă între vizite.",
+            ],
+          },
+          {
+            heading: "Clisme la domiciliu",
+            body: [
+              "Efectuăm clisme evacuatorii pentru constipație severă care nu cedează la tratamentul obișnuit, precum și clisme de pregătire înainte de anumite investigații sau intervenții.",
+              "Constipația e o problemă frecventă și subestimată la pacienții imobilizați: lipsa mișcării, alimentația modificată și unele medicamente, în special analgezicele opioide, o produc aproape inevitabil.",
+              "Procedura se face cu blândețe și în condiții de intimitate. Pentru mulți pacienți vârstnici e o situație jenantă, iar felul în care e tratată contează la fel de mult ca tehnica în sine.",
+            ],
+          },
+          {
+            heading: "Când trebuie să ne suni între vizite",
+            body: [
+              "Anunță-ne dacă apar: urina nu se mai scurge deloc sau debitul scade brusc, urina devine tulbure, cu miros puternic sau cu sânge, febră, durere în zona inferioară a abdomenului, sau sonda iese parțial.",
+              "Blocarea sondei nu poate aștepta până a doua zi: vezica se destinde, apare durerea, iar riscul de infecție crește rapid. Sună imediat, la orice oră.",
+              "În cazul clismelor, anunță-ne dacă după procedură apare durere abdominală puternică, sângerare sau lipsa completă a rezultatului — pot indica o problemă care necesită evaluare medicală.",
+            ],
+          },
+          {
+            heading: "Când procedura nu se face la domiciliu",
+            body: [
+              "Nu efectuăm cateterizare dacă există sângerare urinară activă, traumatism recent al zonei sau dacă montarea întâmpină rezistență — forțarea poate provoca leziuni serioase ale uretrei. În aceste situații pacientul are nevoie de evaluare urologică.",
+              "Clisma este contraindicată în caz de durere abdominală acută de cauză necunoscută, suspiciune de ocluzie intestinală, sângerare digestivă sau intervenție chirurgicală recentă pe abdomen.",
+              "Asistentul evaluează situația înainte de a începe și îți spune deschis dacă procedura nu se poate face în siguranță acasă.",
+            ],
+          },
+        ],
+        indications: [
+          "Pacienți care nu pot urina spontan",
+          "Schimbarea periodică a sondei urinare la termen",
+          "Pacienți imobilizați cu drenaj vezical permanent",
+          "Constipație severă la pacienți imobilizați",
+          "Pregătire înainte de investigații sau intervenții",
+        ],
+        benefits: [
+          "Tehnică sterilă, cu material de unică folosință",
+          "Fără deplasarea unui pacient imobilizat",
+          "Verificarea sistemului la fiecare vizită",
+          "Îndrumarea familiei pentru îngrijirea zilnică",
+        ],
+        faq: [
+          {
+            q: "Cât de des trebuie schimbată sonda urinară?",
+            a: "De obicei la 2-4 săptămâni, în funcție de tipul sondei și de indicația medicului. Amânarea peste termen crește riscul de infecție și de blocare.",
+          },
+          {
+            q: "Montarea sondei doare?",
+            a: "Este o senzație neplăcută, dar de scurtă durată. Folosim gel lubrifiant cu anestezic local, iar procedura efectuată corect durează câteva minute.",
+          },
+          {
+            q: "Ce fac dacă sonda se blochează noaptea?",
+            a: "Sună-ne imediat, indiferent de oră. Blocarea nu poate aștepta: vezica se destinde și apare durerea. Lucrăm non-stop și ajungem în 25-45 de minute.",
+          },
+          {
+            q: "Puteți învăța familia să îngrijească sonda?",
+            a: "Da. Arătăm cum se golește punga colectoare, cum se face igiena zonei și la ce semne trebuie reacționat între vizite. E o parte importantă a serviciului.",
+          },
+          {
+            q: "Faceți clisme și pacienților vârstnici fragili?",
+            a: "Da, cu evaluare prealabilă. Procedura se adaptează stării pacientului, iar dacă există contraindicații — durere abdominală de cauză necunoscută, sângerare, operație recentă — îți spunem direct că nu se poate.",
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Мочевой Катетер и Клизма на Дому в Кишинёве | Постановка Катетера — Medline.md",
+        metaDescription:
+          "Постановка и замена мочевого катетера, катетеризация мочевого пузыря и клизмы на дому в Кишинёве. Стерильно, сертифицированными медработниками, для лежачих пациентов.",
+        keywords:
+          "мочевой катетер на дому, катетеризация мочевого пузыря Кишинёв, постановка катетера на дому, замена мочевого катетера, клизма на дому, очистительная клизма Кишинёв, катетер фолея на дому",
+        h1: "Мочевой катетер и клизма на дому",
+        short:
+          "Постановка и замена мочевого катетера, катетеризация мочевого пузыря и клизмы — стерильно, у пациента дома.",
+        lead: "Это процедуры, которые кажутся простыми, но требуют стерильной техники и опыта: неправильно поставленный катетер вызывает инфекции мочевых путей, а неподходящая клизма может навредить ослабленному пациенту. Выполняем их на дому, силами сертифицированных медработников, без перевозки пациента.",
+        sections: [
+          {
+            heading: "Мочевой катетер: постановка и замена",
+            body: [
+              "Ставим мочевые катетеры пациентам, которые не могут мочиться самостоятельно, или тем, кому врач назначил дренаж мочевого пузыря: после операций, при заболеваниях простаты, лежачим пациентам и при неврологических поражениях.",
+              "Замена катетера производится в срок, рекомендованный врачом, обычно каждые 2-4 недели, в зависимости от типа катетера. Задержка сверх срока значительно повышает риск инфекции и закупорки.",
+              "Процедура выполняется стерильными одноразовыми материалами, со строгим соблюдением асептики. Мочевыводящие пути легко загрязняются, а инфекция у ослабленного пациента быстро осложняется.",
+              "При каждом визите проверяем работу системы: отток, вид мочи, состояние места введения и целостность мочеприёмника. Обучаем семью, как опорожнять мешок и на какие признаки обращать внимание между визитами.",
+            ],
+          },
+          {
+            heading: "Клизмы на дому",
+            body: [
+              "Делаем очистительные клизмы при тяжёлых запорах, не поддающихся обычному лечению, а также подготовительные клизмы перед определёнными обследованиями или вмешательствами.",
+              "Запор — частая и недооценённая проблема у лежачих пациентов: отсутствие движения, изменённое питание и некоторые препараты, особенно опиоидные обезболивающие, делают его почти неизбежным.",
+              "Процедура проводится бережно и в условиях приватности. Для многих пожилых пациентов это неловкая ситуация, и то, как к ней отнестись, значит не меньше самой техники.",
+            ],
+          },
+          {
+            heading: "Когда звонить между визитами",
+            body: [
+              "Сообщите нам, если: моча перестала оттекать или отток резко уменьшился, моча стала мутной, с резким запахом или с кровью, поднялась температура, появилась боль внизу живота или катетер частично вышел.",
+              "Закупорка катетера не может ждать до утра: мочевой пузырь растягивается, появляется боль, риск инфекции быстро растёт. Звоните сразу, в любое время.",
+              "После клизмы сообщите нам, если появилась сильная боль в животе, кровотечение или полное отсутствие результата — это может указывать на проблему, требующую осмотра врача.",
+            ],
+          },
+          {
+            heading: "Когда процедуру нельзя делать на дому",
+            body: [
+              "Мы не проводим катетеризацию при активном кровотечении из мочевых путей, недавней травме этой области или если постановка встречает сопротивление — форсирование может серьёзно повредить уретру. В таких случаях пациенту нужен осмотр уролога.",
+              "Клизма противопоказана при острой боли в животе неясного происхождения, подозрении на кишечную непроходимость, желудочно-кишечном кровотечении или недавней операции на брюшной полости.",
+              "Медработник оценивает ситуацию до начала и прямо говорит, если процедуру нельзя выполнить дома безопасно.",
+            ],
+          },
+        ],
+        indications: [
+          "Пациенты, которые не могут мочиться самостоятельно",
+          "Плановая замена мочевого катетера в срок",
+          "Лежачие пациенты с постоянным дренажом",
+          "Тяжёлый запор у лежачих пациентов",
+          "Подготовка к обследованиям или вмешательствам",
+        ],
+        benefits: [
+          "Стерильная техника, одноразовые материалы",
+          "Без перевозки лежачего пациента",
+          "Проверка системы при каждом визите",
+          "Обучение семьи ежедневному уходу",
+        ],
+        faq: [
+          {
+            q: "Как часто нужно менять мочевой катетер?",
+            a: "Обычно каждые 2-4 недели, в зависимости от типа катетера и назначения врача. Задержка сверх срока повышает риск инфекции и закупорки.",
+          },
+          {
+            q: "Больно ли ставить катетер?",
+            a: "Ощущение неприятное, но кратковременное. Мы используем гель-смазку с местным анестетиком, и правильно выполненная процедура занимает несколько минут.",
+          },
+          {
+            q: "Что делать, если катетер засорился ночью?",
+            a: "Звоните сразу, в любое время. Закупорка не может ждать: мочевой пузырь растягивается, появляется боль. Работаем круглосуточно и приезжаем за 25-45 минут.",
+          },
+          {
+            q: "Можете ли вы научить семью ухаживать за катетером?",
+            a: "Да. Показываем, как опорожнять мочеприёмник, как проводить гигиену области и на какие признаки реагировать между визитами. Это важная часть услуги.",
+          },
+          {
+            q: "Делаете ли вы клизмы ослабленным пожилым пациентам?",
+            a: "Да, с предварительной оценкой. Процедура подстраивается под состояние пациента, а при противопоказаниях — боль в животе неясного происхождения, кровотечение, недавняя операция — мы прямо говорим, что делать нельзя.",
           },
         ],
       },
@@ -1389,9 +1902,12 @@ export const RU_SLUG: Record<string, string> = {
   // Servicii
   "perfuzii-la-domiciliu": "kapelnicy-na-domu",
   "injectii-la-domiciliu": "inekcii-na-domu",
+  "asistenta-medicala-noaptea": "medpomoshch-nochyu",
   "ingrijire-bolnavi-la-domiciliu": "uhod-za-bolnymi-na-domu",
+  "ingrijire-postoperatorie-la-domiciliu": "posleoperacionnyy-uhod-na-domu",
   "consult-medical-la-domiciliu": "medicinskiy-osmotr-na-domu",
   "vitaminoterapie-la-domiciliu": "vitaminoterapiya-na-domu",
+  "sonda-urinara-si-clisma-la-domiciliu": "mochevoy-kateter-i-klizma-na-domu",
   "pansamente-ingrijire-plagi": "perevyazki-i-uhod-za-ranami",
   "tratament-post-alcool": "lechenie-posle-alkogolya",
   "codare-anti-alcool": "kodirovanie-ot-alkogolya",
