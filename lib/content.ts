@@ -774,6 +774,176 @@ export const SERVICES: ServiceDetail[] = [
     },
   },
   {
+    slug: "vitaminoterapie-la-domiciliu",
+    icon: "flask",
+    relatedArticles: [
+      "perfuzii-cu-vitamine-beneficii",
+      "cum-te-pregatesti-pentru-perfuzie-la-domiciliu",
+    ],
+    content: {
+      ro: {
+        metaTitle: "Complex de Vitamine Intravenos la Domiciliu Chișinău | Vitaminoterapie — Medline.md",
+        metaDescription:
+          "Complex de vitamine administrat intravenos la domiciliu în Chișinău: refacere după epuizare, imunitate scăzută, oboseală cronică. Asistenți medicali autorizați, programare 24/7.",
+        keywords:
+          "complex de vitamine intravenos, vitaminoterapie la domiciliu Chisinau, perfuzie cu vitamine pret, vitamine intravenos Chisinau, perfuzie pentru imunitate, perfuzie pentru energie, cocktail de vitamine intravenos, vitamine perfuzie oboseala",
+        h1: "Complex de vitamine intravenos la domiciliu",
+        short:
+          "Vitamine administrate intravenos acasă, pentru refacere după epuizare, imunitate scăzută sau oboseală prelungită.",
+        lead: "Administrarea intravenoasă a vitaminelor ocolește digestia și duce substanțele direct în sânge, unde organismul le poate folosi imediat. Serviciul se efectuează la domiciliu, de asistenți medicali autorizați, după o evaluare prealabilă a stării tale.",
+        sections: [
+          {
+            heading: "De ce intravenos și nu pastile",
+            body: [
+              "Când iei vitamine pe cale orală, o parte se pierde în procesul digestiv, iar absorbția depinde de starea stomacului, de alimentație și de medicamentele pe care le iei în paralel. Pentru mulți oameni, mai ales după boală sau în perioade de stres, absorbția e vizibil redusă.",
+              "Administrarea intravenoasă elimină pasul acesta: substanțele ajung direct în circulație. De aceea efectul se simte de obicei mai repede decât la suplimentele obișnuite.",
+              "Asta nu înseamnă că perfuzia înlocuiește o alimentație corectă sau tratamentul unei afecțiuni. E o măsură de sprijin, nu un substitut pentru ce lipsește din viața de zi cu zi.",
+            ],
+          },
+          {
+            heading: "Când merită să ceri o perfuzie cu vitamine",
+            body: [
+              "Cele mai frecvente situații în care ne sunt cerute: recuperare după o viroză sau o boală care a lăsat organismul epuizat, perioade de suprasolicitare cu somn puțin, oboseală care nu trece după odihnă, imunitate scăzută cu răceli repetate.",
+              "Se cere des și după perioade de deshidratare sau alimentație dezechilibrată, precum și în convalescența de după o intervenție chirurgicală, când organismul are nevoie de resurse suplimentare.",
+              "Dacă oboseala durează de luni de zile, nu începe cu perfuzia. Poate ascunde anemie, o problemă tiroidiană sau altceva care se vede în analize. Îți spunem asta deschis și te îndrumăm către investigații — o perfuzie care maschează un simptom fără să lămurească cauza nu ajută pe nimeni.",
+            ],
+          },
+          {
+            heading: "Cum decurge vizita",
+            body: [
+              "Asistentul ajunge la ora stabilită, cu tot materialul necesar. Evaluează starea generală, măsoară funcțiile vitale și confirmă compoziția potrivită pentru situația ta.",
+              "Perfuzia durează de obicei între 30 și 60 de minute. Poți sta întins pe canapea, poți citi sau lucra la laptop — nu e nevoie să faci nimic special. Asistentul rămâne lângă tine tot timpul.",
+              "La final, cateterul e scos, se aplică pansamentul și primești recomandări pentru orele următoare. Nu ai nevoie de recuperare: îți poți relua activitatea imediat.",
+            ],
+          },
+          {
+            heading: "Cine nu trebuie să facă vitaminoterapie",
+            body: [
+              "Procedura nu se efectuează în caz de alergie cunoscută la componentele soluției, insuficiență renală sau cardiacă severă, sau în timpul unei infecții acute cu febră mare, când organismul are nevoie de alt tip de tratament.",
+              "Sarcina și alăptarea necesită acordul medicului curant. La fel și situațiile în care iei deja tratament cronic — unele substanțe interacționează.",
+              "Asistentul evaluează toate acestea înainte de a începe. Dacă ceva nu permite procedura, îți spunem direct, chiar dacă asta înseamnă să anulăm vizita.",
+            ],
+          },
+        ],
+        indications: [
+          "Epuizare fizică după boală sau suprasolicitare",
+          "Imunitate scăzută, răceli frecvente",
+          "Oboseală care nu trece după odihnă",
+          "Convalescență după intervenții chirurgicale",
+          "Perioade de stres prelungit și somn insuficient",
+        ],
+        benefits: [
+          "Absorbție directă, fără pierderi digestive",
+          "La tine acasă, fără drum la clinică",
+          "Asistenți autorizați, materiale sterile de unică folosință",
+          "Evaluare înainte de administrare, nu doar montarea perfuziei",
+        ],
+        faq: [
+          {
+            q: "Cât durează o perfuzie cu vitamine?",
+            a: "În mod obișnuit între 30 și 60 de minute, în funcție de compoziție. Asistentul rămâne lângă tine pe toată durata procedurii.",
+          },
+          {
+            q: "În cât timp se simte efectul?",
+            a: "Mulți pacienți raportează o ameliorare în primele 24 de ore, dar depinde de starea inițială și de cauza oboselii. Dacă nu simți nicio diferență, spune-ne — poate fi un semn că problema are altă cauză.",
+          },
+          {
+            q: "Câte ședințe sunt necesare?",
+            a: "Depinde de situație. Uneori o singură perfuzie e suficientă, alteori se recomandă o serie scurtă. Stabilim împreună după evaluare, fără să vindem ședințe de care nu ai nevoie.",
+          },
+          {
+            q: "Este nevoie de analize înainte?",
+            a: "Pentru o perfuzie simplă de refacere, de obicei nu. Dacă oboseala durează de mult timp sau ai afecțiuni cronice, îți recomandăm analizele întâi — pot arăta o cauză care se tratează altfel.",
+          },
+          {
+            q: "În cât timp ajungeți la domiciliu?",
+            a: "În 25-45 de minute în Chișinău. Programarea se poate face la orice oră, inclusiv seara sau în weekend.",
+          },
+        ],
+      },
+      ru: {
+        metaTitle: "Витаминный Комплекс Внутривенно на Дому Кишинёв | Витаминотерапия — Medline.md",
+        metaDescription:
+          "Витаминный комплекс внутривенно на дому в Кишинёве: восстановление после истощения, сниженный иммунитет, хроническая усталость. Сертифицированные медработники, запись 24/7.",
+        keywords:
+          "витаминный комплекс внутривенно, витаминотерапия на дому Кишинёв, капельница с витаминами цена, витамины внутривенно Кишинёв, капельница для иммунитета, капельница для энергии, витаминный коктейль внутривенно",
+        h1: "Витаминный комплекс внутривенно на дому",
+        short:
+          "Витамины внутривенно у вас дома — для восстановления после истощения, при сниженном иммунитете или длительной усталости.",
+        lead: "Внутривенное введение витаминов минует пищеварение и доставляет вещества прямо в кровь, где организм может использовать их сразу. Услуга выполняется на дому сертифицированными медработниками, после предварительной оценки вашего состояния.",
+        sections: [
+          {
+            heading: "Почему внутривенно, а не в таблетках",
+            body: [
+              "При приёме внутрь часть витаминов теряется в процессе пищеварения, а усвоение зависит от состояния желудка, питания и параллельно принимаемых препаратов. У многих людей, особенно после болезни или в периоды стресса, усвоение заметно снижено.",
+              "Внутривенное введение убирает этот этап: вещества попадают прямо в кровоток. Поэтому эффект обычно ощущается быстрее, чем от обычных добавок.",
+              "Это не значит, что капельница заменяет правильное питание или лечение заболевания. Это поддержка, а не замена того, чего не хватает в повседневной жизни.",
+            ],
+          },
+          {
+            heading: "Когда стоит попросить витаминную капельницу",
+            body: [
+              "Самые частые ситуации: восстановление после вируса или болезни, истощившей организм; периоды перегрузки с недосыпом; усталость, которая не проходит после отдыха; сниженный иммунитет с частыми простудами.",
+              "Часто просят и после периодов обезвоживания или несбалансированного питания, а также в восстановительном периоде после операции, когда организму нужны дополнительные ресурсы.",
+              "Если усталость длится месяцами, не начинайте с капельницы. За ней может стоять анемия, проблема щитовидной железы или что-то ещё, видимое в анализах. Мы скажем это прямо и направим на обследование — капельница, маскирующая симптом без выяснения причины, не помогает никому.",
+            ],
+          },
+          {
+            heading: "Как проходит визит",
+            body: [
+              "Медработник приезжает в назначенное время со всем необходимым. Оценивает общее состояние, измеряет жизненные показатели и подтверждает подходящий состав для вашей ситуации.",
+              "Капельница обычно занимает от 30 до 60 минут. Можно лежать на диване, читать или работать за ноутбуком — ничего особенного делать не нужно. Медработник находится рядом всё время.",
+              "В конце катетер снимается, накладывается повязка, и вы получаете рекомендации на ближайшие часы. Восстановление не требуется: к своим делам можно вернуться сразу.",
+            ],
+          },
+          {
+            heading: "Кому витаминотерапия не подходит",
+            body: [
+              "Процедура не проводится при известной аллергии на компоненты раствора, тяжёлой почечной или сердечной недостаточности, а также во время острой инфекции с высокой температурой, когда организму нужно другое лечение.",
+              "Беременность и кормление грудью требуют согласия лечащего врача. То же касается ситуаций, когда вы уже принимаете хроническое лечение — некоторые вещества взаимодействуют.",
+              "Медработник оценивает всё это до начала. Если что-то не позволяет процедуру, мы говорим прямо, даже если это означает отменить визит.",
+            ],
+          },
+        ],
+        indications: [
+          "Физическое истощение после болезни или перегрузки",
+          "Сниженный иммунитет, частые простуды",
+          "Усталость, не проходящая после отдыха",
+          "Восстановление после хирургических вмешательств",
+          "Периоды длительного стресса и недосыпа",
+        ],
+        benefits: [
+          "Прямое усвоение, без потерь в пищеварении",
+          "У вас дома, без поездки в клинику",
+          "Сертифицированные медработники, стерильные одноразовые материалы",
+          "Оценка перед введением, а не просто постановка капельницы",
+        ],
+        faq: [
+          {
+            q: "Сколько длится витаминная капельница?",
+            a: "Обычно от 30 до 60 минут, в зависимости от состава. Медработник находится рядом всю процедуру.",
+          },
+          {
+            q: "Через сколько чувствуется эффект?",
+            a: "Многие пациенты отмечают улучшение в первые 24 часа, но это зависит от исходного состояния и причины усталости. Если разницы нет — скажите нам, это может означать, что причина в другом.",
+          },
+          {
+            q: "Сколько сеансов нужно?",
+            a: "Зависит от ситуации. Иногда достаточно одной капельницы, иногда рекомендуется короткий курс. Определяем вместе после осмотра, не продавая сеансы, которые вам не нужны.",
+          },
+          {
+            q: "Нужны ли анализы заранее?",
+            a: "Для простой восстановительной капельницы обычно нет. Если усталость длится давно или есть хронические заболевания, сначала рекомендуем анализы — они могут показать причину, которая лечится иначе.",
+          },
+          {
+            q: "Как быстро вы приезжаете на дом?",
+            a: "За 25-45 минут в пределах Кишинёва. Записаться можно в любое время, включая вечер и выходные.",
+          },
+        ],
+      },
+    },
+  },
+  {
     slug: "pansamente-ingrijire-plagi",
     icon: "bandage",
     relatedArticles: [
@@ -1221,6 +1391,7 @@ export const RU_SLUG: Record<string, string> = {
   "injectii-la-domiciliu": "inekcii-na-domu",
   "ingrijire-bolnavi-la-domiciliu": "uhod-za-bolnymi-na-domu",
   "consult-medical-la-domiciliu": "medicinskiy-osmotr-na-domu",
+  "vitaminoterapie-la-domiciliu": "vitaminoterapiya-na-domu",
   "pansamente-ingrijire-plagi": "perevyazki-i-uhod-za-ranami",
   "tratament-post-alcool": "lechenie-posle-alkogolya",
   "codare-anti-alcool": "kodirovanie-ot-alkogolya",
