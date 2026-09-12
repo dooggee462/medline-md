@@ -1,22 +1,28 @@
 import { NextResponse } from "next/server";
-import { cleanPath, isLeadType, recordLead } from "@/lib/leads";
+import { cleanPath, isLeadType, isVisitorId, recordContact, recordVisit } from "@/lib/leads";
+
+/** Roboții de indexare rulează JavaScript și ar umfla vizitele */
+const BOT = /bot|crawl|spider|slurp|facebookexternalhit|headless|lighthouse|pingdom|preview|monitor/i;
 
 /**
- * Înregistrează un contact venit de pe site (apel, WhatsApp, formular…).
- * Public prin natura lui — de aceea acceptă STRICT tipurile din listă și nu
- * salvează nimic din ce trimite clientul în afară de tip.
+ * Înregistrează o vizită sau un contact. Public prin natura lui: acceptă strict
+ * tipurile din listă și un ID de forma generată de noi, și nu salvează nimic
+ * altceva din ce trimite browserul.
  *
- * ponytail: fără rate limiting. Cifrele pot fi umflate de cineva care apelează
- * endpointul în buclă; pentru un site local riscul e teoretic. Dacă apare,
+ * ponytail: fără rate limiting. Cineva care trimite ID-uri inventate în buclă
+ * poate umfla cifrele; pentru un site local riscul e teoretic. Dacă apare,
  * adaugă o limită per IP.
  */
 export async function POST(req: Request) {
   try {
-    const { type, page } = await req.json();
-    if (!isLeadType(type)) {
-      return NextResponse.json({ ok: false }, { status: 400 });
-    }
-    await recordLead(type, cleanPath(page));
+    const { type, page, vid } = await req.json();
+    if (!isVisitorId(vid)) return NextResponse.json({ ok: false }, { status: 400 });
+    if (BOT.test(req.headers.get("user-agent") ?? "")) return NextResponse.json({ ok: true });
+
+    if (type === "visit") await recordVisit(vid);
+    else if (isLeadType(type)) await recordContact(vid, type, cleanPath(page));
+    else return NextResponse.json({ ok: false }, { status: 400 });
+
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json({ ok: false }, { status: 400 });

@@ -18,7 +18,7 @@ export default async function AdminDashboard() {
         </h1>
         <div className="flex items-center gap-3">
           <Link href="/admin/contacte" className="text-sm font-semibold text-brand-700 hover:underline">
-            Contacte de pe site
+            Statistici site
           </Link>
           <a href="/ro/blog" target="_blank" className="text-sm font-medium text-slate-500 hover:text-brand-700">
             Vezi blogul ↗
