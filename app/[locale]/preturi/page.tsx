@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
-import { SERVICE_LIST } from "@/lib/content";
+import { SERVICE_LIST, serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Footer, FloatingContact } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -61,6 +61,7 @@ export default async function ServicesListPage({
       "@type": "ListItem",
       position: i + 1,
       name: s[locale],
+      ...(s.slug ? { url: `${SITE.url}${serviceHref(locale, s.slug)}` } : {}),
     })),
   };
 
@@ -102,7 +103,16 @@ export default async function ServicesListPage({
                     <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full border border-gold-500/50 text-gold-400">
                       <IconCheck className="h-4 w-4" />
                     </span>
-                    <span className="font-medium text-white/95">{s[locale]}</span>
+                    {s.slug ? (
+                      <Link
+                        href={serviceHref(locale, s.slug)}
+                        className="font-medium text-white/95 underline-offset-4 hover:text-gold-300 hover:underline"
+                      >
+                        {s[locale]}
+                      </Link>
+                    ) : (
+                      <span className="font-medium text-white/95">{s[locale]}</span>
+                    )}
                     {s.featured && (
                       <span className="ml-auto rounded-full bg-gold-500/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wide text-gold-300">
                         {locale === "ro" ? "Nou" : "Новое"}

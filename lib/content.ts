@@ -4582,20 +4582,27 @@ export function tiktokVideoId(url: string): string {
 export type ServiceListItem = {
   ro: string;
   ru: string;
-  /** evidențiază serviciul (badge) */
   featured?: boolean;
+  /** Slug-ul paginii serviciului (RO) — rândul devine link spre ea */
+  slug?: string;
 };
 
 export const SERVICE_LIST: ServiceListItem[] = [
-  { ro: "Injecție intramusculară (I/M)", ru: "Внутримышечная инъекция (в/м)" },
-  { ro: "Injecție subcutanată (S/C)", ru: "Подкожная инъекция (п/к)" },
-  { ro: "Injecție intravenoasă (I/V)", ru: "Внутривенная инъекция (в/в)" },
-  { ro: "Perfuzie intravenoasă (I/V)", ru: "Внутривенная капельница (в/в)" },
-  { ro: "Complex de vitamine I/V", ru: "Витаминный комплекс в/в" },
-  { ro: "Tratament post-alcool", ru: "Лечение после алкоголя (вывод из запоя)" },
-  { ro: "Tratament post-alcool LUX", ru: "Лечение после алкоголя LUX" },
-  { ro: "Codare (anti-alcool)", ru: "Кодирование от алкоголя", featured: true },
-  { ro: "Pansamente și îngrijirea plăgilor", ru: "Перевязки и уход за ранами" },
-  { ro: "Consult medical la domiciliu", ru: "Медицинский осмотр на дому" },
-  { ro: "Îngrijirea bolnavilor la domiciliu", ru: "Уход за больными на дому" },
+  { ro: "Injecție intramusculară (I/M)", ru: "Внутримышечная инъекция (в/м)", slug: "injectii-la-domiciliu" },
+  { ro: "Injecție subcutanată (S/C)", ru: "Подкожная инъекция (п/к)", slug: "injectii-la-domiciliu" },
+  { ro: "Injecție intravenoasă (I/V)", ru: "Внутривенная инъекция (в/в)", slug: "injectii-la-domiciliu" },
+  { ro: "Perfuzie intravenoasă (I/V)", ru: "Внутривенная капельница (в/в)", slug: "perfuzii-la-domiciliu" },
+  { ro: "Complex de vitamine I/V", ru: "Витаминный комплекс в/в", slug: "vitaminoterapie-la-domiciliu" },
+  { ro: "Tratament post-alcool", ru: "Лечение после алкоголя (вывод из запоя)", slug: "tratament-post-alcool" },
+  { ro: "Tratament post-alcool LUX", ru: "Лечение после алкоголя LUX", slug: "tratament-post-alcool" },
+  { ro: "Codare (anti-alcool)", ru: "Кодирование от алкоголя", featured: true, slug: "codare-anti-alcool" },
+  { ro: "Pansamente și îngrijirea plăgilor", ru: "Перевязки и уход за ранами", slug: "pansamente-ingrijire-plagi" },
+  { ro: "Scoaterea firelor și îngrijire după operație", ru: "Снятие швов и уход после операции", slug: "ingrijire-postoperatorie-la-domiciliu" },
+  { ro: "Consultația chirurgului la domiciliu", ru: "Консультация хирурга на дому", slug: "ingrijire-postoperatorie-la-domiciliu" },
+  { ro: "Montarea și schimbarea sondei urinare", ru: "Постановка и замена мочевого катетера", slug: "sonda-urinara-si-clisma-la-domiciliu" },
+  { ro: "Clismă la domiciliu", ru: "Клизма на дому", slug: "sonda-urinara-si-clisma-la-domiciliu" },
+  { ro: "Consult medical la domiciliu", ru: "Медицинский осмотр на дому", slug: "consult-medical-la-domiciliu" },
+  { ro: "Îngrijirea bolnavilor la domiciliu", ru: "Уход за больными на дому", slug: "ingrijire-bolnavi-la-domiciliu" },
+  { ro: "Îngrijire după AVC", ru: "Уход после инсульта", slug: "ingrijire-dupa-avc-la-domiciliu" },
+  { ro: "Îngrijire paliativă la domiciliu", ru: "Паллиативный уход на дому", slug: "ingrijire-paliativa-la-domiciliu" },
 ];

@@ -1,5 +1,6 @@
 import { SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
+import { SERVICES, serviceHref } from "@/lib/content";
 
 /**
  * Structured data (schema.org) pentru rich results în Google:
@@ -53,10 +54,12 @@ export function JsonLd({ locale }: { locale: Locale }) {
       SITE.social.instagram,
       SITE.social.tiktok,
     ].filter(Boolean),
-    availableService: dict.services.items.map((s) => ({
+    // Din lista reală de servicii: o pagină nouă apare automat și aici
+    availableService: SERVICES.map((s) => ({
       "@type": "MedicalProcedure",
-      name: s.title,
-      description: s.desc,
+      name: s.content[locale].h1,
+      description: s.content[locale].short,
+      url: `${SITE.url}${serviceHref(locale, s.slug)}`,
     })),
     /**
      * Nota reală din Google Business Profile, verificabilă public de oricine.
