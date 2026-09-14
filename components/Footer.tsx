@@ -107,4 +107,3 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
 }
 
 // Widget flotant de contact (Telefon / WhatsApp / Viber / Messenger)
-export { FloatingContact } from "./FloatingContact";

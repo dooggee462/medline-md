@@ -9,6 +9,8 @@ import { MobileCallBar } from "@/components/MobileCallBar";
 import { Analytics } from "@/components/Analytics";
 import { SiteSchema } from "@/components/SiteSchema";
 import { ContactTracker } from "@/components/ContactTracker";
+import { ChatBot } from "@/components/ChatBot";
+import { SERVICES, serviceHref } from "@/lib/content";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -104,6 +106,19 @@ export default async function LocaleLayout({
         <CookieConsent dict={dict} />
         <Analytics />
         <ContactTracker />
+        <ChatBot
+          dict={dict}
+          locale={locale as Locale}
+          // doar ce afișează chatul, nu textele lungi ale paginilor de servicii
+          services={SERVICES.map((s) => ({
+            // „Perfuzii la domiciliu în Chișinău" → „Perfuzii", ca să încapă pe buton
+            name: s.content[locale as Locale].h1
+              .replace(/,? (la domiciliu|на дому)/, "")
+              .replace(/ (în Chișinău|в Кишинёве)$/, ""),
+            short: s.content[locale as Locale].short,
+            href: serviceHref(locale as Locale, s.slug),
+          }))}
+        />
       </body>
     </html>
   );

@@ -11,6 +11,7 @@ const LABELS: Record<LeadType, string> = {
   viber: "Viber",
   messenger: "Messenger",
   form: "Formular",
+  chat: "Chat pe site",
 };
 
 const COLORS: Record<LeadType, string> = {
@@ -19,6 +20,7 @@ const COLORS: Record<LeadType, string> = {
   viber: "bg-purple-600",
   messenger: "bg-blue-600",
   form: "bg-amber-500",
+  chat: "bg-sky-600",
 };
 
 const PERIODS = [7, 30, 90, 365];
@@ -82,7 +84,7 @@ export default async function StatsPage({
       <p className="text-sm text-slate-500">
         O persoană care a sunat și a scris pe WhatsApp apare la ambele canale, dar o singură dată în total.
       </p>
-      <div className="mt-4 grid gap-3 sm:grid-cols-5">
+      <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {LEAD_TYPES.map((t) => (
           <div key={t} className="rounded-xl border border-slate-200 bg-white p-4">
             <p className="flex items-center gap-2 text-2xl font-bold text-slate-900">

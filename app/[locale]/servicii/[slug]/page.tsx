@@ -5,7 +5,7 @@ import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { SERVICES, getArticle, getServiceByLocaleSlug, localizeSlug, serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
-import { Footer, FloatingContact } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SERVICE_ICONS, IconCheck, IconClock } from "@/components/Icons";
 
@@ -263,7 +263,6 @@ export default async function ServiceDetail({
       </main>
 
       <Footer locale={locale} dict={dict} />
-      <FloatingContact dict={dict} />
     </>
   );
 }

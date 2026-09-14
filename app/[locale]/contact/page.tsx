@@ -5,7 +5,7 @@ import { LOCALES, SITE, whatsappLink, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
-import { Footer, FloatingContact } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { BookingForm } from "@/components/BookingForm";
 import { IconPhone, IconWhatsApp, IconMail, IconPin, IconClock } from "@/components/Icons";
@@ -129,7 +129,6 @@ export default async function ContactPage({
         </section>
       </main>
       <Footer locale={locale} dict={dict} />
-      <FloatingContact dict={dict} />
     </>
   );
 }

@@ -80,3 +80,8 @@ export function ContactTracker() {
 export function trackFormSubmit() {
   send({ type: "form" });
 }
+
+/** Apelată din chat, după ce cererea a ajuns la clinică */
+export function trackChatLead() {
+  send({ type: "chat" });
+}

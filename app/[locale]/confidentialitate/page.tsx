@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { Header } from "@/components/Header";
-import { Footer, FloatingContact } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 
 const CONTENT: Record<
@@ -12,7 +12,7 @@ const CONTENT: Record<
 > = {
   ro: {
     title: "Politica de confidențialitate",
-    updated: "Ultima actualizare: iunie 2026",
+    updated: "Ultima actualizare: septembrie 2026",
     sections: [
       {
         heading: "Cine suntem",
@@ -23,7 +23,7 @@ const CONTENT: Record<
       {
         heading: "Ce date colectăm",
         body: [
-          "Colectăm doar datele pe care ni le oferi voluntar prin formularul de programare: nume, număr de telefon și, opțional, serviciul dorit, data și un mesaj cu detalii.",
+          "Colectăm doar datele pe care ni le oferi voluntar prin formularul de programare sau prin chatul de pe site: nume, număr de telefon și, opțional, serviciul dorit, data, sectorul sau localitatea și un mesaj cu detalii.",
           "Colectăm automat și date tehnice minime (prin cookie-uri și instrumente de analiză, dacă sunt activate): tip de dispozitiv, pagini vizitate. Acestea ne ajută să îmbunătățim site-ul.",
         ],
       },
@@ -32,6 +32,7 @@ const CONTENT: Record<
         body: [
           "Folosim datele exclusiv pentru a-ți răspunde la solicitări și a programa vizita medicală. Nu vindem și nu transmitem datele tale unor terți în scopuri de marketing.",
           "Când trimiți formularul, datele introduse sunt transmise către noi prin WhatsApp (aplicația se deschide cu mesajul precompletat). Astfel, se aplică și politica de confidențialitate a WhatsApp.",
+          "Când ne lași numele și telefonul în chatul de pe site, datele ajung la echipa noastră printr-un mesaj Telegram, ca să te putem suna. Nu le păstrăm pe serverul site-ului. Se aplică și politica de confidențialitate a Telegram.",
         ],
       },
       {
@@ -62,7 +63,7 @@ const CONTENT: Record<
   },
   ru: {
     title: "Политика конфиденциальности",
-    updated: "Последнее обновление: июнь 2026",
+    updated: "Последнее обновление: сентябрь 2026",
     sections: [
       {
         heading: "Кто мы",
@@ -73,7 +74,7 @@ const CONTENT: Record<
       {
         heading: "Какие данные мы собираем",
         body: [
-          "Мы собираем только данные, которые вы добровольно предоставляете через форму записи: имя, номер телефона и, по желанию, нужную услугу, дату и сообщение с деталями.",
+          "Мы собираем только данные, которые вы добровольно предоставляете через форму записи или чат на сайте: имя, номер телефона и, по желанию, нужную услугу, дату, сектор или населённый пункт и сообщение с деталями.",
           "Автоматически собираются минимальные технические данные (через cookie и аналитику, если включена): тип устройства, посещённые страницы. Это помогает улучшать сайт.",
         ],
       },
@@ -82,6 +83,7 @@ const CONTENT: Record<
         body: [
           "Мы используем данные исключительно для ответа на ваши запросы и записи на визит. Мы не продаём и не передаём ваши данные третьим лицам в маркетинговых целях.",
           "При отправке формы введённые данные передаются нам через WhatsApp (приложение открывается с готовым сообщением). Поэтому применяется и политика конфиденциальности WhatsApp.",
+          "Когда вы оставляете имя и телефон в чате на сайте, данные приходят нашей команде сообщением в Telegram, чтобы мы могли перезвонить. На сервере сайта они не хранятся. Применяется и политика конфиденциальности Telegram.",
         ],
       },
       {
@@ -175,7 +177,6 @@ export default async function PrivacyPage({
         </section>
       </main>
       <Footer locale={locale} dict={dict} />
-      <FloatingContact dict={dict} />
     </>
   );
 }

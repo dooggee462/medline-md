@@ -5,7 +5,7 @@ import { getDictionary } from "@/lib/dictionaries";
 import { Header } from "@/components/Header";
 import { BookingForm } from "@/components/BookingForm";
 import { JsonLd } from "@/components/JsonLd";
-import { Footer, FloatingContact } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { SERVICES, serviceHref } from "@/lib/content";
 import {
@@ -502,7 +502,6 @@ export default async function Home({
       </main>
 
       <Footer locale={locale} dict={dict} />
-      <FloatingContact dict={dict} />
     </>
   );
 }

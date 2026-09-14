@@ -5,7 +5,7 @@ import { LOCALES, SITE, whatsappLink, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
-import { Footer, FloatingContact } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CtaBand } from "@/components/CtaBand";
 import { IconDrop, IconStar, IconShield, IconCheck, IconPhone, IconWhatsApp } from "@/components/Icons";
@@ -272,7 +272,6 @@ export default async function DetoxPage({
         <CtaBand locale={locale} dict={dict} />
       </main>
       <Footer locale={locale} dict={dict} />
-      <FloatingContact dict={dict} />
     </>
   );
 }

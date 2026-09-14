@@ -157,6 +157,48 @@ export type Dictionary = {
     nav: string;
     legal: string;
   };
+  /** Asistentul cu butoane din colțul paginii (scenariu fix, fără AI) */
+  chat: {
+    open: string;
+    /** eticheta de lângă „Chat online" din meniul flotant */
+    badge: string;
+    close: string;
+    title: string;
+    status: string;
+    greeting: string;
+    /** cererea obligatorie de nume și telefon, înainte de meniu */
+    intro: string;
+    start: string;
+    /** {name} se înlocuiește cu numele introdus */
+    welcome: string;
+    ask: string;
+    services: string;
+    price: string;
+    time: string;
+    area: string;
+    urgent: string;
+    callback: string;
+    callNow: string;
+    writeWhatsapp: string;
+    back: string;
+    chooseService: string;
+    serviceInfo: string;
+    readMore: string;
+    priceAnswer: string;
+    timeAnswer: string;
+    areaAnswer: string;
+    urgentAnswer: string;
+    call112: string;
+    formIntro: string;
+    zone: string;
+    message: string;
+    send: string;
+    sending: string;
+    consent: string;
+    /** {name} se înlocuiește cu numele introdus */
+    thanks: string;
+    failed: string;
+  };
 };
 
 const ro: Dictionary = {
@@ -466,6 +508,48 @@ const ro: Dictionary = {
     nav: "Navigare",
     legal:
       "Acest site are scop informativ și nu înlocuiește consultul medical de specialitate.",
+  },
+  chat: {
+    open: "Chat online",
+    badge: "Nou",
+    close: "Închide",
+    title: "Asistent Medline",
+    status: "Răspundem 24/7",
+    greeting:
+      "Bună ziua! 👋 Sunt asistentul Medline. Vă ajut să aflați rapid ce vă interesează, iar dacă doriți, vă sunăm noi.",
+    intro: "Ca să vă putem ajuta, lăsați numele și numărul de telefon:",
+    start: "Continuă",
+    welcome: "Mulțumim, {name}! Cu ce vă putem ajuta?",
+    ask: "Cu ce vă putem ajuta?",
+    services: "🩺 Servicii",
+    price: "💰 Cât costă?",
+    time: "⏱ Cât de repede veniți?",
+    area: "📍 Unde veniți?",
+    urgent: "🚨 Este urgent",
+    callback: "📞 Vreau să mă sunați",
+    callNow: "Sună acum",
+    writeWhatsapp: "Scrie pe WhatsApp",
+    back: "↩ Înapoi la meniu",
+    chooseService: "Alegeți serviciul:",
+    serviceInfo: "Venim la domiciliu 24/7, iar în Chișinău ajungem în 25-45 de minute.",
+    readMore: "Detalii despre serviciu",
+    priceAnswer:
+      "Prețul depinde de serviciu și de specificul cazului. Vi-l spunem exact la telefon, înainte de vizită, fără costuri ascunse.",
+    timeAnswer:
+      "Lucrăm non-stop, inclusiv noaptea, în weekend și de sărbători. În Chișinău ajungem de obicei în 25-45 de minute de la apel.",
+    areaAnswer: "Venim în tot Chișinăul, precum și în Ciorescu, Tohatin, Ialoveni, Vatra, Sîngera, Bubuieci și Băcioi.",
+    urgentAnswer:
+      "Dacă viața este în pericol (durere puternică în piept, pierderea cunoștinței, respirație grea, sângerare abundentă), sunați imediat la 112. Pentru alte situații urgente, sunați-ne direct:",
+    call112: "Sună la 112",
+    formIntro: "Vă sunăm în câteva minute. Dacă doriți, spuneți-ne și zona și ce vă îngrijorează:",
+    zone: "Sector sau localitate (opțional)",
+    message: "Ce vă îngrijorează? (opțional)",
+    send: "Sunați-mă",
+    sending: "Se trimite…",
+    consent: "Datele se folosesc doar ca să vă contactăm.",
+    thanks: "Mulțumim, {name}! Am primit cererea și vă sunăm în câteva minute.",
+    failed:
+      "Nu am reușit să trimitem cererea. Scrieți-ne pe WhatsApp sau sunați, răspundem imediat.",
   },
 };
 
@@ -777,6 +861,48 @@ const ru: Dictionary = {
     nav: "Навигация",
     legal:
       "Этот сайт носит информационный характер и не заменяет консультацию специалиста.",
+  },
+  chat: {
+    open: "Онлайн-чат",
+    badge: "Новое",
+    close: "Закрыть",
+    title: "Ассистент Medline",
+    status: "Отвечаем 24/7",
+    greeting:
+      "Здравствуйте! 👋 Я ассистент Medline. Помогу быстро узнать нужное, а если хотите, мы вам перезвоним.",
+    intro: "Чтобы мы могли помочь, оставьте имя и номер телефона:",
+    start: "Продолжить",
+    welcome: "Спасибо, {name}! Чем можем помочь?",
+    ask: "Чем можем помочь?",
+    services: "🩺 Услуги",
+    price: "💰 Сколько стоит?",
+    time: "⏱ Как быстро приедете?",
+    area: "📍 Куда выезжаете?",
+    urgent: "🚨 Это срочно",
+    callback: "📞 Перезвоните мне",
+    callNow: "Позвонить",
+    writeWhatsapp: "Написать в WhatsApp",
+    back: "↩ В меню",
+    chooseService: "Выберите услугу:",
+    serviceInfo: "Выезжаем на дом 24/7, по Кишинёву приезжаем за 25-45 минут.",
+    readMore: "Подробнее об услуге",
+    priceAnswer:
+      "Цена зависит от услуги и особенностей случая. Мы точно назовём её по телефону до визита, без скрытых платежей.",
+    timeAnswer:
+      "Работаем круглосуточно, включая ночь, выходные и праздники. По Кишинёву обычно приезжаем за 25-45 минут после звонка.",
+    areaAnswer: "Выезжаем по всему Кишинёву, а также в Чореску, Тохатин, Яловены, Ватру, Сынджеру, Бубуечь и Бачой.",
+    urgentAnswer:
+      "Если есть угроза жизни (сильная боль в груди, потеря сознания, тяжёлое дыхание, обильное кровотечение), немедленно звоните 112. В других срочных случаях звоните нам напрямую:",
+    call112: "Позвонить 112",
+    formIntro: "Перезвоним через несколько минут. Если хотите, укажите район и что беспокоит:",
+    zone: "Сектор или населённый пункт (по желанию)",
+    message: "Что беспокоит? (по желанию)",
+    send: "Перезвоните мне",
+    sending: "Отправляем…",
+    consent: "Данные используются только для связи с вами.",
+    thanks: "Спасибо, {name}! Заявка получена, перезвоним через несколько минут.",
+    failed:
+      "Не удалось отправить заявку. Напишите нам в WhatsApp или позвоните, ответим сразу.",
   },
 };
 

@@ -4,7 +4,7 @@ import { DATA_DIR } from "./posts";
 
 /**
  * Statistici de pe site: vizitatori unici, afișări de pagini și persoanele
- * care au inițiat un contact (apel, WhatsApp, Viber, Messenger, formular).
+ * care au inițiat un contact (apel, WhatsApp, Viber, Messenger, formular, chat).
  *
  * „Persoană" = un ID aleatoriu generat în browser, fără nicio dată personală.
  * Cine apasă de cinci ori pe „Sună" apare o singură dată. Limite: alt telefon,
@@ -21,7 +21,7 @@ const FILE = path.join(DATA_DIR, "stats.json");
 const KEEP_DAYS = 400;
 
 /** Tipurile acceptate — endpointul e public, deci nimic în afara listei */
-export const LEAD_TYPES = ["call", "whatsapp", "viber", "messenger", "form"] as const;
+export const LEAD_TYPES = ["call", "whatsapp", "viber", "messenger", "form", "chat"] as const;
 export type LeadType = (typeof LEAD_TYPES)[number];
 
 type Day = {

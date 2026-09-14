@@ -5,7 +5,7 @@ import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { getBlogPost, getBlogList } from "@/lib/posts";
 import { Header } from "@/components/Header";
-import { Footer, FloatingContact } from "@/components/Footer";
+import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CtaBand } from "@/components/CtaBand";
 import { ReadingProgress, ShareButtons } from "@/components/ShareButtons";
@@ -197,7 +197,6 @@ export default async function ArticlePage({
         <CtaBand locale={locale} dict={dict} />
       </main>
       <Footer locale={locale} dict={dict} />
-      <FloatingContact dict={dict} />
     </>
   );
 }
