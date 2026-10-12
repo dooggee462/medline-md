@@ -42,10 +42,14 @@ export function middleware(request: NextRequest) {
     url.pathname = `/${locale}/servicii/${svc[locale as "ro" | "ru"] ?? svc.ro}`;
   } else if (key === "detox") {
     url.pathname = `/${locale}/detoxifiere`;
+  } else if (key === "codare") {
+    url.pathname = `/${locale}/codare`;
   } else {
     url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;
   }
-  return NextResponse.redirect(url);
+  const res = NextResponse.redirect(url, 308);
+  res.headers.set("Vary", "Accept-Language");
+  return res;
 }
 
 export const config = {

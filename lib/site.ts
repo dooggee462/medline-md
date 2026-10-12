@@ -15,6 +15,7 @@ export const SITE = {
 
   /** Telefon */
   phone: "+373 61 003 863",
+  phoneDisplay: "+373 61 003 863",
   /** Doar cifre, pentru linkuri tel: */
   phoneRaw: "+37361003863",
 
@@ -62,7 +63,22 @@ export const SITE = {
     "Sîngera",
     "Bubuieci",
     "Băcioi",
+    "Durlești",
+    "Stăuceni",
+    "Codru",
+    "Dumbrava",
+    "Trușeni",
   ],
+
+  sectors: {
+    ro: ["Centru", "Botanica", "Buiucani", "Rîșcani", "Ciocana", "Telecentru", "Poșta Veche"],
+    ru: ["Центр", "Ботаника", "Буюканы", "Рышкановка", "Чеканы", "Телецентр", "Пошта Веке"],
+  },
+
+  suburbs: {
+    ro: ["Durlești", "Stăuceni", "Codru", "Ialoveni", "Dumbrava", "Trușeni", "Băcioi", "Ciorescu", "Tohatin", "Vatra", "Sîngera", "Bubuieci"],
+    ru: ["Дурлешты", "Ставчены", "Кодру", "Яловены", "Думбрава", "Трушены", "Бачой", "Чореску", "Тохатин", "Ватра", "Сынджера", "Бубуечь"],
+  },
 
   /** Sloganul brandului */
   slogan: "Ușor. Rapid. Acasă.",
@@ -103,6 +119,20 @@ export const SITE = {
     idno: "1025607003895",
     /** Adresa juridică din registru — NU e sediu cu primire de pacienți */
     registeredAddress: "mun. Chișinău, str. Gh. Asachi 53, ap. 44, MD-2065",
+  },
+
+  /**
+   * Medicul expert și fondatorul în spatele serviciilor și conținutului medical.
+   * Pentru subiecte de sănătate (YMYL), Google și platformele AI cer un expert
+   * identificabil cu competență declarată (E-E-A-T).
+   */
+  author: {
+    name: "Sochirean Victor",
+    jobTitle: {
+      ro: "Medic expert · Fondator Medline",
+      ru: "Врач-эксперт · Основатель Medline",
+    },
+    image: "/founder.jpg",
   },
 
   /**

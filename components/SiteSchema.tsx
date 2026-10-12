@@ -20,10 +20,17 @@ export function SiteSchema({ locale }: { locale: Locale }) {
     slogan: SITE.slogan,
     founder: {
       "@type": "Person",
-      name: "Sochirean Victor",
-      jobTitle: "Asistent medical",
+      "@id": `${SITE.url}/#founder`,
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle[locale],
+      image: `${SITE.url}${SITE.author.image}`,
+      url: `${SITE.url}/${locale}/despre-noi`,
+      worksFor: { "@id": `${SITE.url}/#organization` },
     },
-    areaServed: { "@type": "City", name: SITE.address.city },
+    areaServed: [
+      { "@type": "City", name: SITE.address.city },
+      ...SITE.areaServed.map((name) => ({ "@type": "Place", name })),
+    ],
     contactPoint: {
       "@type": "ContactPoint",
       telephone: SITE.phoneRaw,

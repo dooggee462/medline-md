@@ -122,8 +122,33 @@ export default async function AboutPage({
   const dict = getDictionary(locale);
   const a = ABOUT[locale];
 
+  const aboutLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    url: `${SITE.url}/${locale}/despre-noi`,
+    name: a.h1,
+    description: a.metaDescription,
+    inLanguage: locale,
+    mainEntity: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#founder`,
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle[locale],
+      image: `${SITE.url}${SITE.author.image}`,
+      url: `${SITE.url}/${locale}/despre-noi`,
+      worksFor: {
+        "@type": "MedicalOrganization",
+        "@id": `${SITE.url}/#organization`,
+        name: SITE.legalName,
+        url: SITE.url,
+        telephone: SITE.phoneRaw,
+      },
+    },
+  };
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutLd) }} />
       <Header locale={locale} dict={dict} />
       <main>
         <section className="bg-gradient-to-b from-brand-50/70 to-white py-12 lg:py-16">
@@ -145,7 +170,7 @@ export default async function AboutPage({
             <div className="mx-auto w-full max-w-xs overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-brand-900/10">
               <Image
                 src="/founder.jpg"
-                alt={locale === "ro" ? "Sochirean Victor — asistent medical, fondator Medline" : "Сокирян Виктор — медицинский ассистент, основатель Medline"}
+                alt={locale === "ro" ? "Sochirean Victor — medic expert, fondator Medline" : "Сокирян Виктор — врач-эксперт, основатель Medline"}
                 width={590}
                 height={1153}
                 className="aspect-[3/4] w-full object-cover object-top"
@@ -153,16 +178,16 @@ export default async function AboutPage({
             </div>
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">
-                {locale === "ro" ? "Fondator" : "Основатель"}
+                {locale === "ro" ? "Medic expert · Fondator" : "Врач-эксперт · Основатель"}
               </p>
               <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900">Sochirean Victor</h2>
               <p className="mt-1 font-semibold text-brand-700">
-                {locale === "ro" ? "Asistent medical · Fondator Medline" : "Медицинский ассистент · Основатель Medline"}
+                {SITE.author.jobTitle[locale]}
               </p>
               <p className="mt-4 leading-relaxed text-slate-600">
                 {locale === "ro"
-                  ? "Victor a fondat Medline cu o convingere simplă: îngrijirea medicală de calitate trebuie să ajungă la oameni acasă, cu profesionalism, discreție și empatie. Coordonează personal echipa de asistente, asigurându-se că fiecare pacient primește atenția și siguranța pe care le merită."
-                  : "Виктор основал Medline с простым убеждением: качественная медицинская помощь должна приходить к людям домой — с профессионализмом, деликатностью и заботой. Он лично руководит командой медсестёр, следя за тем, чтобы каждый пациент получал внимание и безопасность, которых заслуживает."}
+                  ? "Victor Sochirean a fondat Medline.md cu o convingere simplă: îngrijirea medicală de calitate trebuie să ajungă la oameni acasă, în Chișinău și împrejurimi, cu profesionalism, discreție și empatie. În calitate de medic expert, coordonează personal echipa medicală și protocoalele de intervenție (perfuzii, detoxifiere post-alcool, codare și îngrijire la domiciliu), asigurându-se că fiecare pacient primește atenția și siguranța pe care le merită."
+                  : "Виктор Сокирян основал Medline.md с простым убеждением: качественная медицинская помощь должна приходить к людям домой в Кишинёве и пригородах — с профессионализмом, деликатностью и заботой. Как врач-эксперт, он лично руководит медицинской командой и протоколами выезда (капельницы, детоксикация и вывод из запоя, кодирование и уход на дому), следя за тем, чтобы каждый пациент получал внимание и безопасность, которых заслуживает."}
               </p>
             </div>
           </div>

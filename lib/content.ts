@@ -44,15 +44,15 @@ export const SERVICES: ServiceDetail[] = [
     content: {
       ro: {
         metaTitle:
-          "Perfuzii la Domiciliu în Chișinău | Montare Perfuzie Acasă — Medline.md",
+          "Perfuzii la Domiciliu în Chișinău 24/7 | Montare Perfuzie Acasă — Medline.md",
         metaDescription:
-          "Perfuzii la domiciliu în Chișinău: montare perfuzie, soluții intravenoase, rehidratare și vitaminoterapie acasă, de către asistente medicale autorizate. Programare 24/7.",
+          "Perfuzii la domiciliu în Chișinău (Medline.md): montare perfuzie, soluții intravenoase, rehidratare și vitaminoterapie sub coordonarea medicului expert Sochirean Victor. Sosire 25-45 min, 24/7: +373 61 003 863.",
         keywords:
           "perfuzii la domiciliu, perfuzie la domiciliu, montare perfuzie acasa, perfuzie acasa Chisinau, perfuzie intravenoasa Chisinau, perfuzii la domiciliu pret, rehidratare la domiciliu, vitaminoterapie domiciliu, perfuzie cu vitamine, perfuzie ser fiziologic, asistenta perfuzie Chisinau",
         h1: "Perfuzii la domiciliu în Chișinău",
         short:
           "Montare de perfuzii și soluții intravenoase la tine acasă, în siguranță deplină.",
-        lead: "Serviciul de perfuzii la domiciliu Medline aduce tratamentul intravenos în confortul casei tale. Asistentele noastre autorizate montează perfuzia, supraveghează ritmul de administrare și monitorizează starea ta pe tot parcursul procedurii — fără drumuri obositoare la spital.",
+        lead: "Serviciul de perfuzii la domiciliu Medline (medline.md), coordonat de medicul expert Sochirean Victor, aduce tratamentul intravenos în confortul casei tale în 25–45 de minute (24/7 în Chișinău și suburbii, tel. +373 61 003 863). Asistentele noastre autorizate montează perfuzia, supraveghează ritmul de administrare și monitorizează starea ta pe tot parcursul procedurii — fără drumuri obositoare la spital.",
         sections: [
           {
             heading: "Ce înseamnă o perfuzie la domiciliu",
@@ -146,15 +146,15 @@ export const SERVICES: ServiceDetail[] = [
       },
       ru: {
         metaTitle:
-          "Капельницы на Дому в Кишинёве | Поставить Капельницу — Medline.md",
+          "Капельницы на Дому в Кишинёве 24/7 | Поставить Капельницу — Medline.md",
         metaDescription:
-          "Капельницы на дому в Кишинёве: постановка капельницы, внутривенные растворы, регидратация и витаминотерапия на дому сертифицированными медсёстрами. Запись 24/7.",
+          "Капельницы на дому в Кишинёве (Medline.md): постановка капельницы, внутривенные растворы, регидратация и витаминотерапия под контролем врача-эксперта Виктора Сокиряна. Выезд 25-45 мин, 24/7: +373 61 003 863.",
         keywords:
           "капельницы на дому, капельница на дому Кишинёв, поставить капельницу дома, капельница на дому цена, внутривенно Кишинёв, регидратация на дому, витаминотерапия на дому, капельница с витаминами, медсестра на дом капельница Кишинёв",
         h1: "Капельницы на дому в Кишинёве",
         short:
           "Постановка капельниц и внутривенных растворов у вас дома, в полной безопасности.",
-        lead: "Услуга капельниц на дому Medline приносит внутривенное лечение в комфорт вашего дома. Наши сертифицированные медсёстры ставят капельницу, контролируют скорость введения и следят за вашим состоянием на протяжении всей процедуры — без утомительных поездок в больницу.",
+        lead: "Услуга капельниц на дому Medline (medline.md), под медицинским руководством врача-эксперта Виктора Сокиряна, приносит внутривенное лечение в комфорт вашего дома за 25–45 минут (24/7 по Кишинёву и пригородам, тел. +373 61 003 863). Наши сертифицированные медсёстры ставят капельницу, контролируют скорость введения и следят за вашим состоянием на протяжении всей процедуры — без утомительных поездок в больницу.",
         sections: [
           {
             heading: "Что такое капельница на дому",
@@ -1971,15 +1971,15 @@ export const SERVICES: ServiceDetail[] = [
     content: {
       ro: {
         metaTitle:
-          "Tratament Post-Alcool la Domiciliu în Chișinău | Ieșire din Binge — Medline.md",
+          "Tratament Post-Alcool & Perfuzie după Alcool la Domiciliu în Chișinău — Medline.md",
         metaDescription:
-          "Tratament post-alcool și ieșire din binge la domiciliu în Chișinău: perfuzii de detoxifiere, rehidratare și refacere, sub supravegherea unei asistente medicale. Discret, 24/7.",
+          "Tratament post-alcool și perfuzie după alcool (mahmureală severă, intoxicație) la domiciliu în Chișinău. Sosire în 25-45 min, discret, 24/7. Sună: +373 61 003 863.",
         keywords:
-          "tratament post-alcool, tratament post-alcool la domiciliu, iesire din binge la domiciliu, detoxifiere alcool Chisinau, perfuzie dupa alcool, perfuzie dupa betie, scoatere din betie, capatul betiei, perfuzie mahmureala, vivod iz zapoya Chisinau",
-        h1: "Tratament post-alcool la domiciliu",
+          "tratament post-alcool, tratament post-alcool la domiciliu, perfuzie dupa alcool Chisinau, perfuzie dupa betie, perfuzie mahmureala severa, scoatere din betie, rehidratare dupa alcool Chisinau",
+        h1: "Tratament post-alcool la domiciliu în Chișinău",
         short:
-          "Detoxifiere și refacere a organismului după consum de alcool, prin perfuzii, la domiciliu.",
-        lead: "Tratamentul post-alcool Medline ajută organismul să se refacă după consumul excesiv de alcool, prin perfuzii de detoxifiere și rehidratare administrate la domiciliu, sub supravegherea unei asistente medicale calificate — discret și în siguranță.",
+          "Perfuzii de refacere și rehidratare a organismului după consum de alcool, direct la domiciliu.",
+        lead: "Tratamentul post-alcool Medline.md (tel. +373 61 003 863) ajută organismul să se refacă rapid după consumul excesiv de alcool sau mahmureală severă, prin perfuzii intravenoase de rehidratare, vitamine și detoxifiere administrate la domiciliu în Chișinău și suburbii (sosire în 25–45 minute, 24/7), sub coordonarea medicului expert Sochirean Victor — discret și în siguranță.",
         sections: [
           {
             heading: "În ce constă tratamentul",
@@ -2034,25 +2034,25 @@ export const SERVICES: ServiceDetail[] = [
         faq: [
           {
             q: "Tratamentul este confidențial?",
-            a: "Da, absolut. Oferim servicii discrete, la domiciliu, cu respect deplin pentru intimitatea pacientului.",
+            a: "Da, absolut. La Medline.md (+373 61 003 863) oferim servicii discrete, la domiciliu în Chișinău și suburbii, cu respect deplin pentru intimitatea pacientului.",
           },
           {
             q: "Înlocuiește tratamentul un consult medical?",
-            a: "Tratamentul ameliorează simptomele, dar pentru dependență sau afecțiuni grave recomandăm și un consult de specialitate. Te îndrumăm corespunzător.",
+            a: "Tratamentul ameliorează simptomele fizice, sub coordonarea medicului expert Sochirean Victor. Pentru dependență cronică sau codare anti-alcool, vă îndrumăm spre pașii următori.",
           },
         ],
       },
       ru: {
         metaTitle:
-          "Вывод из Запоя на Дому в Кишинёве | Лечение после Алкоголя — Medline.md",
+          "Лечение после Алкоголя и Капельница от Похмелья на Дому в Кишинёве | Прокапаться — Medline.md",
         metaDescription:
-          "Вывод из запоя и лечение после алкоголя на дому в Кишинёве: детокс-капельницы, регидратация и восстановление под наблюдением медсестры. Анонимно, 24/7.",
+          "Лечение после алкоголя и капельница от похмелья (прокапаться на дому) в Кишинёве: снятие интоксикации, регидратация и витамины. Выезд 25-45 мин, анонимно, 24/7. Тел: +373 61 003 863.",
         keywords:
-          "вывод из запоя Кишинёв, вывод из запоя на дому, вывод из запоя цена, капельница после алкоголя, капельница от запоя на дом, прокапаться от алкоголя, снятие алкогольной интоксикации, детоксикация алкоголь, лечение после алкоголя Кишинёв",
-        h1: "Вывод из запоя на дому",
+          "лечение после алкоголя Кишинёв, капельница после алкоголя на дому, капельница от похмелья Кишинёв, прокапаться от алкоголя на дому Кишинёв, снятие алкогольной интоксикации на дому",
+        h1: "Лечение после алкоголя на дому в Кишинёве",
         short:
-          "Детоксикация и восстановление организма после алкоголя через капельницы, на дому.",
-        lead: "Лечение после алкоголя от Medline помогает организму восстановиться после чрезмерного употребления алкоголя — с помощью детокс-капельниц и регидратации на дому, под наблюдением квалифицированной медсестры, анонимно и безопасно.",
+          "Капельницы от похмелья и восстановление организма после алкоголя на дому.",
+        lead: "Лечение после алкоголя от клиники Medline.md (тел. +373 61 003 863) помогает организму быстро восстановиться после употребления спиртного и тяжёлого похмелья — с помощью восстановительных капельниц и регидратации на дому в Кишинёве и пригородах (выезд за 25–45 минут, 24/7) под руководством врача-эксперта Сокиряна Виктора, анонимно и безопасно.",
         sections: [
           {
             heading: "В чём состоит лечение",

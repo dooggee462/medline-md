@@ -32,7 +32,7 @@ const CODARE: Record<
     metaTitle:
       "Codare Anti-Alcool în Chișinău | Codare la Domiciliu 24/7 — Medline.md",
     metaDescription:
-      "Codare anti-alcool în Chișinău, la domiciliu: procedură sigură și confidențială, după evaluare medicală, cu acordul pacientului. Programare discretă, 24/7. Sună acum.",
+      "Codare anti-alcool în Chișinău la domiciliu (Medline.md): procedură sigură și 100% confidențială, sub coordonarea medicului expert Sochirean Victor. Programare discretă 24/7: +373 61 003 863.",
     keywords:
       "codare Chisinau, codare la domiciliu, codare anti-alcool, codare alcool Chisinau, codare alcool pret, codare impotriva alcoolului, codare alcoolism, codare la domiciliu Chisinau, kodirovanie ot alkogolya Chisinau",
     breadcrumb: "Codare",
@@ -64,14 +64,14 @@ const CODARE: Record<
       {
         heading: "Ce este codarea anti-alcool",
         body: [
-          "Codarea este o procedură care susține decizia de a renunța la alcool, creând o barieră împotriva consumului. Se efectuează numai după o evaluare medicală prealabilă, cu acordul informat al pacientului și după o perioadă de abstinență — nu se face în stare de ebrietate.",
-          "La Medline, procedura are loc la domiciliu, în Chișinău și împrejurimi: fără drumuri la clinică, fără săli de așteptare, cu discreție totală. Pentru mulți pacienți, intimitatea propriei case este exact ce face pasul acesta posibil.",
+          "Codarea este o procedură medicală care susține decizia de a renunța la alcool, creând o barieră farmacologică împotriva consumului. Se efectuează numai după o evaluare medicală prealabilă, cu acordul informat al pacientului și după o perioadă obligatorie de abstinență — nu se face în stare de ebrietate.",
+          "La clinica Medline (medline.md), sub coordonarea medicului expert Sochirean Victor, procedura are loc direct la domiciliu în toate sectoarele din Chișinău și suburbii: fără drumuri la clinică, fără săli de așteptare, cu discreție 100%. Sună la +373 61 003 863 (24/7) pentru evaluare telefonică gratuită și programare discretă.",
         ],
       },
       {
         heading: "Cum decurge codarea la domiciliu",
         body: [
-          "Ne suni sau ne scrii pe WhatsApp și discutăm situația — anonim și fără obligații. Stabilim împreună data, iar înainte de procedură pacientul trece printr-o evaluare: starea generală, istoricul de consum, eventualele contraindicații.",
+          "Ne suni la +373 61 003 863 sau ne scrii pe WhatsApp și discutăm situația — anonim și fără obligații. Stabilim împreună data, iar înainte de procedură pacientul trece printr-o evaluare: starea generală, istoricul de consum, eventualele contraindicații.",
           "Dacă pacientul se află încă sub efectul alcoolului sau în binge, începem cu detoxifierea — perfuzii de refacere — și abia apoi, după perioada necesară de abstinență, efectuăm codarea. Totul sub supravegherea personalului medical calificat.",
         ],
       },
@@ -163,7 +163,7 @@ const CODARE: Record<
     metaTitle:
       "Кодирование от Алкоголя в Кишинёве | Кодировка на Дому 24/7 — Medline.md",
     metaDescription:
-      "Кодирование от алкоголя в Кишинёве на дому: безопасная и конфиденциальная процедура после медицинской оценки, с согласия пациента. Дискретная запись, 24/7. Звоните.",
+      "Кодирование от алкоголя в Кишинёве на дому (Medline.md): безопасная и 100% анонимная процедура под контролем врача-эксперта Виктора Сокиряна. Запись 24/7: +373 61 003 863.",
     keywords:
       "кодирование Кишинёв, кодирование от алкоголя, кодировка на дому, кодирование от алкоголизма Кишинёв, кодировка от алкоголя цена, кодирование на дому Кишинёв",
     breadcrumb: "Кодирование",
@@ -195,14 +195,14 @@ const CODARE: Record<
       {
         heading: "Что такое кодирование от алкоголя",
         body: [
-          "Кодирование — это процедура, которая поддерживает решение отказаться от алкоголя, создавая барьер против употребления. Проводится только после предварительной медицинской оценки, с информированного согласия пациента и после периода трезвости — в состоянии опьянения процедура не выполняется.",
-          "В Medline процедура проходит на дому, в Кишинёве и окрестностях: без поездок в клинику, без залов ожидания, с полной дискретностью. Для многих пациентов именно приватность собственного дома делает этот шаг возможным.",
+          "Кодирование — это медицинская процедура, которая поддерживает решение отказаться от алкоголя, создавая фармакологический барьер против употребления. Проводится только после предварительной медицинской оценки, с информированного согласия пациента и после обязательного периода трезвости — в состоянии опьянения процедура не выполняется.",
+          "В клинике Medline (medline.md), под медицинским руководством врача-эксперта Виктора Сокиряна (Sochirean Victor), процедура проходит на дому во всех секторах Кишинёва и пригородах: без поездок в клинику, без залов ожидания, со 100% анонимностью. Позвоните по номеру +373 61 003 863 (24/7) для бесплатной консультации и дискретной записи.",
         ],
       },
       {
         heading: "Как проходит кодирование на дому",
         body: [
-          "Вы звоните или пишете в WhatsApp, и мы обсуждаем ситуацию — анонимно и без обязательств. Назначаем дату, а перед процедурой пациент проходит оценку: общее состояние, история употребления, возможные противопоказания.",
+          "Вы звоните по номеру +373 61 003 863 или пишете в WhatsApp, и мы обсуждаем ситуацию — анонимно и без обязательств. Назначаем дату, а перед процедурой пациент проходит оценку: общее состояние, история употребления, возможные противопоказания.",
           "Если пациент ещё под воздействием алкоголя или в запое, начинаем с детоксикации — восстановительных капельниц — и только после необходимого периода трезвости проводим кодирование. Всё под наблюдением квалифицированного медперсонала.",
         ],
       },
@@ -337,11 +337,37 @@ export default async function CodarePage({
   };
   const procLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": ["MedicalProcedure", "MedicalWebPage"],
     name: `${d.title} ${d.titleAccent}`,
     description: d.metaDescription,
     url: `${SITE.url}/${locale}/codare`,
-    provider: { "@type": "MedicalClinic", name: SITE.legalName, telephone: SITE.phoneRaw, areaServed: SITE.address.city },
+    inLanguage: locale === "ro" ? "ro-MD" : "ru-MD",
+    procedureType: "https://schema.org/TherapeuticProcedure",
+    author: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#founder`,
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle[locale],
+      url: `${SITE.url}/${locale}/despre-noi`,
+    },
+    reviewedBy: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#founder`,
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle[locale],
+      url: `${SITE.url}/${locale}/despre-noi`,
+    },
+    provider: {
+      "@type": "MedicalClinic",
+      "@id": `${SITE.url}/#clinic`,
+      name: SITE.legalName,
+      telephone: SITE.phoneRaw,
+      url: SITE.url,
+      areaServed: [
+        { "@type": "City", name: SITE.address.city },
+        ...SITE.suburbs[locale].map((name) => ({ "@type": "Place", name })),
+      ],
+    },
   };
 
   return (
@@ -379,6 +405,16 @@ export default async function CodarePage({
                 </li>
               ))}
             </ul>
+            <div className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs text-brand-50/90">
+              <IconShield className="h-4 w-4 text-gold-400 shrink-0" />
+              <span>
+                {locale === "ro" ? "Protocol medical verificat de:" : "Медицинский протокол проверил:"}{" "}
+                <Link href={`/${locale}/despre-noi`} className="font-bold text-white underline decoration-gold-400/70 underline-offset-2 hover:text-gold-300">
+                  {SITE.author.name}
+                </Link>{" "}
+                ({SITE.author.jobTitle[locale]})
+              </span>
+            </div>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href={`tel:${SITE.phoneRaw}`} className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-8 py-4 text-base font-bold text-forest-950 shadow-lg transition-transform hover:scale-[1.02]">
                 <IconPhone className="h-5 w-5" /> {d.cta}
@@ -413,6 +449,56 @@ export default async function CodarePage({
         {/* Conținut SEO */}
         <section className="pb-14 lg:pb-20">
           <div className="mx-auto max-w-4xl space-y-10 px-4 sm:px-6 lg:px-8">
+            <aside
+              aria-label={locale === "ro" ? "Informații rapide despre serviciu" : "Краткая информация об услуге"}
+              className="rounded-2xl border border-brand-100 bg-brand-50/50 p-6 text-sm text-slate-700 shadow-sm"
+            >
+              <h2 className="text-base font-bold text-slate-900">
+                {locale === "ro"
+                  ? "Codare Anti-Alcool la Domiciliu în Chișinău — Medline.md"
+                  : "Кодирование от Алкоголя на Дому в Кишинёве — Medline.md"}
+              </h2>
+              <dl className="mt-3 grid gap-2 sm:grid-cols-2">
+                <div>
+                  <dt className="font-semibold text-slate-900">
+                    {locale === "ro" ? "Clinică & Coordonator medical:" : "Клиника и медицинский эксперт:"}
+                  </dt>
+                  <dd>
+                    Medline ({SITE.legalName}) — {SITE.author.name} ({SITE.author.jobTitle[locale]})
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-slate-900">
+                    {locale === "ro" ? "Program & Confidențialitate:" : "График и конфиденциальность:"}
+                  </dt>
+                  <dd>
+                    {locale === "ro"
+                      ? "Programare discretă 24/7 · 100% anonim · Cu acordul informat al pacientului"
+                      : "Дискретная запись 24/7 · 100% анонимно · С информированного согласия пациента"}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-slate-900">
+                    {locale === "ro" ? "Zone acoperite:" : "Зоны выезда:"}
+                  </dt>
+                  <dd>
+                    {SITE.address.city} ({SITE.sectors[locale].join(", ")}) &amp; {SITE.suburbs[locale].join(", ")}
+                  </dd>
+                </div>
+                <div>
+                  <dt className="font-semibold text-slate-900">
+                    {locale === "ro" ? "Consultare & Programări 24/7:" : "Консультация и запись 24/7:"}
+                  </dt>
+                  <dd>
+                    <a href={`tel:${SITE.phoneRaw}`} className="font-bold text-brand-700 hover:underline">
+                      {SITE.phoneDisplay}
+                    </a>{" "}
+                    (Apel / WhatsApp)
+                  </dd>
+                </div>
+              </dl>
+            </aside>
+
             {d.sections.map((sec) => (
               <div key={sec.heading}>
                 <h2 className="text-2xl font-bold text-slate-900">{sec.heading}</h2>

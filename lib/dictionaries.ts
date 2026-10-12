@@ -204,9 +204,9 @@ export type Dictionary = {
 const ro: Dictionary = {
   meta: {
     title:
-      "Medline.md — Asistență Medicală la Domiciliu în Chișinău | Detoxifiere & Îngrijire 24/7",
+      "Medline.md — Asistență Medicală la Domiciliu în Chișinău | Detoxifiere & Perfuzii 24/7",
     description:
-      "Asistență medicală la domiciliu în Chișinău: detoxifiere post-alcool, codare, perfuzii, injecții, îngrijirea bolnavilor și consult medical. Discret, asistente calificate, 24/7.",
+      "Asistență medicală la domiciliu în Chișinău (Medline.md): detoxifiere post-alcool, codare, perfuzii, injecții și îngrijire sub coordonarea medicului expert Sochirean Victor. Sosire 25-45 min, 24/7: +373 61 003 863.",
     keywords:
       "asistenta medicala la domiciliu, asistenta medicala la domiciliu Chisinau, sora medicala la domiciliu, medic la domiciliu Chisinau, detoxifiere post-alcool Chisinau, detoxifiere la domiciliu, dezalcoolizare Chisinau, codare la domiciliu, codare anti-alcool, codare alcool Chisinau, iesire din binge, perfuzii la domiciliu, perfuzie la domiciliu, perfuzie vitamine, perfuzie glucoza, vitaminoterapie la domiciliu, tratament post-alcool, tratament mahmureala, injectii la domiciliu, injectie intramusculara la domiciliu, injectie intravenoasa la domiciliu, ingrijire bolnavi la domiciliu Chisinau, ingrijire varstnici la domiciliu, ingrijire pacienti imobilizati, escare ingrijire, pansamente la domiciliu, ingrijire plagi la domiciliu, consult medical domiciliu, asistenta medicala non stop, servicii medicale 24/7 Chisinau, chemare asistenta la domiciliu, ajutor medical acasa Chisinau, servicii medicale private Moldova",
     ogAlt: "Medline — asistență medicală la domiciliu în Chișinău",
@@ -537,16 +537,16 @@ const ro: Dictionary = {
       "Prețul depinde de serviciu și de specificul cazului. Vi-l spunem exact la telefon, înainte de vizită, fără costuri ascunse.",
     timeAnswer:
       "Lucrăm non-stop, inclusiv noaptea, în weekend și de sărbători. În Chișinău ajungem de obicei în 25-45 de minute de la apel.",
-    areaAnswer: "Venim în tot Chișinăul, precum și în Ciorescu, Tohatin, Ialoveni, Vatra, Sîngera, Bubuieci și Băcioi.",
+    areaAnswer: "Venim în toate sectoarele din Chișinău (Centru, Botanica, Buiucani, Rîșcani, Ciocana, Telecentru) și în suburbii: Durlești, Stăuceni, Codru, Ialoveni, Dumbrava, Trușeni, Băcioi, Ciorescu, Tohatin, Vatra, Sîngera și Bubuieci.",
     urgentAnswer:
       "Dacă viața este în pericol (durere puternică în piept, pierderea cunoștinței, respirație grea, sângerare abundentă), sunați imediat la 112. Pentru alte situații urgente, sunați-ne direct:",
     call112: "Sună la 112",
-    formIntro: "Vă sunăm în câteva minute. Dacă doriți, spuneți-ne și zona și ce vă îngrijorează:",
+    formIntro: "Lăsați numele și numărul de telefon — vă sunăm în 2-3 minute:",
     zone: "Sector sau localitate (opțional)",
     message: "Ce vă îngrijorează? (opțional)",
     send: "Sunați-mă",
     sending: "Se trimite…",
-    consent: "Datele se folosesc doar ca să vă contactăm.",
+    consent: "Datele sunt 100% confidențiale și se folosesc doar ca să vă contactăm.",
     thanks: "Mulțumim, {name}! Am primit cererea și vă sunăm în câteva minute.",
     failed:
       "Nu am reușit să trimitem cererea. Scrieți-ne pe WhatsApp sau sunați, răspundem imediat.",
@@ -556,9 +556,9 @@ const ro: Dictionary = {
 const ru: Dictionary = {
   meta: {
     title:
-      "Medline.md — Медицинская помощь на дому в Кишинёве | Вывод из запоя & Уход 24/7",
+      "Medline.md — Медицинская помощь на дому в Кишинёве | Вывод из запоя & Капельницы 24/7",
     description:
-      "Медицинская помощь на дому в Кишинёве: вывод из запоя, кодирование, капельницы, инъекции, уход за больными и осмотр. Анонимно, квалифицированные медсёстры, 24/7.",
+      "Медицинская помощь на дому в Кишинёве (Medline.md): вывод из запоя, кодирование, капельницы, инъекции и уход под руководством врача-эксперта Виктора Сокиряна. Выезд 25-45 мин, 24/7: +373 61 003 863.",
     keywords:
       "медицинская помощь на дому, медпомощь на дому Кишинёв, медсестра на дом, медсестра на дом Кишинёв, врач на дом, врач на дом Кишинёв, вывод из запоя Кишинёв, вывод из запоя на дому, кодирование от алкоголя, кодирование на дому, кодирование от алкоголя Кишинёв, детоксикация после алкоголя, детокс на дому, капельницы на дому, капельница на дому Кишинёв, витаминная капельница, капельница с глюкозой, витаминотерапия на дому, лечение похмелья, лечение после алкоголя, инъекции на дому, внутримышечная инъекция на дому, внутривенная инъекция на дому, уход за больными на дому Кишинёв, уход за пожилыми на дому, уход за лежачими больными, пролежни уход, перевязки на дому, обработка ран на дому, осмотр врача на дому, медпомощь круглосуточно, медицинские услуги 24/7 Кишинёв, вызов медсестры на дом, помощь на дому Кишинёв, частные медицинские услуги Молдова",
     ogAlt: "Medline — медицинская помощь на дому в Кишинёве",
@@ -890,16 +890,16 @@ const ru: Dictionary = {
       "Цена зависит от услуги и особенностей случая. Мы точно назовём её по телефону до визита, без скрытых платежей.",
     timeAnswer:
       "Работаем круглосуточно, включая ночь, выходные и праздники. По Кишинёву обычно приезжаем за 25-45 минут после звонка.",
-    areaAnswer: "Выезжаем по всему Кишинёву, а также в Чореску, Тохатин, Яловены, Ватру, Сынджеру, Бубуечь и Бачой.",
+    areaAnswer: "Выезжаем во все сектора Кишинёва (Центр, Ботаника, Буюканы, Рышкановка, Чеканы, Телецентр) и пригороды: Дурлешты, Ставчены, Кодру, Яловены, Думбрава, Трушены, Бачой, Чореску, Тохатин, Ватру, Сынджеру и Бубуечь.",
     urgentAnswer:
       "Если есть угроза жизни (сильная боль в груди, потеря сознания, тяжёлое дыхание, обильное кровотечение), немедленно звоните 112. В других срочных случаях звоните нам напрямую:",
     call112: "Позвонить 112",
-    formIntro: "Перезвоним через несколько минут. Если хотите, укажите район и что беспокоит:",
+    formIntro: "Оставьте имя и номер телефона — перезвоним через 2-3 минуты:",
     zone: "Сектор или населённый пункт (по желанию)",
     message: "Что беспокоит? (по желанию)",
     send: "Перезвоните мне",
     sending: "Отправляем…",
-    consent: "Данные используются только для связи с вами.",
+    consent: "Данные 100% конфиденциальны и используются только для связи с вами.",
     thanks: "Спасибо, {name}! Заявка получена, перезвоним через несколько минут.",
     failed:
       "Не удалось отправить заявку. Напишите нам в WhatsApp или позвоните, ответим сразу.",

@@ -55,6 +55,25 @@ export function BookingForm({
     e.preventDefault();
     if (!validate()) return;
     trackFormSubmit();
+    try {
+      fetch("/api/chat", {
+        method: "POST",
+        keepalive: true,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name.trim(),
+          phone: form.phone.trim(),
+          service: form.service,
+          zone: form.date,
+          message: form.message,
+          kind: "callback",
+          locale,
+          page: location.pathname,
+        }),
+      }).catch(() => {});
+    } catch {
+      /* non-blocking */
+    }
     window.open(whatsappLink(buildMessage()), "_blank", "noopener,noreferrer");
   }
 

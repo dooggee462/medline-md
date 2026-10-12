@@ -39,18 +39,18 @@ export function ChatBot({
   const [menu, setMenu] = useState(false);
   const [msgs, setMsgs] = useState<Msg[]>([
     { from: "bot", text: t.greeting },
-    { from: "bot", text: t.intro },
+    { from: "bot", text: t.ask },
   ]);
   const [typing, setTyping] = useState(false);
   const [service, setService] = useState<ChatService | null>(null);
-  /** contact = nume + telefon (obligatoriu, la început); callback = zonă + mesaj */
-  const [form, setForm] = useState<"contact" | "callback" | null>("contact");
+  const [form, setForm] = useState<"contact" | "callback" | null>(null);
   const [contact, setContact] = useState<{ name: string; phone: string } | null>(null);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const box = useRef<HTMLDivElement>(null);
 
-  const call: Action = { label: t.callNow, href: `tel:${SITE.phoneRaw}` };
+  const call: Action = { label: `${t.callNow} (${SITE.phoneDisplay})`, href: `tel:${SITE.phoneRaw}` };
+  const waAction: Action = { label: t.writeWhatsapp, href: whatsappLink(dict.booking.waMessageIntro) };
   const back: Action = { label: t.back, step: "menu" };
   const callback: Action = { label: t.callback, step: "form" };
   const mainMenu: Action[] = [
@@ -60,8 +60,9 @@ export function ChatBot({
     { label: t.area, step: "area" },
     { label: t.urgent, step: "urgent" },
     callback,
+    call,
   ];
-  const [actions, setActions] = useState<Action[]>([]);
+  const [actions, setActions] = useState<Action[]>(mainMenu);
 
   useEffect(() => {
     box.current?.scrollTo({ top: box.current.scrollHeight });
@@ -88,7 +89,7 @@ export function ChatBot({
       setMsgs((m) => [...m, ...botTexts.map((text) => ({ from: "bot" as const, text }))]);
       setActions(next);
       setForm(nextForm);
-    }, 450);
+    }, 350);
   }
 
   function choose(a: Extract<Action, { step: Step }>) {
@@ -104,15 +105,17 @@ export function ChatBot({
         setService(a.service!);
         return reply(a.label, [a.service!.short, t.serviceInfo], [
           callback,
+          call,
+          waAction,
           { label: t.readMore, href: a.service!.href, internal: true },
           back,
         ]);
       case "price":
-        return reply(a.label, [t.priceAnswer], [callback, call, back]);
+        return reply(a.label, [t.priceAnswer], [callback, call, waAction, back]);
       case "time":
-        return reply(a.label, [t.timeAnswer], [callback, back]);
+        return reply(a.label, [t.timeAnswer], [callback, call, waAction, back]);
       case "area":
-        return reply(a.label, [t.areaAnswer], [callback, back]);
+        return reply(a.label, [t.areaAnswer], [callback, call, waAction, back]);
       case "urgent":
         return reply(a.label, [t.urgentAnswer], [{ label: t.call112, href: "tel:112" }, call, back]);
       case "form":
@@ -123,27 +126,35 @@ export function ChatBot({
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(e.currentTarget)) as Record<string, string>;
-    const kind = contact ? "callback" : "contact";
-    const who = contact ?? { name: data.name.trim(), phone: data.phone.trim() };
+    const who = {
+      name: (data.name ?? contact?.name ?? "").trim(),
+      phone: (data.phone ?? contact?.phone ?? "").trim(),
+    };
     if (!who.name) return setError(dict.booking.required);
     if (who.phone.replace(/\D/g, "").length < 6) return setError(dict.booking.invalidPhone);
     setError("");
     setSending(true);
 
-    const svc = kind === "callback" ? service?.name : undefined;
+    const svc = service?.name;
     let ok = false;
     try {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, ...who, kind, service: svc ?? "", locale, page: location.pathname }),
+        body: JSON.stringify({
+          ...data,
+          ...who,
+          kind: "callback",
+          service: svc ?? "",
+          locale,
+          page: location.pathname,
+        }),
       });
       ok = res.ok;
     } catch {
       /* fără rețea: tratat ca eșec mai jos */
     }
     setSending(false);
-    // și la eșec: omul merge mai departe, iar „Vreau să mă sunați" reîncearcă
     setContact(who);
 
     const details = [who.name, who.phone, svc, data.zone, data.message].filter(Boolean);
@@ -155,11 +166,9 @@ export function ChatBot({
         call,
         back,
       ]);
-    } else if (kind === "contact") {
-      trackChatLead();
-      reply(details.join(" · "), [t.welcome.replace("{name}", who.name)], mainMenu);
     } else {
-      reply(details.join(" · "), [t.thanks.replace("{name}", who.name)], [back]);
+      trackChatLead();
+      reply(details.join(" · "), [t.thanks.replace("{name}", who.name)], [call, back]);
     }
   }
 
@@ -234,17 +243,27 @@ export function ChatBot({
 
             {form && (
               <form key={form} onSubmit={submit} noValidate className="space-y-2 rounded-2xl bg-white p-3 shadow-sm">
-                {form === "contact" ? (
-                  <>
-                    <input name="name" placeholder={`${dict.booking.name} *`} autoComplete="name" maxLength={60} required className={input} />
-                    <input name="phone" type="tel" placeholder={`${dict.booking.phone} * (+373 ...)`} autoComplete="tel" maxLength={30} required className={input} />
-                  </>
-                ) : (
-                  <>
-                    <input name="zone" placeholder={t.zone} maxLength={80} className={input} />
-                    <textarea name="message" placeholder={t.message} rows={2} maxLength={500} className={input} />
-                  </>
-                )}
+                <input
+                  name="name"
+                  defaultValue={contact?.name ?? ""}
+                  placeholder={`${dict.booking.name} *`}
+                  autoComplete="name"
+                  maxLength={60}
+                  required
+                  className={input}
+                />
+                <input
+                  name="phone"
+                  type="tel"
+                  defaultValue={contact?.phone ?? ""}
+                  placeholder={`${dict.booking.phone} * (+373 ...)`}
+                  autoComplete="tel"
+                  maxLength={30}
+                  required
+                  className={input}
+                />
+                <input name="zone" placeholder={t.zone} maxLength={80} className={input} />
+                <textarea name="message" placeholder={t.message} rows={2} maxLength={500} className={input} />
                 {/* capcană pentru roboții de spam: oamenii nu văd câmpul */}
                 <input name="website" tabIndex={-1} autoComplete="off" aria-hidden className="hidden" />
                 {error && <p className="text-xs text-red-600">{error}</p>}
@@ -252,7 +271,7 @@ export function ChatBot({
                   disabled={sending}
                   className="w-full rounded-lg bg-brand-600 py-2.5 text-sm font-semibold text-white hover:bg-brand-700 disabled:opacity-60"
                 >
-                  {sending ? t.sending : form === "contact" ? t.start : t.send}
+                  {sending ? t.sending : t.send}
                 </button>
                 <Link href={`/${locale}/confidentialitate`} className="block text-center text-[11px] text-slate-400 underline">
                   {t.consent}

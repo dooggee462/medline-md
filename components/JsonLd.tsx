@@ -23,10 +23,11 @@ export function JsonLd({ locale }: { locale: Locale }) {
     description: dict.meta.description,
     url,
     telephone: SITE.phoneRaw,
+    email: SITE.email,
     image: `${SITE.url}/og-image.png`,
     logo: `${SITE.url}/icon.svg`,
     priceRange: "$$",
-    medicalSpecialty: "Nursing",
+    founder: { "@id": `${SITE.url}/#founder` },
     // Serviciu la domiciliu (fără sediu cu primire pacienți) — fără adresă fizică
     // Chișinău + suburbiile deservite — semnal de acoperire pentru căutările locale
     areaServed: [
@@ -73,6 +74,12 @@ export function JsonLd({ locale }: { locale: Locale }) {
       bestRating: "5",
       worstRating: "1",
     },
+    review: dict.reviews.items.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      reviewBody: r.text,
+      reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    })),
   };
 
   const faq = {

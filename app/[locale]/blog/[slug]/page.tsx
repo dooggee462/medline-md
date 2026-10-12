@@ -45,12 +45,18 @@ export async function generateMetadata({
   const post = await getBlogPost(slug, locale);
   if (!post) return {};
   const path = `/${locale}/blog/${slug}`;
+  // Clipurile scurte (-video) au ~30 cuvinte și titluri similare cu serviciile:
+  // rămân accesibile pe site, dar nu se indexează separat ca să nu canibalizeze serviciile.
+  const isThinVideo = post.roSlug.endsWith("-video");
   return {
     title: post.metaTitle.includes("Medline")
       ? post.metaTitle
       : `${post.metaTitle} | Medline.md`,
     description: post.metaDescription,
     keywords: post.keywords,
+    ...(isThinVideo
+      ? { robots: { index: false, follow: true } }
+      : {}),
     alternates: {
       canonical: path,
       languages: {
@@ -82,7 +88,7 @@ export default async function ArticlePage({
   if (!post) notFound();
   const dict = getDictionary(locale);
   const related = (await getBlogList(locale))
-    .filter((b) => b.slug !== post.slug)
+    .filter((b) => b.slug !== post.slug && !b.roSlug.endsWith("-video"))
     .slice(0, 3);
   const dateLabel = new Date(post.date).toLocaleDateString(
     locale === "ro" ? "ro-RO" : "ru-RU",
@@ -91,17 +97,32 @@ export default async function ArticlePage({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": ["Article", "MedicalWebPage"],
     headline: post.title,
     description: post.excerpt,
     datePublished: post.date,
     dateModified: post.date,
     inLanguage: locale,
-    image: post.cover ? `${SITE.url}${post.cover}` : undefined,
+    image: post.cover ? `${SITE.url}${post.cover}` : `${SITE.url}/og-image.png`,
     mainEntityOfPage: `${SITE.url}/${locale}/blog/${slug}`,
-    author: { "@type": "Organization", name: SITE.legalName },
+    author: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#founder`,
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle[locale],
+      url: `${SITE.url}/${locale}/despre-noi`,
+      affiliation: { "@type": "MedicalOrganization", "@id": `${SITE.url}/#organization`, name: SITE.legalName },
+    },
+    reviewedBy: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#founder`,
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle[locale],
+      url: `${SITE.url}/${locale}/despre-noi`,
+    },
     publisher: {
-      "@type": "Organization",
+      "@type": "MedicalOrganization",
+      "@id": `${SITE.url}/#organization`,
       name: SITE.legalName,
       logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` },
     },
@@ -128,6 +149,14 @@ export default async function ArticlePage({
             <h1 className="mt-3 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
               {post.title}
             </h1>
+            <p className="mt-4 text-sm text-slate-600">
+              {locale === "ro" ? "Autor & verificare medicală: " : "Автор и медицинская проверка: "}
+              <Link href={`/${locale}/despre-noi`} className="font-semibold text-brand-700 hover:underline">
+                {SITE.author.name}
+              </Link>
+              {" — "}
+              {SITE.author.jobTitle[locale]}
+            </p>
           </div>
         </section>
 
@@ -152,6 +181,24 @@ export default async function ArticlePage({
               }
               return <p key={i} className="text-lg leading-relaxed text-slate-700"><RichText text={b.text} /></p>;
             })}
+
+            {/* Caseta de autoritate medicală și contact direct (E-E-A-T + RAG pentru AI) */}
+            <aside className="mt-8 rounded-2xl border border-brand-100 bg-brand-50/50 p-6 text-sm leading-relaxed text-slate-700">
+              <p className="font-bold text-slate-900">
+                {locale === "ro"
+                  ? `Asistență medicală la domiciliu în Chișinău — ${SITE.legalName}`
+                  : `Медицинская помощь на дому в Кишинёве — ${SITE.legalName}`}
+              </p>
+              <p className="mt-1.5">
+                {locale === "ro"
+                  ? `Articol verificat de ${SITE.author.name} (${SITE.author.jobTitle.ro}). Echipa ${SITE.legalName} (${SITE.company.shortName}) intervine la domiciliu 24/7 în Chișinău și suburbii (${SITE.areaServed.join(", ")}), cu timp de sosire de 25–45 minute. Pentru programări sau urgențe la domiciliu (perfuzii, injecții, detoxifiere post-alcool, codare, îngrijire bolnavi), sunați sau scrieți pe WhatsApp/Viber la `
+                  : `Статья проверена: ${SITE.author.name} (${SITE.author.jobTitle.ru}). Команда ${SITE.legalName} (${SITE.company.shortName}) выезжает на дом 24/7 по Кишинёву и пригородам (время приезда 25–45 минут). Для вызова на дом (капельницы, уколы, вывод из запоя, детоксикация, кодирование, уход за больными) звоните или пишите в WhatsApp/Viber: `}
+                <a href={`tel:${SITE.phoneRaw}`} className="font-bold text-brand-700 hover:underline">
+                  {SITE.phone}
+                </a>
+                .
+              </p>
+            </aside>
 
             <div className="flex flex-col gap-6 border-t border-slate-100 pt-8 sm:flex-row sm:items-center sm:justify-between">
               <Link href={`/${locale}/blog`} className="text-sm font-semibold text-brand-700 hover:underline">

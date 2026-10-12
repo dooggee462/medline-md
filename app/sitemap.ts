@@ -15,8 +15,8 @@ const BUILD_DATE = new Date();
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = BUILD_DATE;
   const entries: MetadataRoute.Sitemap = [];
-  // Articolele își poartă data reală de publicare
-  const posts = await getBlogList("ro");
+  // Articolele își poartă data reală de publicare (fără clipurile scurte -video, marcate noindex)
+  const posts = (await getBlogList("ro")).filter((p) => !p.roSlug.endsWith("-video"));
 
   // Căi statice (relative la locale)
   const staticPaths = ["", "/servicii", "/detoxifiere", "/codare", "/preturi", "/despre-noi", "/blog", "/contact", "/confidentialitate", "/termeni"];
@@ -32,6 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           languages: {
             ro: `${SITE.url}/ro${p}`,
             ru: `${SITE.url}/ru${p}`,
+            "x-default": `${SITE.url}/ro${p}`,
           },
         },
       });
@@ -51,6 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           languages: {
             ro: `${SITE.url}/ro/servicii/${s.slug}`,
             ru: `${SITE.url}/ru/servicii/${localizeSlug(s.slug, "ru")}`,
+            "x-default": `${SITE.url}/ro/servicii/${s.slug}`,
           },
         },
       });
@@ -67,6 +69,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           languages: {
             ro: `${SITE.url}/ro/blog/${p.roSlug}`,
             ru: `${SITE.url}/ru/blog/${localizeSlug(p.roSlug, "ru")}`,
+            "x-default": `${SITE.url}/ro/blog/${p.roSlug}`,
           },
         },
       });

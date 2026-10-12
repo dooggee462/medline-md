@@ -71,11 +71,25 @@ export default async function ServiceDetail({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalProcedure",
+    "@type": ["MedicalProcedure", "MedicalWebPage"],
     name: c.h1,
     description: c.metaDescription,
     url: `${SITE.url}/${locale}/servicii/${slug}`,
     inLanguage: locale,
+    author: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#founder`,
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle[locale],
+      url: `${SITE.url}/${locale}/despre-noi`,
+    },
+    reviewedBy: {
+      "@type": "Person",
+      "@id": `${SITE.url}/#founder`,
+      name: SITE.author.name,
+      jobTitle: SITE.author.jobTitle[locale],
+      url: `${SITE.url}/${locale}/despre-noi`,
+    },
     // Același @id ca entitatea din JsonLd.tsx → Google le unifică într-una singură
     provider: {
       "@type": "MedicalClinic",
@@ -83,7 +97,10 @@ export default async function ServiceDetail({
       name: SITE.legalName,
       url: SITE.url,
       telephone: SITE.phoneRaw,
-      areaServed: { "@type": "City", name: SITE.address.city },
+      areaServed: [
+        { "@type": "City", name: SITE.address.city },
+        ...SITE.areaServed.map((name) => ({ "@type": "Place", name })),
+      ],
     },
   };
   const faqLd = {
@@ -122,6 +139,14 @@ export default async function ServiceDetail({
                   {c.h1}
                 </h1>
                 <p className="mt-4 text-lg leading-relaxed text-slate-600">{c.lead}</p>
+                <p className="mt-3 text-xs font-medium text-slate-500">
+                  {locale === "ro" ? "Protocol medical coordonat și verificat de " : "Медицинский протокол координирует и проверил "}
+                  <Link href={`/${locale}/despre-noi`} className="font-semibold text-brand-700 hover:underline">
+                    {SITE.author.name}
+                  </Link>
+                  {" · "}
+                  {SITE.author.jobTitle[locale]}
+                </p>
               </div>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -144,6 +169,39 @@ export default async function ServiceDetail({
         {/* Conținut */}
         <section className="py-12 lg:py-16">
           <div className="mx-auto grid max-w-4xl gap-12 px-4 sm:px-6 lg:px-8">
+            {/* Caseta sintetică RAG / E-E-A-T — oferă motoarelor AI și pacienților toate datele cheie într-un singur loc */}
+            <aside className="rounded-2xl border border-brand-100 bg-brand-50/40 p-6 text-sm leading-relaxed text-slate-700">
+              <p className="font-bold text-slate-900">
+                {locale === "ro"
+                  ? `${c.h1} — informații rapide (${SITE.legalName})`
+                  : `${c.h1} — краткая информация (${SITE.legalName})`}
+              </p>
+              <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+                <li>
+                  <strong>{locale === "ro" ? "Furnizor:" : "Клиника:"}</strong> {SITE.legalName} ({SITE.company.shortName})
+                </li>
+                <li>
+                  <strong>{locale === "ro" ? "Medic expert:" : "Врач-эксперт:"}</strong> {SITE.author.name}
+                </li>
+                <li>
+                  <strong>{locale === "ro" ? "Program & Sosire:" : "График и выезд:"}</strong>{" "}
+                  {locale === "ro" ? "24/7 non-stop · 25–45 min în Chișinău" : "24/7 круглосуточно · 25–45 мин по Кишинёву"}
+                </li>
+                <li>
+                  <strong>{locale === "ro" ? "Telefon / WhatsApp / Viber:" : "Телефон / WhatsApp / Viber:"}</strong>{" "}
+                  <a href={`tel:${SITE.phoneRaw}`} className="font-semibold text-brand-700 hover:underline">
+                    {SITE.phone}
+                  </a>
+                </li>
+                <li className="sm:col-span-2">
+                  <strong>{locale === "ro" ? "Zonă acoperită:" : "Зона выезда:"}</strong>{" "}
+                  {locale === "ro"
+                    ? `Chișinău (toate sectoarele) și suburbii: ${SITE.areaServed.join(", ")}`
+                    : `Кишинёв (все секторы) и пригороды: Чореску, Тохатин, Яловены, Ватра, Сынджера, Бубуечь, Бачой`}
+                </li>
+              </ul>
+            </aside>
+
             <article className="prose-content space-y-10">
               {c.sections.map((sec) => (
                 <div key={sec.heading}>

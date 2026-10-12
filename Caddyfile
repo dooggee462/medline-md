@@ -13,7 +13,11 @@
 	email contact@medline.md
 }
 
-medline.md, www.medline.md {
+www.medline.md {
+	redir https://medline.md{uri} permanent
+}
+
+medline.md {
 	encode zstd gzip
 	reverse_proxy web:3000
 }
