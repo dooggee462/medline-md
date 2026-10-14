@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { getSession, staffNames } from "@/lib/auth";
+import { getSession, assignableNames } from "@/lib/auth";
 import { getCase, historyFor } from "@/lib/cases";
 import { CaseForm } from "@/components/admin/CaseForm";
 import { saveCaseAction, deleteCaseAction } from "../actions";
@@ -47,7 +47,7 @@ export default async function EditCasePage({
       <CaseForm
         action={saveCaseAction}
         session={session}
-        staff={staffNames()}
+        staff={assignableNames()}
         value={item}
         history={history}
         error={error}

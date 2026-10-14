@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { getSession, staffNames } from "@/lib/auth";
+import { getSession, assignableNames } from "@/lib/auth";
 import { SelectAll } from "@/components/admin/SelectAll";
 import { ConfirmButton } from "@/components/admin/ConfirmButton";
 import { logoutAction } from "../actions";
@@ -86,7 +86,7 @@ export default async function RegistryPage({
         {session.role === "admin" && (
           <select name="asistent" defaultValue={sp.asistent ?? ""} className={field} aria-label="Asistent">
             <option value="">Toți asistenții</option>
-            {staffNames().map((s) => (
+            {assignableNames().map((s) => (
               <option key={s} value={s}>
                 {s}
               </option>

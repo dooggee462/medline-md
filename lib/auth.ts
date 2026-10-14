@@ -41,9 +41,13 @@ function accounts(): Map<string, Account> {
   return map;
 }
 
-/** Numele afișate ale asistenților — pentru lista de repartizare din registru */
-export function staffNames(): string[] {
-  return [...accounts().values()].filter((a) => a.role === "asistent").map((a) => a.name);
+/**
+ * Numele cărora li se poate repartiza un caz: administratorul (care merge și
+ * el la pacienți) și asistenții, în ordinea din configurare.
+ */
+export function assignableNames(): string[] {
+  const all = [...accounts().values()];
+  return [...all.filter((a) => a.role === "admin"), ...all.filter((a) => a.role === "asistent")].map((a) => a.name);
 }
 
 export function displayName(user: string): string {
