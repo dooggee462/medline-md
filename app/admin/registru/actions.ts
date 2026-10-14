@@ -4,7 +4,8 @@ import crypto from "crypto";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
 import { getSession, type Session } from "@/lib/auth";
-import { getCase, removeCase, saveCase, setStatus, today, STATUSES, type Status } from "@/lib/cases";
+import { getCase, removeCase, saveCase, setStatus, today, STATUSES, type Case, type Status } from "@/lib/cases";
+import { sendTelegram } from "@/lib/telegram";
 
 async function requireSession(): Promise<Session> {
   const session = await getSession();
@@ -18,6 +19,24 @@ function allowed(session: Session, assignee: string): boolean {
 }
 
 const text = (fd: FormData, key: string, max = 200) => String(fd.get(key) || "").trim().slice(0, max);
+
+/** Anunțul din grupul de Telegram: tot ce îi trebuie asistentului ca să plece */
+function announcement(c: Case, title: string): string {
+  return [
+    `${title} ${c.no}`,
+    "",
+    `👤 ${c.patient}${c.age ? `, ${c.age} ani` : ""}`,
+    c.phone ? `📞 ${c.phone}` : null,
+    c.address || c.area ? `📍 ${[c.area, c.address].filter(Boolean).join(", ")}` : null,
+    c.service ? `🩺 ${c.service}` : null,
+    `🕐 ${c.date}${c.time ? ` ${c.time}` : ""}`,
+    `👩‍⚕️ ${c.assignee || "nerepartizat"}`,
+    c.contact ? `☎️ contact: ${c.contact}` : null,
+    c.notes ? `📝 ${c.notes}` : null,
+  ]
+    .filter((l) => l !== null)
+    .join("\n");
+}
 
 export async function saveCaseAction(formData: FormData) {
   const session = await requireSession();
@@ -57,6 +76,18 @@ export async function saveCaseAction(formData: FormData) {
     },
     session.name,
   );
+
+  /*
+   * Grupul de Telegram primește cazul când e creat și când trece la alt
+   * asistent, ca omul să aibă adresa și ora fără să mai sune pe nimeni.
+   * Dacă Telegram nu răspunde, cazul rămâne salvat: doar anunțul lipsește.
+   */
+  const saved = await getCase(id);
+  if (saved) {
+    if (!existing) await sendTelegram(announcement(saved, "🗂 Caz nou"));
+    else if (existing.assignee !== saved.assignee && saved.assignee)
+      await sendTelegram(announcement(saved, "🔁 Caz repartizat"));
+  }
 
   revalidatePath("/admin/registru");
   redirect("/admin/registru");

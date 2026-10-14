@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { cleanPath } from "@/lib/leads";
+import { sendTelegram } from "@/lib/telegram";
 
 /*
  * Datele din chat ajung la clinică pe Telegram: întâi numele și telefonul
@@ -81,16 +82,7 @@ export async function POST(req: Request) {
     .filter((l) => l !== null)
     .join("\n");
 
-  try {
-    const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ chat_id: chatId, text }),
-      signal: AbortSignal.timeout(8000),
-    });
-    if (!res.ok) throw new Error(`${res.status} ${await res.text()}`);
-  } catch (e) {
-    console.error("[chat] Telegram nu a primit cererea:", e);
+  if (!(await sendTelegram(text))) {
     return NextResponse.json({ ok: false }, { status: 502 });
   }
 
