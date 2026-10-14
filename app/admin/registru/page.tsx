@@ -2,8 +2,9 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession, staffNames } from "@/lib/auth";
 import { SelectAll } from "@/components/admin/SelectAll";
+import { ConfirmButton } from "@/components/admin/ConfirmButton";
 import { logoutAction } from "../actions";
-import { setStatusAction } from "./actions";
+import { deleteCaseAction, deleteManyAction, setStatusAction } from "./actions";
 import {
   AREAS,
   STATUSES,
@@ -165,6 +166,13 @@ export default async function RegistryPage({
             >
               ⤓ Excel
             </button>
+            <ConfirmButton
+              formAction={deleteManyAction}
+              message="Ștergi definitiv cazurile bifate? Nu se mai pot recupera."
+              className="rounded-lg border border-red-200 px-4 py-2 text-sm font-semibold text-red-600 hover:bg-red-50"
+            >
+              Șterge bifate
+            </ConfirmButton>
           </div>
         </form>
       )}
@@ -297,6 +305,15 @@ function CaseRow({ item, admin }: { item: Case; admin: boolean }) {
         <button className="rounded-lg border border-slate-200 px-2.5 py-1 text-xs font-semibold text-slate-600 hover:bg-slate-50">
           Salvează statusul
         </button>
+        {admin && (
+          <ConfirmButton
+            formAction={deleteCaseAction}
+            message={`Ștergi definitiv cazul ${item.no} (${item.patient})? Nu se mai poate recupera.`}
+            className="rounded-lg border border-red-200 px-2.5 py-1 text-xs font-semibold text-red-600 hover:bg-red-50"
+          >
+            Șterge
+          </ConfirmButton>
+        )}
         {admin && item.source && <span className="ml-auto text-xs text-slate-400">sursa: {item.source}</span>}
       </form>
     </li>

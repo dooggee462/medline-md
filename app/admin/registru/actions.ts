@@ -75,6 +75,15 @@ export async function setStatusAction(formData: FormData) {
   redirect("/admin/registru");
 }
 
+/** Șterge cazurile bifate în listă */
+export async function deleteManyAction(formData: FormData) {
+  const session = await requireSession();
+  if (session.role !== "admin") redirect("/admin/registru");
+  for (const id of formData.getAll("id").map(String)) await removeCase(id);
+  revalidatePath("/admin/registru");
+  redirect("/admin/registru");
+}
+
 export async function deleteCaseAction(formData: FormData) {
   const session = await requireSession();
   if (session.role !== "admin") redirect("/admin/registru"); // ștergerea rămâne la administrator
