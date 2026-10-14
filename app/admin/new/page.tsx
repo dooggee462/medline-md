@@ -1,11 +1,13 @@
 import { redirect } from "next/navigation";
-import { isAuthenticated } from "@/lib/auth";
+import { getSession } from "@/lib/auth";
 import { PostForm } from "@/components/admin/PostForm";
 
 export const dynamic = "force-dynamic";
 
 export default async function NewPostPage() {
-  if (!(await isAuthenticated())) redirect("/admin/login");
+  const session = await getSession();
+  if (!session) redirect("/admin/login");
+  if (session.role !== "admin") redirect("/admin/registru");
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
       <a href="/admin" className="text-sm font-medium text-slate-500 hover:text-brand-700">← Înapoi</a>

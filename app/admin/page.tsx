@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { isAuthenticated } from "@/lib/auth";
+import { getSession } from "@/lib/auth";
 import { readPosts } from "@/lib/posts";
 import { logoutAction, deletePostAction } from "./actions";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminDashboard() {
-  if (!(await isAuthenticated())) redirect("/admin/login");
+  const session = await getSession();
+  if (!session) redirect("/admin/login");
+  if (session.role !== "admin") redirect("/admin/registru");
   const posts = await readPosts();
 
   return (
@@ -17,6 +19,9 @@ export default async function AdminDashboard() {
           Medline <span className="text-brand-600">Admin</span>
         </h1>
         <div className="flex items-center gap-3">
+          <Link href="/admin/registru" className="text-sm font-semibold text-brand-700 hover:underline">
+            Registru vizite
+          </Link>
           <Link href="/admin/contacte" className="text-sm font-semibold text-brand-700 hover:underline">
             Statistici site
           </Link>

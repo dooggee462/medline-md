@@ -5,12 +5,7 @@ import path from "path";
 import crypto from "crypto";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import {
-  checkCredentials,
-  createSession,
-  destroySession,
-  isAuthenticated,
-} from "@/lib/auth";
+import { checkCredentials, createSession, destroySession, getSession } from "@/lib/auth";
 import {
   savePost,
   deletePost,
@@ -20,16 +15,20 @@ import {
   type Post,
 } from "@/lib/posts";
 
-async function requireAuth() {
-  if (!(await isAuthenticated())) redirect("/admin/login");
+/** Articolele le administrează doar Victor; asistenții n-au ce căuta aici */
+async function requireAdmin() {
+  const session = await getSession();
+  if (!session) redirect("/admin/login");
+  if (session.role !== "admin") redirect("/admin/registru");
 }
 
 export async function loginAction(formData: FormData) {
   const user = String(formData.get("user") || "");
   const password = String(formData.get("password") || "");
-  if (checkCredentials(user, password)) {
-    await createSession();
-    redirect("/admin");
+  const session = await checkCredentials(user, password);
+  if (session) {
+    await createSession(session);
+    redirect(session.role === "admin" ? "/admin" : "/admin/registru");
   }
   redirect("/admin/login?error=1");
 }
@@ -55,7 +54,7 @@ async function handleUpload(file: File | null, id: string): Promise<string | und
 }
 
 export async function savePostAction(formData: FormData) {
-  await requireAuth();
+  await requireAdmin();
 
   const id = String(formData.get("id") || "") || crypto.randomUUID();
   const existing = await getPostById(id);
@@ -90,7 +89,7 @@ export async function savePostAction(formData: FormData) {
 }
 
 export async function deletePostAction(formData: FormData) {
-  await requireAuth();
+  await requireAdmin();
   const id = String(formData.get("id") || "");
   if (id) await deletePost(id);
   revalidatePath("/ro/blog");

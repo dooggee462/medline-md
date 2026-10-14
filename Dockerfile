@@ -8,6 +8,8 @@ FROM node:22-alpine AS base
 FROM base AS deps
 WORKDIR /app
 COPY package.json package-lock.json* ./
+# biblioteca pentru fișiere Excel e păstrată în proiect, ca build-ul să nu depindă de rețea
+COPY vendor ./vendor
 RUN npm ci
 
 # --- Build ---

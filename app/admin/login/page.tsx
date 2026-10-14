@@ -1,13 +1,14 @@
 import { redirect } from "next/navigation";
 import { loginAction } from "../actions";
-import { isAuthenticated, PASSWORD_SET } from "@/lib/auth";
+import { getSession, PASSWORD_SET } from "@/lib/auth";
 
 export default async function LoginPage({
   searchParams,
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  if (await isAuthenticated()) redirect("/admin");
+  const session = await getSession();
+  if (session) redirect(session.role === "admin" ? "/admin" : "/admin/registru");
   const { error } = await searchParams;
 
   return (
@@ -17,7 +18,7 @@ export default async function LoginPage({
           Medline <span className="text-brand-600">Admin</span>
         </h1>
         <p className="mt-1 text-center text-sm text-slate-500">
-          Autentificare administrator
+          Autentificare
         </p>
 
         {!PASSWORD_SET && (

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { isAuthenticated } from "@/lib/auth";
+import { getSession } from "@/lib/auth";
 import { summarize, LEAD_TYPES, type LeadType } from "@/lib/leads";
 
 export const dynamic = "force-dynamic";
@@ -30,7 +30,9 @@ export default async function StatsPage({
 }: {
   searchParams: Promise<{ zile?: string }>;
 }) {
-  if (!(await isAuthenticated())) redirect("/admin/login");
+  const session = await getSession();
+  if (!session) redirect("/admin/login");
+  if (session.role !== "admin") redirect("/admin/registru");
   const { zile } = await searchParams;
   const days = PERIODS.includes(Number(zile)) ? Number(zile) : 30;
   const s = await summarize(days);

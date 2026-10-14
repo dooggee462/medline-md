@@ -1,5 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import { isAuthenticated } from "@/lib/auth";
+import { getSession } from "@/lib/auth";
 import { getPostById } from "@/lib/posts";
 import { PostForm } from "@/components/admin/PostForm";
 
@@ -10,7 +10,9 @@ export default async function EditPostPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
-  if (!(await isAuthenticated())) redirect("/admin/login");
+  const session = await getSession();
+  if (!session) redirect("/admin/login");
+  if (session.role !== "admin") redirect("/admin/registru");
   const { id } = await params;
   const post = await getPostById(id);
   if (!post) notFound();
