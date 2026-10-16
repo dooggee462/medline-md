@@ -53,6 +53,8 @@ export type Case = {
   notes: string;
   createdBy: string;
   createdAt: string;
+  /** moment exact, pentru a prinde o salvare trimisă de două ori */
+  createdTs?: number;
   updatedBy?: string;
   updatedAt?: string;
 };
@@ -115,16 +117,43 @@ export async function getCase(id: string): Promise<Case | undefined> {
   return (await readCases()).find((c) => c.id === id);
 }
 
-export async function saveCase(input: Omit<Case, "no" | "createdBy" | "createdAt">, user: string): Promise<void> {
+/** Două cereri identice la câteva secunde = aceeași apăsare, trimisă de două ori */
+const DUPLICATE_MS = 60_000;
+
+export type SaveResult = "creat" | "actualizat" | "duplicat";
+
+export async function saveCase(
+  input: Omit<Case, "no" | "createdBy" | "createdAt">,
+  user: string,
+): Promise<SaveResult> {
+  let result: SaveResult = "creat";
   await write((cases) => {
     const i = cases.findIndex((c) => c.id === input.id);
-    if (i === -1) {
-      return [{ ...input, no: nextNo(cases, input.date), createdBy: user, createdAt: stamp() }, ...cases];
+    if (i !== -1) {
+      result = "actualizat";
+      const next = [...cases];
+      next[i] = { ...cases[i], ...input, updatedBy: user, updatedAt: stamp() };
+      return next;
     }
-    const next = [...cases];
-    next[i] = { ...cases[i], ...input, updatedBy: user, updatedAt: stamp() };
-    return next;
+
+    const twin = cases.find(
+      (c) =>
+        c.patient === input.patient &&
+        c.phone === input.phone &&
+        c.date === input.date &&
+        Date.now() - (c.createdTs ?? 0) < DUPLICATE_MS,
+    );
+    if (twin) {
+      result = "duplicat";
+      return cases;
+    }
+
+    return [
+      { ...input, no: nextNo(cases, input.date), createdBy: user, createdAt: stamp(), createdTs: Date.now() },
+      ...cases,
+    ];
   });
+  return result;
 }
 
 export async function setStatus(id: string, status: Status, user: string): Promise<void> {

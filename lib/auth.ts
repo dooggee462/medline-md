@@ -47,7 +47,9 @@ function accounts(): Map<string, Account> {
  */
 export function assignableNames(): string[] {
   const all = [...accounts().values()];
-  return [...all.filter((a) => a.role === "admin"), ...all.filter((a) => a.role === "asistent")].map((a) => a.name);
+  const ordered = [...all.filter((a) => a.role === "admin"), ...all.filter((a) => a.role === "asistent")];
+  // Victor are și conturi de asistent: același nume nu se repetă în listă
+  return [...new Set(ordered.map((a) => a.name))];
 }
 
 export function displayName(user: string): string {

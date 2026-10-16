@@ -55,7 +55,7 @@ export async function saveCaseAction(formData: FormData) {
   const assignee =
     session.role === "admin" ? text(formData, "assignee", 60) : existing?.assignee || session.name;
 
-  await saveCase(
+  const result = await saveCase(
     {
       id,
       date: text(formData, "date", 10) || today(),
@@ -84,8 +84,8 @@ export async function saveCaseAction(formData: FormData) {
    */
   const saved = await getCase(id);
   if (saved) {
-    if (!existing) await sendTelegram(announcement(saved, "🗂 Caz nou"));
-    else if (existing.assignee !== saved.assignee && saved.assignee)
+    if (result === "creat") await sendTelegram(announcement(saved, "🗂 Caz nou"));
+    else if (result === "actualizat" && existing?.assignee !== saved.assignee && saved.assignee)
       await sendTelegram(announcement(saved, "🔁 Caz repartizat"));
   }
 

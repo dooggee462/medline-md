@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SERVICE_LIST } from "@/lib/content";
 import { AREAS, PAYMENTS, SOURCES, STATUSES, today, type Case } from "@/lib/cases";
 import type { Session } from "@/lib/auth";
+import { SubmitButton } from "./SubmitButton";
 
 const input =
   "w-full rounded-lg border border-slate-300 px-3 py-2.5 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200";
@@ -186,9 +187,7 @@ export function CaseForm({
       </Field>
 
       <div className="flex items-center gap-3 pt-2">
-        <button className="rounded-lg bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700">
-          Salvează
-        </button>
+        <SubmitButton pendingLabel="Se salvează…">Salvează</SubmitButton>
         <Link href="/admin/registru" className="text-sm font-medium text-slate-500 hover:text-slate-700">
           Renunță
         </Link>

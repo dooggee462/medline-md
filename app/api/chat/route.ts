@@ -68,7 +68,7 @@ export async function POST(req: Request) {
   // text simplu, fără parse_mode: nimic din ce scrie clientul nu poate strica formatarea
   const text = [
     body.kind === "callback"
-      ? "📞 Cere să fie sunat · chat medline.md"
+      ? "📞 Completare la cererea de mai sus · cere să fie sunat"
       : "🔔 Client nou în chat · medline.md",
     "",
     `👤 ${name}`,
