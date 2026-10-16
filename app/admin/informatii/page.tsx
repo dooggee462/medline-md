@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { SERVICE_LIST } from "@/lib/content";
 import { currentUser } from "@/lib/team";
 import { readInfo } from "@/lib/info";
 import { SubmitButton } from "@/components/admin/SubmitButton";
@@ -7,13 +8,20 @@ import { saveInfoAction } from "./actions";
 
 export const dynamic = "force-dynamic";
 
-const EXEMPLU = `## Perfuzie la domiciliu
-Preț: ... lei. Include: ser fiziologic, trusă de perfuzie, dezinfectant.
-Medicamentele prescrise se cumpără separat sau le aducem noi, la preț.
-
-## Codare anti-alcool
-Preț: ... lei. Preparat folosit: ...
-Durata vizitei: ...`;
+/**
+ * Când pagina e goală, formularul pornește cu toate serviciile prestate, în
+ * ordinea de pe site: Victor completează doar prețul și preparatele, nu scrie
+ * lista de la zero.
+ */
+const SABLON = [
+  "## Cum folosim pagina asta",
+  "Completați prețul și preparatele pentru fiecare serviciu. Ce scrieți aici văd toți asistenții, pe telefon, în fața pacientului.",
+  "",
+  ...SERVICE_LIST.flatMap((s) => [`## ${s.ro}`, "Preț: ... lei", "Preparate incluse: ...", ""]),
+  "## Alte reguli",
+  "- medicamentele prescrise: le cumpără pacientul sau le aducem noi, la preț",
+  "- deplasarea în suburbii: ...",
+].join("\n");
 
 /** Afișare simplă: „## " e titlu, „- " e punct de listă, restul sunt paragrafe */
 function Rendered({ text }: { text: string }) {
@@ -90,7 +98,7 @@ export default async function InfoPage({
             id="text"
             name="text"
             rows={22}
-            defaultValue={info.text || EXEMPLU}
+            defaultValue={info.text || SABLON}
             className="w-full rounded-xl border border-slate-300 p-4 font-mono text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
           />
           <p className="text-xs text-slate-400">
