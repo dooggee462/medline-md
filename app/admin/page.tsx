@@ -14,13 +14,19 @@ export default async function AdminDashboard() {
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-10">
-      <header className="flex items-center justify-between">
+      <header className="flex flex-wrap items-center justify-between gap-3">
         <h1 className="text-2xl font-extrabold text-slate-900">
           Medline <span className="text-brand-600">Admin</span>
         </h1>
         <div className="flex items-center gap-3">
           <Link href="/admin/registru" className="text-sm font-semibold text-brand-700 hover:underline">
             Registru vizite
+          </Link>
+          <Link href="/admin/informatii" className="text-sm font-semibold text-brand-700 hover:underline">
+            Informații
+          </Link>
+          <Link href="/admin/echipa" className="text-sm font-semibold text-brand-700 hover:underline">
+            Echipa
           </Link>
           <Link href="/admin/contacte" className="text-sm font-semibold text-brand-700 hover:underline">
             Statistici site

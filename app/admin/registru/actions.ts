@@ -3,18 +3,18 @@
 import crypto from "crypto";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { getSession, type Session } from "@/lib/auth";
+import { currentUser, type Member } from "@/lib/team";
 import { getCase, removeCase, saveCase, setStatus, today, STATUSES, type Case, type Status } from "@/lib/cases";
 import { sendTelegram } from "@/lib/telegram";
 
-async function requireSession(): Promise<Session> {
-  const session = await getSession();
+async function requireSession(): Promise<Member> {
+  const session = await currentUser();
   if (!session) redirect("/admin/login");
   return session;
 }
 
 /** Asistentul lucrează doar cu propriile cazuri; administratorul, cu toate */
-function allowed(session: Session, assignee: string): boolean {
+function allowed(session: Member, assignee: string): boolean {
   return session.role === "admin" || assignee === session.name;
 }
 

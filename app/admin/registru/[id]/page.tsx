@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { getSession, assignableNames } from "@/lib/auth";
+import { assignableNames, currentUser } from "@/lib/team";
 import { getCase, historyFor } from "@/lib/cases";
 import { CaseForm } from "@/components/admin/CaseForm";
 import { saveCaseAction, deleteCaseAction } from "../actions";
@@ -14,7 +14,7 @@ export default async function EditCasePage({
   params: Promise<{ id: string }>;
   searchParams: Promise<{ error?: string }>;
 }) {
-  const session = await getSession();
+  const session = await currentUser();
   if (!session) redirect("/admin/login");
 
   const { id } = await params;
@@ -47,7 +47,7 @@ export default async function EditCasePage({
       <CaseForm
         action={saveCaseAction}
         session={session}
-        staff={assignableNames()}
+        staff={await assignableNames()}
         value={item}
         history={history}
         error={error}

@@ -55,6 +55,8 @@ export type Case = {
   createdAt: string;
   /** moment exact, pentru a prinde o salvare trimisă de două ori */
   createdTs?: number;
+  /** câte ore înainte de vizită s-a trimis deja reamintire (6, 2) */
+  reminded?: number[];
   updatedBy?: string;
   updatedAt?: string;
 };
@@ -160,6 +162,28 @@ export async function setStatus(id: string, status: Status, user: string): Promi
   await write((cases) =>
     cases.map((c) => (c.id === id ? { ...c, status, updatedBy: user, updatedAt: stamp() } : c)),
   );
+}
+
+/** Reține că reamintirea cu `lead` ore înainte a plecat, ca să nu se repete */
+export async function markReminded(id: string, lead: number): Promise<void> {
+  await write((cases) =>
+    cases.map((c) =>
+      c.id === id ? { ...c, reminded: [...new Set([...(c.reminded ?? []), lead])] } : c,
+    ),
+  );
+}
+
+/** Schimbă numele asistentului în toate cazurile lui (la redenumirea din Echipa) */
+export async function renameAssignee(from: string, to: string): Promise<number> {
+  let changed = 0;
+  await write((cases) =>
+    cases.map((c) => {
+      if (c.assignee !== from) return c;
+      changed += 1;
+      return { ...c, assignee: to };
+    }),
+  );
+  return changed;
 }
 
 export async function removeCase(id: string): Promise<void> {

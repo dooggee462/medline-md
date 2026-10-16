@@ -29,6 +29,18 @@ const nextConfig = {
       },
     ];
   },
+  /**
+   * Reamintirile pornesc din instrumentation.ts și citesc fișiere, deci au
+   * nevoie de „fs". Next compilează instrumentarea și pentru middleware, care
+   * rulează în edge, unde „fs" nu există — acolo o lăsăm goală, fiindcă acel
+   * cod nu rulează niciodată în edge.
+   */
+  webpack(config, { nextRuntime }) {
+    if (nextRuntime === "edge") {
+      config.resolve.fallback = { ...config.resolve.fallback, fs: false, path: false };
+    }
+    return config;
+  },
   async headers() {
     return [
       {

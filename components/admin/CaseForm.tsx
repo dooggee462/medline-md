@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { SERVICE_LIST } from "@/lib/content";
 import { AREAS, PAYMENTS, SOURCES, STATUSES, today, type Case } from "@/lib/cases";
-import type { Session } from "@/lib/auth";
+import type { Member } from "@/lib/team";
 import { SubmitButton } from "./SubmitButton";
 
 const input =
@@ -32,7 +32,7 @@ export function CaseForm({
   error,
 }: {
   action: (formData: FormData) => void;
-  session: Session;
+  session: Member;
   staff: string[];
   value?: Case;
   history?: Case[];

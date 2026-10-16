@@ -41,19 +41,9 @@ function accounts(): Map<string, Account> {
   return map;
 }
 
-/**
- * Numele cărora li se poate repartiza un caz: administratorul (care merge și
- * el la pacienți) și asistenții, în ordinea din configurare.
- */
-export function assignableNames(): string[] {
-  const all = [...accounts().values()];
-  const ordered = [...all.filter((a) => a.role === "admin"), ...all.filter((a) => a.role === "asistent")];
-  // Victor are și conturi de asistent: același nume nu se repetă în listă
-  return [...new Set(ordered.map((a) => a.name))];
-}
-
-export function displayName(user: string): string {
-  return accounts().get(user)?.name || user;
+/** Conturile cu numele din .env — numele curente se iau din lib/team.ts */
+export function accountList(): { user: string; role: Role; name: string }[] {
+  return [...accounts().entries()].map(([user, a]) => ({ user, role: a.role, name: a.name }));
 }
 
 function sign(payload: string): string {

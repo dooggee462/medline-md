@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { getSession, assignableNames } from "@/lib/auth";
+import { assignableNames, currentUser } from "@/lib/team";
 import { SelectAll } from "@/components/admin/SelectAll";
 import { ConfirmButton } from "@/components/admin/ConfirmButton";
 import { logoutAction } from "../actions";
@@ -38,7 +38,7 @@ export default async function RegistryPage({
 }: {
   searchParams: Promise<{ luna?: string; asistent?: string; status?: string; sector?: string; q?: string }>;
 }) {
-  const session = await getSession();
+  const session = await currentUser();
   if (!session) redirect("/admin/login");
 
   const sp = await searchParams;
@@ -66,12 +66,23 @@ export default async function RegistryPage({
         <h1 className="text-2xl font-extrabold text-slate-900">
           Registru <span className="text-brand-600">vizite</span>
         </h1>
-        <div className="flex items-center gap-3 text-sm">
+        <div className="flex flex-wrap items-center gap-3 text-sm">
           <span className="text-slate-500">{session.name}</span>
+          <Link href="/admin/informatii" className="font-semibold text-brand-700 hover:underline">
+            Informații
+          </Link>
+          <Link href="/admin/telefon" className="font-medium text-slate-500 hover:text-brand-700">
+            Pe telefon
+          </Link>
           {session.role === "admin" && (
-            <Link href="/admin" className="font-semibold text-brand-700 hover:underline">
-              Panou
-            </Link>
+            <>
+              <Link href="/admin/echipa" className="font-semibold text-brand-700 hover:underline">
+                Echipa
+              </Link>
+              <Link href="/admin" className="font-semibold text-brand-700 hover:underline">
+                Panou
+              </Link>
+            </>
           )}
           <form action={logoutAction}>
             <button className="rounded-lg border border-slate-300 px-3 py-1.5 font-semibold text-slate-600 hover:bg-slate-50">
@@ -86,7 +97,7 @@ export default async function RegistryPage({
         {session.role === "admin" && (
           <select name="asistent" defaultValue={sp.asistent ?? ""} className={field} aria-label="Asistent">
             <option value="">Toți asistenții</option>
-            {assignableNames().map((s) => (
+            {(await assignableNames()).map((s) => (
               <option key={s} value={s}>
                 {s}
               </option>

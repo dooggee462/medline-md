@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { getSession, assignableNames } from "@/lib/auth";
+import { assignableNames, currentUser } from "@/lib/team";
 import { CaseForm } from "@/components/admin/CaseForm";
 import { saveCaseAction } from "../actions";
 
@@ -11,7 +11,7 @@ export default async function NewCasePage({
 }: {
   searchParams: Promise<{ error?: string }>;
 }) {
-  const session = await getSession();
+  const session = await currentUser();
   if (!session) redirect("/admin/login");
   const { error } = await searchParams;
 
@@ -21,7 +21,7 @@ export default async function NewCasePage({
         ← Registru
       </Link>
       <h1 className="mt-3 text-2xl font-extrabold text-slate-900">Caz nou</h1>
-      <CaseForm action={saveCaseAction} session={session} staff={assignableNames()} error={error} />
+      <CaseForm action={saveCaseAction} session={session} staff={await assignableNames()} error={error} />
     </main>
   );
 }
