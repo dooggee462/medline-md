@@ -1,31 +1,62 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { DATA_DIR } from "./posts";
+import { SERVICE_LIST } from "./content";
 
 /**
- * Pagina de informații pentru asistenți: prețurile pe servicii și preparatele
- * care intră în fiecare tratament. O scrie Victor, o citesc asistenții în fața
- * pacientului, ca să nu-l mai sune pe el la fiecare întrebare.
+ * Prețurile și preparatele, pentru întrebările pacienților. Le scrie Victor,
+ * le citesc asistenții pe telefon, în fața pacientului, ca să nu-l mai sune pe
+ * el la fiecare întrebare.
  *
  * E internă: stă în spatele parolei, nu apare pe site și nu ajunge în Google.
  */
 const FILE = path.join(DATA_DIR, "info.json");
 
-export type Info = { text: string; updatedBy: string; updatedAt: string };
+export type InfoItem = {
+  service: string;
+  price: string;
+  /** ce intră în tratament: preparate, materiale */
+  included: string;
+};
 
-const EMPTY: Info = { text: "", updatedBy: "", updatedAt: "" };
+export type Info = {
+  items: InfoItem[];
+  /** reguli generale, sub tabel */
+  notes: string;
+  updatedBy: string;
+  updatedAt: string;
+};
+
+/** Lista goală pornește de la serviciile de pe site, ca să nu le scrie de mână */
+export function emptyItems(): InfoItem[] {
+  return SERVICE_LIST.map((s) => ({ service: s.ro, price: "", included: "" }));
+}
 
 export async function readInfo(): Promise<Info> {
   try {
-    return JSON.parse(await fs.readFile(FILE, "utf8")) as Info;
+    const raw = JSON.parse(await fs.readFile(FILE, "utf8"));
+    return {
+      items: Array.isArray(raw.items) ? raw.items : [],
+      // formatul vechi era un singur text; îl păstrăm la observații
+      notes: typeof raw.notes === "string" ? raw.notes : typeof raw.text === "string" ? raw.text : "",
+      updatedBy: raw.updatedBy ?? "",
+      updatedAt: raw.updatedAt ?? "",
+    };
   } catch {
-    return EMPTY;
+    return { items: [], notes: "", updatedBy: "", updatedAt: "" };
   }
 }
 
-export async function saveInfo(text: string, user: string): Promise<void> {
+export async function saveInfo(items: InfoItem[], notes: string, user: string): Promise<void> {
   const info: Info = {
-    text: text.slice(0, 50_000),
+    items: items
+      .map((i) => ({
+        service: i.service.trim().slice(0, 120),
+        price: i.price.trim().slice(0, 60),
+        included: i.included.trim().slice(0, 300),
+      }))
+      .filter((i) => i.service),
+    notes: notes.trim().slice(0, 5000),
     updatedBy: user,
     updatedAt: new Intl.DateTimeFormat("sv-SE", {
       timeZone: "Europe/Chisinau",
