@@ -201,8 +201,16 @@ export type Filter = {
 /** Doar cifrele, ca „+373 69 123 456" și „069123456" să se potrivească */
 const digits = (s: string) => s.replace(/\D/g, "");
 
+/**
+ * Text pregătit pentru căutare: litere mici și fără diacritice, fiindcă pe
+ * telefon lumea scrie „rumega", „stefan", „creanga", nu „Rumegă", „Ștefan",
+ * „Creangă". Fără asta, căutarea după nume nu găsea nimic.
+ */
+export const fold = (s: string) =>
+  s.normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase();
+
 export function filterCases(cases: Case[], f: Filter): Case[] {
-  const q = (f.q || "").trim().toLowerCase();
+  const q = fold((f.q || "").trim());
   const qDigits = digits(q);
   return cases
     .filter((c) => !f.month || c.date.startsWith(f.month))
@@ -212,7 +220,7 @@ export function filterCases(cases: Case[], f: Filter): Case[] {
     .filter((c) => {
       if (!q) return true;
       if (qDigits.length >= 3 && digits(c.phone).includes(qDigits)) return true;
-      return `${c.patient} ${c.no} ${c.address} ${c.service} ${c.contact}`.toLowerCase().includes(q);
+      return fold(`${c.patient} ${c.no} ${c.address} ${c.service} ${c.contact} ${c.assignee}`).includes(q);
     })
     .sort((a, b) => `${b.date} ${b.time}`.localeCompare(`${a.date} ${a.time}`));
 }

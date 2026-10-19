@@ -36,7 +36,9 @@ export function PriceList({ items }: { items: InfoItem[] }) {
               <p className="shrink-0 text-lg font-bold tabular-nums text-brand-700">
                 {i.price || <span className="text-base font-medium text-slate-300">necompletat</span>}
               </p>
-              {i.included && <p className="w-full text-sm text-slate-500">{i.included}</p>}
+              {i.included && (
+                <p className="w-full whitespace-pre-line text-sm text-slate-500">{i.included}</p>
+              )}
             </li>
           ))}
         </ul>

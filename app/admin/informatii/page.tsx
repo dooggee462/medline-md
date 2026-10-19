@@ -82,12 +82,13 @@ export default async function InfoPage({
                   className={`${input} min-w-[8rem] flex-1`}
                 />
               </div>
-              <input
+              <textarea
                 id={`included_${i}`}
                 name={`included_${i}`}
                 defaultValue={row.included}
-                placeholder="Ce intră în tratament: preparate, materiale"
-                maxLength={300}
+                rows={2}
+                placeholder="Ce intră în tratament: preparate, materiale. Poți scrie pe mai multe rânduri."
+                maxLength={600}
                 className={`${input} mt-2`}
               />
             </div>

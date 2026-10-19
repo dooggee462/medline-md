@@ -2,6 +2,7 @@ import { promises as fs } from "fs";
 import path from "path";
 import { DATA_DIR } from "./posts";
 import { accountList, getSession, type Role } from "./auth";
+import { renameAssignee } from "./cases";
 
 /**
  * Numele echipei. Conturile și parolele rămân în .env, dar numele afișate se
@@ -77,4 +78,22 @@ export async function setName(user: string, name: string): Promise<string | null
   // alt cont cu același nume (Victor are trei): cazurile rămân ale lui
   const stillUsed = (await team()).some((m) => m.user !== user && m.name === old);
   return stillUsed ? null : old;
+}
+
+/*
+ * Cazurile create cât timp conturile se numeau „Asistent 1", „Asistent 2" au
+ * rămas pe numele acela, deci nu ieșeau la filtrarea după numele real. Le
+ * mutăm o singură dată, la prima citire a registrului după pornire.
+ */
+let synced = false;
+
+export async function syncLegacyNames(): Promise<void> {
+  if (synced) return;
+  synced = true;
+  for (const m of await team()) {
+    const numar = m.user.match(/^asistent(\d+)$/)?.[1];
+    if (!numar) continue;
+    const vechi = `Asistent ${numar}`;
+    if (vechi !== m.name) await renameAssignee(vechi, m.name);
+  }
 }

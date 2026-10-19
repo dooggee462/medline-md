@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { assignableNames, currentUser } from "@/lib/team";
+import { assignableNames, currentUser, syncLegacyNames } from "@/lib/team";
 import { SelectAll } from "@/components/admin/SelectAll";
 import { ConfirmButton } from "@/components/admin/ConfirmButton";
 import { logoutAction } from "../actions";
@@ -51,6 +51,7 @@ export default async function RegistryPage({
     q: sp.q || "",
   };
 
+  await syncLegacyNames();
   const all = await readCases();
   const cases = filterCases(all, filter);
   const sum = totals(cases);

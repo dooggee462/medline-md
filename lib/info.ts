@@ -53,7 +53,7 @@ export async function saveInfo(items: InfoItem[], notes: string, user: string): 
       .map((i) => ({
         service: i.service.trim().slice(0, 120),
         price: i.price.trim().slice(0, 60),
-        included: i.included.trim().slice(0, 300),
+        included: i.included.trim().slice(0, 600),
       }))
       .filter((i) => i.service),
     notes: notes.trim().slice(0, 5000),
