@@ -64,6 +64,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               <li><Link href={`/${locale}`} className="hover:text-brand-700">{dict.nav.home}</Link></li>
               <li><Link href={`/${locale}/servicii`} className="hover:text-brand-700">{dict.nav.services}</Link></li>
               <li><Link href={`/${locale}/detoxifiere`} className="hover:text-brand-700">{dict.nav.detox}</Link></li>
+              <li><Link href={`/${locale}/narcolog`} className="hover:text-brand-700">{locale === "ro" ? "Narcolog la domiciliu" : "Нарколог на дом"}</Link></li>
               <li><Link href={`/${locale}/codare`} className="hover:text-brand-700">{locale === "ro" ? "Codare anti-alcool" : "Кодирование"}</Link></li>
               <li><Link href={`/${locale}/preturi`} className="hover:text-brand-700">{dict.nav.prices}</Link></li>
               <li><Link href={`/${locale}/despre-noi`} className="hover:text-brand-700">{dict.nav.about}</Link></li>

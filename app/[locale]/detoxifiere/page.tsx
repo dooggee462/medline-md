@@ -42,9 +42,9 @@ const DETOX: Record<
         ],
       },
       {
-        heading: "Narcolog la domiciliu: când să suni",
+        heading: "Când e nevoie de detoxifiere: semnele",
         body: [
-          "Merită să chemi medicul narcolog acasă când omul bea de mai multe zile la rând și nu se poate opri singur, iar când încearcă să se oprească apar tremurul mâinilor, transpirațiile, greața sau vărsăturile, insomnia, palpitațiile, tensiunea oscilantă sau neliniștea. Sunt semnele sevrajului: organismul a devenit dependent de alcool, iar oprirea bruscă fără ajutor medical se suportă greu.",
+          "Detoxifierea e necesară când omul bea de mai multe zile la rând și nu se poate opri singur, iar când încearcă să se oprească apar tremurul mâinilor, transpirațiile, greața sau vărsăturile, insomnia, palpitațiile, tensiunea oscilantă sau neliniștea. Sunt semnele sevrajului: organismul a devenit dependent de alcool, iar oprirea bruscă fără ajutor medical se suportă greu.",
           "Cu cât binge-ul durează mai mult, cu atât ieșirea din el e mai grea și cu atât crește solicitarea inimii, a ficatului și a sistemului nervos — de aceea nu merită să amâni apelul.",
           "Dacă omul are convulsii, halucinații, confuzie, durere în piept sau își pierde cunoștința, este o urgență: sună imediat la 112. Aceste situații se tratează în spital, nu la domiciliu.",
         ],
@@ -81,7 +81,7 @@ const DETOX: Record<
         a: "Da, 100% anonim. Medicul vine în haine civile, cu automobil neinscripționat, fără raportări externe. Intimitatea pacientului și a familiei este prioritară.",
       },
       {
-        q: "Pot chema narcologul acasă noaptea?",
+        q: "Se poate face detoxifierea noaptea?",
         a: "Da, lucrăm non-stop, inclusiv noaptea, în weekend și de sărbători. În Chișinău medicul ajunge în 25–45 de minute de la apelul la +373 61 003 863 sau mesajul pe WhatsApp.",
       },
       {
@@ -115,9 +115,9 @@ const DETOX: Record<
         ],
       },
       {
-        heading: "Вызов нарколога на дом: когда звонить",
+        heading: "Когда нужен вывод из запоя: признаки",
         body: [
-          "Вызвать нарколога на дом стоит, если человек пьёт несколько дней подряд и не может остановиться сам, а при попытке бросить появляются дрожь в руках, потливость, тошнота или рвота, бессонница, сердцебиение, скачки давления, тревога. Это признаки абстинентного синдрома: организм уже зависит от алкоголя, и резкая остановка без медицинской помощи переносится тяжело.",
+          "Вывод из запоя нужен, если человек пьёт несколько дней подряд и не может остановиться сам, а при попытке бросить появляются дрожь в руках, потливость, тошнота или рвота, бессонница, сердцебиение, скачки давления, тревога. Это признаки абстинентного синдрома: организм уже зависит от алкоголя, и резкая остановка без медицинской помощи переносится тяжело.",
           "Чем дольше длится запой, тем тяжелее из него выйти и тем выше нагрузка на сердце, печень и нервную систему — поэтому откладывать звонок не стоит.",
           "Если у человека судороги, галлюцинации, спутанность сознания, боль в груди или он теряет сознание — это неотложное состояние: сразу звоните 112. Такие случаи лечат в стационаре, а не на дому.",
         ],
@@ -154,7 +154,7 @@ const DETOX: Record<
         a: "Да, на 100% анонимно. Врач приезжает в обычной одежде на автомобиле без медицинской символики. Данные пациента никуда не передаются и не ставятся на учёт.",
       },
       {
-        q: "Можно ли вызвать нарколога на дом ночью?",
+        q: "Можно ли вывести из запоя ночью?",
         a: "Да, мы работаем круглосуточно, включая ночь, выходные и праздники. По Кишинёву врач приезжает за 25–45 минут после звонка по телефону +373 61 003 863 или сообщения в WhatsApp.",
       },
       {
@@ -389,6 +389,15 @@ export default async function DetoxPage({
                 ))}
               </div>
             ))}
+
+            <p className="rounded-2xl border border-brand-100 bg-brand-50/50 p-5 text-lg leading-relaxed text-slate-700">
+              {locale === "ro"
+                ? "Vrei ca medicul să vină întâi să evalueze situația, înainte de orice procedură? "
+                : "Нужно, чтобы врач сначала приехал и оценил ситуацию, а потом решил, что делать? "}
+              <Link href={`/${locale}/narcolog`} className="font-semibold text-brand-700 hover:underline">
+                {locale === "ro" ? "Narcolog la domiciliu în Chișinău →" : "Вызов нарколога на дом в Кишинёве →"}
+              </Link>
+            </p>
 
             {/* FAQ */}
             <div>

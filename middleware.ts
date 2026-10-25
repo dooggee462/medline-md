@@ -56,6 +56,8 @@ export function middleware(request: NextRequest) {
     url.pathname = `/${locale}/servicii/${svc[locale as "ro" | "ru"] ?? svc.ro}`;
   } else if (key === "detox") {
     url.pathname = `/${locale}/detoxifiere`;
+  } else if (key === "narcolog" || key === "narkolog") {
+    url.pathname = `/${locale}/narcolog`;
   } else if (key === "codare") {
     url.pathname = `/${locale}/codare`;
   } else {

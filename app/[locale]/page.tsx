@@ -164,9 +164,13 @@ export default async function Home({
                   </li>
                 ))}
               </ul>
-              <div className="mt-6">
+              <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2">
                 <Link href={`/${locale}/detoxifiere`} className="inline-flex items-center gap-1 font-semibold text-gold-300 hover:text-gold-200">
-                  {locale === "ro" ? "Detoxifiere la domiciliu — medic narcolog 24/7" : "Вывод из запоя на дому — нарколог 24/7"}
+                  {locale === "ro" ? "Detoxifiere la domiciliu" : "Вывод из запоя на дому"}
+                  <span aria-hidden>→</span>
+                </Link>
+                <Link href={`/${locale}/narcolog`} className="inline-flex items-center gap-1 font-semibold text-gold-300 hover:text-gold-200">
+                  {locale === "ro" ? "Narcolog la domiciliu 24/7" : "Вызов нарколога на дом 24/7"}
                   <span aria-hidden>→</span>
                 </Link>
               </div>

@@ -2401,7 +2401,7 @@ export const ARTICLES: Article[] = [
             heading: "Ce facem noi, dacă acceptă",
             body: [
               "Venim la domiciliu, discret, fără însemne pe mașină, în 25-45 de minute de la apel, la orice oră. Pentru mulți oameni, faptul că nu trebuie să intre pe ușa unei clinici e exact ce face pasul posibil.",
-              "Medicul narcolog evaluează starea, explică opțiunile și spune deschis ce se poate și ce nu. Dacă e nevoie de detoxifiere înainte de [codare](/ro/codare), o spunem — nu vindem proceduri care nu ajută.",
+              "[Medicul narcolog chemat la domiciliu](/ro/narcolog) evaluează starea, explică opțiunile și spune deschis ce se poate și ce nu. Dacă e nevoie de detoxifiere înainte de [codare](/ro/codare), o spunem — nu vindem proceduri care nu ajută.",
               "Poți suna și doar ca să întrebi, fără ca persoana să știe încă. Discuția e gratuită și confidențială, iar de multe ori ajută să vorbești cu cineva care a văzut situația asta de sute de ori.",
             ],
           },
@@ -2467,7 +2467,7 @@ export const ARTICLES: Article[] = [
             heading: "Что делаем мы, если он согласится",
             body: [
               "Приезжаем на дом незаметно, без опознавательных знаков, за 25-45 минут после звонка, в любое время суток. Для многих именно то, что не надо входить в дверь клиники, и делает шаг возможным.",
-              "Врач-нарколог оценивает состояние, объясняет варианты и прямо говорит, что возможно, а что нет. Если перед [кодированием](/ru/codare) нужна детоксикация, мы это скажем — мы не продаём процедуры, которые не помогут.",
+              "[Нарколог, вызванный на дом](/ru/narcolog), оценивает состояние, объясняет варианты и прямо говорит, что возможно, а что нет. Если перед [кодированием](/ru/codare) нужна детоксикация, мы это скажем — мы не продаём процедуры, которые не помогут.",
               "Позвонить можно и просто чтобы спросить, пока человек ещё не знает. Разговор бесплатный и конфиденциальный, и часто помогает поговорить с тем, кто видел такую ситуацию сотни раз.",
             ],
           },
@@ -3544,7 +3544,7 @@ export const ARTICLES: Article[] = [
               "### Este confidențial?",
               "Da, complet. Toate vizitele sunt discrete, la domiciliu, fără judecăți și fără divulgarea informațiilor.",
               "### Pot face asta singur acasă, fără medic?",
-              "Nu este recomandat. Sevrajul necontrolat poate fi periculos. Supravegherea unui medic narcolog face procesul sigur și mult mai blând.",
+              "Nu este recomandat. Sevrajul necontrolat poate fi periculos. Supravegherea unui medic narcolog face procesul sigur și mult mai blând. Poți [chema narcologul la domiciliu](/ro/narcolog) non-stop.",
             ],
           },
           {
@@ -3622,7 +3622,7 @@ export const ARTICLES: Article[] = [
               "### Это конфиденциально?",
               "Да, полностью. Все визиты дискретны, на дому, без осуждения и без разглашения информации.",
               "### Можно ли сделать это самому дома, без врача?",
-              "Не рекомендуется. Неконтролируемая абстиненция может быть опасной. Наблюдение врача-нарколога делает процесс безопасным и гораздо мягче.",
+              "Не рекомендуется. Неконтролируемая абстиненция может быть опасной. Наблюдение врача-нарколога делает процесс безопасным и гораздо мягче. [Вызвать нарколога на дом](/ru/narcolog) можно круглосуточно.",
             ],
           },
           {

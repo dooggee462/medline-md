@@ -46,9 +46,9 @@ const CODARE: Record<
     cta: "Sună pentru programare",
     cards: [
       {
-        title: "Codare anti-alcool",
-        desc: "Detalii complete despre procedură: condiții, pregătire, contraindicații și întrebări frecvente.",
-        href: (l) => serviceHref(l, "codare-anti-alcool"),
+        title: "Narcolog la domiciliu",
+        desc: "Medicul vine personal: evaluare, oprirea sevrajului și un plan — inclusiv pregătirea pentru codare.",
+        href: (l) => `/${l}/narcolog`,
       },
       {
         title: "Tratament post-alcool",
@@ -162,7 +162,7 @@ const CODARE: Record<
   },
   ru: {
     metaTitle:
-      "Кодирование от алкоголя в Кишинёве — нарколог на дом | Medline.md",
+      "Кодирование от алкоголя в Кишинёве на дому — врач-нарколог | Medline.md",
     metaDescription:
       "Кодирование от алкоголя на дому в Кишинёве: процедуру лично проводит врач-нарколог Виктор Сокирян, после осмотра и с согласия пациента. Тел.: +373 61 003 863",
     keywords:
@@ -177,9 +177,9 @@ const CODARE: Record<
     cta: "Позвонить и записаться",
     cards: [
       {
-        title: "Кодирование от алкоголя",
-        desc: "Подробно о процедуре: условия, подготовка, противопоказания и частые вопросы.",
-        href: (l) => serviceHref(l, "codare-anti-alcool"),
+        title: "Вызов нарколога на дом",
+        desc: "Врач приезжает сам: осмотр, снятие абстиненции и план — в том числе подготовка к кодированию.",
+        href: (l) => `/${l}/narcolog`,
       },
       {
         title: "Восстановление после алкоголя",

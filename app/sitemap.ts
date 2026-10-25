@@ -19,7 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = (await getBlogList("ro")).filter((p) => !p.roSlug.endsWith("-video"));
 
   // Căi statice (relative la locale)
-  const staticPaths = ["", "/servicii", "/detoxifiere", "/codare", "/preturi", "/despre-noi", "/blog", "/contact", "/confidentialitate", "/termeni"];
+  const staticPaths = ["", "/servicii", "/detoxifiere", "/narcolog", "/codare", "/preturi", "/despre-noi", "/blog", "/contact", "/confidentialitate", "/termeni"];
 
   for (const locale of LOCALES) {
     for (const p of staticPaths) {
