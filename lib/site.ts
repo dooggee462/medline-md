@@ -105,6 +105,14 @@ export const SITE = {
   reviewUrl: "https://g.page/r/CViJVna_59QmEAI/review",
 
   /**
+   * Nota reală din Google Business Profile, verificabilă public de oricine.
+   * Apare pe paginile de servicii și în schema.org (aggregateRating).
+   * ⚠️ Se actualizează MANUAL: când numărul de recenzii crește, schimbă aici.
+   * O notă care nu corespunde cu profilul Google e tratată ca dată falsă.
+   */
+  rating: { value: "5.0", count: 10 },
+
+  /**
    * Datele firmei din Registrul de Stat — informație PUBLICĂ, verificabilă
    * oricine. Se folosesc în schema.org ca să lege site-ul de o entitate
    * juridică reală: pentru Google, un site medical cu firmă identificabilă

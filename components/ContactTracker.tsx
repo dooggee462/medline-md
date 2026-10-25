@@ -41,6 +41,15 @@ function send(body: Record<string, string>) {
     body: JSON.stringify({ ...body, vid: visitorId(), page: location.pathname }),
     keepalive: true,
   }).catch(() => {});
+
+  // Același contact și în GA4, ca „generate_lead" (method = call/whatsapp/…).
+  // Marcat în GA4 ca eveniment cheie, devine conversie și pentru Google Ads.
+  if (body.type !== "visit") {
+    (window as { gtag?: (...args: unknown[]) => void }).gtag?.("event", "generate_lead", {
+      method: body.type,
+      page_path: location.pathname,
+    });
+  }
 }
 
 function typeFromHref(href: string): string | null {

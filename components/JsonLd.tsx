@@ -62,15 +62,11 @@ export function JsonLd({ locale }: { locale: Locale }) {
       description: s.content[locale].short,
       url: `${SITE.url}${serviceHref(locale, s.slug)}`,
     })),
-    /**
-     * Nota reală din Google Business Profile, verificabilă public de oricine.
-     * ⚠️ Se actualizează MANUAL: când numărul de recenzii crește, schimbă aici.
-     * Un rating care nu corespunde cu profilul Google e tratat ca dată falsă.
-     */
+    // Nota reală din Google Business Profile — se actualizează în SITE.rating
     aggregateRating: {
       "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "10",
+      ratingValue: SITE.rating.value,
+      reviewCount: String(SITE.rating.count),
       bestRating: "5",
       worstRating: "1",
     },

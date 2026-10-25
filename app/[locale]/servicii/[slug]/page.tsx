@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { ogDefaults } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { LOCALES, SITE, type Locale } from "@/lib/site";
+import { LOCALES, SITE, whatsappLink, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { SERVICES, getArticle, getServiceByLocaleSlug, localizeSlug, serviceHref } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { SERVICE_ICONS, IconCheck, IconClock } from "@/components/Icons";
+import { SERVICE_ICONS, IconCheck, IconClock, IconPhone, IconWhatsApp } from "@/components/Icons";
 
 export function generateStaticParams() {
   return LOCALES.flatMap((locale) =>
@@ -64,6 +64,10 @@ export default async function ServiceDetail({
   const dict = getDictionary(locale);
   const c = service.content[locale];
   const Icon = SERVICE_ICONS[service.icon] ?? IconCheck;
+  const quickFacts =
+    locale === "ro"
+      ? ["Sosire în 25–45 min", "Non-stop 24/7", `★ ${SITE.rating.value} pe Google`]
+      : ["Выезд за 25–45 мин", "Круглосуточно 24/7", `★ ${SITE.rating.value} в Google`];
   const related = SERVICES.filter((s) => s.slug !== service.slug).slice(0, 3);
   // Articole pe aceeași temă — slug-urile inexistente sunt ignorate, nu strică pagina
   const articles = (service.relatedArticles ?? [])
@@ -139,7 +143,37 @@ export default async function ServiceDetail({
                 <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
                   {c.h1}
                 </h1>
-                <p className="mt-4 text-lg leading-relaxed text-slate-600">{c.lead}</p>
+                {/*
+                  Butonul de apel stă imediat sub titlu: pe telefon era sub un
+                  paragraf lung, la ~740px, acoperit de bannerul de cookie, iar
+                  butonul principal ducea pe altă pagină, la un formular.
+                */}
+                <ul className="mt-4 flex flex-wrap gap-2 text-sm font-semibold text-slate-700">
+                  {quickFacts.map((f) => (
+                    <li key={f} className="rounded-full bg-white px-3 py-1 ring-1 ring-slate-200">
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+                  <a
+                    href={`tel:${SITE.phoneRaw}`}
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-6 py-3.5 text-base font-bold text-forest-950 shadow-lg shadow-gold-600/30 transition-all hover:from-gold-300 hover:to-gold-500"
+                  >
+                    <IconPhone className="h-5 w-5" />
+                    {dict.nav.call} · {SITE.phone}
+                  </a>
+                  <a
+                    href={whatsappLink(dict.booking.waMessageIntro)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-6 py-3.5 text-base font-semibold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
+                  >
+                    <IconWhatsApp className="h-5 w-5" />
+                    WhatsApp
+                  </a>
+                </div>
+                <p className="mt-6 text-lg leading-relaxed text-slate-600">{c.lead}</p>
                 <p className="mt-3 text-xs font-medium text-slate-500">
                   {locale === "ro" ? "Protocol medical coordonat și verificat de " : "Медицинский протокол координирует и проверил "}
                   <Link href={`/${locale}/despre-noi`} className="font-semibold text-brand-700 hover:underline">
@@ -148,21 +182,13 @@ export default async function ServiceDetail({
                   {" · "}
                   {SITE.author.jobTitle[locale]}
                 </p>
+                <Link
+                  href={`/${locale}/contact#programare`}
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-700 hover:underline"
+                >
+                  {dict.ui.bookThisService} <span aria-hidden>→</span>
+                </Link>
               </div>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href={`/${locale}/contact#programare`}
-                className="inline-flex items-center justify-center rounded-full bg-gradient-to-b from-gold-400 to-gold-600 px-6 py-3 text-base font-bold text-forest-950 shadow-lg shadow-gold-600/30 transition-all hover:from-gold-300 hover:to-gold-500"
-              >
-                {dict.ui.bookThisService}
-              </Link>
-              <a
-                href={`tel:${SITE.phoneRaw}`}
-                className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-base font-semibold text-slate-800 transition-colors hover:border-brand-300 hover:text-brand-700"
-              >
-                {SITE.phone}
-              </a>
             </div>
           </div>
         </section>

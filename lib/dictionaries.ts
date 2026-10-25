@@ -256,7 +256,7 @@ const ro: Dictionary = {
     backToTop: "Înapoi sus",
     share: "Distribuie",
     cookieText:
-      "Folosim cookie-uri pentru a îmbunătăți experiența pe site. Continuând navigarea, ești de acord cu utilizarea lor.",
+      "Folosim cookie-uri pentru statistica vizitelor.",
     cookieAccept: "Accept",
     cookieReject: "Refuz",
     videoTitle: "Videoclipuri Medline",
@@ -608,7 +608,7 @@ const ru: Dictionary = {
     backToTop: "Наверх",
     share: "Поделиться",
     cookieText:
-      "Мы используем файлы cookie для улучшения работы сайта. Продолжая просмотр, вы соглашаетесь с их использованием.",
+      "Мы используем cookie для статистики посещений.",
     cookieAccept: "Принять",
     cookieReject: "Отклонить",
     videoTitle: "Видео Medline",
