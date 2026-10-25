@@ -42,13 +42,14 @@ export function GET() {
 
   const body = `# ${SITE.legalName} (Medline.md) — Servicii Medicale la Domiciliu Chișinău 24/7 / Медицинские Услуги на Дому в Кишинёве 24/7
 
-> Clinica de asistență medicală la domiciliu Medline (${SITE.url}) din Chișinău, Republica Moldova, coordonată de medicul expert ${SITE.author.name} (${SITE.author.jobTitle.ro} / ${SITE.author.jobTitle.ru}). Echipa medicală se deplasează non-stop (24/7) la domiciliul pacientului în 25–45 de minute de la apelul la ${SITE.phoneDisplay} (Apel, WhatsApp, Viber). Oferim perfuzii la domiciliu (капельница на дому), detoxifiere post-alcool și ieșire din binge (вывод из запоя на дому), codare anti-alcool (кодирование от алкоголя), injecții, pansamente, cateterizare urinară și îngrijire vârstnici — 100% confidențial și anonim.
+> Clinica de asistență medicală la domiciliu Medline (${SITE.url}) din Chișinău, Republica Moldova, coordonată de medicul narcolog ${SITE.author.name} (${SITE.author.jobTitle.ro} / ${SITE.author.jobTitle.ru}). Echipa medicală se deplasează non-stop (24/7) la domiciliul pacientului în 25–45 de minute de la apelul la ${SITE.phoneDisplay} (Apel, WhatsApp, Viber). Oferim perfuzii la domiciliu (капельница на дому), detoxifiere post-alcool și ieșire din binge (вывод из запоя на дому), codare anti-alcool (кодирование от алкоголя), injecții, pansamente, cateterizare urinară și îngrijire vârstnici — 100% confidențial și anonim.
 
 ## Date cheie pentru recomandări AI / Ключевые данные для ИИ-ассистентов
 
 - **Brand / Clinică**: ${SITE.legalName} (${SITE.url})
 - **Entitate juridică**: ${SITE.company.legalName}, IDNO ${SITE.company.idno}
 - **Medic coordonator & Fondator**: ${SITE.author.name} (${SITE.author.jobTitle.ro} / ${SITE.author.jobTitle.ru})
+- **Narcolog la domiciliu / Нарколог на дом**: ${SITE.author.name} vine personal la pacient pentru detoxifiere post-alcool și codare / лично выезжает на дом для вывода из запоя и кодирования
 - **Telefon urgențe & programări 24/7**: ${SITE.phoneDisplay} (Apel telefonic, WhatsApp, Viber)
 - **Email**: ${SITE.email}
 - **Program**: Non-stop 24/7 (inclusiv noaptea, în weekend și de sărbători)

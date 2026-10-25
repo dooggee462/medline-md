@@ -31,18 +31,18 @@ const CODARE: Record<
 > = {
   ro: {
     metaTitle:
-      "Codare Anti-Alcool în Chișinău | Codare la Domiciliu 24/7 — Medline.md",
+      "Codare Anti-Alcool în Chișinău la Domiciliu — Medic Narcolog | Medline.md",
     metaDescription:
-      "Codare anti-alcool în Chișinău la domiciliu (Medline.md): procedură sigură și 100% confidențială, sub coordonarea medicului expert Sochirean Victor. Programare discretă 24/7: +373 61 003 863.",
+      "Codare anti-alcool la domiciliu în Chișinău: o face personal medicul narcolog Sochirean Victor, după evaluare și cu acordul pacientului. Tel.: +373 61 003 863",
     keywords:
-      "codare Chisinau, codare la domiciliu, codare anti-alcool, codare alcool Chisinau, codare alcool pret, codare impotriva alcoolului, codare alcoolism, codare la domiciliu Chisinau, kodirovanie ot alkogolya Chisinau",
+      "codare Chisinau, codare la domiciliu, codare anti-alcool, codare alcool Chisinau, codare alcool pret, codare impotriva alcoolului, codare alcoolism, codare la domiciliu Chisinau, narcolog la domiciliu Chisinau, medic narcolog Chisinau, kodirovanie ot alkogolya Chisinau",
     breadcrumb: "Codare",
     eyebrow: "Confidențial · La domiciliu · 24/7",
     title: "Codare anti-alcool în Chișinău,",
     titleAccent: "direct la tine acasă",
     subtitle:
-      "Procedura de codare împotriva dependenței de alcool, efectuată la domiciliu, în condiții sigure — după o evaluare prealabilă și cu acordul informat al pacientului. Discret, fără cozi, fără priviri străine.",
-    points: ["100% confidențial", "Evaluare medicală prealabilă", "Programare discretă 24/7"],
+      "Codarea împotriva dependenței de alcool, efectuată de medicul narcolog la tine acasă — după o evaluare prealabilă și cu acordul informat al pacientului. Discret, fără cozi, fără priviri străine.",
+    points: ["100% confidențial", "Efectuată de medic narcolog", "Programare discretă 24/7"],
     cta: "Sună pentru programare",
     cards: [
       {
@@ -66,14 +66,14 @@ const CODARE: Record<
         heading: "Ce este codarea anti-alcool",
         body: [
           "Codarea este o procedură medicală care susține decizia de a renunța la alcool, creând o barieră farmacologică împotriva consumului. Se efectuează numai după o evaluare medicală prealabilă, cu acordul informat al pacientului și după o perioadă obligatorie de abstinență — nu se face în stare de ebrietate.",
-          "La clinica Medline (medline.md), sub coordonarea medicului expert Sochirean Victor, procedura are loc direct la domiciliu în toate sectoarele din Chișinău și suburbii: fără drumuri la clinică, fără săli de așteptare, cu discreție 100%. Sună la +373 61 003 863 (24/7) pentru evaluare telefonică gratuită și programare discretă.",
+          "La clinica Medline (medline.md), procedura o efectuează personal medicul narcolog Sochirean Victor, direct la domiciliu în toate sectoarele din Chișinău și suburbii: fără drumuri la clinică, fără săli de așteptare, cu discreție 100%. Sună la +373 61 003 863 (24/7) pentru evaluare telefonică gratuită și programare discretă.",
         ],
       },
       {
         heading: "Cum decurge codarea la domiciliu",
         body: [
           "Ne suni la +373 61 003 863 sau ne scrii pe WhatsApp și discutăm situația — anonim și fără obligații. Stabilim împreună data, iar înainte de procedură pacientul trece printr-o evaluare: starea generală, istoricul de consum, eventualele contraindicații.",
-          "Dacă pacientul se află încă sub efectul alcoolului sau în binge, începem cu detoxifierea — perfuzii de refacere — și abia apoi, după perioada necesară de abstinență, efectuăm codarea. Totul sub supravegherea personalului medical calificat.",
+          "Dacă pacientul se află încă sub efectul alcoolului sau în binge, începem cu detoxifierea — perfuzii de refacere — și abia apoi, după perioada necesară de abstinență, efectuăm codarea. Ambele etape le face același medic narcolog.",
         ],
       },
       {
@@ -85,9 +85,9 @@ const CODARE: Record<
       {
         heading: "Cum te pregătești pentru codare",
         body: [
-          "Condiția principală este abstinența înainte de procedură. Perioada exactă depinde de cât și cât de recent s-a consumat, iar asistentul o stabilește la discuția inițială — nu este o formalitate, ci o condiție de siguranță: codarea efectuată cu alcool încă prezent în organism poate provoca reacții periculoase.",
+          "Condiția principală este abstinența înainte de procedură. Perioada exactă depinde de cât și cât de recent s-a consumat, iar medicul narcolog o stabilește la discuția inițială — nu este o formalitate, ci o condiție de siguranță: codarea efectuată cu alcool încă prezent în organism poate provoca reacții periculoase.",
           "Dacă pacientul nu reușește să se oprească singur, începem cu detoxifierea. Perfuziile de refacere ajută organismul să treacă peste primele zile, iar codarea se face abia după aceea. Sunt două etape distincte, iar sărirea peste prima nu ajută pe nimeni.",
-          "Pregătește actul de identitate și, dacă există, documentele medicale: analize recente, tratamente în curs, diagnostice cunoscute. Asistentul trebuie să știe ce medicamente ia pacientul, pentru că unele nu se combină cu procedura.",
+          "Pregătește actul de identitate și, dacă există, documentele medicale: analize recente, tratamente în curs, diagnostice cunoscute. Medicul trebuie să știe ce medicamente ia pacientul, pentru că unele nu se combină cu procedura.",
           "Ajută mult dacă familia discută deschis cu pacientul înainte. Un om care vine la procedură împăcat cu decizia lui are cu totul alte șanse decât unul adus prin insistențe.",
         ],
       },
@@ -103,7 +103,7 @@ const CODARE: Record<
       {
         heading: "Când codarea nu se poate face",
         body: [
-          "Există situații în care procedura este amânată sau contraindicată, iar asistentul le stabilește la evaluarea de la fața locului. Cele mai frecvente: pacientul este sub influența alcoolului, se află în plin sevraj, are afecțiuni cardiace grave, boli hepatice avansate, epilepsie, tulburări psihice acute sau este însărcinată.",
+          "Există situații în care procedura este amânată sau contraindicată, iar medicul narcolog le stabilește la evaluarea de la fața locului. Cele mai frecvente: pacientul este sub influența alcoolului, se află în plin sevraj, are afecțiuni cardiace grave, boli hepatice avansate, epilepsie, tulburări psihice acute sau este însărcinată.",
           "Preferăm să pierdem o vizită decât să efectuăm o procedură care poate face rău. Dacă starea pacientului nu permite codarea, îți explicăm de ce și îți spunem ce se poate face în schimb — de multe ori detoxifierea este primul pas corect.",
           "Nu efectuăm codarea fără acordul pacientului. Nu este doar o chestiune legală: o procedură făcută împotriva voinței cuiva nu funcționează și distruge încrederea de care are nevoie recuperarea.",
         ],
@@ -120,7 +120,7 @@ const CODARE: Record<
     faq: [
       {
         q: "Se poate face codarea la domiciliu?",
-        a: "Da. Echipa Medline se deplasează la domiciliu în Chișinău și împrejurimi, iar procedura se efectuează în condiții sigure, cu materiale sterile, după evaluarea prealabilă a pacientului.",
+        a: "Da. Medicul narcolog Medline se deplasează personal la domiciliu în Chișinău și împrejurimi, iar procedura se efectuează în condiții sigure, cu materiale sterile, după evaluarea prealabilă a pacientului.",
       },
       {
         q: "Cât costă codarea?",
@@ -148,7 +148,7 @@ const CODARE: Record<
       },
       {
         q: "Se poate face codarea dacă pacientul are boli cronice?",
-        a: "Depinde de afecțiune. Bolile cardiace grave, afecțiunile hepatice avansate, epilepsia, tulburările psihice acute și sarcina sunt contraindicații. Asistentul evaluează situația la fața locului și îți spune deschis dacă procedura este posibilă.",
+        a: "Depinde de afecțiune. Bolile cardiace grave, afecțiunile hepatice avansate, epilepsia, tulburările psihice acute și sarcina sunt contraindicații. Medicul narcolog evaluează situația la fața locului și îți spune deschis dacă procedura este posibilă.",
       },
       {
         q: "Veniți și noaptea sau în weekend?",
@@ -162,18 +162,18 @@ const CODARE: Record<
   },
   ru: {
     metaTitle:
-      "Кодирование от Алкоголя в Кишинёве | Кодировка на Дому 24/7 — Medline.md",
+      "Кодирование от алкоголя в Кишинёве — нарколог на дом | Medline.md",
     metaDescription:
-      "Кодирование от алкоголя в Кишинёве на дому (Medline.md): безопасная и 100% анонимная процедура под контролем врача-эксперта Виктора Сокиряна. Запись 24/7: +373 61 003 863.",
+      "Кодирование от алкоголя на дому в Кишинёве: процедуру лично проводит врач-нарколог Виктор Сокирян, после осмотра и с согласия пациента. Тел.: +373 61 003 863",
     keywords:
-      "кодирование Кишинёв, кодирование от алкоголя, кодировка на дому, кодирование от алкоголизма Кишинёв, кодировка от алкоголя цена, кодирование на дому Кишинёв",
+      "кодирование Кишинёв, кодирование от алкоголя, кодировка на дому, кодирование от алкоголизма Кишинёв, кодировка от алкоголя цена, кодирование на дому Кишинёв, нарколог на дом Кишинёв, врач-нарколог кодирование",
     breadcrumb: "Кодирование",
     eyebrow: "Конфиденциально · На дому · 24/7",
     title: "Кодирование от алкоголя в Кишинёве,",
     titleAccent: "прямо у вас дома",
     subtitle:
-      "Процедура кодирования от алкогольной зависимости на дому, в безопасных условиях — после предварительной оценки и с информированного согласия пациента. Дискретно, без очередей и посторонних глаз.",
-    points: ["100% конфиденциально", "Предварительная медицинская оценка", "Дискретная запись 24/7"],
+      "Кодирование от алкогольной зависимости проводит врач-нарколог у вас дома — после предварительного осмотра и с информированного согласия пациента. Дискретно, без очередей и посторонних глаз.",
+    points: ["100% конфиденциально", "Проводит врач-нарколог", "Дискретная запись 24/7"],
     cta: "Позвонить и записаться",
     cards: [
       {
@@ -197,14 +197,14 @@ const CODARE: Record<
         heading: "Что такое кодирование от алкоголя",
         body: [
           "Кодирование — это медицинская процедура, которая поддерживает решение отказаться от алкоголя, создавая фармакологический барьер против употребления. Проводится только после предварительной медицинской оценки, с информированного согласия пациента и после обязательного периода трезвости — в состоянии опьянения процедура не выполняется.",
-          "В клинике Medline (medline.md), под медицинским руководством врача-эксперта Виктора Сокиряна (Sochirean Victor), процедура проходит на дому во всех секторах Кишинёва и пригородах: без поездок в клинику, без залов ожидания, со 100% анонимностью. Позвоните по номеру +373 61 003 863 (24/7) для бесплатной консультации и дискретной записи.",
+          "В клинике Medline (medline.md), процедуру лично проводит врач-нарколог Виктор Сокирян (Sochirean Victor) — на дому во всех секторах Кишинёва и пригородах: без поездок в клинику, без залов ожидания, со 100% анонимностью. Позвоните по номеру +373 61 003 863 (24/7) для бесплатной консультации и дискретной записи.",
         ],
       },
       {
         heading: "Как проходит кодирование на дому",
         body: [
           "Вы звоните по номеру +373 61 003 863 или пишете в WhatsApp, и мы обсуждаем ситуацию — анонимно и без обязательств. Назначаем дату, а перед процедурой пациент проходит оценку: общее состояние, история употребления, возможные противопоказания.",
-          "Если пациент ещё под воздействием алкоголя или в запое, начинаем с детоксикации — восстановительных капельниц — и только после необходимого периода трезвости проводим кодирование. Всё под наблюдением квалифицированного медперсонала.",
+          "Если пациент ещё под воздействием алкоголя или в запое, начинаем с детоксикации — восстановительных капельниц — и только после необходимого периода трезвости проводим кодирование. Оба этапа проводит тот же врач-нарколог.",
         ],
       },
       {
@@ -216,9 +216,9 @@ const CODARE: Record<
       {
         heading: "Как подготовиться к кодированию",
         body: [
-          "Главное условие — воздержание перед процедурой. Точный срок зависит от того, сколько и как недавно было выпито; медработник определяет его при первом разговоре. Это не формальность, а условие безопасности: кодирование при остатках алкоголя в организме может вызвать опасные реакции.",
+          "Главное условие — воздержание перед процедурой. Точный срок зависит от того, сколько и как недавно было выпито; врач-нарколог определяет его при первом разговоре. Это не формальность, а условие безопасности: кодирование при остатках алкоголя в организме может вызвать опасные реакции.",
           "Если пациент не может остановиться самостоятельно, начинаем с детоксикации. Восстановительные капельницы помогают пережить первые дни, и только после этого проводится кодирование. Это два разных этапа, и пропуск первого не помогает никому.",
-          "Подготовьте удостоверение личности и, если есть, медицинские документы: свежие анализы, текущее лечение, известные диагнозы. Медработник должен знать, какие препараты принимает пациент — некоторые несовместимы с процедурой.",
+          "Подготовьте удостоверение личности и, если есть, медицинские документы: свежие анализы, текущее лечение, известные диагнозы. Врач должен знать, какие препараты принимает пациент — некоторые несовместимы с процедурой.",
           "Очень помогает, если семья заранее откровенно поговорит с пациентом. Человек, пришедший к процедуре в согласии со своим решением, имеет совсем другие шансы, чем тот, кого привели уговорами.",
         ],
       },
@@ -234,7 +234,7 @@ const CODARE: Record<
       {
         heading: "Когда кодирование провести нельзя",
         body: [
-          "Есть ситуации, когда процедура откладывается или противопоказана; медработник определяет их при осмотре на месте. Самые частые: пациент под воздействием алкоголя, в разгар синдрома отмены, тяжёлые заболевания сердца, запущенные болезни печени, эпилепсия, острые психические расстройства или беременность.",
+          "Есть ситуации, когда процедура откладывается или противопоказана; врач-нарколог определяет их при осмотре на месте. Самые частые: пациент под воздействием алкоголя, в разгар синдрома отмены, тяжёлые заболевания сердца, запущенные болезни печени, эпилепсия, острые психические расстройства или беременность.",
           "Мы лучше потеряем выезд, чем проведём процедуру, способную навредить. Если состояние пациента не позволяет кодирование, мы объясняем почему и говорим, что можно сделать вместо этого — часто правильный первый шаг именно детоксикация.",
           "Мы не проводим кодирование без согласия пациента. Дело не только в законе: процедура, сделанная против воли человека, не работает и разрушает доверие, необходимое для восстановления.",
         ],
@@ -251,7 +251,7 @@ const CODARE: Record<
     faq: [
       {
         q: "Можно ли сделать кодирование на дому?",
-        a: "Да. Команда Medline выезжает на дом в Кишинёве и окрестностях, процедура проводится в безопасных условиях, со стерильными материалами, после предварительной оценки пациента.",
+        a: "Да. Врач-нарколог Medline лично выезжает на дом в Кишинёве и окрестностях, процедура проводится в безопасных условиях, со стерильными материалами, после предварительной оценки пациента.",
       },
       {
         q: "Сколько стоит кодирование?",
@@ -279,7 +279,7 @@ const CODARE: Record<
       },
       {
         q: "Можно ли кодировать при хронических заболеваниях?",
-        a: "Зависит от заболевания. Тяжёлые болезни сердца, запущенные заболевания печени, эпилепсия, острые психические расстройства и беременность являются противопоказаниями. Медработник оценивает ситуацию на месте и прямо говорит, возможна ли процедура.",
+        a: "Зависит от заболевания. Тяжёлые болезни сердца, запущенные заболевания печени, эпилепсия, острые психические расстройства и беременность являются противопоказаниями. Врач-нарколог оценивает ситуацию на месте и прямо говорит, возможна ли процедура.",
       },
       {
         q: "Вы приезжаете ночью и в выходные?",
@@ -409,7 +409,7 @@ export default async function CodarePage({
             <div className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs text-brand-50/90">
               <IconShield className="h-4 w-4 text-gold-400 shrink-0" />
               <span>
-                {locale === "ro" ? "Protocol medical verificat de:" : "Медицинский протокол проверил:"}{" "}
+                {locale === "ro" ? "Vine personal:" : "Приезжает лично:"}{" "}
                 <Link href={`/${locale}/despre-noi`} className="font-bold text-white underline decoration-gold-400/70 underline-offset-2 hover:text-gold-300">
                   {SITE.author.name}
                 </Link>{" "}

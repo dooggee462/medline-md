@@ -166,7 +166,7 @@ export default async function Home({
               </ul>
               <div className="mt-6">
                 <Link href={`/${locale}/detoxifiere`} className="inline-flex items-center gap-1 font-semibold text-gold-300 hover:text-gold-200">
-                  {locale === "ro" ? "Vezi pagina completă" : "Открыть страницу"}
+                  {locale === "ro" ? "Detoxifiere la domiciliu — medic narcolog 24/7" : "Вывод из запоя на дому — нарколог 24/7"}
                   <span aria-hidden>→</span>
                 </Link>
               </div>

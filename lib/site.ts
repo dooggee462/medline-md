@@ -137,8 +137,8 @@ export const SITE = {
   author: {
     name: "Sochirean Victor",
     jobTitle: {
-      ro: "Medic expert · Fondator Medline",
-      ru: "Врач-эксперт · Основатель Medline",
+      ro: "Medic narcolog · Fondator Medline",
+      ru: "Врач-нарколог · Основатель Medline",
     },
     image: "/founder.jpg",
   },

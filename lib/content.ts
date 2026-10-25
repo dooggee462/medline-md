@@ -1979,7 +1979,7 @@ export const SERVICES: ServiceDetail[] = [
         h1: "Tratament post-alcool la domiciliu în Chișinău",
         short:
           "Perfuzii de refacere și rehidratare a organismului după consum de alcool, direct la domiciliu.",
-        lead: "Tratamentul post-alcool Medline.md (tel. +373 61 003 863) ajută organismul să se refacă rapid după consumul excesiv de alcool sau mahmureală severă, prin perfuzii intravenoase de rehidratare, vitamine și detoxifiere administrate la domiciliu în Chișinău și suburbii (sosire în 25–45 minute, 24/7), sub coordonarea medicului expert Sochirean Victor — discret și în siguranță.",
+        lead: "Tratamentul post-alcool Medline.md (tel. +373 61 003 863) ajută organismul să se refacă rapid după consumul excesiv de alcool sau mahmureală severă, prin perfuzii intravenoase de rehidratare, vitamine și detoxifiere administrate la domiciliu în Chișinău și suburbii (sosire în 25–45 minute, 24/7), sub coordonarea medicului narcolog Sochirean Victor — discret și în siguranță.",
         sections: [
           {
             heading: "În ce constă tratamentul",
@@ -2038,7 +2038,7 @@ export const SERVICES: ServiceDetail[] = [
           },
           {
             q: "Înlocuiește tratamentul un consult medical?",
-            a: "Tratamentul ameliorează simptomele fizice, sub coordonarea medicului expert Sochirean Victor. Pentru dependență cronică sau codare anti-alcool, vă îndrumăm spre pașii următori.",
+            a: "Tratamentul ameliorează simptomele fizice, sub coordonarea medicului narcolog Sochirean Victor. Pentru dependență cronică sau codare anti-alcool, vă îndrumăm spre pașii următori.",
           },
         ],
       },
@@ -2052,7 +2052,7 @@ export const SERVICES: ServiceDetail[] = [
         h1: "Лечение после алкоголя на дому в Кишинёве",
         short:
           "Капельницы от похмелья и восстановление организма после алкоголя на дому.",
-        lead: "Лечение после алкоголя от клиники Medline.md (тел. +373 61 003 863) помогает организму быстро восстановиться после употребления спиртного и тяжёлого похмелья — с помощью восстановительных капельниц и регидратации на дому в Кишинёве и пригородах (выезд за 25–45 минут, 24/7) под руководством врача-эксперта Сокиряна Виктора, анонимно и безопасно.",
+        lead: "Лечение после алкоголя от клиники Medline.md (тел. +373 61 003 863) помогает организму быстро восстановиться после употребления спиртного и тяжёлого похмелья — с помощью восстановительных капельниц и регидратации на дому в Кишинёве и пригородах (выезд за 25–45 минут, 24/7) под руководством врача-нарколога Сокиряна Виктора, анонимно и безопасно.",
         sections: [
           {
             heading: "В чём состоит лечение",
@@ -2401,7 +2401,7 @@ export const ARTICLES: Article[] = [
             heading: "Ce facem noi, dacă acceptă",
             body: [
               "Venim la domiciliu, discret, fără însemne pe mașină, în 25-45 de minute de la apel, la orice oră. Pentru mulți oameni, faptul că nu trebuie să intre pe ușa unei clinici e exact ce face pasul posibil.",
-              "Asistentul evaluează starea, explică opțiunile și spune deschis ce se poate și ce nu. Dacă e nevoie de detoxifiere înainte de [codare](/ro/codare), o spunem — nu vindem proceduri care nu ajută.",
+              "Medicul narcolog evaluează starea, explică opțiunile și spune deschis ce se poate și ce nu. Dacă e nevoie de detoxifiere înainte de [codare](/ro/codare), o spunem — nu vindem proceduri care nu ajută.",
               "Poți suna și doar ca să întrebi, fără ca persoana să știe încă. Discuția e gratuită și confidențială, iar de multe ori ajută să vorbești cu cineva care a văzut situația asta de sute de ori.",
             ],
           },
@@ -2467,7 +2467,7 @@ export const ARTICLES: Article[] = [
             heading: "Что делаем мы, если он согласится",
             body: [
               "Приезжаем на дом незаметно, без опознавательных знаков, за 25-45 минут после звонка, в любое время суток. Для многих именно то, что не надо входить в дверь клиники, и делает шаг возможным.",
-              "Медработник оценивает состояние, объясняет варианты и прямо говорит, что возможно, а что нет. Если перед [кодированием](/ru/codare) нужна детоксикация, мы это скажем — мы не продаём процедуры, которые не помогут.",
+              "Врач-нарколог оценивает состояние, объясняет варианты и прямо говорит, что возможно, а что нет. Если перед [кодированием](/ru/codare) нужна детоксикация, мы это скажем — мы не продаём процедуры, которые не помогут.",
               "Позвонить можно и просто чтобы спросить, пока человек ещё не знает. Разговор бесплатный и конфиденциальный, и часто помогает поговорить с тем, кто видел такую ситуацию сотни раз.",
             ],
           },
@@ -3373,7 +3373,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Ce să eviți înainte",
             body: [
-              "Evită consumul de alcool în perioada recomandată înainte de procedură și informează asistenta despre orice medicamente sau afecțiuni. Onestitatea la evaluare este esențială pentru siguranță.",
+              "Evită consumul de alcool în perioada recomandată înainte de procedură și informează medicul despre orice medicamente sau afecțiuni. Onestitatea la evaluare este esențială pentru siguranță.",
             ],
           },
           {
@@ -3438,7 +3438,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Чего избегать заранее",
             body: [
-              "Избегайте алкоголя в рекомендованный период перед процедурой и сообщите медсестре о любых препаратах или заболеваниях. Честность при оценке крайне важна для безопасности.",
+              "Избегайте алкоголя в рекомендованный период перед процедурой и сообщите врачу о любых препаратах или заболеваниях. Честность при оценке крайне важна для безопасности.",
             ],
           },
           {
@@ -3516,11 +3516,11 @@ export const ARTICLES: Article[] = [
             heading: "Cum decurge ieșirea din binge la domiciliu",
             body: [
               "### 1. Evaluarea",
-              "Asistenta medicală evaluează starea generală, măsoară tensiunea, pulsul și întreabă despre durata și cantitatea consumului. Astfel stabilește tratamentul potrivit și depistează eventualele riscuri.",
+              "Medicul narcolog evaluează starea generală, măsoară tensiunea, pulsul și întreabă despre durata și cantitatea consumului. Astfel stabilește tratamentul potrivit și depistează eventualele riscuri. Cum decurge vizita, pas cu pas, găsești pe pagina [detoxifiere la domiciliu cu medic narcolog](/ro/detoxifiere).",
               "### 2. Perfuzia de detoxifiere",
               "Se administrează o perfuzie cu soluții de rehidratare, vitamine (în special grupul B) și substanțe care reduc greața, tremurăturile și anxietatea. Organismul începe să se refacă, iar simptomele se ameliorează vizibil.",
               "### 3. Monitorizarea",
-              "Pe durata procedurii, asistenta rămâne alături și urmărește reacția pacientului. La nevoie, ajustează tratamentul sau recomandă un consult suplimentar.",
+              "Pe durata procedurii, medicul rămâne alături și urmărește reacția pacientului. La nevoie, ajustează tratamentul sau recomandă un consult suplimentar.",
             ],
           },
           {
@@ -3544,7 +3544,7 @@ export const ARTICLES: Article[] = [
               "### Este confidențial?",
               "Da, complet. Toate vizitele sunt discrete, la domiciliu, fără judecăți și fără divulgarea informațiilor.",
               "### Pot face asta singur acasă, fără medic?",
-              "Nu este recomandat. Sevrajul necontrolat poate fi periculos. Supravegherea unei asistente medicale face procesul sigur și mult mai blând.",
+              "Nu este recomandat. Sevrajul necontrolat poate fi periculos. Supravegherea unui medic narcolog face procesul sigur și mult mai blând.",
             ],
           },
           {
@@ -3594,11 +3594,11 @@ export const ARTICLES: Article[] = [
             heading: "Как проходит вывод из запоя на дому",
             body: [
               "### 1. Оценка",
-              "Медсестра оценивает общее состояние, измеряет давление, пульс и расспрашивает о длительности и количестве употребления. Так подбирается подходящее лечение и выявляются риски.",
+              "Врач-нарколог оценивает общее состояние, измеряет давление, пульс и расспрашивает о длительности и количестве употребления. Так подбирается подходящее лечение и выявляются риски. Как проходит визит, шаг за шагом, — на странице [вывод из запоя на дому с наркологом](/ru/detoxifiere).",
               "### 2. Детокс-капельница",
               "Ставится капельница с растворами для регидратации, витаминами (особенно группы B) и веществами, снижающими тошноту, тремор и тревогу. Организм начинает восстанавливаться, симптомы заметно облегчаются.",
               "### 3. Наблюдение",
-              "Во время процедуры медсестра остаётся рядом и следит за реакцией пациента. При необходимости корректирует лечение или рекомендует доп. консультацию.",
+              "Во время процедуры врач остаётся рядом и следит за реакцией пациента. При необходимости корректирует лечение или рекомендует доп. консультацию.",
             ],
           },
           {
@@ -3622,7 +3622,7 @@ export const ARTICLES: Article[] = [
               "### Это конфиденциально?",
               "Да, полностью. Все визиты дискретны, на дому, без осуждения и без разглашения информации.",
               "### Можно ли сделать это самому дома, без врача?",
-              "Не рекомендуется. Неконтролируемая абстиненция может быть опасной. Наблюдение медсестры делает процесс безопасным и гораздо мягче.",
+              "Не рекомендуется. Неконтролируемая абстиненция может быть опасной. Наблюдение врача-нарколога делает процесс безопасным и гораздо мягче.",
             ],
           },
           {
@@ -3890,7 +3890,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Cum ajutăm noi — detoxifiere la domiciliu",
             body: [
-              "Asistenta Medline vine la domiciliu, evaluează starea și administrează o perfuzie de detoxifiere care ameliorează simptomele și ajută organismul să se refacă, discret și în siguranță.",
+              "Medicul [narcolog Medline vine la domiciliu](/ro/detoxifiere), evaluează starea și administrează o perfuzie de detoxifiere care ameliorează simptomele și ajută organismul să se refacă, discret și în siguranță.",
               "Totul este confidențial, fără judecăți — un prim pas blând spre recuperare.",
             ],
           },
@@ -3924,7 +3924,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Как помогаем мы — детокс на дому",
             body: [
-              "Медсестра Medline приезжает на дом, оценивает состояние и ставит детокс-капельницу, которая облегчает симптомы и помогает организму восстановиться — анонимно и безопасно.",
+              "[Нарколог Medline приезжает на дом](/ru/detoxifiere), оценивает состояние и ставит детокс-капельницу, которая облегчает симптомы и помогает организму восстановиться — анонимно и безопасно.",
               "Всё конфиденциально, без осуждения — мягкий первый шаг к восстановлению.",
             ],
           },
@@ -4044,7 +4044,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Cum programezi",
             body: [
-              "Ne suni sau ne scrii, iar asistenta Medline ajunge la domiciliu, în Chișinău, discret și 24/7. Evaluează starea și administrează perfuzia potrivită pentru tine.",
+              "Ne suni sau ne scrii, iar [medicul narcolog Medline ajunge la domiciliu](/ro/detoxifiere), în Chișinău, discret și 24/7. Evaluează starea și administrează perfuzia potrivită pentru tine.",
             ],
           },
         ],
@@ -4077,7 +4077,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Как записаться",
             body: [
-              "Позвоните или напишите — медсестра Medline приедет на дом в Кишинёве, анонимно и 24/7. Оценит состояние и поставит подходящую капельницу.",
+              "Позвоните или напишите — [врач-нарколог Medline приедет на дом](/ru/detoxifiere) в Кишинёве, анонимно и 24/7. Оценит состояние и поставит подходящую капельницу.",
             ],
           },
         ],

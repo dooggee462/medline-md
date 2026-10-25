@@ -17,48 +17,76 @@ const DETOX: Record<
     metaTitle: string;
     metaDescription: string;
     keywords: string;
+    /** H1 propriu: titlul din dict.alcohol e și titlul secțiunii de pe pagina principală */
+    h1: string;
+    h1Accent: string;
     sections: { heading: string; body: string[] }[];
     faq: { q: string; a: string }[];
   }
 > = {
   ro: {
     metaTitle:
-      "Detoxifiere Post-Alcool la Domiciliu în Chișinău | Ieșire din Binge 24/7 — Medline.md",
+      "Detoxifiere Alcool la Domiciliu Chișinău — Medic Narcolog 24/7 | Medline.md",
     metaDescription:
-      "Detoxifiere post-alcool și ieșire din binge la domiciliu în Chișinău (Medline.md): perfuzii de dezintoxicare, vitamine și supraveghere medicală (Sochirean Victor). Sosire în 25-45 min, anonim 24/7: +373 61 003 863.",
+      "Detoxifiere alcool și ieșire din binge la domiciliu în Chișinău: medicul narcolog Sochirean Victor vine personal în 25–45 min. Anonim, 24/7: +373 61 003 863",
     keywords:
-      "detoxifiere post-alcool, iesire din binge Chisinau, detoxifiere alcool la domiciliu, vivod iz zapoya Chisinau, perfuzie dupa alcool, codare anti-alcool Chisinau, dezintoxicare alcoolica Chisinau",
+      "detoxifiere post-alcool, iesire din binge Chisinau, detoxifiere alcool la domiciliu, narcolog la domiciliu Chisinau, medic narcolog Chisinau, vivod iz zapoya Chisinau, perfuzie dupa alcool, dezintoxicare alcoolica Chisinau",
+    h1: "Detoxifiere post-alcool la domiciliu în Chișinău",
+    h1Accent: "— medic narcolog 24/7",
     sections: [
       {
         heading: "Ce este detoxifierea post-alcool și ieșirea din binge",
         body: [
           "Detoxifierea post-alcool (ieșirea din binge / dezintoxicarea alcoolică) este un protocol medical intensiv care ajută organismul să elimine rapid metaboliții toxici ai alcoolului (acetaldehida), să oprească starea de sevraj și să-și restabilească echilibrul hidro-electrolitic și cardiovascular. Se realizează prin perfuzii intravenoase cu soluții cristaloide, hepatoprotectoare, vitamine din grupul B și C, magneziu, potasiu și medicație simptomatică (antiemetice, anxiolitice ușoare la indicație).",
-          "La clinica Medline (medline.md), coordonată de medicul expert Sochirean Victor, efectuăm detoxifierea post-alcool direct la domiciliu în toate sectoarele din Chișinău (Centru, Botanica, Buiucani, Rîșcani, Ciocana, Telecentru) și în suburbii (Durlești, Stăuceni, Codru, Ialoveni, Dumbrava, Trușeni, Băcioi). Echipa ajunge în 25–45 de minute de la apelul la +373 61 003 863, 24/7, garantând anonimat 100%.",
+          "La clinica Medline (medline.md), detoxifierea la domiciliu o face personal medicul narcolog Sochirean Victor, în toate sectoarele din Chișinău (Centru, Botanica, Buiucani, Rîșcani, Ciocana, Telecentru) și în suburbii (Durlești, Stăuceni, Codru, Ialoveni, Dumbrava, Trușeni, Băcioi). Medicul ajunge în 25–45 de minute de la apelul la +373 61 003 863, 24/7, cu anonimat 100%.",
+        ],
+      },
+      {
+        heading: "Narcolog la domiciliu: când să suni",
+        body: [
+          "Merită să chemi medicul narcolog acasă când omul bea de mai multe zile la rând și nu se poate opri singur, iar când încearcă să se oprească apar tremurul mâinilor, transpirațiile, greața sau vărsăturile, insomnia, palpitațiile, tensiunea oscilantă sau neliniștea. Sunt semnele sevrajului: organismul a devenit dependent de alcool, iar oprirea bruscă fără ajutor medical se suportă greu.",
+          "Cu cât binge-ul durează mai mult, cu atât ieșirea din el e mai grea și cu atât crește solicitarea inimii, a ficatului și a sistemului nervos — de aceea nu merită să amâni apelul.",
+          "Dacă omul are convulsii, halucinații, confuzie, durere în piept sau își pierde cunoștința, este o urgență: sună imediat la 112. Aceste situații se tratează în spital, nu la domiciliu.",
         ],
       },
       {
         heading: "Cum decurge o vizită de detoxifiere la domiciliu",
         body: [
-          "Ne suni la +373 61 003 863 sau ne scrii pe WhatsApp, ne spui pe scurt durata consumului și starea pacientului, iar asistenta medicală autorizată se deplasează imediat — 24/7, fără mașini inscripționate. La sosire, evaluăm starea generală, măsurăm tensiunea arterială, pulsul și saturația de oxigen, apoi montăm perfuzia de detoxifiere, rămânând lângă pacient pe toată durata procedurii (45–90 minute).",
-          "Pentru pacienții care doresc să prevină recăderile după ieșirea din binge și stabilizarea completă a organismului, oferim și procedura de codare anti-alcool la domiciliu, în urma unei evaluări medicale prealabile.",
+          "Ne suni la +373 61 003 863 sau ne scrii pe WhatsApp și ne spui pe scurt de cât timp durează consumul și cum se simte pacientul. Medicul narcolog vine personal — 24/7, fără mașini inscripționate. La sosire îl examinează pe pacient, măsoară tensiunea, pulsul și saturația de oxigen, întreabă despre bolile cronice și medicamentele luate, și abia apoi alege compoziția perfuziei. Perfuzia durează 45–90 de minute, iar medicul rămâne lângă pacient tot timpul.",
+          "Înainte să plece, medicul le explică celor apropiați cum vor decurge următoarele ore, ce se poate și ce nu se poate face și la ce semne să sune din nou. După un binge lung, o singură perfuzie poate să nu ajungă — atunci medicul stabilește o nouă vizită.",
+          "Pentru pacienții care vor să rămână fără alcool după ieșirea din binge, același medic narcolog face și codarea anti-alcool la domiciliu, după perioada necesară de abstinență.",
+        ],
+      },
+      {
+        heading: "Când detoxifierea la domiciliu nu este posibilă",
+        body: [
+          "Medicul narcolog evaluează de fiecare dată dacă tratamentul acasă este sigur. E nevoie de spital când pacientul are delir alcoolic, convulsii, boli grave de inimă sau de ficat decompensate, ori când binge-ul se combină cu droguri sau cu doze mari de sedative. În aceste cazuri medicul explică de ce tratamentul acasă ar fi periculos și ce trebuie făcut mai departe.",
         ],
       },
       {
         heading: "De ce să alegi detoxifierea la domiciliu cu Medline.md",
         body: [
           "Acasă, pacientul se simte în siguranță, evită stresul transportului, aglomerația și privirile din spital și își păstrează intimitatea. Pentru multe familii din Chișinău, discreția este decisivă — de aceea Medline garantează confidențialitate deplină, fără înregistrare în registre publice și fără judecăți.",
-          "Intervenim rapid (25–45 minute), cu consumabile sterile de unică folosință și protocoale verificate de medicul expert Sochirean Victor, astfel încât refacerea fizică și liniștirea pacientului să fie blânde și sigure.",
+          "Intervenim rapid (25–45 minute), cu consumabile sterile de unică folosință, iar fiecare pacient este văzut personal de medicul narcolog Sochirean Victor, astfel încât refacerea fizică și liniștirea pacientului să fie blânde și sigure.",
         ],
       },
     ],
     faq: [
       {
-        q: "Serviciul de detoxifiere la domiciliu este cu adevărat confidențial?",
-        a: "Da, 100% anonim. Echipa Medline vine în haine civile, cu automobil neinscripționat, fără raportări externe. Intimitatea pacientului și a familiei este prioritară.",
+        q: "Vine medicul narcolog personal sau o asistentă?",
+        a: "Vine personal medicul narcolog Sochirean Victor. El examinează pacientul, alege perfuzia și rămâne lângă el până la sfârșitul procedurii.",
       },
       {
-        q: "În cât timp ajungeți în Chișinău și la ce număr sunăm?",
-        a: "Lucrăm non-stop 24/7. În Chișinău ajungem în 25–45 de minute de la apelul telefonic la +373 61 003 863 sau mesajul pe WhatsApp.",
+        q: "Serviciul de detoxifiere la domiciliu este cu adevărat confidențial?",
+        a: "Da, 100% anonim. Medicul vine în haine civile, cu automobil neinscripționat, fără raportări externe. Intimitatea pacientului și a familiei este prioritară.",
+      },
+      {
+        q: "Pot chema narcologul acasă noaptea?",
+        a: "Da, lucrăm non-stop, inclusiv noaptea, în weekend și de sărbători. În Chișinău medicul ajunge în 25–45 de minute de la apelul la +373 61 003 863 sau mesajul pe WhatsApp.",
+      },
+      {
+        q: "Se poate face detoxifierea fără acordul pacientului?",
+        a: "Tratamentul la domiciliu se face numai cu acordul pacientului — fără el, medicul nu poate monta perfuzia. Dacă omul refuză, iar starea lui îi pune viața în pericol (convulsii, halucinații, pierderea cunoștinței), sună la 112.",
       },
       {
         q: "Detoxifierea vindecă dependența de alcool?",
@@ -71,43 +99,67 @@ const DETOX: Record<
     ],
   },
   ru: {
-    metaTitle:
-      "Вывод из Запоя на Дому в Кишинёве 24/7 | Детоксикация после Алкоголя — Medline.md",
+    metaTitle: "Вывод из запоя на дому в Кишинёве — нарколог 24/7 | Medline.md",
     metaDescription:
-      "Вывод из запоя и детоксикация после алкоголя на дому в Кишинёве (Medline.md): детокс-капельницы, снятие интоксикации под контролем врача-эксперта Виктора Сокиряна. Выезд за 25-45 мин, анонимно 24/7: +373 61 003 863.",
+      "Вывод из запоя на дому в Кишинёве: врач-нарколог Виктор Сокирян приезжает лично за 25–45 мин, капельница и наблюдение. Анонимно, 24/7: +373 61 003 863",
     keywords:
-      "вывод из запоя Кишинёв, детоксикация после алкоголя на дому, капельница после алкоголя Кишинёв, вывод из запоя на дому, кодирование от алкоголя Кишинёв, наркологическая помощь на дому Кишинёв",
+      "вывод из запоя Кишинёв, вывод из запоя на дому, нарколог на дом Кишинёв, вызов нарколога на дом, капельница от запоя Кишинёв, детоксикация после алкоголя на дому, наркологическая помощь на дому Кишинёв",
+    h1: "Вывод из запоя на дому в Кишинёве",
+    h1Accent: "— врач-нарколог 24/7",
     sections: [
       {
         heading: "Что такое вывод из запоя и детоксикация после алкоголя на дому",
         body: [
           "Вывод из запоя (алкогольная детоксикация на дому) — это комплекс интенсивных медицинских процедур, которые помогают организму быстро вывести токсичные продукты распада этанола (ацетальдегид), купировать абстинентный синдром и восстановить водно-электролитный баланс и работу сердца. Проводится с помощью внутривенных капельниц с кристаллоидными растворами, гепатопротекторами, витаминами группы B и C, магнием, калием и симптоматическими препаратами (противорвотные, седативные по показаниям).",
-          "В клинике Medline (medline.md), под медицинским руководством врача-эксперта Виктора Сокиряна (Sochirean Victor), мы проводим вывод из запоя прямо на дому во всех секторах Кишинёва (Центр, Ботаника, Буюканы, Рышкановка, Чеканы, Телецентр) и пригородах (Дурлешты, Ставчены, Кодру, Яловены, Думбрава, Трушены, Бачой). Медсестра приезжает за 25–45 минут после звонка на +373 61 003 863, круглосуточно 24/7, со 100% гарантией анонимности.",
+          "В клинике Medline (medline.md) вывод из запоя на дому лично проводит врач-нарколог Виктор Сокирян (Sochirean Victor) — во всех секторах Кишинёва (Центр, Ботаника, Буюканы, Рышкановка, Чеканы, Телецентр) и пригородах (Дурлешты, Ставчены, Кодру, Яловены, Думбрава, Трушены, Бачой). Врач приезжает за 25–45 минут после звонка на +373 61 003 863, круглосуточно 24/7, со 100% гарантией анонимности.",
         ],
       },
       {
-        heading: "Как проходит визит для вывода из запоя",
+        heading: "Вызов нарколога на дом: когда звонить",
         body: [
-          "Вы звоните по номеру +373 61 003 863 или пишете в WhatsApp, кратко описываете длительность употребления и самочувствие пациента, и сертифицированная медсестра выезжает немедленно — 24/7, на автомобиле без опознавательных знаков. На месте мы оцениваем общее состояние, измеряем артериальное давление, пульс и сатурацию, после чего ставим детокс-капельницу и непрерывно наблюдаем пациента на протяжении всей процедуры (45–90 минут).",
-          "Для пациентов, которые хотят закрепить результат после вывода из запоя и полного очищения организма, мы также предлагаем процедуру кодирования от алкоголя на дому после предварительной медицинской оценки.",
+          "Вызвать нарколога на дом стоит, если человек пьёт несколько дней подряд и не может остановиться сам, а при попытке бросить появляются дрожь в руках, потливость, тошнота или рвота, бессонница, сердцебиение, скачки давления, тревога. Это признаки абстинентного синдрома: организм уже зависит от алкоголя, и резкая остановка без медицинской помощи переносится тяжело.",
+          "Чем дольше длится запой, тем тяжелее из него выйти и тем выше нагрузка на сердце, печень и нервную систему — поэтому откладывать звонок не стоит.",
+          "Если у человека судороги, галлюцинации, спутанность сознания, боль в груди или он теряет сознание — это неотложное состояние: сразу звоните 112. Такие случаи лечат в стационаре, а не на дому.",
+        ],
+      },
+      {
+        heading: "Как проходит вывод из запоя на дому",
+        body: [
+          "Вы звоните по номеру +373 61 003 863 или пишете в WhatsApp и кратко рассказываете, сколько длится запой и как себя чувствует пациент. Врач-нарколог выезжает сам — 24/7, на автомобиле без опознавательных знаков. На месте он осматривает пациента, измеряет давление, пульс и сатурацию, уточняет хронические болезни и принимаемые лекарства и только после этого подбирает состав капельницы. Капельница длится 45–90 минут, и всё это время врач остаётся рядом.",
+          "Перед уходом врач объясняет родственникам, как пройдут ближайшие часы, что можно и чего нельзя делать и при каких признаках звонить снова. После длительного запоя одной капельницы может не хватить — тогда врач договаривается о повторном визите.",
+          "Для пациентов, которые хотят закрепить результат после вывода из запоя, тот же врач-нарколог проводит кодирование от алкоголя на дому — после необходимого периода трезвости.",
+        ],
+      },
+      {
+        heading: "Когда вывод из запоя на дому невозможен",
+        body: [
+          "Врач-нарколог каждый раз оценивает, безопасно ли лечение дома. Стационар нужен, если у пациента алкогольный делирий («белая горячка»), судороги, тяжёлые болезни сердца или печени в стадии декомпенсации, а также если запой сочетается с наркотиками или большими дозами седативных препаратов. В таких случаях врач объясняет, почему лечение дома опасно, и что делать дальше.",
         ],
       },
       {
         heading: "Почему стоит выбрать вывод из запоя на дому с Medline.md",
         body: [
           "Дома пациент чувствует себя спокойно и в безопасности, избегает стресса транспортировки, очередей и посторонних взглядов в стационаре. Для многих семей в Кишинёве анонимность решающа — поэтому Medline гарантирует полную конфиденциальность, без постановки на учёт и без осуждения.",
-          "Мы выезжаем оперативно (25–45 минут), используем только стерильные одноразовые материалы и протоколы, утверждённые врачом-экспертом Виктором Сокиряном, чтобы восстановление и нормализация сна прошли мягко и безопасно.",
+          "Мы выезжаем оперативно (25–45 минут), используем только стерильные одноразовые материалы, а каждого пациента лично ведёт врач-нарколог Виктор Сокирян — чтобы восстановление и нормализация сна прошли мягко и безопасно.",
         ],
       },
     ],
     faq: [
       {
-        q: "Вывод из запоя на дому действительно анонимен?",
-        a: "Да, на 100% анонимно. Специалист Medline приезжает в обычной одежде на автомобиле без медицинской символики. Данные пациента никуда не передаются и не ставятся на учёт.",
+        q: "Приезжает сам нарколог или медсестра?",
+        a: "Приезжает сам врач-нарколог Виктор Сокирян. Он осматривает пациента, подбирает капельницу и остаётся рядом до конца процедуры.",
       },
       {
-        q: "Как быстро вы приедете по Кишинёву и куда звонить?",
-        a: "Мы работаем круглосуточно 24/7 без выходных. По Кишинёву приезжаем за 25–45 минут после звонка по телефону +373 61 003 863 или сообщения в WhatsApp.",
+        q: "Вывод из запоя на дому действительно анонимен?",
+        a: "Да, на 100% анонимно. Врач приезжает в обычной одежде на автомобиле без медицинской символики. Данные пациента никуда не передаются и не ставятся на учёт.",
+      },
+      {
+        q: "Можно ли вызвать нарколога на дом ночью?",
+        a: "Да, мы работаем круглосуточно, включая ночь, выходные и праздники. По Кишинёву врач приезжает за 25–45 минут после звонка по телефону +373 61 003 863 или сообщения в WhatsApp.",
+      },
+      {
+        q: "Можно ли вывести из запоя без согласия пациента?",
+        a: "Лечение на дому проводится только с согласия пациента — без него врач не может поставить капельницу. Если человек отказывается, а его состояние угрожает жизни (судороги, галлюцинации, потеря сознания), звоните 112.",
       },
       {
         q: "Детокс-капельница лечит алкогольную зависимость?",
@@ -168,7 +220,7 @@ export default async function DetoxPage({
   const procLd = {
     "@context": "https://schema.org",
     "@type": ["MedicalProcedure", "MedicalWebPage"],
-    name: `${a.title} ${a.titleAccent}`,
+    name: d.h1,
     description: d.metaDescription,
     url: `${SITE.url}/${locale}/detoxifiere`,
     inLanguage: locale === "ro" ? "ro-MD" : "ru-MD",
@@ -222,9 +274,9 @@ export default async function DetoxPage({
               {a.eyebrow}
             </p>
             <h1 className="mt-3 text-4xl font-extrabold tracking-tight sm:text-5xl">
-              {a.title}{" "}
+              {d.h1}{" "}
               <span className="bg-gradient-to-r from-gold-300 to-gold-500 bg-clip-text text-transparent">
-                {a.titleAccent}
+                {d.h1Accent}
               </span>
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-brand-50/90">{a.subtitle}</p>
@@ -238,7 +290,7 @@ export default async function DetoxPage({
             <div className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-2 text-xs text-brand-50/90">
               <IconShield className="h-4 w-4 text-gold-400 shrink-0" />
               <span>
-                {locale === "ro" ? "Protocol medical verificat de:" : "Медицинский протокол проверил:"}{" "}
+                {locale === "ro" ? "Vine personal:" : "Приезжает лично:"}{" "}
                 <Link href={`/${locale}/despre-noi`} className="font-bold text-white underline decoration-gold-400/70 underline-offset-2 hover:text-gold-300">
                   {SITE.author.name}
                 </Link>{" "}
@@ -291,7 +343,7 @@ export default async function DetoxPage({
               <dl className="mt-3 grid gap-2 sm:grid-cols-2">
                 <div>
                   <dt className="font-semibold text-slate-900">
-                    {locale === "ro" ? "Clinică & Coordonator medical:" : "Клиника и медицинский эксперт:"}
+                    {locale === "ro" ? "Clinică & medic narcolog:" : "Клиника и врач-нарколог:"}
                   </dt>
                   <dd>
                     Medline ({SITE.legalName}) — {SITE.author.name} ({SITE.author.jobTitle[locale]})

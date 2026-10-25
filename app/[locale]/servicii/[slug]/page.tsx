@@ -208,7 +208,7 @@ export default async function ServiceDetail({
                   <strong>{locale === "ro" ? "Furnizor:" : "Клиника:"}</strong> {SITE.legalName} ({SITE.company.shortName})
                 </li>
                 <li>
-                  <strong>{locale === "ro" ? "Medic expert:" : "Врач-эксперт:"}</strong> {SITE.author.name}
+                  <strong>{locale === "ro" ? "Medic coordonator:" : "Врач-координатор:"}</strong> {SITE.author.name}
                 </li>
                 <li>
                   <strong>{locale === "ro" ? "Program & Sosire:" : "График и выезд:"}</strong>{" "}
