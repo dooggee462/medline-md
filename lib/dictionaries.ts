@@ -204,9 +204,9 @@ export type Dictionary = {
 const ro: Dictionary = {
   meta: {
     title:
-      "Medline.md — Asistență Medicală la Domiciliu în Chișinău | Detoxifiere & Perfuzii 24/7",
+      "Asistență Medicală la Domiciliu în Chișinău 24/7 — Medline.md",
     description:
-      "Asistență medicală la domiciliu în Chișinău (Medline.md): detoxifiere post-alcool, codare, perfuzii, injecții și îngrijire sub coordonarea medicului expert Sochirean Victor. Sosire 25-45 min, 24/7: +373 61 003 863.",
+      "Asistență medicală la domiciliu în Chișinău 24/7: perfuzii, injecții, detoxifiere post-alcool, codare, îngrijire bolnavi. Sosire în 25–45 min: +373 61 003 863",
     keywords:
       "asistenta medicala la domiciliu, asistenta medicala la domiciliu Chisinau, sora medicala la domiciliu, medic la domiciliu Chisinau, detoxifiere post-alcool Chisinau, detoxifiere la domiciliu, dezalcoolizare Chisinau, codare la domiciliu, codare anti-alcool, codare alcool Chisinau, iesire din binge, perfuzii la domiciliu, perfuzie la domiciliu, perfuzie vitamine, perfuzie glucoza, vitaminoterapie la domiciliu, tratament post-alcool, tratament mahmureala, injectii la domiciliu, injectie intramusculara la domiciliu, injectie intravenoasa la domiciliu, ingrijire bolnavi la domiciliu Chisinau, ingrijire varstnici la domiciliu, ingrijire pacienti imobilizati, escare ingrijire, pansamente la domiciliu, ingrijire plagi la domiciliu, consult medical domiciliu, asistenta medicala non stop, servicii medicale 24/7 Chisinau, chemare asistenta la domiciliu, ajutor medical acasa Chisinau, servicii medicale private Moldova",
     ogAlt: "Medline — asistență medicală la domiciliu în Chișinău",
@@ -556,9 +556,9 @@ const ro: Dictionary = {
 const ru: Dictionary = {
   meta: {
     title:
-      "Medline.md — Медицинская помощь на дому в Кишинёве | Вывод из запоя & Капельницы 24/7",
+      "Медицинская помощь на дому в Кишинёве 24/7 — Medline.md",
     description:
-      "Медицинская помощь на дому в Кишинёве (Medline.md): вывод из запоя, кодирование, капельницы, инъекции и уход под руководством врача-эксперта Виктора Сокиряна. Выезд 25-45 мин, 24/7: +373 61 003 863.",
+      "Медпомощь на дому в Кишинёве 24/7: капельницы, уколы, вывод из запоя, кодирование, уход за больными. Выезд за 25–45 мин. Тел.: +373 61 003 863",
     keywords:
       "медицинская помощь на дому, медпомощь на дому Кишинёв, медсестра на дом, медсестра на дом Кишинёв, врач на дом, врач на дом Кишинёв, вывод из запоя Кишинёв, вывод из запоя на дому, кодирование от алкоголя, кодирование на дому, кодирование от алкоголя Кишинёв, детоксикация после алкоголя, детокс на дому, капельницы на дому, капельница на дому Кишинёв, витаминная капельница, капельница с глюкозой, витаминотерапия на дому, лечение похмелья, лечение после алкоголя, инъекции на дому, внутримышечная инъекция на дому, внутривенная инъекция на дому, уход за больными на дому Кишинёв, уход за пожилыми на дому, уход за лежачими больными, пролежни уход, перевязки на дому, обработка ран на дому, осмотр врача на дому, медпомощь круглосуточно, медицинские услуги 24/7 Кишинёв, вызов медсестры на дом, помощь на дому Кишинёв, частные медицинские услуги Молдова",
     ogAlt: "Medline — медицинская помощь на дому в Кишинёве",

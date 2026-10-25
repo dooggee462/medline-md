@@ -25,7 +25,7 @@ export function JsonLd({ locale }: { locale: Locale }) {
     telephone: SITE.phoneRaw,
     email: SITE.email,
     image: `${SITE.url}/og-image.png`,
-    logo: `${SITE.url}/icon.svg`,
+    logo: `${SITE.url}/icon-512.png`,
     priceRange: "$$",
     founder: { "@id": `${SITE.url}/#founder` },
     // Serviciu la domiciliu (fără sediu cu primire pacienți) — fără adresă fizică

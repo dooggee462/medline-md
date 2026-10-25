@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
@@ -39,7 +40,7 @@ export async function generateMetadata({
       canonical: `/${locale}/preturi`,
       languages: { ro: "/ro/preturi", ru: "/ru/preturi", "x-default": "/ro/preturi" },
     },
-    openGraph: { title, description, url: `/${locale}/preturi` },
+    openGraph: { ...ogDefaults(locale), title, description, url: `/${locale}/preturi` },
   };
 }
 

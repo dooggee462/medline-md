@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -107,7 +108,7 @@ export async function generateMetadata({
       canonical: `/${locale}/despre-noi`,
       languages: { ro: "/ro/despre-noi", ru: "/ru/despre-noi", "x-default": "/ro/despre-noi" },
     },
-    openGraph: { title: a.metaTitle, description: a.metaDescription, url: `/${locale}/despre-noi` },
+    openGraph: { ...ogDefaults(locale), title: a.metaTitle, description: a.metaDescription, url: `/${locale}/despre-noi` },
   };
 }
 

@@ -15,7 +15,7 @@ export function SiteSchema({ locale }: { locale: Locale }) {
     taxID: SITE.company.idno,
     alternateName: SITE.name,
     url: SITE.url,
-    logo: `${SITE.url}/icon.svg`,
+    logo: `${SITE.url}/icon-512.png`,
     image: `${SITE.url}/og-image.png`,
     slogan: SITE.slogan,
     founder: {

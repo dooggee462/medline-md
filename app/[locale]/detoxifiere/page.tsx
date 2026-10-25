@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, whatsappLink, type Locale } from "@/lib/site";
@@ -139,7 +140,7 @@ export async function generateMetadata({
       canonical: `/${locale}/detoxifiere`,
       languages: { ro: "/ro/detoxifiere", ru: "/ru/detoxifiere", "x-default": "/ro/detoxifiere" },
     },
-    openGraph: { title: d.metaTitle, description: d.metaDescription, url: `/${locale}/detoxifiere` },
+    openGraph: { ...ogDefaults(locale), title: d.metaTitle, description: d.metaDescription, url: `/${locale}/detoxifiere` },
   };
 }
 

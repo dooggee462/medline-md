@@ -127,7 +127,10 @@ export async function generateMetadata({
   const c = CONTENT[locale];
   return {
     title: `${c.title} | Medline.md`,
-    description: c.title,
+    description:
+      locale === "ro"
+        ? "Cum colectează, folosește și protejează Medline.md datele pacienților: ce informații cerem la programare, cât le păstrăm și ce drepturi ai."
+        : "Как Medline.md собирает, использует и защищает данные пациентов: какую информацию мы запрашиваем при записи, сколько храним и какие у вас права.",
     alternates: {
       canonical: `/${locale}/confidentialitate`,
       languages: { ro: "/ro/confidentialitate", ru: "/ru/confidentialitate", "x-default": "/ro/confidentialitate" },

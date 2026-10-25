@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
@@ -46,7 +47,7 @@ export async function generateMetadata({
     description: c.metaDescription,
     keywords: c.keywords,
     alternates: { canonical, languages: langs },
-    openGraph: { title: c.metaTitle, description: c.metaDescription, url: path },
+    openGraph: { ...ogDefaults(locale), title: c.metaTitle, description: c.metaDescription, url: path },
   };
 }
 

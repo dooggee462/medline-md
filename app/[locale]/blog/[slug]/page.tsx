@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
 import { getBlogPost, getBlogList } from "@/lib/posts";
+import { SERVICES } from "@/lib/content";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
@@ -66,6 +68,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
+      ...ogDefaults(locale),
       type: "article",
       title: post.title,
       description: post.excerpt,
@@ -87,9 +90,21 @@ export default async function ArticlePage({
   const post = await getBlogPost(slug, locale);
   if (!post) notFound();
   const dict = getDictionary(locale);
-  const related = (await getBlogList(locale))
-    .filter((b) => b.slug !== post.slug && !b.roSlug.endsWith("-video"))
-    .slice(0, 3);
+  // Întâi articolele de pe aceeași temă (din serviciile care listează și
+  // articolul curent), apoi cele mai noi. Înainte erau aceleași 3 articole
+  // pe toate paginile, iar cele despre codare nu primeau aproape niciun link.
+  const cluster = new Set(
+    SERVICES.filter((s) => s.relatedArticles?.includes(post.roSlug)).flatMap(
+      (s) => s.relatedArticles ?? []
+    )
+  );
+  const others = (await getBlogList(locale)).filter(
+    (b) => b.slug !== post.slug && !b.roSlug.endsWith("-video")
+  );
+  const related = [
+    ...others.filter((b) => cluster.has(b.roSlug)),
+    ...others.filter((b) => !cluster.has(b.roSlug)),
+  ].slice(0, 3);
   const dateLabel = new Date(post.date).toLocaleDateString(
     locale === "ro" ? "ro-RO" : "ru-RU",
     { day: "numeric", month: "long", year: "numeric" }
@@ -124,7 +139,7 @@ export default async function ArticlePage({
       "@type": "MedicalOrganization",
       "@id": `${SITE.url}/#organization`,
       name: SITE.legalName,
-      logo: { "@type": "ImageObject", url: `${SITE.url}/icon.svg` },
+      logo: { "@type": "ImageObject", url: `${SITE.url}/icon-512.png` },
     },
   };
 

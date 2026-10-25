@@ -3072,7 +3072,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Pe scurt: ce este codarea",
             body: [
-              "Codarea este o procedură care întărește decizia de a nu mai consuma alcool, funcționând cel mai bine ca parte a unei hotărâri ferme și, ideal, cu sprijin psihologic. Pentru detalii complete, vezi [pagina noastră despre codarea anti-alcool](/ro/servicii/codare-anti-alcool).",
+              "Codarea este o procedură care întărește decizia de a nu mai consuma alcool, funcționând cel mai bine ca parte a unei hotărâri ferme și, ideal, cu sprijin psihologic. Pentru detalii complete, vezi [pagina noastră despre codarea anti-alcool](/ro/codare).",
             ],
           },
           {
@@ -3144,7 +3144,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Коротко: что такое кодирование",
             body: [
-              "Кодирование — это процедура, которая укрепляет решение не употреблять алкоголь и работает лучше всего как часть твёрдого решения и, в идеале, с психологической поддержкой. Подробнее — на [нашей странице о кодировании](/ru/servicii/kodirovanie-ot-alkogolya).",
+              "Кодирование — это процедура, которая укрепляет решение не употреблять алкоголь и работает лучше всего как часть твёрдого решения и, в идеале, с психологической поддержкой. Подробнее — на [нашей странице о кодировании](/ru/codare).",
             ],
           },
           {
@@ -3229,7 +3229,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Ce este codarea",
             body: [
-              "[Codarea](/ro/servicii/codare-anti-alcool) țintește latura comportamentală: întărește decizia de a nu mai consuma alcool pe termen lung. Nu este un detox, ci un pas spre abstinență.",
+              "[Codarea](/ro/codare) țintește latura comportamentală: întărește decizia de a nu mai consuma alcool pe termen lung. Nu este un detox, ci un pas spre abstinență.",
             ],
           },
           {
@@ -3292,7 +3292,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Что такое кодирование",
             body: [
-              "[Кодирование](/ru/servicii/kodirovanie-ot-alkogolya) нацелено на поведенческую сторону: укрепляет решение не употреблять алкоголь надолго. Это не детокс, а шаг к трезвости.",
+              "[Кодирование](/ru/codare) нацелено на поведенческую сторону: укрепляет решение не употреблять алкоголь надолго. Это не детокс, а шаг к трезвости.",
             ],
           },
           {
@@ -3394,7 +3394,7 @@ export const ARTICLES: Article[] = [
               "### Cât trebuie să nu beau înainte?",
               "Perioada se stabilește la evaluare, în funcție de caz. Te informăm exact când ne contactezi.",
               "### Se face la domiciliu?",
-              "Da, oferim [codare la domiciliu](/ro/servicii/codare-anti-alcool) în Chișinău, discret și în siguranță.",
+              "Da, oferim [codare la domiciliu](/ro/codare) în Chișinău, discret și în siguranță.",
             ],
           },
           {
@@ -3459,7 +3459,7 @@ export const ARTICLES: Article[] = [
               "### Сколько нельзя пить заранее?",
               "Период определяется при оценке, в зависимости от случая. Сообщим точно, когда вы свяжетесь с нами.",
               "### Делается ли на дому?",
-              "Да, мы предлагаем [кодирование на дому](/ru/servicii/kodirovanie-ot-alkogolya) в Кишинёве, дискретно и безопасно.",
+              "Да, мы предлагаем [кодирование на дому](/ru/codare) в Кишинёве, дискретно и безопасно.",
             ],
           },
           {
@@ -3533,7 +3533,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Codarea — pasul spre abstinență",
             body: [
-              "Detoxifierea rezolvă starea fizică imediată, dar nu și dependența. Pentru cei care vor să rămână fără alcool, [codarea](/ro/servicii/codare-anti-alcool) (după o evaluare și o perioadă de abstinență) poate fi un pas eficient, mai ales împreună cu sprijin psihologic.",
+              "Detoxifierea rezolvă starea fizică imediată, dar nu și dependența. Pentru cei care vor să rămână fără alcool, [codarea](/ro/codare) (după o evaluare și o perioadă de abstinență) poate fi un pas eficient, mai ales împreună cu sprijin psihologic.",
             ],
           },
           {
@@ -3611,7 +3611,7 @@ export const ARTICLES: Article[] = [
           {
             heading: "Кодирование — шаг к трезвости",
             body: [
-              "Детоксикация решает непосредственное физическое состояние, но не зависимость. Для тех, кто хочет остаться без алкоголя, [кодирование](/ru/servicii/kodirovanie-ot-alkogolya) (после оценки и периода трезвости) может быть эффективным шагом, особенно вместе с психологической поддержкой.",
+              "Детоксикация решает непосредственное физическое состояние, но не зависимость. Для тех, кто хочет остаться без алкоголя, [кодирование](/ru/codare) (после оценки и периода трезвости) может быть эффективным шагом, особенно вместе с психологической поддержкой.",
             ],
           },
           {

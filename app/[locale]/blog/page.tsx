@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, type Locale } from "@/lib/site";
@@ -36,7 +37,7 @@ export async function generateMetadata({
       canonical: `/${locale}/blog`,
       languages: { ro: "/ro/blog", ru: "/ru/blog", "x-default": "/ro/blog" },
     },
-    openGraph: { title, description, url: `/${locale}/blog` },
+    openGraph: { ...ogDefaults(locale), title, description, url: `/${locale}/blog` },
   };
 }
 

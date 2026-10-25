@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, whatsappLink, type Locale } from "@/lib/site";
@@ -311,7 +312,7 @@ export async function generateMetadata({
       canonical: `/${locale}/codare`,
       languages: { ro: "/ro/codare", ru: "/ru/codare", "x-default": "/ro/codare" },
     },
-    openGraph: { title: d.metaTitle, description: d.metaDescription, url: `/${locale}/codare` },
+    openGraph: { ...ogDefaults(locale), title: d.metaTitle, description: d.metaDescription, url: `/${locale}/codare` },
   };
 }
 

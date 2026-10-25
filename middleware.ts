@@ -22,7 +22,21 @@ const SERVICE_SHORTCUTS: Record<string, { ro: string; ru: string }> = {
  * Ex: /  ->  /ro   (sau /ru dacă browserul preferă rusa)
  */
 export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
+  const { pathname, search } = request.nextUrl;
+
+  /**
+   * www.medline.md → medline.md. Pe server, www răspundea cu 200 și o copie
+   * completă a site-ului (Caddy nu-l redirecționa), deci Google vedea două
+   * site-uri identice. Plasa de siguranță e aici, ca să nu depindă de
+   * configurația proxy-ului.
+   */
+  const host = request.headers.get("host") ?? "";
+  if (host.startsWith("www.")) {
+    return NextResponse.redirect(
+      `https://${host.slice(4)}${pathname}${search}`,
+      308
+    );
+  }
 
   const hasLocale = LOCALES.some(
     (l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`)

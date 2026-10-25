@@ -125,7 +125,10 @@ export async function generateMetadata({
   const c = CONTENT[locale];
   return {
     title: `${c.title} | Medline.md`,
-    description: c.title,
+    description:
+      locale === "ro"
+        ? "Termenii și condițiile serviciilor medicale la domiciliu Medline.md în Chișinău: cum funcționează programarea, cum se comunică prețurile și limitele informațiilor de pe site."
+        : "Условия оказания медицинских услуг на дому Medline.md в Кишинёве: как работает запись, как сообщаются цены и ограничения информации на сайте.",
     alternates: {
       canonical: `/${locale}/termeni`,
       languages: { ro: "/ro/termeni", ru: "/ru/termeni", "x-default": "/ro/termeni" },

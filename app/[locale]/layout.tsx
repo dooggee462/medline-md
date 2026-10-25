@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond } from "next/font/google";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, type Locale } from "@/lib/site";
 import { getDictionary } from "@/lib/dictionaries";
+import { ogDefaults } from "@/lib/seo";
 import { CookieConsent } from "@/components/CookieConsent";
 import { BackToTop } from "@/components/BackToTop";
 import { MobileCallBar } from "@/components/MobileCallBar";
@@ -55,26 +56,16 @@ export async function generateMetadata({
       },
     },
     openGraph: {
-      type: "website",
-      siteName: SITE.name,
+      ...ogDefaults(locale),
       title: dict.meta.title,
       description: dict.meta.description,
       url: path,
-      locale: locale === "ro" ? "ro_RO" : "ru_RU",
-      alternateLocale: locale === "ro" ? ["ru_RU"] : ["ro_RO"],
-      images: [
-        {
-          url: "/og-image.png",
-          width: 1200,
-          height: 630,
-          alt: dict.meta.ogAlt,
-        },
-      ],
     },
+    // Fără title/description: paginile interioare moștenesc `twitter` din
+    // layout și ar fi purtat titlul paginii principale. Fără ele, rețelele
+    // citesc og:title / og:description ale fiecărei pagini.
     twitter: {
       card: "summary_large_image",
-      title: dict.meta.title,
-      description: dict.meta.description,
       images: ["/og-image.png"],
     },
     robots: {

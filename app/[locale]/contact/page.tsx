@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ogDefaults } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LOCALES, SITE, whatsappLink, type Locale } from "@/lib/site";
@@ -39,7 +40,7 @@ export async function generateMetadata({
       canonical: `/${locale}/contact`,
       languages: { ro: "/ro/contact", ru: "/ru/contact", "x-default": "/ro/contact" },
     },
-    openGraph: { title, description, url: `/${locale}/contact` },
+    openGraph: { ...ogDefaults(locale), title, description, url: `/${locale}/contact` },
   };
 }
 
