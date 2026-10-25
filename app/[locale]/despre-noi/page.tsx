@@ -171,7 +171,7 @@ export default async function AboutPage({
             <div className="mx-auto w-full max-w-xs overflow-hidden rounded-3xl border border-slate-100 shadow-xl shadow-brand-900/10">
               <Image
                 src="/founder.jpg"
-                alt={locale === "ro" ? "Sochirean Victor — medic narcolog, fondator Medline" : "Сокирян Виктор — врач-нарколог, основатель Medline"}
+                alt={locale === "ro" ? "Sochirean Victor — medic, fondator Medline" : "Сокирян Виктор — врач, основатель Medline"}
                 width={590}
                 height={1153}
                 className="aspect-[3/4] w-full object-cover object-top"
@@ -179,7 +179,7 @@ export default async function AboutPage({
             </div>
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-brand-600">
-                {locale === "ro" ? "Medic narcolog · Fondator" : "Врач-нарколог · Основатель"}
+                {locale === "ro" ? "Medic · Fondator" : "Врач · Основатель"}
               </p>
               <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-slate-900">Sochirean Victor</h2>
               <p className="mt-1 font-semibold text-brand-700">
@@ -187,8 +187,8 @@ export default async function AboutPage({
               </p>
               <p className="mt-4 leading-relaxed text-slate-600">
                 {locale === "ro"
-                  ? "Victor Sochirean a fondat Medline.md cu o convingere simplă: îngrijirea medicală de calitate trebuie să ajungă la oameni acasă, în Chișinău și împrejurimi, cu profesionalism, discreție și empatie. În calitate de medic narcolog, vine personal la pacienții care au nevoie de detoxifiere post-alcool sau de codare și coordonează echipa medicală pentru celelalte intervenții (perfuzii, injecții, îngrijire la domiciliu), asigurându-se că fiecare pacient primește atenția și siguranța pe care le merită."
-                  : "Виктор Сокирян основал Medline.md с простым убеждением: качественная медицинская помощь должна приходить к людям домой в Кишинёве и пригородах — с профессионализмом, деликатностью и заботой. Как врач-нарколог, он сам выезжает к пациентам на вывод из запоя и кодирование и руководит медицинской командой на остальных выездах (капельницы, уколы, уход на дому), следя за тем, чтобы каждый пациент получал внимание и безопасность, которых заслуживает."}
+                  ? "Victor Sochirean a fondat Medline.md cu o convingere simplă: îngrijirea medicală de calitate trebuie să ajungă la oameni acasă, în Chișinău și împrejurimi, cu profesionalism, discreție și empatie. În calitate de medic, vine personal la pacienții care au nevoie de detoxifiere post-alcool sau de codare și coordonează echipa medicală pentru celelalte intervenții (perfuzii, injecții, îngrijire la domiciliu), asigurându-se că fiecare pacient primește atenția și siguranța pe care le merită."
+                  : "Виктор Сокирян основал Medline.md с простым убеждением: качественная медицинская помощь должна приходить к людям домой в Кишинёве и пригородах — с профессионализмом, деликатностью и заботой. Как врач, он сам выезжает к пациентам на вывод из запоя и кодирование и руководит медицинской командой на остальных выездах (капельницы, уколы, уход на дому), следя за тем, чтобы каждый пациент получал внимание и безопасность, которых заслуживает."}
               </p>
             </div>
           </div>

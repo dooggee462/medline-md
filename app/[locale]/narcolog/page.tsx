@@ -16,8 +16,9 @@ import { IconDrop, IconStar, IconShield, IconCheck, IconPhone, IconWhatsApp } fr
  * un medic care să vină și să decidă ce trebuie făcut, nu o procedură anume.
  * Concurenții de pe primele locuri au pagini separate pentru cele două, așa
  * că și noi le ținem separat: aici vizita medicului, la /detoxifiere
- * procedura. Toate afirmațiile despre cine vine sunt confirmate de client:
- * dr. Sochirean, medic narcolog, merge personal la fiecare pacient.
+ * procedura. Confirmat de client: dr. Sochirean merge personal la fiecare pacient.
+ * Pe site el apare doar ca „medic" / „врач" (cerința clientului); „narcolog"
+ * rămâne numai ca nume al serviciului — titlu, H1, buton, întrebări.
  */
 const NARCOLOG: Record<
   Locale,
@@ -43,14 +44,14 @@ const NARCOLOG: Record<
     metaDescription:
       "Narcolog la domiciliu în Chișinău, 24/7: medicul vine personal în 25–45 min — evaluare, oprirea sevrajului, perfuzie, plan de tratament. Anonim: +373 61 003 863",
     keywords:
-      "narcolog la domiciliu, narcolog la domiciliu Chisinau, chemare narcolog acasa, medic narcolog Chisinau, narcolog 24/7, narcolog anonim Chisinau, sevraj alcool tratament la domiciliu",
+      "narcolog la domiciliu, narcolog la domiciliu Chisinau, chemare narcolog acasa, medic Chisinau, narcolog 24/7, narcolog anonim Chisinau, sevraj alcool tratament la domiciliu",
     breadcrumb: "Narcolog la domiciliu",
     eyebrow: "Anonim · Medicul vine personal · 24/7",
     h1: "Narcolog la domiciliu în Chișinău",
     h1Accent: "— vine în 25–45 de minute",
     subtitle:
-      "Medicul narcolog Sochirean Victor vine personal la pacient acasă, în Chișinău și suburbii: îl examinează, oprește sevrajul și le spune celor apropiați ce trebuie făcut mai departe.",
-    points: ["Vine medicul narcolog, nu asistenta", "Sosire în 25–45 de minute", "Fără înregistrare în registre publice"],
+      "Medicul Sochirean Victor vine personal la pacient acasă, în Chișinău și suburbii: îl examinează, oprește sevrajul și le spune celor apropiați ce trebuie făcut mai departe.",
+    points: ["Vine medicul, nu asistenta", "Sosire în 25–45 de minute", "Fără înregistrare în registre publice"],
     cta: "Cheamă narcologul",
     cards: [
       {
@@ -60,7 +61,7 @@ const NARCOLOG: Record<
       },
       {
         title: "Codare anti-alcool",
-        desc: "Pasul următor după detoxifiere, făcut tot de medicul narcolog, după perioada de abstinență.",
+        desc: "Pasul următor după detoxifiere, făcut de același medic, după perioada de abstinență.",
         href: (l) => `/${l}/codare`,
       },
       {
@@ -73,7 +74,7 @@ const NARCOLOG: Record<
       {
         heading: "Când să chemi narcologul acasă",
         body: [
-          "Un medic narcolog la domiciliu e potrivit atunci când problema e legată de alcool, situația e serioasă, dar nu e o urgență pentru 112, iar omul nu poate sau nu vrea să meargă la o clinică. Cele mai frecvente situații în care ne sună familiile:",
+          "Chemarea narcologului la domiciliu e potrivită atunci când problema e legată de alcool, situația e serioasă, dar nu e o urgență pentru 112, iar omul nu poate sau nu vrea să meargă la o clinică. Cele mai frecvente situații în care ne sună familiile:",
         ],
         list: [
           "omul bea de câteva zile la rând și nu se poate opri singur;",
@@ -84,7 +85,7 @@ const NARCOLOG: Record<
         ],
       },
       {
-        heading: "Ce face medicul narcolog la domiciliu",
+        heading: "Ce face medicul la domiciliu",
         body: [
           "Mai întâi examinează pacientul: măsoară tensiunea, pulsul și saturația de oxigen și întreabă de cât timp durează consumul, ce boli are și ce medicamente ia. După asta decide dacă tratamentul acasă este sigur.",
           "Dacă este, montează o perfuzie care elimină intoxicația și oprește sevrajul. Perfuzia durează 45–90 de minute, iar medicul rămâne lângă pacient tot timpul. Când e vorba de un binge, vizita devine ieșirea din binge la domiciliu — o descriem pas cu pas pe pagina de detoxifiere.",
@@ -156,14 +157,14 @@ const NARCOLOG: Record<
     metaDescription:
       "Вызов нарколога на дом в Кишинёве 24/7: врач приезжает лично за 25–45 минут — осмотр, снятие абстиненции, капельница, план лечения. Анонимно: +373 61 003 863",
     keywords:
-      "вызов нарколога на дом, нарколог на дом Кишинёв, вызвать нарколога на дом, нарколог на дом круглосуточно, анонимный нарколог Кишинёв, врач-нарколог на дом, снятие абстиненции на дому",
+      "вызов нарколога на дом, нарколог на дом Кишинёв, вызвать нарколога на дом, нарколог на дом круглосуточно, анонимный нарколог Кишинёв, врач на дом, снятие абстиненции на дому",
     breadcrumb: "Нарколог на дом",
     eyebrow: "Анонимно · Врач приезжает сам · 24/7",
     h1: "Вызов нарколога на дом в Кишинёве",
     h1Accent: "— приезд за 25–45 минут",
     subtitle:
-      "Врач-нарколог Виктор Сокирян сам приезжает к пациенту домой по Кишинёву и пригородам: осматривает, снимает абстинентный синдром и объясняет семье, что делать дальше.",
-    points: ["Приезжает врач-нарколог, а не медсестра", "Выезд за 25–45 минут", "Без постановки на учёт"],
+      "Врач Виктор Сокирян сам приезжает к пациенту домой по Кишинёву и пригородам: осматривает, снимает абстинентный синдром и объясняет семье, что делать дальше.",
+    points: ["Приезжает врач, а не медсестра", "Выезд за 25–45 минут", "Без постановки на учёт"],
     cta: "Вызвать нарколога",
     cards: [
       {
@@ -173,7 +174,7 @@ const NARCOLOG: Record<
       },
       {
         title: "Кодирование от алкоголя",
-        desc: "Следующий шаг после вывода из запоя — его тоже проводит врач-нарколог, после периода трезвости.",
+        desc: "Следующий шаг после вывода из запоя — его проводит тот же врач, после периода трезвости.",
         href: (l) => `/${l}/codare`,
       },
       {
@@ -197,7 +198,7 @@ const NARCOLOG: Record<
         ],
       },
       {
-        heading: "Что делает нарколог на дому",
+        heading: "Что делает врач на дому",
         body: [
           "Сначала врач осматривает пациента: измеряет давление, пульс и сатурацию, расспрашивает, сколько длится употребление, какие есть болезни и какие лекарства человек принимает. После этого он решает, безопасно ли лечение дома.",
           "Если безопасно — ставит капельницу, которая снимает интоксикацию и абстинентный синдром. Капельница длится 45–90 минут, и всё это время врач остаётся рядом. Если речь о запое, визит превращается в вывод из запоя на дому — он подробно описан на отдельной странице.",
