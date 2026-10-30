@@ -14,6 +14,7 @@ const PASI = [
       "Apasă butonul de Partajare, pătratul cu săgeata în sus, din bara de jos",
       "Alege „Adaugă la ecranul principal”",
       "Apasă „Adaugă”, sus în dreapta",
+      "Deschide aplicația de pe ecran și apasă „Notificări” → „Activează notificările”",
     ],
   },
   {
@@ -24,6 +25,7 @@ const PASI = [
       "Apasă meniul cu trei puncte, sus în dreapta",
       "Alege „Adaugă la ecranul principal” sau „Instalează aplicația”",
       "Confirmă cu „Adaugă”",
+      "Deschide aplicația de pe ecran și apasă „Notificări” → „Activează notificările”",
     ],
   },
 ];

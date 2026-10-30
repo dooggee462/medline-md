@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { cleanPath } from "@/lib/leads";
 import { sendTelegram } from "@/lib/telegram";
+import { sendPush } from "@/lib/push";
+import { adminUsers } from "@/lib/team";
 
 /*
  * Datele din chat ajung la clinică pe Telegram: întâi numele și telefonul
@@ -81,6 +83,12 @@ export async function POST(req: Request) {
   ]
     .filter((l) => l !== null)
     .join("\n");
+
+  await sendPush(await adminUsers(), {
+    title: body.kind === "callback" ? `📞 Cere să fie sunat · ${name}` : `🔔 Client nou în chat · ${name}`,
+    body: [phone, service, zone, message].filter(Boolean).join(" · "),
+    url: "/admin/registru/nou",
+  });
 
   if (!(await sendTelegram(text))) {
     return NextResponse.json({ ok: false }, { status: 502 });

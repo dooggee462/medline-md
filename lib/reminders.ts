@@ -1,5 +1,7 @@
 import { markReminded, readCases, type Case } from "./cases";
 import { sendTelegram } from "./telegram";
+import { sendPush } from "./push";
+import { adminUsers, usersNamed } from "./team";
 import { localToTimestamp } from "./when";
 
 /**
@@ -49,6 +51,12 @@ export async function checkReminders(now = Date.now()): Promise<number> {
     // marcăm înainte de trimitere: mai bine o reamintire pierdută decât trimisă în buclă
     await markReminded(c.id, lead);
     await sendTelegram(message(c, lead));
+    await sendPush([...(await adminUsers()), ...(await usersNamed(c.assignee))], {
+      title: `⏰ Peste ${lead} ore · ${c.patient}`,
+      body: [[c.area, c.address].filter(Boolean).join(", "), c.service, `azi ${c.time}`].filter(Boolean).join(" · "),
+      url: `/admin/registru/${c.id}`,
+      tag: `${c.id}-${lead}`,
+    });
   }
   return due.length;
 }

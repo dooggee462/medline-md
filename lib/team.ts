@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { DATA_DIR } from "./posts";
-import { accountList, getSession, type Role } from "./auth";
+import { accountList, type Role } from "./auth";
 import { renameAssignee } from "./cases";
 
 /**
@@ -50,8 +50,24 @@ export async function assignableNames(): Promise<string[]> {
   return [...new Set(ordered.map((m) => m.name))];
 }
 
-/** Sesiunea curentă, cu numele luat din echipă: o redenumire prinde imediat */
+/** Conturile care poartă numele ăsta — Victor are mai multe */
+export async function usersNamed(name: string): Promise<string[]> {
+  if (!name) return [];
+  return (await team()).filter((m) => m.name === name).map((m) => m.user);
+}
+
+/** Conturile de administrator: primesc tot */
+export async function adminUsers(): Promise<string[]> {
+  return (await team()).filter((m) => m.role === "admin").map((m) => m.user);
+}
+
+/**
+ * Sesiunea curentă, cu numele luat din echipă: o redenumire prinde imediat.
+ * „next/headers" se încarcă abia aici, ca fișierul să poată fi folosit și din
+ * verificarea reamintirilor, care rulează în afara unei cereri.
+ */
 export async function currentUser(): Promise<Member | null> {
+  const { getSession } = await import("./auth");
   const session = await getSession();
   if (!session) return null;
   return { user: session.user, role: session.role, name: await nameOf(session.user) };

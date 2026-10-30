@@ -72,6 +72,9 @@ export default async function RegistryPage({
           <Link href="/admin/informatii" className="font-semibold text-brand-700 hover:underline">
             Informații
           </Link>
+          <Link href="/admin/notificari" className="font-semibold text-brand-700 hover:underline">
+            Notificări
+          </Link>
           <Link href="/admin/telefon" className="font-medium text-slate-500 hover:text-brand-700">
             Pe telefon
           </Link>

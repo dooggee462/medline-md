@@ -3,7 +3,8 @@
 import crypto from "crypto";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { currentUser, type Member } from "@/lib/team";
+import { adminUsers, currentUser, usersNamed, type Member } from "@/lib/team";
+import { sendPush } from "@/lib/push";
 import { getCase, removeCase, saveCase, setStatus, today, STATUSES, type Case, type Status } from "@/lib/cases";
 import { sendTelegram } from "@/lib/telegram";
 
@@ -21,6 +22,17 @@ function allowed(session: Member, assignee: string): boolean {
 const text = (fd: FormData, key: string, max = 200) => String(fd.get(key) || "").trim().slice(0, max);
 
 /** Anunțul din grupul de Telegram: tot ce îi trebuie asistentului ca să plece */
+/** Notificarea de pe telefon: scurtă, cât să se citească de pe ecranul blocat */
+async function notify(c: Case, title: string) {
+  const unde = [c.area, c.address].filter(Boolean).join(", ");
+  await sendPush([...(await adminUsers()), ...(await usersNamed(c.assignee))], {
+    title: `${title} ${c.no}`,
+    body: [c.patient, unde, c.service, `${c.date}${c.time ? ` ${c.time}` : ""}`].filter(Boolean).join(" · "),
+    url: `/admin/registru/${c.id}`,
+    tag: c.id,
+  });
+}
+
 function announcement(c: Case, title: string): string {
   return [
     `${title} ${c.no}`,
@@ -84,9 +96,13 @@ export async function saveCaseAction(formData: FormData) {
    */
   const saved = await getCase(id);
   if (saved) {
-    if (result === "creat") await sendTelegram(announcement(saved, "🗂 Caz nou"));
-    else if (result === "actualizat" && existing?.assignee !== saved.assignee && saved.assignee)
+    if (result === "creat") {
+      await sendTelegram(announcement(saved, "🗂 Caz nou"));
+      await notify(saved, "🗂 Caz nou");
+    } else if (result === "actualizat" && existing?.assignee !== saved.assignee && saved.assignee) {
       await sendTelegram(announcement(saved, "🔁 Caz repartizat"));
+      await notify(saved, "🔁 Caz repartizat");
+    }
   }
 
   revalidatePath("/admin/registru");

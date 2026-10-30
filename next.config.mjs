@@ -37,7 +37,13 @@ const nextConfig = {
    */
   webpack(config, { nextRuntime }) {
     if (nextRuntime === "edge") {
-      config.resolve.fallback = { ...config.resolve.fallback, fs: false, path: false };
+      // modulele de Node folosite de reamintiri și de notificări: în edge nu
+      // există, dar nici nu rulează, fiindcă instrumentarea iese imediat acolo
+      const nodeOnly = ["fs", "path", "crypto", "http", "https", "net", "tls", "zlib", "stream", "url", "dns", "os", "child_process"];
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        ...Object.fromEntries(nodeOnly.map((m) => [m, false])),
+      };
     }
     return config;
   },

@@ -22,6 +22,9 @@ export default async function AdminDashboard() {
           <Link href="/admin/registru" className="text-sm font-semibold text-brand-700 hover:underline">
             Registru vizite
           </Link>
+          <Link href="/admin/notificari" className="text-sm font-semibold text-brand-700 hover:underline">
+            Notificări
+          </Link>
           <Link href="/admin/informatii" className="text-sm font-semibold text-brand-700 hover:underline">
             Informații
           </Link>
