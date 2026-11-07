@@ -97,10 +97,10 @@ export async function saveCaseAction(formData: FormData) {
   const saved = await getCase(id);
   if (saved) {
     if (result === "creat") {
-      await sendTelegram(announcement(saved, "🗂 Caz nou"));
+      await sendTelegram(announcement(saved, "🗂 Caz nou"), "echipa");
       await notify(saved, "🗂 Caz nou");
     } else if (result === "actualizat" && existing?.assignee !== saved.assignee && saved.assignee) {
-      await sendTelegram(announcement(saved, "🔁 Caz repartizat"));
+      await sendTelegram(announcement(saved, "🔁 Caz repartizat"), "echipa");
       await notify(saved, "🔁 Caz repartizat");
     }
   }

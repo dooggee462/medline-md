@@ -50,7 +50,7 @@ export async function checkReminders(now = Date.now()): Promise<number> {
   for (const { c, lead } of due) {
     // marcăm înainte de trimitere: mai bine o reamintire pierdută decât trimisă în buclă
     await markReminded(c.id, lead);
-    await sendTelegram(message(c, lead));
+    await sendTelegram(message(c, lead), "echipa");
     await sendPush([...(await adminUsers()), ...(await usersNamed(c.assignee))], {
       title: `⏰ Peste ${lead} ore · ${c.patient}`,
       body: [[c.area, c.address].filter(Boolean).join(", "), c.service, `azi ${c.time}`].filter(Boolean).join(" · "),
