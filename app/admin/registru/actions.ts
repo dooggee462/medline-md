@@ -7,6 +7,7 @@ import { adminUsers, currentUser, usersNamed, type Member } from "@/lib/team";
 import { sendPush } from "@/lib/push";
 import { getCase, removeCase, saveCase, setStatus, today, STATUSES, type Case, type Status } from "@/lib/cases";
 import { sendTelegram } from "@/lib/telegram";
+import { daysLabel } from "@/lib/when";
 
 async function requireSession(): Promise<Member> {
   const session = await currentUser();
@@ -27,7 +28,9 @@ async function notify(c: Case, title: string) {
   const unde = [c.area, c.address].filter(Boolean).join(", ");
   await sendPush([...(await adminUsers()), ...(await usersNamed(c.assignee))], {
     title: `${title} ${c.no}`,
-    body: [c.patient, unde, c.service, `${c.date}${c.time ? ` ${c.time}` : ""}`].filter(Boolean).join(" · "),
+    body: [c.patient, unde, c.service, `${c.date}${c.time ? ` ${c.time}` : ""}`, daysLabel(c.date, c.days)]
+      .filter(Boolean)
+      .join(" · "),
     url: `/admin/registru/${c.id}`,
     tag: c.id,
   });
@@ -42,6 +45,7 @@ function announcement(c: Case, title: string): string {
     c.address || c.area ? `📍 ${[c.area, c.address].filter(Boolean).join(", ")}` : null,
     c.service ? `🩺 ${c.service}` : null,
     `🕐 ${c.date}${c.time ? ` ${c.time}` : ""}`,
+    daysLabel(c.date, c.days) ? `🗓 ${daysLabel(c.date, c.days)}` : null,
     `👩‍⚕️ ${c.assignee || "nerepartizat"}`,
     c.contact ? `☎️ contact: ${c.contact}` : null,
     c.notes ? `📝 ${c.notes}` : null,
@@ -72,6 +76,7 @@ export async function saveCaseAction(formData: FormData) {
       id,
       date: text(formData, "date", 10) || today(),
       time: text(formData, "time", 5),
+      days: Math.min(Math.max(Number(text(formData, "days", 3)) || 1, 1), 31),
       patient,
       age: text(formData, "age", 10),
       phone: text(formData, "phone", 30),

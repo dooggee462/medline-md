@@ -3,7 +3,7 @@
  * Se rulează cu:  npm run verifica:ore
  */
 import assert from "node:assert/strict";
-import { localToTimestamp } from "./when.ts";
+import { daysLabel, localToTimestamp, visitDates } from "./when.ts";
 
 const utc = (s: string) => Date.parse(s);
 
@@ -26,3 +26,17 @@ assert.equal(vizita - 6 * 3600_000, localToTimestamp("2026-10-17", "15:00"));
 assert.equal(vizita - 2 * 3600_000, localToTimestamp("2026-10-17", "19:00"));
 
 console.log("ora Moldovei: toate verificările trec");
+
+// programare pe mai multe zile
+assert.deepEqual(visitDates("2026-11-08", 3), ["2026-11-08", "2026-11-09", "2026-11-10"]);
+assert.deepEqual(visitDates("2026-11-08", 1), ["2026-11-08"]);
+assert.deepEqual(visitDates("2026-11-08"), ["2026-11-08"]);
+// peste schimbarea orei (25 octombrie) și peste sfârșit de lună
+assert.deepEqual(visitDates("2026-10-24", 3), ["2026-10-24", "2026-10-25", "2026-10-26"]);
+assert.deepEqual(visitDates("2026-10-30", 3), ["2026-10-30", "2026-10-31", "2026-11-01"]);
+// an bisect: februarie 2028 are 29 de zile
+assert.deepEqual(visitDates("2028-02-28", 2), ["2028-02-28", "2028-02-29"]);
+assert.equal(daysLabel("2026-11-08", 3), "3 zile · 08.11–10.11");
+assert.equal(daysLabel("2026-11-08", 1), null);
+
+console.log("programări pe mai multe zile: toate verificările trec");

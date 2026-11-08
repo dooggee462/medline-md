@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SERVICE_LIST } from "@/lib/content";
 import { AREAS, PAYMENTS, SOURCES, STATUSES, today, type Case } from "@/lib/cases";
 import type { Member } from "@/lib/team";
+import { daysLabel } from "@/lib/when";
 import { SubmitButton } from "./SubmitButton";
 
 const input =
@@ -39,6 +40,7 @@ export function CaseForm({
   error?: string;
 }) {
   const v = value;
+  const span = v ? daysLabel(v.date, v.days) : null;
 
   return (
     <form action={action} className="mt-6 space-y-5">
@@ -71,17 +73,30 @@ export function CaseForm({
         </Field>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-4">
         <Field id="age" title="Vârsta">
           <input id="age" name="age" defaultValue={v?.age} placeholder="78" className={input} />
         </Field>
-        <Field id="date" title="Data vizitei">
+        <Field id="date" title="Prima zi">
           <input id="date" name="date" type="date" defaultValue={v?.date || today()} className={input} />
         </Field>
         <Field id="time" title="Ora">
           <input id="time" name="time" type="time" defaultValue={v?.time} className={input} />
         </Field>
+        <Field id="days" title="Zile la rând">
+          <input
+            id="days"
+            name="days"
+            type="number"
+            min={1}
+            max={31}
+            defaultValue={v?.days || 1}
+            className={input}
+          />
+        </Field>
       </div>
+
+      {v && span && <p className="-mt-2 text-sm text-slate-500">Programare pe {span}, la ora {v.time || "—"}.</p>}
 
       <Field id="contact" title="Persoana de contact (rudă, însoțitor)">
         <input id="contact" name="contact" defaultValue={v?.contact} placeholder="fiica, Ana, +373 79 ..." className={input} />

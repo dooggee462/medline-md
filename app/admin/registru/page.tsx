@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { assignableNames, currentUser, syncLegacyNames } from "@/lib/team";
 import { SelectAll } from "@/components/admin/SelectAll";
 import { ConfirmButton } from "@/components/admin/ConfirmButton";
+import { daysLabel } from "@/lib/when";
 import { logoutAction } from "../actions";
 import { deleteCaseAction, deleteManyAction, setStatusAction } from "./actions";
 import {
@@ -242,6 +243,7 @@ function Breakdown({ title, rows }: { title: string; rows: { name: string; count
 }
 
 function CaseRow({ item, admin }: { item: Case; admin: boolean }) {
+  const span = daysLabel(item.date, item.days);
   const map = item.address
     ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${item.address}, ${item.area || "Chișinău"}`)}`
     : null;
@@ -266,6 +268,9 @@ function CaseRow({ item, admin }: { item: Case; admin: boolean }) {
           {item.date === today() ? "azi" : item.date}
           {item.time ? ` · ${item.time}` : ""}
         </span>
+        {span && (
+          <span className="rounded-full bg-brand-50 px-2 py-0.5 text-xs font-semibold text-brand-700">{span}</span>
+        )}
         <span className={`rounded-full px-2 py-0.5 text-xs font-semibold ${CHIP[item.status]}`}>{item.status}</span>
         {item.amount > 0 && (
           <span className="text-sm font-semibold text-slate-700">{lei(item.amount)}</span>

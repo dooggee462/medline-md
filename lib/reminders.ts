@@ -2,11 +2,12 @@ import { markReminded, readCases, type Case } from "./cases";
 import { sendTelegram } from "./telegram";
 import { sendPush } from "./push";
 import { adminUsers, usersNamed } from "./team";
-import { localToTimestamp } from "./when";
+import { localToTimestamp, visitDates } from "./when";
 
 /**
- * Reamintiri în grupul de Telegram înainte de vizită: cu 6 ore și cu 2 ore.
- * La o programare de sâmbătă la 21:00 înseamnă 15:00 și 19:00.
+ * Reamintiri în grupul asistenților, pe Telegram, înainte de vizită: cu 6 ore
+ * și cu 2 ore. La o programare de sâmbătă la 21:00 înseamnă 15:00 și 19:00.
+ * Dacă programarea ține mai multe zile, reamintirile vin pentru fiecare zi.
  *
  * Verificarea rulează în fundal, în același proces cu site-ul (pornită din
  * instrumentation.ts), deci nu cere nimic în plus pe server.
@@ -16,15 +17,15 @@ const EVERY = 5 * 60 * 1000;
 /** Fereastră după momentul reamintirii: un caz adăugat mai târziu nu mai primește una veche */
 const WINDOW = 45 * 60 * 1000;
 
-function message(c: Case, lead: number): string {
+function message(c: Case, lead: number, day: string, nth: number, total: number): string {
   return [
-    `⏰ Peste ${lead} ore · caz ${c.no}`,
+    `⏰ Peste ${lead} ore · caz ${c.no}${total > 1 ? ` · ziua ${nth} din ${total}` : ""}`,
     "",
     `👤 ${c.patient}${c.age ? `, ${c.age} ani` : ""}`,
     c.phone ? `📞 ${c.phone}` : null,
     c.address || c.area ? `📍 ${[c.area, c.address].filter(Boolean).join(", ")}` : null,
     c.service ? `🩺 ${c.service}` : null,
-    `🕐 ${c.date} ${c.time}`,
+    `🕐 ${day} ${c.time}`,
     `👩‍⚕️ ${c.assignee || "nerepartizat"}`,
     c.notes ? `📝 ${c.notes}` : null,
   ]
@@ -33,29 +34,35 @@ function message(c: Case, lead: number): string {
 }
 
 export async function checkReminders(now = Date.now()): Promise<number> {
-  const due: { c: Case; lead: number }[] = [];
+  const due: { c: Case; lead: number; day: string; nth: number; total: number }[] = [];
 
   for (const c of await readCases()) {
     if (c.status === "finalizat" || c.status === "anulat") continue;
-    const visit = localToTimestamp(c.date, c.time);
-    if (visit === null || visit <= now) continue;
 
-    for (const lead of LEADS) {
-      if (c.reminded?.includes(lead)) continue;
-      const moment = visit - lead * 3600_000;
-      if (now >= moment && now < moment + WINDOW) due.push({ c, lead });
-    }
+    // o programare pe mai multe zile primește reamintiri pentru fiecare zi
+    const days = visitDates(c.date, c.days);
+    days.forEach((day, i) => {
+      const visit = localToTimestamp(day, c.time);
+      if (visit === null || visit <= now) return;
+
+      for (const lead of LEADS) {
+        if (c.reminded?.includes(`${day}:${lead}`)) continue;
+        const moment = visit - lead * 3600_000;
+        if (now >= moment && now < moment + WINDOW)
+          due.push({ c, lead, day, nth: i + 1, total: days.length });
+      }
+    });
   }
 
-  for (const { c, lead } of due) {
+  for (const { c, lead, day, nth, total } of due) {
     // marcăm înainte de trimitere: mai bine o reamintire pierdută decât trimisă în buclă
-    await markReminded(c.id, lead);
-    await sendTelegram(message(c, lead), "echipa");
+    await markReminded(c.id, `${day}:${lead}`);
+    await sendTelegram(message(c, lead, day, nth, total), "echipa");
     await sendPush([...(await adminUsers()), ...(await usersNamed(c.assignee))], {
-      title: `⏰ Peste ${lead} ore · ${c.patient}`,
+      title: `⏰ Peste ${lead} ore · ${c.patient}${total > 1 ? ` (ziua ${nth}/${total})` : ""}`,
       body: [[c.area, c.address].filter(Boolean).join(", "), c.service, `azi ${c.time}`].filter(Boolean).join(" · "),
       url: `/admin/registru/${c.id}`,
-      tag: `${c.id}-${lead}`,
+      tag: `${c.id}-${day}-${lead}`,
     });
   }
   return due.length;

@@ -11,6 +11,7 @@ function row(c: Case) {
     Nr: c.no,
     Data: c.date,
     Ora: c.time,
+    Zile: c.days && c.days > 1 ? c.days : 1,
     Pacient: c.patient,
     Vârsta: c.age,
     Telefon: c.phone,
@@ -32,9 +33,9 @@ function row(c: Case) {
 function xlsxFile(cases: Case[]): ArrayBuffer {
   const rows = cases.map(row);
   const sheet = XLSX.utils.json_to_sheet(rows);
-  sheet["!cols"] = [10, 11, 7, 22, 7, 16, 22, 12, 34, 24, 14, 12, 12, 11, 11, 30, 14, 16].map((wch) => ({ wch }));
+  sheet["!cols"] = [10, 11, 7, 6, 22, 7, 16, 22, 12, 34, 24, 14, 12, 12, 11, 11, 30, 14, 16].map((wch) => ({ wch }));
   if (rows.length) {
-    sheet["!autofilter"] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: rows.length, c: 17 } }) };
+    sheet["!autofilter"] = { ref: XLSX.utils.encode_range({ s: { r: 0, c: 0 }, e: { r: rows.length, c: 18 } }) };
     sheet["!freeze"] = { xSplit: "0", ySplit: "1" };
   }
 

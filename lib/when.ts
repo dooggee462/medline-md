@@ -42,3 +42,23 @@ export function localLabel(date: string, time: string): string {
   const [, m, d] = date.split("-");
   return `${d}.${m}${time ? ` la ${time}` : ""}`;
 }
+
+/**
+ * Zilele unei programări pe mai multe zile: ziua de început și următoarele.
+ * „2026-11-08" + 3 → ["2026-11-08", "2026-11-09", "2026-11-10"]
+ */
+export function visitDates(date: string, days = 1): string[] {
+  const n = Math.min(Math.max(Math.round(days) || 1, 1), 31);
+  if (n === 1 || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return [date];
+  // pornim de la miezul zilei în UTC: adunarea de 24 de ore nu alunecă la schimbarea orei
+  const start = Date.parse(`${date}T12:00:00Z`);
+  return Array.from({ length: n }, (_, i) => new Date(start + i * 86400_000).toISOString().slice(0, 10));
+}
+
+/** „3 zile · 08.11–10.11" pentru afișare; null dacă e o singură zi */
+export function daysLabel(date: string, days = 1): string | null {
+  const all = visitDates(date, days);
+  if (all.length < 2) return null;
+  const dm = (d: string) => `${d.slice(8, 10)}.${d.slice(5, 7)}`;
+  return `${all.length} zile · ${dm(all[0])}–${dm(all[all.length - 1])}`;
+}

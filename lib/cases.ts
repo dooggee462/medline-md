@@ -1,6 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { DATA_DIR } from "./posts";
+import { visitDates } from "./when";
 import { SITE } from "./site";
 
 /**
@@ -35,8 +36,10 @@ export type Case = {
   id: string;
   /** Număr de dosar, ex. 2026-0147 */
   no: string;
-  date: string; // ziua vizitei, YYYY-MM-DD
+  date: string; // prima zi a vizitei, YYYY-MM-DD
   time: string; // ora vizitei, HH:MM (poate lipsi)
+  /** Câte zile la rând ține programarea; 1 sau lipsă = o singură vizită */
+  days?: number;
   patient: string;
   age: string;
   phone: string;
@@ -55,8 +58,8 @@ export type Case = {
   createdAt: string;
   /** moment exact, pentru a prinde o salvare trimisă de două ori */
   createdTs?: number;
-  /** câte ore înainte de vizită s-a trimis deja reamintire (6, 2) */
-  reminded?: number[];
+  /** reamintirile trimise deja, „zi:ore" — ex. „2026-11-09:6" */
+  reminded?: string[];
   updatedBy?: string;
   updatedAt?: string;
 };
@@ -164,11 +167,11 @@ export async function setStatus(id: string, status: Status, user: string): Promi
   );
 }
 
-/** Reține că reamintirea cu `lead` ore înainte a plecat, ca să nu se repete */
-export async function markReminded(id: string, lead: number): Promise<void> {
+/** Reține că reamintirea `zi:ore` a plecat, ca să nu se repete */
+export async function markReminded(id: string, key: string): Promise<void> {
   await write((cases) =>
     cases.map((c) =>
-      c.id === id ? { ...c, reminded: [...new Set([...(c.reminded ?? []), lead])] } : c,
+      c.id === id ? { ...c, reminded: [...new Set([...(c.reminded ?? []), key])] } : c,
     ),
   );
 }
@@ -213,7 +216,8 @@ export function filterCases(cases: Case[], f: Filter): Case[] {
   const q = fold((f.q || "").trim());
   const qDigits = digits(q);
   return cases
-    .filter((c) => !f.month || c.date.startsWith(f.month))
+    // o programare pe mai multe zile apare în fiecare lună pe care o atinge
+    .filter((c) => !f.month || visitDates(c.date, c.days).some((d) => d.startsWith(f.month!)))
     .filter((c) => !f.assignee || c.assignee === f.assignee)
     .filter((c) => !f.status || c.status === f.status)
     .filter((c) => !f.area || c.area === f.area)
