@@ -12,6 +12,10 @@ import { DATA_DIR } from "./posts";
  * Dacă nu e ales niciunul, se folosesc TELEGRAM_CHAT_ID și TELEGRAM_TEAM_CHAT_ID
  * din .env; iar dacă grupul echipei lipsește, comenzile merg tot la clienți, ca
  * să nu se piardă.
+ *
+ * Fiecare flux poate avea botul lui: TELEGRAM_TEAM_BOT_TOKEN pentru echipă,
+ * TELEGRAM_BOT_TOKEN pentru rest. Fără cel de echipă, amândouă merg pe
+ * același bot.
  */
 const FILE = path.join(DATA_DIR, "telegram.json");
 
@@ -46,8 +50,13 @@ export async function setChat(channel: Channel, id: string): Promise<void> {
   await fs.writeFile(FILE, JSON.stringify(next, null, 2), "utf8");
 }
 
-async function telegram(method: string, body?: unknown) {
-  const token = process.env.TELEGRAM_BOT_TOKEN;
+/** Botul fluxului: cel al echipei dacă e pus, altfel cel principal */
+export function tokenFor(channel: Channel): string {
+  const team = channel === "echipa" ? process.env.TELEGRAM_TEAM_BOT_TOKEN : "";
+  return team || process.env.TELEGRAM_BOT_TOKEN || "";
+}
+
+async function telegram(method: string, token: string, body?: unknown) {
   if (!token) return null;
   const res = await fetch(`https://api.telegram.org/bot${token}/${method}`, {
     method: body ? "POST" : "GET",
@@ -66,9 +75,9 @@ export type Group = { id: string; title: string; type: string };
  * Telegram ține evidența doar ~24 de ore, deci grupul trebuie să fi primit un
  * mesaj de curând.
  */
-export async function discoverGroups(): Promise<Group[]> {
+export async function discoverGroups(channel: Channel = "clienti"): Promise<Group[]> {
   try {
-    const data = (await telegram("getUpdates")) as {
+    const data = (await telegram("getUpdates", tokenFor(channel))) as {
       result?: Record<string, { chat?: { id: number; title?: string; type: string } }>[];
     } | null;
     const found = new Map<string, Group>();
@@ -86,14 +95,32 @@ export async function discoverGroups(): Promise<Group[]> {
   }
 }
 
+/** Numele botului unui flux, ca să se știe pe cine adaugi în grup */
+const names = new Map<string, string>();
+export async function botName(channel: Channel): Promise<string> {
+  const token = tokenFor(channel);
+  if (!token) return "";
+  if (!names.has(token)) {
+    try {
+      const me = (await telegram("getMe", token)) as { result?: { username?: string } } | null;
+      names.set(token, me?.result?.username ? `@${me.result.username}` : "");
+    } catch {
+      names.set(token, "");
+    }
+  }
+  return names.get(token) || "";
+}
+
 /** Trimite în grupul potrivit; textul e simplu, fără formatare care s-ar putea strica */
 export async function sendTelegram(text: string, channel: Channel = "clienti"): Promise<boolean> {
   const ids = await chatIds();
-  const chatId = ids[channel] || ids.clienti;
-  if (!process.env.TELEGRAM_BOT_TOKEN || !chatId) return false;
+  const token = tokenFor(channel);
+  // rezerva pe grupul clienților are sens doar dacă e același bot
+  const chatId = ids[channel] || (token === tokenFor("clienti") ? ids.clienti : "");
+  if (!token || !chatId) return false;
 
   try {
-    await telegram("sendMessage", { chat_id: chatId, text });
+    await telegram("sendMessage", token, { chat_id: chatId, text });
     return true;
   } catch (e) {
     console.error("[telegram] trimitere eșuată:", e);

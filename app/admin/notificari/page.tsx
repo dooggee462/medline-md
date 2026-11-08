@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { currentUser } from "@/lib/team";
 import { deviceCount, PUBLIC_KEY } from "@/lib/push";
-import { chatIds, discoverGroups } from "@/lib/telegram";
+import { botName, chatIds, discoverGroups } from "@/lib/telegram";
 import { PushButton } from "@/components/admin/PushButton";
 import { SubmitButton } from "@/components/admin/SubmitButton";
 import { setChatAction, testTelegramAction } from "./actions";
@@ -27,8 +27,13 @@ export default async function NotificationsPage({
   const telefoane = await deviceCount(session.user);
   const chats = await chatIds();
   const telegram = Boolean(process.env.TELEGRAM_BOT_TOKEN && (chats.clienti || chats.echipa));
-  // grupurile în care a fost adăugat botul, ca să se aleagă din listă
-  const grupuri = admin ? await discoverGroups() : [];
+  // grupurile în care a fost adăugat botul fiecărui flux, ca să se aleagă din listă
+  const [grupuri, boti] = admin
+    ? await Promise.all([
+        Promise.all(CANALE.map((c) => discoverGroups(c.cheie))),
+        Promise.all(CANALE.map((c) => botName(c.cheie))),
+      ])
+    : [CANALE.map(() => []), CANALE.map(() => "")];
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-8">
@@ -96,20 +101,23 @@ export default async function NotificationsPage({
           {grup && <p className="mt-3 rounded-lg bg-green-50 p-3 text-sm text-green-700">Grup salvat.</p>}
 
           <div className="mt-4 space-y-3">
-            {CANALE.map((c) => (
+            {CANALE.map((c, idx) => (
               <div key={c.cheie} className="rounded-lg border border-slate-200 p-3">
                 <div className="flex flex-wrap items-baseline justify-between gap-2">
                   <div>
                     <p className="font-semibold text-slate-800">{c.titlu}</p>
                     <p className="text-xs text-slate-500">{c.ce}</p>
                   </div>
-                  <span className={`font-mono text-xs ${chats[c.cheie] ? "text-slate-500" : "text-amber-700"}`}>
-                    {chats[c.cheie] || "niciun grup"}
+                  <span className="text-right">
+                    <span className={`block font-mono text-xs ${chats[c.cheie] ? "text-slate-500" : "text-amber-700"}`}>
+                      {chats[c.cheie] || "niciun grup"}
+                    </span>
+                    {boti[idx] && <span className="block font-mono text-xs text-slate-400">{boti[idx]}</span>}
                   </span>
                 </div>
 
                 <div className="mt-3 flex flex-wrap items-center gap-2">
-                  {grupuri.map((g) => (
+                  {grupuri[idx].map((g) => (
                     <form key={g.id} action={setChatAction}>
                       <input type="hidden" name="channel" value={c.cheie} />
                       <input type="hidden" name="id" value={g.id} />
@@ -145,7 +153,7 @@ export default async function NotificationsPage({
             ))}
           </div>
 
-          {grupuri.length === 0 && (
+          {grupuri.every((g) => g.length === 0) && (
             <p className="mt-3 text-xs text-slate-400">
               Niciun grup găsit acum. Scrie un mesaj în grup și reîncarcă pagina, sau lipește direct
               ID-ul în câmpul de mai sus.
@@ -156,7 +164,10 @@ export default async function NotificationsPage({
             <summary className="cursor-pointer font-semibold">Cum adaugi un grup nou</summary>
             <ol className="mt-2 list-decimal space-y-1 pl-5">
               <li>În Telegram, creează grupul, de exemplu „Medline Comenzi echipă”.</li>
-              <li>Adaugă în el pe asistenți și botul <span className="mono">@medlinemoldovabot</span>.</li>
+              <li>
+                Adaugă în el pe asistenți și botul fluxului — numele lui scrie mai sus, în dreapta
+                fiecărui flux.
+              </li>
               <li>Scrie un mesaj în grup, orice.</li>
               <li>Reîncarcă pagina asta: grupul apare mai sus, îl alegi cu un buton.</li>
               <li>
