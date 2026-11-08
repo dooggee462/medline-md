@@ -5,21 +5,31 @@ import { adminUsers, usersNamed } from "./team";
 import { localToTimestamp, visitDates } from "./when";
 
 /**
- * Reamintiri în grupul asistenților, pe Telegram, înainte de vizită: cu 6 ore
- * și cu 2 ore. La o programare de sâmbătă la 21:00 înseamnă 15:00 și 19:00.
- * Dacă programarea ține mai multe zile, reamintirile vin pentru fiecare zi.
+ * Reamintiri înainte de vizită, pe telefon și în grupul asistenților:
+ * cu 6 ore, cu 2 ore și cu o oră. La o programare de sâmbătă la 21:00
+ * înseamnă 15:00, 19:00 și 20:00.
+ *
+ * O programare pe mai multe zile (perfuzii 21 sau 30 de zile la rând) ar
+ * însemna 90 de mesaje dacă fiecare zi ar primi toate trei. Așa că doar
+ * prima zi le primește pe toate, iar în zilele următoare vine avertizarea
+ * cu o oră înainte — cea care contează când pleci la pacient.
  *
  * Verificarea rulează în fundal, în același proces cu site-ul (pornită din
  * instrumentation.ts), deci nu cere nimic în plus pe server.
  */
-const LEADS = [6, 2];
+const LEADS = [6, 2, 1];
+/** În zilele 2, 3… ale unei programări lungi: doar avertizarea de dinainte */
+const NEXT_DAYS = [1];
+
+/** „o oră", „2 ore", „6 ore" */
+const ore = (lead: number) => (lead === 1 ? "o oră" : `${lead} ore`);
 const EVERY = 5 * 60 * 1000;
 /** Fereastră după momentul reamintirii: un caz adăugat mai târziu nu mai primește una veche */
 const WINDOW = 45 * 60 * 1000;
 
 function message(c: Case, lead: number, day: string, nth: number, total: number): string {
   return [
-    `⏰ Peste ${lead} ore · caz ${c.no}${total > 1 ? ` · ziua ${nth} din ${total}` : ""}`,
+    `⏰ Peste ${ore(lead)} · caz ${c.no}${total > 1 ? ` · ziua ${nth} din ${total}` : ""}`,
     "",
     `👤 ${c.patient}${c.age ? `, ${c.age} ani` : ""}`,
     c.phone ? `📞 ${c.phone}` : null,
@@ -45,7 +55,7 @@ export async function checkReminders(now = Date.now()): Promise<number> {
       const visit = localToTimestamp(day, c.time);
       if (visit === null || visit <= now) return;
 
-      for (const lead of LEADS) {
+      for (const lead of i === 0 ? LEADS : NEXT_DAYS) {
         if (c.reminded?.includes(`${day}:${lead}`)) continue;
         const moment = visit - lead * 3600_000;
         if (now >= moment && now < moment + WINDOW)
@@ -59,7 +69,7 @@ export async function checkReminders(now = Date.now()): Promise<number> {
     await markReminded(c.id, `${day}:${lead}`);
     await sendTelegram(message(c, lead, day, nth, total), "echipa");
     await sendPush([...(await adminUsers()), ...(await usersNamed(c.assignee))], {
-      title: `⏰ Peste ${lead} ore · ${c.patient}${total > 1 ? ` (ziua ${nth}/${total})` : ""}`,
+      title: `⏰ Peste ${ore(lead)} · ${c.patient}${total > 1 ? ` (ziua ${nth}/${total})` : ""}`,
       body: [[c.area, c.address].filter(Boolean).join(", "), c.service, `azi ${c.time}`].filter(Boolean).join(" · "),
       url: `/admin/registru/${c.id}`,
       tag: `${c.id}-${day}-${lead}`,
