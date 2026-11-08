@@ -60,15 +60,72 @@ export async function tgNameOf(user: string): Promise<string> {
   return Object.keys(links).find((k) => k.startsWith("@") && links[k] === user) || "";
 }
 
-/** Leagă un cont de un nume de Telegram; gol = șterge toate legăturile lui */
+/**
+ * Leagă un cont de cineva de pe Telegram: „@numele", numele afișat („vlad🦅")
+ * sau id-ul numeric. Gol = șterge legăturile lui.
+ */
 export async function setTelegramName(user: string, value: string): Promise<void> {
-  const clean = value.trim().toLowerCase().replace(/^@?/, "");
+  const clean = value.trim();
+  const key = clean.startsWith("@") ? clean.toLowerCase() : clean ? fold(clean) : "";
   const links = await tgLinks();
+  // id-urile învățate rămân; se schimbă doar numele scris de Victor
   const next = Object.fromEntries(
-    Object.entries(links).filter(([k, v]) => v !== user || (clean && !k.startsWith("@"))),
+    Object.entries(links).filter(([k, v]) => v !== user || (key !== "" && /^\d+$/.test(k))),
   );
-  if (clean) next[`@${clean}`] = user;
+  if (key) next[key] = user;
   await writeLinks(next);
+}
+
+/** Leagă un om de pe Telegram, după id, și îl scoate din lista de așteptare */
+export async function linkTelegramId(id: string, user: string): Promise<void> {
+  if (!/^\d+$/.test(id)) return;
+  await writeLinks({ ...(await tgLinks()), [id]: user });
+  const rest = { ...(await pendingTelegram()) };
+  delete rest[id];
+  await writePending(rest);
+}
+
+/*
+ * Cine a apăsat butonul și nu l-am recunoscut. Îi ținem minte ca Victor să-i
+ * lege de conturi din panou, cu un clic: numele de pe Telegram au emoji și
+ * porecle („vlad🦅", „RvG⚔Warrior"), pe care nimeni nu le scrie de mână.
+ */
+const PENDING_FILE = path.join(DATA_DIR, "tg-pending.json");
+let pendingCache: Record<string, string> | null = null;
+
+export async function pendingTelegram(): Promise<Record<string, string>> {
+  if (!pendingCache) {
+    try {
+      pendingCache = JSON.parse(await fs.readFile(PENDING_FILE, "utf8")) as Record<string, string>;
+    } catch {
+      pendingCache = {};
+    }
+  }
+  return pendingCache;
+}
+
+async function writePending(next: Record<string, string>): Promise<void> {
+  pendingCache = next;
+  await fs.mkdir(DATA_DIR, { recursive: true });
+  await fs.writeFile(PENDING_FILE, JSON.stringify(next, null, 2), "utf8");
+}
+
+export function tgLabel(from: TgUser): string {
+  const name = `${from.first_name ?? ""} ${from.last_name ?? ""}`.trim();
+  return name || (from.username ? `@${from.username}` : `id ${from.id ?? "?"}`);
+}
+
+/** Scoate pe cineva din lista de așteptare, fără să-l lege (ex. developerul) */
+export async function forgetTelegram(id: string): Promise<void> {
+  const rest = { ...(await pendingTelegram()) };
+  delete rest[id];
+  await writePending(rest);
+}
+
+/** Ține minte pe cine nu am recunoscut, ca să apară în pagina Echipa */
+export async function rememberTelegram(from: TgUser): Promise<void> {
+  if (!from.id) return;
+  await writePending({ ...(await pendingTelegram()), [String(from.id)]: tgLabel(from) });
 }
 
 export type TgUser = { id?: number; username?: string; first_name?: string; last_name?: string };
@@ -95,10 +152,16 @@ export async function memberFromTelegram(from: TgUser): Promise<Member | null> {
 
   const full = fold(`${from.first_name ?? ""} ${from.last_name ?? ""}`.trim());
   const first = fold(from.first_name ?? "");
-  const hits = all.filter((m) => {
-    const n = fold(m.name);
-    return n === full || (first.length > 2 && n.split(" ")[0] === first);
-  });
+
+  // numele afișat, scris de Victor în Echipa
+  const written = byUser(links[full] || links[first]);
+  if (written) return learn(written);
+  /*
+   * Doar numele întreg, niciodată prenumele singur: în grup sunt doi Ilie —
+   * asistentul Ilie Rumega și developerul, cu „Ilie" sec. Potrivirea după
+   * prenume i-a dat developerului comenzile asistentului.
+   */
+  const hits = all.filter((m) => full !== "" && fold(m.name) === full);
   // Victor are mai multe conturi cu același nume: contează să fie un singur nume
   if (hits.length && new Set(hits.map((m) => m.name)).size === 1) return learn(hits[0]);
   return null;

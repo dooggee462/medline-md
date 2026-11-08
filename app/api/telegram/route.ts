@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { claimCase } from "@/lib/cases";
-import { adminUsers, memberFromTelegram } from "@/lib/team";
+import { adminUsers, memberFromTelegram, rememberTelegram, tgLabel } from "@/lib/team";
 import { answerCallback, editMessage } from "@/lib/telegram";
 import { sendPush } from "@/lib/push";
 
@@ -37,9 +37,12 @@ export async function POST(req: Request) {
   const id = data.slice("claim:".length);
   const who = await memberFromTelegram(cb.from ?? {});
   if (!who) {
+    // îl ținem minte: Victor îl leagă de contul lui cu un clic, din pagina Echipa
+    await rememberTelegram(cb.from ?? {});
+    console.log("[telegram] apăsare de la cineva nelegat:", tgLabel(cb.from ?? {}), cb.from?.id);
     await answerCallback(
       cb.id,
-      "Nu te recunosc. Roagă-l pe Victor să-ți scrie numele de Telegram în panou, la Echipa.",
+      "Nu te recunosc încă. Victor te vede acum în panou, la Echipa, și te leagă de contul tău. Încearcă din nou după aceea.",
       true,
     );
     return NextResponse.json({ ok: true });
