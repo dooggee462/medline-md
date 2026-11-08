@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { currentUser, pendingTelegram, team, tgNameOf } from "@/lib/team";
+import { currentUser, pendingTelegram, phoneOf, team, tgNameOf } from "@/lib/team";
 import { SubmitButton } from "@/components/admin/SubmitButton";
 import { linkTelegramAction, saveTeamAction } from "./actions";
 
@@ -31,10 +31,12 @@ export default async function TeamPage({
         Telegram și în fișierele Excel. Parolele se schimbă pe server, nu de aici.
       </p>
       <p className="mt-2 text-sm text-slate-500">
-        În dreapta scrie cum îl cheamă pe om pe Telegram (<span className="font-mono">@ilie</span> sau
-        numele afișat), ca butonul „Eu plec la comanda" din grup să treacă cazul pe el. Dacă numele din
-        panou e același cu cel din Telegram, se leagă singur la prima apăsare; dacă nu, omul apasă o
-        dată și apare mai jos, de unde îl legi cu un clic.
+        Scrie și numărul de telefon al fiecăruia. Cu numărul pus aici, omul scrie o dată botului{" "}
+        <span className="font-mono">@medlineasistentibot</span>, apasă „Trimite numărul meu" și de atunci
+        butonul „Eu plec la comanda" îl recunoaște — fără nume de Telegram, pe care nu toți îl au.
+        Căsuța de lângă e pentru numele de pe Telegram (<span className="font-mono">@ilie</span> sau
+        numele afișat), dacă vrei să-l legi de mână; altfel, omul apasă o dată butonul din grup și apare
+        mai jos, de unde îl legi cu un clic.
       </p>
 
       {salvat !== undefined && (
@@ -56,6 +58,15 @@ export default async function TeamPage({
               defaultValue={m.name}
               maxLength={60}
               className="min-w-[12rem] flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
+            />
+            <input
+              id={`tel_${m.user}`}
+              name={`tel_${m.user}`}
+              type="tel"
+              defaultValue={await phoneOf(m.user)}
+              maxLength={30}
+              placeholder="+373 69 ..."
+              className="w-40 rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200"
             />
             <input
               id={`tg_${m.user}`}

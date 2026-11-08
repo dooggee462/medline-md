@@ -170,3 +170,20 @@ export async function editMessage(
     return false;
   }
 }
+
+/** Mesaj direct către un om, în discuția lui privată cu botul echipei */
+export async function sendTo(
+  chatId: number | string,
+  text: string,
+  replyMarkup?: unknown,
+): Promise<void> {
+  try {
+    await telegram("sendMessage", tokenFor("echipa"), {
+      chat_id: chatId,
+      text,
+      ...(replyMarkup ? { reply_markup: replyMarkup } : {}),
+    });
+  } catch (e) {
+    console.error("[telegram] mesajul direct nu a plecat:", e);
+  }
+}

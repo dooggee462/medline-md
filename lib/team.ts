@@ -128,6 +128,57 @@ export async function rememberTelegram(from: TgUser): Promise<void> {
   await writePending({ ...(await pendingTelegram()), [String(from.id)]: tgLabel(from) });
 }
 
+/*
+ * Numerele de telefon ale echipei. Nu toți au „@nume" pe Telegram, dar toți
+ * au număr: omul scrie o dată botului, apasă „Trimite numărul meu", iar noi
+ * știm de atunci cine e când apasă butonul din grup.
+ */
+const PHONE_FILE = path.join(DATA_DIR, "phones.json");
+let phoneCache: Record<string, string> | null = null;
+
+async function phones(): Promise<Record<string, string>> {
+  if (!phoneCache) {
+    try {
+      phoneCache = JSON.parse(await fs.readFile(PHONE_FILE, "utf8")) as Record<string, string>;
+    } catch {
+      phoneCache = {};
+    }
+  }
+  return phoneCache;
+}
+
+export async function phoneOf(user: string): Promise<string> {
+  return (await phones())[user] || "";
+}
+
+export async function setPhone(user: string, value: string): Promise<void> {
+  const clean = value.trim().slice(0, 30);
+  const next = { ...(await phones()) };
+  if (clean) next[user] = clean;
+  else delete next[user];
+  phoneCache = next;
+  await fs.mkdir(DATA_DIR, { recursive: true });
+  await fs.writeFile(PHONE_FILE, JSON.stringify(next, null, 2), "utf8");
+}
+
+/** Ultimele 8 cifre: „+373 69 123 456", „069123456" și „69123456" sunt același om */
+const tail = (s: string) => s.replace(/\D/g, "").slice(-8);
+
+/** Contul care are numărul ăsta, oricum ar fi scris */
+export async function memberByPhone(phone: string): Promise<Member | null> {
+  const want = tail(phone);
+  if (want.length < 8) return null;
+  const all = await team();
+  const list = await phones();
+  const user = Object.keys(list).find((u) => tail(list[u]) === want);
+  return all.find((m) => m.user === user) || null;
+}
+
+/** Leagă un cont de id-ul de Telegram al omului (după ce și-a trimis numărul) */
+export async function linkTelegram(id: string, user: string): Promise<void> {
+  await linkTelegramId(id, user);
+}
+
 export type TgUser = { id?: number; username?: string; first_name?: string; last_name?: string };
 
 /**
