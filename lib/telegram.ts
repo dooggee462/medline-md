@@ -111,8 +111,14 @@ export async function botName(channel: Channel): Promise<string> {
   return names.get(token) || "";
 }
 
+export type Button = { text: string; callback_data: string };
+
 /** Trimite în grupul potrivit; textul e simplu, fără formatare care s-ar putea strica */
-export async function sendTelegram(text: string, channel: Channel = "clienti"): Promise<boolean> {
+export async function sendTelegram(
+  text: string,
+  channel: Channel = "clienti",
+  buttons?: Button[],
+): Promise<boolean> {
   const ids = await chatIds();
   const token = tokenFor(channel);
   // rezerva pe grupul clienților are sens doar dacă e același bot
@@ -120,10 +126,47 @@ export async function sendTelegram(text: string, channel: Channel = "clienti"): 
   if (!token || !chatId) return false;
 
   try {
-    await telegram("sendMessage", token, { chat_id: chatId, text });
+    await telegram("sendMessage", token, {
+      chat_id: chatId,
+      text,
+      ...(buttons?.length ? { reply_markup: { inline_keyboard: [buttons] } } : {}),
+    });
     return true;
   } catch (e) {
     console.error("[telegram] trimitere eșuată:", e);
+    return false;
+  }
+}
+
+/** Bula care îi apare pe ecran celui care a apăsat butonul */
+export async function answerCallback(id: string, text: string, alert = false): Promise<void> {
+  try {
+    await telegram("answerCallbackQuery", tokenFor("echipa"), {
+      callback_query_id: id,
+      text,
+      show_alert: alert,
+    });
+  } catch (e) {
+    console.error("[telegram] răspunsul la buton nu a plecat:", e);
+  }
+}
+
+/** Rescrie un mesaj trimis deja și scoate butoanele de pe el */
+export async function editMessage(
+  chatId: string | number,
+  messageId: number,
+  text: string,
+): Promise<boolean> {
+  try {
+    await telegram("editMessageText", tokenFor("echipa"), {
+      chat_id: chatId,
+      message_id: messageId,
+      text,
+      reply_markup: { inline_keyboard: [] },
+    });
+    return true;
+  } catch (e) {
+    console.error("[telegram] rescrierea mesajului a eșuat:", e);
     return false;
   }
 }

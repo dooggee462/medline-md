@@ -2,7 +2,7 @@
 
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
-import { currentUser, setName, team } from "@/lib/team";
+import { currentUser, setName, setTelegramName, team } from "@/lib/team";
 import { renameAssignee } from "@/lib/cases";
 
 /** Victor schimbă numele echipei; cazurile vechi se mută singure pe numele nou */
@@ -16,6 +16,7 @@ export async function saveTeamAction(formData: FormData) {
     const name = String(formData.get(`name_${member.user}`) || "").trim();
     const old = await setName(member.user, name);
     if (old) moved += await renameAssignee(old, name);
+    await setTelegramName(member.user, String(formData.get(`tg_${member.user}`) || "").slice(0, 40));
   }
 
   revalidatePath("/admin/echipa");

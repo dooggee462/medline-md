@@ -161,6 +161,36 @@ export async function saveCase(
   return result;
 }
 
+/**
+ * „Eu plec la comanda": primul care apasă ia cazul. Dacă altcineva a apucat
+ * deja, întoarce numele lui, ca să-i spunem celui de-al doilea.
+ */
+export async function claimCase(
+  id: string,
+  name: string,
+): Promise<{ ok: boolean; by: string; item: Case | null }> {
+  let out: { ok: boolean; by: string; item: Case | null } = { ok: false, by: "", item: null };
+  await write((cases) => {
+    const i = cases.findIndex((c) => c.id === id);
+    if (i === -1) return cases;
+    if (cases[i].assignee) {
+      out = { ok: false, by: cases[i].assignee, item: cases[i] };
+      return cases;
+    }
+    const next = [...cases];
+    next[i] = {
+      ...cases[i],
+      assignee: name,
+      status: cases[i].status === "nou" ? "repartizat" : cases[i].status,
+      updatedBy: name,
+      updatedAt: stamp(),
+    };
+    out = { ok: true, by: name, item: next[i] };
+    return next;
+  });
+  return out;
+}
+
 export async function setStatus(id: string, status: Status, user: string): Promise<void> {
   await write((cases) =>
     cases.map((c) => (c.id === id ? { ...c, status, updatedBy: user, updatedAt: stamp() } : c)),

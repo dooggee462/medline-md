@@ -102,7 +102,12 @@ export async function saveCaseAction(formData: FormData) {
   const saved = await getCase(id);
   if (saved) {
     if (result === "creat") {
-      await sendTelegram(announcement(saved, "🗂 Caz nou"), "echipa");
+      // fără asistent ales, pleacă cu buton: primul care apasă ia comanda
+      await sendTelegram(
+        announcement(saved, "🗂 Caz nou"),
+        "echipa",
+        saved.assignee ? undefined : [{ text: "🙋 Eu plec la comanda", callback_data: `claim:${saved.id}` }],
+      );
       await notify(saved, "🗂 Caz nou");
     } else if (result === "actualizat" && existing?.assignee !== saved.assignee && saved.assignee) {
       await sendTelegram(announcement(saved, "🔁 Caz repartizat"), "echipa");
